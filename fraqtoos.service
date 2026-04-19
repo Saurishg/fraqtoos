@@ -1,0 +1,16 @@
+[Unit]
+Description=FraqtoOS Bot Orchestrator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=work
+WorkingDirectory=/home/work/fraqtoos
+ExecStart=/usr/bin/python3 /home/work/fraqtoos/orchestrator.py
+Restart=always
+RestartSec=30
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
