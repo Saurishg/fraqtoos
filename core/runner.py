@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Core runner — executes any bot with retry, timeout, graphify update, git push.
+Core runner — executes any bot with retry and timeout.
+Graphify and git commit run in background (non-blocking).
 """
 import subprocess, os, sys, time
 from datetime import datetime
@@ -9,6 +10,14 @@ from core.logger import get_logger
 from core import state as st
 
 log = get_logger("runner")
+
+def _bg(cmd: str, cwd: str):
+    """Fire-and-forget background subprocess."""
+    try:
+        subprocess.Popen(cmd, shell=True, cwd=cwd,
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except Exception:
+        pass
 
 def run_bot(name: str, cmd: str, cwd: str,
             timeout: int = 600, retries: int = 1) -> dict:
@@ -33,13 +42,13 @@ def run_bot(name: str, cmd: str, cwd: str,
             result["output"]  = (proc.stdout + proc.stderr).strip()[-3000:]
             result["success"] = proc.returncode == 0
             if result["success"]:
-                log.info(f"✓ {name} (exit 0, {round(time.time()-start)}s)")
+                log.info(f"✓ {name} ({round(time.time()-start)}s)")
                 break
             else:
                 log.warning(f"✗ {name} exit {proc.returncode} attempt {attempt+1}")
         except subprocess.TimeoutExpired:
             result["output"] = f"TIMEOUT after {timeout}s"
-            log.error(f"✗ {name} TIMEOUT")
+            log.error(f"✗ {name} TIMEOUT after {timeout}s")
             break
         except Exception as e:
             result["output"] = str(e)
@@ -48,22 +57,13 @@ def run_bot(name: str, cmd: str, cwd: str,
     result["duration"] = round(time.time() - start)
     st.record_run(name, result["success"], result["output"], result["duration"])
 
-    # Graphify update
-    try:
-        subprocess.run("python3.10 -m graphify update .", shell=True, cwd=cwd,
-                       capture_output=True, timeout=60)
-    except Exception:
-        pass
-
-    # Git push
-    try:
-        subprocess.run(
-            'git add -A && git diff --cached --quiet || '
-            'git commit -m "auto: bot run\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>" '
-            '&& git push origin main',
-            shell=True, cwd=cwd, capture_output=True, timeout=60
-        )
-    except Exception:
-        pass
+    # Background: graphify + git (never block the orchestrator)
+    _bg("python3.10 -m graphify update . 2>/dev/null", cwd)
+    _bg(
+        'git add -A && git diff --cached --quiet || '
+        'git commit -m "auto: bot run\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>" '
+        '&& git push origin main 2>/dev/null',
+        cwd
+    )
 
     return result
