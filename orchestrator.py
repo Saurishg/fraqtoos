@@ -43,6 +43,7 @@ BOTS = {
         "cwd":     "/home/work/amazon-bot",
         "timeout": 900,
         "retries": 0,
+        "silent":  True,
     },
     "amazon_reviews": {
         "name":    "Amazon Reviews",
@@ -50,6 +51,7 @@ BOTS = {
         "cwd":     "/home/work/amazon-bot",
         "timeout": 300,
         "retries": 1,
+        "silent":  True,
     },
     "amazon_listing": {
         "name":    "Amazon Listings",
@@ -57,6 +59,7 @@ BOTS = {
         "cwd":     "/home/work/amazon-bot",
         "timeout": 600,
         "retries": 1,
+        "silent":  True,
     },
     "utility_bill": {
         "name":    "Utility Bill Bot",
@@ -84,7 +87,7 @@ def job(key: str):
                 timeout=b.get("timeout", 300),
                 retries=b.get("retries", 1))
     daily_results.append(r)
-    if not r["success"]:
+    if not r["success"] and not b.get("silent"):
         send_alert(b["name"], r["output"][-300:])
 
 def run_ai_agent(task: str):

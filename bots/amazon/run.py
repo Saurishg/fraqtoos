@@ -16,7 +16,9 @@ Usage:
 import sys, os, subprocess, time
 sys.path.insert(0, "/home/work/fraqtoos")
 from core.logger   import get_logger
-from core.notifier import send_alert, send_success
+from core.notifier import send_alert as _send_alert, send_success as _send_success
+def send_alert(title, msg): log.warning(f"[SILENT] {title}: {msg[:100]}")
+def send_success(title, msg): log.info(f"[SILENT] {title}: {msg[:100]}")
 
 log = get_logger("amazon")
 BOT_DIR = "/home/work/amazon-bot"
