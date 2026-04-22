@@ -57,6 +57,15 @@ def run_bot(name: str, cmd: str, cwd: str,
     result["duration"] = round(time.time() - start)
     st.record_run(name, result["success"], result["output"], result["duration"])
 
+    # Write AI summary to shared context (phi4, non-blocking)
+    try:
+        from core.ai_context import summarize_run, write_summary
+        summary = summarize_run(name, result["output"], result["success"], result["duration"])
+        write_summary(name, summary)
+        log.info(f"  ✎ context: {summary[:80]}")
+    except Exception:
+        pass
+
     # Background: graphify + git (never block the orchestrator)
     _bg("python3.10 -m graphify update . 2>/dev/null", cwd)
     _bg(

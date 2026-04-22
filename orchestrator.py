@@ -111,23 +111,17 @@ def morning_analysis():
 
 def send_daily_digest():
     global daily_results
-    if not daily_results:
-        log.info("No results today.")
-        return
-    now  = datetime.now().strftime("%d %b %Y")
-    ok   = sum(1 for r in daily_results if r["success"])
-    total = len(daily_results)
-    lines = [f"*FraqtoOS Daily Report — {now}*", f"{'─'*32}"]
-    for r in daily_results:
-        icon = "✅" if r["success"] else "❌"
-        last_line = [l for l in r["output"].splitlines() if l.strip()]
-        summary = last_line[-1][:80] if last_line else ""
-        lines.append(f"{icon} *{r['name']}* [{r['duration']}s]")
-        if summary:
-            lines.append(f"   ↳ {summary}")
-    lines += [f"{'─'*32}", f"*{ok}/{total} bots OK*"]
-    runs = st.get_all_runs()
-    send("\n".join(lines))
+    from core.ai_context import generate_digest
+    log.info("Generating AI daily digest (llama4 → phi4 fallback)...")
+    try:
+        digest = generate_digest()
+    except Exception as e:
+        log.error(f"Digest generation failed: {e}")
+        now = datetime.now().strftime("%d %b %Y")
+        ok = sum(1 for r in daily_results if r["success"])
+        digest = (f"*FraqtoOS Daily — {now}*\n"
+                  f"{ok}/{len(daily_results)} bots OK\n(AI digest failed: {e})")
+    send(digest)
     daily_results = []
     log.info("Daily digest sent.")
 
