@@ -15,7 +15,7 @@ from core          import state as st
 
 log = get_logger("watchdog")
 OLLAMA_URL  = "http://localhost:11434/api/generate"
-MODEL_CHAIN = ["phi4", "gemma4"]
+MODEL_CHAIN = ["phi4", "deepseek-r1:14b", "gemma4"]
 
 # ── Bot registry ──────────────────────────────────────────────────────────────
 
