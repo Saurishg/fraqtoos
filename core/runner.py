@@ -67,11 +67,12 @@ def run_bot(name: str, cmd: str, cwd: str,
         pass
 
     # Background: graphify + git (never block the orchestrator)
-    _bg("python3.10 -m graphify update . 2>/dev/null", cwd)
+    _bg("graphify update . 2>/dev/null", cwd)
     _bg(
+        'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && { '
         'git add -A && git diff --cached --quiet || '
-        'git commit -m "auto: bot run\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>" '
-        '&& git push origin main 2>/dev/null',
+        'git commit -m "auto: bot run"; '
+        'git push origin main >/dev/null 2>&1 || true; }',
         cwd
     )
 

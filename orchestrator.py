@@ -41,25 +41,28 @@ BOTS = {
         "name":    "Amazon Deletion",
         "cmd":     "python3 scripts/delete_missing_info.py",
         "cwd":     "/home/work/amazon-bot",
-        "timeout": 900,
+        "timeout": 1800,
         "retries": 0,
         "silent":  True,
+        "firefox_lock": True,
     },
     "amazon_reviews": {
         "name":    "Amazon Reviews",
         "cmd":     "python3 scripts/fix1_request_reviews.py",
         "cwd":     "/home/work/amazon-bot",
-        "timeout": 300,
+        "timeout": 900,
         "retries": 1,
         "silent":  True,
+        "firefox_lock": True,
     },
     "amazon_listing": {
         "name":    "Amazon Listings",
         "cmd":     "python3 scripts/fix4_final.py",
         "cwd":     "/home/work/amazon-bot",
-        "timeout": 600,
+        "timeout": 900,
         "retries": 1,
         "silent":  True,
+        "firefox_lock": True,
     },
     "utility_bill": {
         "name":    "Utility Bill Bot",
@@ -82,10 +85,25 @@ daily_results = []
 # ── Job runners ───────────────────────────────────────────────────────────────
 
 def job(key: str):
+    import fcntl
     b = BOTS[key]
-    r = run_bot(b["name"], b["cmd"], b["cwd"],
-                timeout=b.get("timeout", 300),
-                retries=b.get("retries", 1))
+    lock_fd = None
+    if b.get("firefox_lock"):
+        lock_fd = open("/tmp/amazon_firefox.lock", "w")
+        try:
+            fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            log.warning(f"↯ {b['name']} skipped — another Firefox bot holds the lock")
+            lock_fd.close()
+            return
+    try:
+        r = run_bot(b["name"], b["cmd"], b["cwd"],
+                    timeout=b.get("timeout", 300),
+                    retries=b.get("retries", 1))
+    finally:
+        if lock_fd:
+            try: fcntl.flock(lock_fd, fcntl.LOCK_UN); lock_fd.close()
+            except Exception: pass
     daily_results.append(r)
     if not r["success"] and not b.get("silent"):
         send_alert(b["name"], r["output"][-300:])
@@ -103,11 +121,19 @@ def run_ai_agent(task: str):
         log.error(f"AI Agent launch failed: {e}")
 
 def morning_analysis():
-    run_ai_agent(
-        "Check Amazon account health: read /home/work/amazon-bot/logs/phi4_account_health.txt "
-        "and /home/work/amazon-bot/logs/delete_missing_20260419_1125.log last 10 lines. "
-        "Write a 3-point morning action plan to /home/work/fraqtoos/logs/morning_plan.txt"
-    )
+    """Launch gemma-agent with smart router (phi4 classifies → best model)."""
+    log.info("AI Agent: morning analysis (smart router)")
+    try:
+        import subprocess
+        subprocess.Popen(
+            ["python3", "/home/work/gemma-agent/agent.py",
+             "Check Amazon account health: read /home/work/amazon-bot/logs/phi4_account_health.txt "
+             "and the newest /home/work/amazon-bot/logs/delete_missing_*.log (last 10 lines). "
+             "Write a 3-point morning action plan to /home/work/fraqtoos/logs/morning_plan.txt"],
+            env={**os.environ, "DISPLAY": ":0"}
+        )
+    except Exception as e:
+        log.error(f"morning_analysis launch failed: {e}")
 
 def send_daily_digest():
     global daily_results

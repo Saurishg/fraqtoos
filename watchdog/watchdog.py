@@ -14,8 +14,33 @@ from core.notifier import send_alert
 from core          import state as st
 
 log = get_logger("watchdog")
-OLLAMA_URL  = "http://localhost:11434/api/generate"
-MODEL_CHAIN = ["phi4", "deepseek-r1:14b", "gemma4"]
+OLLAMA_URL   = "http://localhost:11434/api/generate"
+OLLAMA_PROBE = "http://localhost:11434/api/tags"
+MODEL_CHAIN  = ["phi4", "deepseek-r1:14b", "gemma4"]
+DISK_WARN_PCT = 90
+
+def ensure_ollama_up(attempts: int = 2) -> bool:
+    """Probe ollama; if down, try systemctl restart. Alert on persistent failure."""
+    for i in range(attempts):
+        try:
+            r = requests.get(OLLAMA_PROBE, timeout=3)
+            if r.status_code == 200:
+                return True
+        except Exception:
+            pass
+        if i == 0:
+            log.warning("Ollama down — attempting systemctl restart")
+            try:
+                subprocess.run(
+                    ["sudo", "-n", "systemctl", "restart", "ollama"],
+                    capture_output=True, timeout=30
+                )
+            except Exception as e:
+                log.error(f"ollama restart failed: {e}")
+            time.sleep(8)
+    log.error("Ollama unreachable after restart attempt")
+    send_alert("FraqtoOS", "⚠ Ollama is DOWN and failed to auto-restart")
+    return False
 
 # ── Bot registry ──────────────────────────────────────────────────────────────
 
@@ -86,6 +111,9 @@ def sys_stats() -> dict:
 # ── AI diagnosis ──────────────────────────────────────────────────────────────
 
 def ai_diagnose(snapshot: dict) -> str:
+    if not ensure_ollama_up():
+        return "AI unavailable (ollama down — restart failed, alerted)"
+
     prompt = f"""DevOps watchdog. Analyze this bot health snapshot in under 200 words.
 State: OK / WARNING / CRITICAL. List problems and one-line fixes.
 
@@ -149,7 +177,18 @@ def run_full(force_alert: bool = False) -> dict:
     critical_down = any(b["critical"] and not b["running"] for b in snapshot["bots"])
     ai_bad = any(k in analysis.upper() for k in ["CRITICAL", "WARNING"])
 
-    if force_alert or critical_down or ai_bad:
+    # Disk alert
+    disk_line = snapshot["system"].get("disk", "")
+    disk_full = False
+    try:
+        pct = int(disk_line.split()[4].rstrip("%"))
+        if pct >= DISK_WARN_PCT:
+            disk_full = True
+            log.warning(f"Disk at {pct}% — alerting")
+    except Exception:
+        pass
+
+    if force_alert or critical_down or ai_bad or disk_full:
         bots_status = "\n".join([
             f"{'🟢' if b['running'] else ('🔴' if b['critical'] else '🟡')} {b['name']}"
             + (f"\n   ↳ {b['errors'][-1]}" if b['errors'] else "")
