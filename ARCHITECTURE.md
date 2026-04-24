@@ -34,12 +34,15 @@ All bots report to the same context layer; one writer per resource; no competing
 |-------|----------------|---------|----------------|---------------|
 | 06:00 | Portfolio      | 300s    | —              | yes           |
 | 07:00 | AI morning     | fire-forget | —          | no            |
+| 07:30 | Competitor Watch | 900s  | firefox_lock   | silent        |
 | 08:00 | Amazon Delete  | 1800s   | firefox_lock   | silent        |
 | 08:45 | Amazon Reviews | 900s    | firefox_lock   | silent        |
+| 09:30 | Ads Audit      | 600s    | firefox_lock   | silent        |
 | 10:00 | Utility Bill   | 300s    | —              | yes           |
 | 12:00 | Watchdog full  | —       | —              | conditional   |
 | 18:00 | Amazon Listing | 900s    | firefox_lock   | silent        |
 | 22:00 | BTC Strategy   | 300s    | —              | yes           |
+| Sun 11:00 | SEO Refresh | 900s   | firefox_lock   | silent        |
 | 23:00 | Daily digest   | llama4 300s, phi4 120s fallback | — | — |
 | every 30m | Watchdog light | — | — | critical only |
 | every 4h  | Watchdog full  | — | — | conditional   |

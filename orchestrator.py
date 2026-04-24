@@ -78,6 +78,33 @@ BOTS = {
         "timeout": 300,
         "retries": 0,
     },
+    "competitor_watch": {
+        "name":    "Competitor Watch",
+        "cmd":     "python3 scripts/competitor_watch.py",
+        "cwd":     "/home/work/amazon-bot",
+        "timeout": 900,
+        "retries": 1,
+        "silent":  True,
+        "firefox_lock": True,
+    },
+    "ads_audit": {
+        "name":    "Ads Audit",
+        "cmd":     "python3 scripts/ads_audit.py",
+        "cwd":     "/home/work/amazon-bot",
+        "timeout": 600,
+        "retries": 1,
+        "silent":  True,
+        "firefox_lock": True,
+    },
+    "seo_refresh": {
+        "name":    "SEO Refresh",
+        "cmd":     "python3 scripts/seo_refresh.py",
+        "cwd":     "/home/work/amazon-bot",
+        "timeout": 900,
+        "retries": 1,
+        "silent":  True,
+        "firefox_lock": True,
+    },
 }
 
 daily_results = []
@@ -158,12 +185,15 @@ schedule.every(4).hours.do(run_full)
 
 schedule.every().day.at("06:00").do(job, "portfolio")
 schedule.every().day.at("07:00").do(morning_analysis)
+schedule.every().day.at("07:30").do(job, "competitor_watch")
 schedule.every().day.at("08:00").do(job, "amazon_delete")
 schedule.every().day.at("08:45").do(job, "amazon_reviews")
+schedule.every().day.at("09:30").do(job, "ads_audit")
 schedule.every().day.at("10:00").do(job, "utility_bill")
 schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("18:00").do(job, "amazon_listing")
 schedule.every().day.at("22:00").do(job, "crypto")
+schedule.every().sunday.at("11:00").do(job, "seo_refresh")
 schedule.every().day.at("23:00").do(send_daily_digest)
 
 # ── Entry point ───────────────────────────────────────────────────────────────

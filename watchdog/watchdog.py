@@ -81,6 +81,24 @@ BOTS = [
         "log":     None,
         "critical": False,
     },
+    {
+        "name":    "Competitor Watch",
+        "proc":    "competitor_watch.py",
+        "log":     None,
+        "critical": False,
+    },
+    {
+        "name":    "Ads Audit",
+        "proc":    "ads_audit.py",
+        "log":     None,
+        "critical": False,
+    },
+    {
+        "name":    "SEO Refresh",
+        "proc":    "seo_refresh.py",
+        "log":     None,
+        "critical": False,
+    },
 ]
 
 # ── Collectors ────────────────────────────────────────────────────────────────

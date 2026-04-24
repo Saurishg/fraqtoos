@@ -1,11 +1,11 @@
-# Graph Report - /home/work/fraqtoos  (2026-04-24)
+# Graph Report - /home/work/fraqtoos  (2026-04-25)
 
 ## Corpus Check
-- 22 files · ~15,042 words
+- 22 files · ~15,909 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 105 nodes · 168 edges · 18 communities detected
+- 109 nodes · 168 edges · 22 communities detected
 - Extraction: 77% EXTRACTED · 23% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -28,6 +28,10 @@
 - [[_COMMUNITY_Community 15|Community 15]]
 - [[_COMMUNITY_Community 16|Community 16]]
 - [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `get()` - 16 edges
@@ -127,8 +131,24 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 18 - "Community 18"
+Cohesion: 1.0
+Nodes (1): Run gemma agent with a task — fire and forget.
+
+### Community 19 - "Community 19"
+Cohesion: 1.0
+Nodes (1): Launch gemma-agent with smart router (phi4 classifies → best model).
+
+### Community 20 - "Community 20"
+Cohesion: 1.0
+Nodes (1): Quick process check — no AI, no log reading. Returns True if all OK.
+
+### Community 21 - "Community 21"
+Cohesion: 1.0
+Nodes (1): Full check with log analysis and AI diagnosis.
+
 ## Knowledge Gaps
-- **20 isolated node(s):** `Run gemma agent with a task — fire and forget.`, `Launch gemma-agent with smart router (phi4 classifies → best model).`, `Blocking file lock with overall timeout. Returns fd or raises Timeout.`, `Fire-and-forget background subprocess.`, `Chain multiple agents — each output feeds into the next prompt.` (+15 more)
+- **24 isolated node(s):** `Run gemma agent with a task — fire and forget.`, `Launch gemma-agent with smart router (phi4 classifies → best model).`, `Blocking file lock with overall timeout. Returns fd or raises Timeout.`, `Fire-and-forget background subprocess.`, `Chain multiple agents — each output feeds into the next prompt.` (+19 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **Thin community `Community 9`** (2 nodes): `logger.py`, `get_logger()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -148,16 +168,24 @@ Nodes (0):
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 17`** (1 nodes): `__init__.py`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 18`** (1 nodes): `Run gemma agent with a task — fire and forget.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 19`** (1 nodes): `Launch gemma-agent with smart router (phi4 classifies → best model).`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 20`** (1 nodes): `Quick process check — no AI, no log reading. Returns True if all OK.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 21`** (1 nodes): `Full check with log analysis and AI diagnosis.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `get()` connect `Community 6` to `Community 1`, `Community 2`, `Community 3`, `Community 4`, `Community 5`, `Community 7`?**
-  _High betweenness centrality (0.448) - this node is a cross-community bridge._
+  _High betweenness centrality (0.415) - this node is a cross-community bridge._
 - **Why does `Agent` connect `Community 0` to `Community 6`?**
-  _High betweenness centrality (0.213) - this node is a cross-community bridge._
+  _High betweenness centrality (0.197) - this node is a cross-community bridge._
 - **Why does `run_bot()` connect `Community 3` to `Community 4`, `Community 5`, `Community 6`?**
-  _High betweenness centrality (0.174) - this node is a cross-community bridge._
+  _High betweenness centrality (0.161) - this node is a cross-community bridge._
 - **Are the 12 inferred relationships involving `get()` (e.g. with `job()` and `render()`) actually correct?**
   _`get()` has 12 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 12 inferred relationships involving `run()` (e.g. with `gpu_stats()` and `ram_stats()`) actually correct?**
