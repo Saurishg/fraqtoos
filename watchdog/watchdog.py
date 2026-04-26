@@ -57,13 +57,6 @@ BOTS = [
         "critical": True,
     },
     {
-        "name":    "Amazon Deletion",
-        "proc":    "delete_missing_info.py",
-        "log":     None,  # dynamic
-        "log_glob": "/home/work/amazon-bot/logs/delete_missing_*.log",
-        "critical": False,
-    },
-    {
         "name":    "Portfolio Bot",
         "proc":    "portfolio_bot.py",
         "log":     "/home/work/portfolio_bot/logs/portfolio.log",
@@ -78,24 +71,6 @@ BOTS = [
     {
         "name":    "BTC Bot",
         "proc":    "btc_strategy.py",
-        "log":     None,
-        "critical": False,
-    },
-    {
-        "name":    "Competitor Watch",
-        "proc":    "competitor_watch.py",
-        "log":     None,
-        "critical": False,
-    },
-    {
-        "name":    "Ads Audit",
-        "proc":    "ads_audit.py",
-        "log":     None,
-        "critical": False,
-    },
-    {
-        "name":    "SEO Refresh",
-        "proc":    "seo_refresh.py",
         "log":     None,
         "critical": False,
     },
@@ -172,6 +147,14 @@ def run_full(force_alert: bool = False) -> dict:
     snapshot = {"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "system": sys_stats(), "bots": []}
 
+    # SearXNG health (web search backend used by agent)
+    try:
+        from core.web_search import is_up as _searx_up
+        snapshot["searxng_up"] = _searx_up()
+    except Exception as e:
+        snapshot["searxng_up"] = False
+        log.warning(f"web_search probe failed: {e}")
+
     for bot in BOTS:
         running  = is_running(bot["proc"])
         log_tail = tail_log(bot)
@@ -206,13 +189,18 @@ def run_full(force_alert: bool = False) -> dict:
     except Exception:
         pass
 
-    if force_alert or critical_down or ai_bad or disk_full:
+    searx_down = snapshot.get("searxng_up") is False
+    if searx_down:
+        log.warning("SearXNG is DOWN — web context will be empty")
+
+    if force_alert or critical_down or ai_bad or disk_full or searx_down:
         bots_status = "\n".join([
             f"{'🟢' if b['running'] else ('🔴' if b['critical'] else '🟡')} {b['name']}"
             + (f"\n   ↳ {b['errors'][-1]}" if b['errors'] else "")
             for b in snapshot["bots"]
         ])
-        send_alert("FraqtoOS Watchdog", f"{bots_status}\n\n{analysis[:400]}")
+        extra = "\n⚠ SearXNG DOWN" if searx_down else ""
+        send_alert("FraqtoOS Watchdog", f"{bots_status}{extra}\n\n{analysis[:400]}")
     else:
         log.info("Watchdog: all systems healthy")
 

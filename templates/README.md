@@ -22,7 +22,7 @@ Add to `/home/work/fraqtoos/orchestrator.py` in the `BOTS` dict:
     "timeout":      300,
     "retries":      1,
     "silent":       False,      # True = don't alert on failure
-    "firefox_lock": False,      # True for Amazon bots
+    "firefox_lock": False,      # True for Firefox-driven bots
 },
 ```
 
@@ -32,5 +32,5 @@ Then add one `schedule.every().day.at("HH:MM").do(lambda: job("mybot"))` line, a
 
 - Launch your own cron — the orchestrator is the only scheduler.
 - Call `send_whatsapp.py` directly from inside a bot — use `ai_context` and let the digest speak. Only alerting paths (portfolio report, utility bill) send WhatsApp directly, and those use `/home/work/fraqtoos/shared/send_whatsapp.py` which takes the lock.
-- Open Firefox without setting `firefox_lock: True` if another Amazon bot could overlap.
+- Open Firefox without setting `firefox_lock: True` if another Firefox bot could overlap.
 - Swallow exceptions silently — let them bubble and exit non-zero; the digest needs to see failures.

@@ -28,7 +28,7 @@ cd /home/work/fraqtoos
 python3 orchestrator.py --run <key>
 ```
 
-Where `<key>` is one of: `portfolio`, `amazon_delete`, `amazon_reviews`, `amazon_listing`, `utility_bill`, `btc_strategy`, `digest`. Output goes to stdout *and* `logs/fraqtoos.log`.
+Where `<key>` is one of: `portfolio`, `utility_bill`, `crypto`, `digest`. Output goes to stdout *and* `logs/fraqtoos.log`.
 
 ## A bot failed — what do I do?
 
@@ -60,13 +60,13 @@ ls /home/work/fraqtoos/shared/wa_profile/ # profile intact?
 
 If the lock is stale, remove it: `rm /tmp/fraqtoos_wa.lock`. If the wa_profile is corrupted, re-login via headed Firefox pointed at that profile.
 
-## Amazon Firefox profile locked
+## Firefox profile locked
 
-Overlapping Amazon bots are mutually excluded via `/tmp/amazon_firefox.lock`. If the lock gets stuck:
+Overlapping Firefox-using bots are mutually excluded via `/tmp/firefox.lock`. If the lock gets stuck:
 
 ```bash
 pgrep -f firefox | xargs -r ps -fp
-rm /tmp/amazon_firefox.lock
+rm /tmp/firefox.lock
 ```
 
 ## Disk near full
@@ -137,7 +137,6 @@ The data that matters (not derivable from code):
 | `/home/work/fraqtoos/logs/state.json` | run history | regenerates |
 | `/home/work/fraqtoos/logs/ai_context.json` | digest context | regenerates after 24h |
 | `/home/work/fraqtoos/shared/wa_profile/` | WhatsApp session | re-login by hand |
-| `/home/work/amazon-bot/amazon_profile/` | Amazon session | re-login by hand |
 | `/home/work/portfolio_bot/.env` | broker credentials | secrets vault |
 | `/home/work/utility-bill-bot/.env` | Gmail OAuth token | re-auth flow |
 | `/home/work/crypto-trading-bot/btc_1h_cache.csv` | BTC OHLC cache | regenerates from binance |

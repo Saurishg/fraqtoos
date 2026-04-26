@@ -31,8 +31,6 @@ def is_running(keyword):
 
 BOTS_DISPLAY = [
     ("Orchestrator",     "orchestrator.py"),
-    ("Amazon Deletion",  "delete_missing_info.py"),
-    ("Amazon Listings",  "fix4_final.py"),
     ("Portfolio Bot",    "portfolio_bot.py"),
     ("Utility Bill Bot", "bot.js"),
     ("BTC Bot",          "btc_strategy.py"),
@@ -43,10 +41,8 @@ BOTS_DISPLAY = [
 SCHEDULE = [
     ("06:00", "Portfolio Bot"),
     ("07:00", "AI Agent Analysis"),
-    ("08:00", "Amazon (delete + reviews)"),
     ("10:00", "Utility Bill Bot"),
     ("12:00", "Watchdog Full Check"),
-    ("18:00", "Amazon (listing update)"),
     ("22:00", "BTC Bot"),
     ("23:00", "Daily WhatsApp Digest"),
 ]

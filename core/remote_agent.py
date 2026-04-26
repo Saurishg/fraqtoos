@@ -17,7 +17,7 @@ Usage:
     final = pipe.run(initial_prompt, prompts=[
         "Summarize this raw data in 200 words: {input}",
         "Analyze this summary and find 3 key insights: {input}",
-        "Write an Amazon listing based on these insights: {input}",
+        "Write a polished report based on these insights: {input}",
     ])
 """
 import requests, sys
@@ -97,20 +97,6 @@ class Pipeline:
 
 # ── Preset pipelines ────────────────────────────────────────────────────────
 
-def amazon_listing_pipeline(raw_data: str, remote_host: str = REMOTE_HOST) -> str:
-    """3-model pipeline: summarize → analyze → write listing."""
-    pipe = Pipeline([
-        Agent("gemma3:27b",      host=remote_host),
-        Agent("deepseek-r1:32b", host=remote_host),
-        Agent("qwen2.5:32b",     host=remote_host),
-    ])
-    return pipe.run(raw_data, prompts=[
-        "Summarize this competitor data in 150 words, highlight price, GSM, keywords: {input}",
-        "Based on this summary, identify 3 specific improvements for a new Amazon India microfiber cloth listing. Be direct: {input}",
-        "Write an optimized Amazon India product listing (title + 5 bullets + keywords) using these improvements: {input}",
-    ], tokens=800)
-
-
 def research_pipeline(question: str, remote_host: str = REMOTE_HOST) -> str:
     """2-model pipeline: research → synthesize."""
     pipe = Pipeline([
@@ -119,7 +105,7 @@ def research_pipeline(question: str, remote_host: str = REMOTE_HOST) -> str:
     ])
     return pipe.run(question, prompts=[
         "Answer this question with facts and data: {input}",
-        "Refine this answer, remove fluff, make it actionable for an Amazon India seller: {input}",
+        "Refine this answer, remove fluff, make it actionable: {input}",
     ], tokens=600)
 
 
