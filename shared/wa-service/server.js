@@ -7,10 +7,11 @@
  * GET  /qr      → text QR for terminal scan
  */
 
-const { Client, LocalAuth } = require("whatsapp-web.js");
+const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
 const qrcode   = require("qrcode-terminal");
 const express  = require("express");
 const fs       = require("fs");
+const path     = require("path");
 const { execSync } = require("child_process");
 
 const QR_TXT  = "/tmp/wa_qr.txt";
@@ -131,6 +132,28 @@ app.post("/send", (req, res) => {
         });
     } else {
         res.status(503).json({ ok: false, error: `WA disconnected` });
+    }
+});
+
+// POST /send-file { phone, file_path, caption? }
+app.post("/send-file", async (req, res) => {
+    const { phone, file_path, caption } = req.body;
+    if (!phone || !file_path) {
+        return res.status(400).json({ ok: false, error: "phone and file_path required" });
+    }
+    if (state !== "ready") {
+        return res.status(503).json({ ok: false, error: `WA not ready (state: ${state})` });
+    }
+    try {
+        const clean  = phone.replace(/^\+/, "").replace(/\s/g, "");
+        const chatId = `${clean}@c.us`;
+        const media  = MessageMedia.fromFilePath(file_path);
+        await client.sendMessage(chatId, media, { caption: caption || "" });
+        console.log(`[wa-service] File sent to ${clean}: ${path.basename(file_path)}`);
+        res.json({ ok: true });
+    } catch (err) {
+        console.error("[wa-service] Send-file error:", err.message);
+        res.status(500).json({ ok: false, error: err.message });
     }
 });
 
