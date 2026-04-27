@@ -1,0 +1,18 @@
+[Unit]
+Description=FraqtoOS WhatsApp Service (whatsapp-web.js)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=work
+WorkingDirectory=/home/work/fraqtoos/shared/wa-service
+ExecStart=/usr/bin/node /home/work/fraqtoos/shared/wa-service/server.js
+Restart=always
+RestartSec=15
+StandardOutput=append:/home/work/fraqtoos/shared/wa-service/wa-service.log
+StandardError=append:/home/work/fraqtoos/shared/wa-service/wa-service.log
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
