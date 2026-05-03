@@ -5,9 +5,11 @@ Runs on boot via systemd (fraqtoos.service).
 
 Schedule:
   Every 30m  Watchdog lightweight (process check)
+  Every 2h   Chia AI log watcher (phi4 classifies new errors)
   Every 4h   Watchdog full (AI diagnosis)
   06:00      Portfolio Bot
   07:00      AI Agent — morning market analysis
+  08:00      Chia Health Monitor (rule-based daily summary)
   10:00      Utility Bill Bot
   12:00      Watchdog full check
   22:00      BTC Strategy Bot
@@ -48,6 +50,22 @@ BOTS = {
         "cwd":     "/home/work/crypto-trading-bot",
         "timeout": 300,
         "retries": 0,
+    },
+    "chia_health": {
+        "name":    "Chia Health Monitor",
+        "cmd":     "python3 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_health import run; print(run())\"",
+        "cwd":     "/home/work/fraqtoos",
+        "timeout": 60,
+        "retries": 0,
+        "silent":  True,
+    },
+    "chia_ai": {
+        "name":    "Chia AI Watcher",
+        "cmd":     "python3 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_ai_watcher import run; print(run())\"",
+        "cwd":     "/home/work/fraqtoos",
+        "timeout": 150,   # phi4 inference can take ~2min on cold log batch
+        "retries": 0,
+        "silent":  True,  # only WhatsApps on critical — suppresses daily_results noise
     },
 }
 
@@ -124,12 +142,14 @@ def send_daily_digest():
 # ── Schedule ──────────────────────────────────────────────────────────────────
 
 schedule.every(30).minutes.do(run_lightweight)
+schedule.every(2).hours.do(job, "chia_ai")
 schedule.every(4).hours.do(run_full)
 
 schedule.every().day.at("06:00").do(job, "portfolio")
 schedule.every().day.at("07:00").do(morning_analysis)
 schedule.every().day.at("10:00").do(job, "utility_bill")
 schedule.every().day.at("12:00").do(run_full)
+schedule.every().day.at("08:00").do(job, "chia_health")
 schedule.every().day.at("22:00").do(job, "crypto")
 schedule.every().day.at("23:00").do(send_daily_digest)
 
