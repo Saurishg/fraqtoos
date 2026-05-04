@@ -50,29 +50,62 @@ def latest_log(pattern: str) -> str:
     return files[0] if files else None
 
 BOTS = [
+    # ── Persistent daemons (always-running, alert if not found) ──────────────
     {
-        "name":    "Orchestrator",
-        "proc":    "orchestrator.py",
-        "log":     "/home/work/fraqtoos/logs/fraqtoos.log",
+        "name":     "Orchestrator",
+        "proc":     "orchestrator.py",
+        "log":      "/home/work/fraqtoos/logs/fraqtoos.log",
         "critical": True,
     },
     {
-        "name":    "Portfolio Bot",
-        "proc":    "portfolio_bot.py",
-        "log":     "/home/work/portfolio_bot/logs/portfolio.log",
-        "critical": False,
+        "name":     "WhatsApp Service",
+        "proc":     "wa-service",
+        "log":      None,
+        "critical": True,
     },
     {
-        "name":    "Utility Bill Bot",
-        "proc":    "bot.js",
-        "log":     "/home/work/utility-bill-bot/logs/bot.log",
+        "name":     "Crypto Price Bot",
+        "proc":     "Desktop/crypto/index.js",
+        "log":      None,
         "critical": False,
     },
+    # ── Scheduled one-shots (run briefly at scheduled time, never persistent) ─
+    # scheduled=True → watchdog skips the "is it running?" check and only
+    # checks the log for recent errors.
     {
-        "name":    "BTC Bot",
-        "proc":    "btc_strategy.py",
-        "log":     None,
-        "critical": False,
+        "name":      "Portfolio Bot",
+        "proc":      "portfolio_bot.py",
+        "log":       "/home/work/portfolio_bot/logs/portfolio.log",
+        "critical":  False,
+        "scheduled": True,   # one-shot at 06:00 — not a daemon
+    },
+    {
+        "name":      "Utility Bill Bot",
+        "proc":      "bot.js",
+        "log":       "/home/work/fraqtoos/logs/fraqtoos.log",  # logged via orchestrator runner
+        "critical":  False,
+        "scheduled": True,   # one-shot at 10:00
+    },
+    {
+        "name":      "BTC Strategy Bot",
+        "proc":      "btc_strategy.py",
+        "log":       "/home/work/fraqtoos/logs/fraqtoos.log",
+        "critical":  False,
+        "scheduled": True,   # one-shot at 22:00
+    },
+    {
+        "name":      "Chia Health Monitor",
+        "proc":      "chia_health",
+        "log":       "/home/work/fraqtoos/logs/fraqtoos.log",
+        "critical":  False,
+        "scheduled": True,   # one-shot at 08:00
+    },
+    {
+        "name":      "Chia AI Watcher",
+        "proc":      "chia_ai_watcher",
+        "log":       "/home/work/fraqtoos/logs/chia_ai_latest.json",
+        "critical":  False,
+        "scheduled": True,   # every 2h
     },
 ]
 
@@ -110,7 +143,11 @@ def ai_diagnose(snapshot: dict) -> str:
     prompt = f"""DevOps watchdog. Analyze this bot health snapshot in under 200 words.
 State: OK / WARNING / CRITICAL. List problems and one-line fixes.
 
-{json.dumps(snapshot, indent=2)[:2000]}"""
+NOTE: Bots marked scheduled=true are one-shot scripts (run once per day/interval).
+"running: false" for scheduled bots is NORMAL — do NOT flag as an issue.
+Only flag scheduled bots if their logs show recent errors or they haven't run in >24h.
+
+{json.dumps(snapshot, indent=2)[:2500]}"""
 
     for model in MODEL_CHAIN:
         try:
@@ -132,6 +169,8 @@ def run_lightweight() -> bool:
     """Quick process check — no AI, no log reading. Returns True if all OK."""
     issues = []
     for bot in BOTS:
+        if bot.get("scheduled"):
+            continue  # one-shot bots are never persistently running — skip
         running = is_running(bot["proc"])
         if bot["critical"] and not running:
             issues.append(f"CRITICAL: {bot['name']} is NOT running!")
@@ -156,14 +195,17 @@ def run_full(force_alert: bool = False) -> dict:
         log.warning(f"web_search probe failed: {e}")
 
     for bot in BOTS:
-        running  = is_running(bot["proc"])
+        running  = False if bot.get("scheduled") else is_running(bot["proc"])
         log_tail = tail_log(bot)
         errors   = [l.strip()[:120] for l in log_tail.splitlines()
                     if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])]
         snapshot["bots"].append({
-            "name": bot["name"], "running": running,
-            "critical": bot["critical"], "errors": errors[-3:],
-            "log_tail": log_tail[-500:]
+            "name":      bot["name"],
+            "running":   running,
+            "scheduled": bot.get("scheduled", False),
+            "critical":  bot["critical"],
+            "errors":    errors[-3:],
+            "log_tail":  log_tail[-500:]
         })
 
     analysis = ai_diagnose(snapshot)
