@@ -143,9 +143,11 @@ def ai_diagnose(snapshot: dict) -> str:
     prompt = f"""DevOps watchdog. Analyze this bot health snapshot in under 200 words.
 State: OK / WARNING / CRITICAL. List problems and one-line fixes.
 
-NOTE: Bots marked scheduled=true are one-shot scripts (run once per day/interval).
-"running: false" for scheduled bots is NORMAL — do NOT flag as an issue.
-Only flag scheduled bots if their logs show recent errors or they haven't run in >24h.
+RULES:
+- Bots marked scheduled=true are one-shot scripts. "running: false" is NORMAL — do NOT flag it.
+- Only flag scheduled bots if their logs show recent errors or they haven't run in >24h.
+- Disk usage below 90% is NORMAL and acceptable — do NOT flag it. Only flag disk if use% >= 90.
+- Disk threshold is 90%. Current usage around 70% is fine.
 
 {json.dumps(snapshot, indent=2)[:2500]}"""
 
@@ -214,6 +216,16 @@ def run_full(force_alert: bool = False) -> dict:
     # Save latest report
     with open("/home/work/fraqtoos/logs/watchdog_latest.json", "w") as f:
         json.dump({"snapshot": snapshot, "analysis": analysis}, f, indent=2)
+
+    # Push to ruflo memory for agent context (non-blocking, best-effort)
+    try:
+        import importlib.util as _ilu
+        _spec = _ilu.spec_from_file_location(
+            "ruflo_report", "/home/work/fraqtoos/watchdog/ruflo_report.py")
+        _mod = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_mod)
+        _mod.push_to_ruflo(snapshot, analysis)
+    except Exception as _e:
+        log.debug(f"ruflo push skipped: {_e}")
 
     st.set("last_watchdog", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
