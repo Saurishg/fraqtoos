@@ -13,7 +13,8 @@ _lock = Lock()
 def _load() -> dict:
     if os.path.exists(STATE_FILE):
         try:
-            return json.load(open(STATE_FILE))
+            with open(STATE_FILE) as f:
+                return json.load(f)
         except Exception:
             pass
     return {}

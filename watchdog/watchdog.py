@@ -225,7 +225,7 @@ def run_full(force_alert: bool = False) -> dict:
         _mod = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_mod)
         _mod.push_to_ruflo(snapshot, analysis)
     except Exception as _e:
-        log.debug(f"ruflo push skipped: {_e}")
+        log.warning(f"ruflo push failed: {_e}")
 
     st.set("last_watchdog", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 

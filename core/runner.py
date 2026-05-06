@@ -3,7 +3,7 @@
 Core runner — executes any bot with retry and timeout.
 Graphify and git commit run in background (non-blocking).
 """
-import subprocess, os, sys, time
+import subprocess, os, sys, time, threading
 from datetime import datetime
 sys.path.insert(0, "/home/work/fraqtoos")
 from core.logger import get_logger
@@ -12,12 +12,15 @@ from core import state as st
 log = get_logger("runner")
 
 def _bg(cmd: str, cwd: str):
-    """Fire-and-forget background subprocess."""
-    try:
-        subprocess.Popen(cmd, shell=True, cwd=cwd,
-                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    except Exception:
-        pass
+    """Fire-and-forget background subprocess; daemon thread reaps the child."""
+    def _reap():
+        try:
+            proc = subprocess.Popen(cmd, shell=True, cwd=cwd,
+                                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            proc.wait(timeout=120)
+        except Exception:
+            pass
+    threading.Thread(target=_reap, daemon=True).start()
 
 def run_bot(name: str, cmd: str, cwd: str,
             timeout: int = 600, retries: int = 1) -> dict:
