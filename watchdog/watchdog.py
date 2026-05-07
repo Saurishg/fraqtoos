@@ -63,12 +63,6 @@ BOTS = [
         "log":      None,
         "critical": True,
     },
-    {
-        "name":     "Crypto Price Bot",
-        "proc":     "Desktop/crypto/index.js",
-        "log":      None,
-        "critical": False,
-    },
     # ── Scheduled one-shots (run briefly at scheduled time, never persistent) ─
     # scheduled=True → watchdog skips the "is it running?" check and only
     # checks the log for recent errors.
@@ -78,6 +72,7 @@ BOTS = [
         "log":       "/home/work/portfolio_bot/logs/portfolio.log",
         "critical":  False,
         "scheduled": True,   # one-shot at 06:00 — not a daemon
+        "max_age_h": 30,
     },
     {
         "name":      "Utility Bill Bot",
@@ -85,6 +80,7 @@ BOTS = [
         "log":       "/home/work/fraqtoos/logs/fraqtoos.log",  # logged via orchestrator runner
         "critical":  False,
         "scheduled": True,   # one-shot at 10:00
+        "max_age_h": 30,
     },
     {
         "name":      "BTC Strategy Bot",
@@ -92,6 +88,7 @@ BOTS = [
         "log":       "/home/work/fraqtoos/logs/fraqtoos.log",
         "critical":  False,
         "scheduled": True,   # one-shot at 22:00
+        "max_age_h": 30,
     },
     {
         "name":      "Chia Health Monitor",
@@ -99,6 +96,7 @@ BOTS = [
         "log":       "/home/work/fraqtoos/logs/fraqtoos.log",
         "critical":  False,
         "scheduled": True,   # one-shot at 08:00
+        "max_age_h": 30,
     },
     {
         "name":      "Chia AI Watcher",
@@ -106,6 +104,7 @@ BOTS = [
         "log":       "/home/work/fraqtoos/logs/chia_ai_latest.json",
         "critical":  False,
         "scheduled": True,   # every 2h
+        "max_age_h": 6,
     },
 ]
 
@@ -142,6 +141,43 @@ def sys_stats() -> dict:
         "gpu":  gpu.stdout.strip() if gpu and gpu.returncode == 0 else "N/A",
     }
 
+def scheduled_run_health(bot: dict) -> tuple[list[str], str]:
+    """Return errors and display tail for one-shot jobs from canonical state.json.
+
+    Scheduled bots share the orchestrator log, so scanning that log for words like
+    "exception" attributes unrelated watchdog/AI prose to every scheduled bot.
+    state.json is the per-bot source of truth for these jobs.
+    """
+    run = st.get_all_runs().get(bot["name"], {})
+    if not run:
+        return [f"{bot['name']} has never recorded a run"], "(no recorded run)"
+
+    tail = run.get("last_output") or ""
+    errors = []
+    if not run.get("success", False):
+        errors.append(f"last run failed: {tail[:120] or 'no output'}")
+
+    max_age_h = bot.get("max_age_h")
+    last_run = run.get("last_run")
+    age_h = None
+    if max_age_h and last_run:
+        try:
+            age_h = (datetime.now() - datetime.strptime(last_run, "%Y-%m-%d %H:%M:%S")).total_seconds() / 3600
+            if age_h > max_age_h:
+                errors.append(f"stale: last run {age_h:.1f}h ago")
+        except Exception:
+            errors.append(f"invalid last_run timestamp: {last_run}")
+
+    status = "OK" if not errors else "ISSUE"
+    age_text = f" age={age_h:.1f}h" if age_h is not None else ""
+    output_text = f"\n{tail}" if errors and tail else ""
+    display = (
+        f"{status} last_run={run.get('last_run', '?')} "
+        f"duration={run.get('duration', '?')}s{age_text} success={run.get('success', False)}"
+        f"{output_text}"
+    ).strip()
+    return errors[-3:], display[-500:]
+
 # ── AI diagnosis ──────────────────────────────────────────────────────────────
 
 def ai_diagnose(snapshot: dict) -> str:
@@ -154,6 +190,8 @@ State: OK / WARNING / CRITICAL. List problems and one-line fixes.
 RULES:
 - Bots marked scheduled=true are one-shot scripts. "running: false" is NORMAL — do NOT flag it.
 - Only flag scheduled bots if their logs show recent errors or they haven't run in >24h.
+- For scheduled bots, trust their "errors" array. If errors is empty, the scheduled bot is OK.
+- Do not infer stale status from last_run text; stale scheduled runs are already listed in errors.
 - Disk usage below 90% is NORMAL and acceptable — do NOT flag it. Only flag disk if use% >= 90.
 - Disk threshold is 90%. Current usage around 70% is fine.
 
@@ -206,9 +244,12 @@ def run_full(force_alert: bool = False) -> dict:
 
     for bot in BOTS:
         running  = False if bot.get("scheduled") else is_running(bot["proc"])
-        log_tail = tail_log(bot)
-        errors   = [l.strip()[:120] for l in log_tail.splitlines()
-                    if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])]
+        if bot.get("scheduled"):
+            errors, log_tail = scheduled_run_health(bot)
+        else:
+            log_tail = tail_log(bot)
+            errors   = [l.strip()[:120] for l in log_tail.splitlines()
+                        if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])]
         snapshot["bots"].append({
             "name":      bot["name"],
             "running":   running,
