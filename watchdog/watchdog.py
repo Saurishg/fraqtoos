@@ -124,14 +124,22 @@ def tail_log(bot: dict, lines: int = 20) -> str:
     return r.stdout.strip()
 
 def sys_stats() -> dict:
-    disk = subprocess.run(["df", "-h", "/home/work"], capture_output=True, text=True)
-    ram  = subprocess.run(["free", "-h"], capture_output=True, text=True)
-    gpu  = subprocess.run(["nvidia-smi", "--query-gpu=memory.used,memory.free,temperature.gpu",
-                           "--format=csv,noheader"], capture_output=True, text=True)
+    # Timeouts matter: nvidia-smi can hang indefinitely during GPU IPC firmware
+    # stalls (see fraqtoos memory: nvidia_ipc_fix). Without timeout the entire
+    # watchdog blocks and orchestrator never schedules anything else.
+    def _run(cmd, t=10):
+        try:
+            return subprocess.run(cmd, capture_output=True, text=True, timeout=t)
+        except (subprocess.TimeoutExpired, Exception):
+            return None
+    disk = _run(["df", "-h", "/home/work"], 5)
+    ram  = _run(["free", "-h"], 5)
+    gpu  = _run(["nvidia-smi", "--query-gpu=memory.used,memory.free,temperature.gpu",
+                 "--format=csv,noheader"], 10)
     return {
-        "disk": disk.stdout.strip().splitlines()[-1] if disk.stdout else "?",
-        "ram":  ram.stdout.strip().splitlines()[1]   if ram.stdout  else "?",
-        "gpu":  gpu.stdout.strip()                   if gpu.returncode == 0 else "N/A",
+        "disk": disk.stdout.strip().splitlines()[-1] if disk and disk.stdout else "?",
+        "ram":  ram.stdout.strip().splitlines()[1]   if ram  and ram.stdout  else "?",
+        "gpu":  gpu.stdout.strip() if gpu and gpu.returncode == 0 else "N/A",
     }
 
 # ── AI diagnosis ──────────────────────────────────────────────────────────────

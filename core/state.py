@@ -20,8 +20,14 @@ def _load() -> dict:
     return {}
 
 def _save(state: dict):
-    with open(STATE_FILE, "w") as f:
+    # Atomic write: write to temp then rename. If orchestrator is SIGTERMed
+    # mid-write, the original state.json stays intact. Without this, a partial
+    # write produces invalid JSON, _load() returns {}, and the next _save()
+    # silently wipes all run history.
+    tmp = STATE_FILE + ".tmp"
+    with open(tmp, "w") as f:
         json.dump(state, f, indent=2, default=str)
+    os.replace(tmp, STATE_FILE)
 
 def get(key: str, default=None):
     with _lock:

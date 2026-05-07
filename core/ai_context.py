@@ -17,14 +17,19 @@ def _today() -> str:
 def _load() -> dict:
     if os.path.exists(CONTEXT_FILE):
         try:
-            return json.load(open(CONTEXT_FILE))
+            with open(CONTEXT_FILE) as f:
+                return json.load(f)
         except Exception:
             pass
     return {}
 
 def _save(data: dict):
-    with open(CONTEXT_FILE, "w") as f:
+    # Atomic write: temp file + rename. Prevents corruption if process is killed
+    # mid-write (orchestrator can be SIGTERMed by systemd at any moment).
+    tmp = CONTEXT_FILE + ".tmp"
+    with open(tmp, "w") as f:
         json.dump(data, f, indent=2, default=str)
+    os.replace(tmp, CONTEXT_FILE)
 
 def write_summary(bot: str, text: str):
     """Write a bot's daily summary. Called after each bot run."""
