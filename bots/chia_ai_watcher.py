@@ -10,6 +10,8 @@ Flow:
   5. Alert via WhatsApp on critical (max once per 4h), include fix result
   6. Write full analysis + fix result to logs/chia_ai_latest.json
 """
+import warnings
+warnings.filterwarnings("ignore", message=".*urllib3.*", category=Warning)
 import json
 import re
 import requests
