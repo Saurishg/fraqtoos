@@ -248,8 +248,13 @@ def run_full(force_alert: bool = False) -> dict:
             errors, log_tail = scheduled_run_health(bot)
         else:
             log_tail = tail_log(bot)
+            # Exclude watchdog/AI lines — the AI prose itself contains "error"/"exception"
+            # which would create a self-referential false-positive feedback loop.
             errors   = [l.strip()[:120] for l in log_tail.splitlines()
-                        if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])]
+                        if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])
+                        and "watchdog" not in l.lower()
+                        and "ai diagnosis" not in l.lower()
+                        and "context:" not in l.lower()]
         snapshot["bots"].append({
             "name":      bot["name"],
             "running":   running,
