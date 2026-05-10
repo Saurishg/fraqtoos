@@ -248,24 +248,40 @@ def run_full(force_alert: bool = False) -> dict:
             errors, log_tail = scheduled_run_health(bot)
         else:
             log_tail = tail_log(bot)
-            # Exclude watchdog/AI lines — the AI prose itself contains "error"/"exception"
-            # which would create a self-referential false-positive feedback loop.
+            # Only scan lines that start with a log timestamp (YYYY-MM-DD HH:MM:SS).
+            # Raw AI-prose lines (markdown bullets, numbered lists) bleed into the log
+            # without a timestamp prefix and would create false-positive error matches.
+            import re as _re
+            _ts = _re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}")
             errors   = [l.strip()[:120] for l in log_tail.splitlines()
-                        if any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])
-                        and "watchdog" not in l.lower()
-                        and "ai diagnosis" not in l.lower()
-                        and "context:" not in l.lower()]
+                        if _ts.match(l.strip())
+                        and any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])
+                        and "watchdog"    not in l.lower()
+                        and "ruflo_fixer" not in l.lower()
+                        and "context:"    not in l.lower()]
+        # For daemon logs: keep only timestamped operational lines.
+        # Exclude watchdog/fixer meta-lines — phi4 reads log_tail and would
+        # re-diagnose its own previous diagnosis in an infinite feedback loop.
+        _skip_loggers = ("watchdog", "ruflo_fixer", "ai diagnosis")
+        clean_tail = "\n".join(
+            l for l in log_tail.splitlines()
+            if _ts.match(l.strip())
+            and not any(s in l.lower() for s in _skip_loggers)
+        ) if not bot.get("scheduled") else log_tail
+
         snapshot["bots"].append({
             "name":      bot["name"],
             "running":   running,
             "scheduled": bot.get("scheduled", False),
             "critical":  bot["critical"],
             "errors":    errors[-3:],
-            "log_tail":  log_tail[-500:]
+            "log_tail":  clean_tail[-500:]
         })
 
     analysis = ai_diagnose(snapshot)
-    log.info(f"AI diagnosis: {analysis[:200]}")
+    # Log only the first line (state) — full multi-line AI prose in the log
+    # creates a self-referential feedback loop on the next scan.
+    log.info(f"AI diagnosis: {analysis.splitlines()[0].strip()[:120]}")
 
     # Save latest report
     with open("/home/work/fraqtoos/logs/watchdog_latest.json", "w") as f:

@@ -218,7 +218,7 @@ def run_fixer(snapshot: dict) -> list[dict]:
         verdict    = classify(error_text)
 
         if verdict != "fix":
-            log.info(f"[{name}] skipped ({verdict}): {error_text[:80]}")
+            log.info(f"[{name}] skipped ({verdict})")
             continue
 
         registry = BOT_REGISTRY.get(name)
