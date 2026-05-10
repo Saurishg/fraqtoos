@@ -278,6 +278,23 @@ def run_full(force_alert: bool = False) -> dict:
 
     st.set("last_watchdog", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
+    # ── RuFlo auto-fixer ──────────────────────────────────────────────────────
+    # Spawn Claude Code agents to fix any code-level errors, then commit+push.
+    fixer_results = []
+    any_errors = any(b.get("errors") for b in snapshot["bots"])
+    if any_errors:
+        try:
+            from watchdog.ruflo_fixer import run_fixer, format_wa_summary
+            fixer_results = run_fixer(snapshot)
+            if fixer_results:
+                summary = format_wa_summary(fixer_results)
+                if summary:
+                    from core.notifier import send
+                    send(summary)
+                    log.info(f"RuFlo fixer sent: {len(fixer_results)} result(s)")
+        except Exception as _fe:
+            log.warning(f"ruflo_fixer error: {_fe}")
+
     critical_down = any(b["critical"] and not b["running"] for b in snapshot["bots"])
     ai_bad = any(k in analysis.upper() for k in ["CRITICAL", "WARNING"])
 
