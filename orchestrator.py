@@ -12,7 +12,8 @@ Schedule:
   08:00      Chia Health Monitor (rule-based daily summary)
   10:00      Utility Bill Bot
   12:00      Watchdog full check
-  20:00      Crypto Portfolio Bot
+  09:00      Crypto Portfolio Bot (Hive)
+  21:00      Crypto Portfolio Bot (Hive)
   22:00      BTC Strategy Bot
   23:00      Daily WhatsApp digest
 """
@@ -54,8 +55,8 @@ BOTS = {
     },
     "crypto_portfolio": {
         "name":    "Crypto Portfolio Bot",
-        "cmd":     "python3 crypto_portfolio.py",
-        "cwd":     "/home/work/portfolio_bot",
+        "cmd":     "node index.js --once",
+        "cwd":     "/home/work/Desktop/crypto",
         "timeout": 120,
         "retries": 1,
     },
@@ -158,7 +159,8 @@ schedule.every().day.at("07:00").do(morning_analysis)
 schedule.every().day.at("10:00").do(job, "utility_bill")
 schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("08:00").do(job, "chia_health")
-schedule.every().day.at("20:00").do(job, "crypto_portfolio")
+schedule.every().day.at("09:00").do(job, "crypto_portfolio")
+schedule.every().day.at("21:00").do(job, "crypto_portfolio")
 schedule.every().day.at("22:00").do(job, "crypto")
 schedule.every().day.at("23:00").do(send_daily_digest)
 
