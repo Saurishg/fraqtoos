@@ -39,28 +39,38 @@ def _parse_log(since_hours: int = 24) -> dict:
     if not LOG_PATH.exists():
         return {}
 
-    with open(LOG_PATH, errors="replace") as fh:
-        for line in fh:
-            ts_match = re.match(r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2})", line)
-            if not ts_match or ts_match.group(1) < cutoff_str:
-                continue
+    _LOG_SIZE_LIMIT = 100 * 1024 * 1024  # 100 MB
+    if LOG_PATH.stat().st_size > _LOG_SIZE_LIMIT:
+        raw = subprocess.run(
+            ["tail", "-n", "3000", str(LOG_PATH)],
+            capture_output=True, text=True
+        ).stdout
+        log_lines = raw.splitlines(keepends=True)
+    else:
+        with open(LOG_PATH, errors="replace") as fh:
+            log_lines = fh.readlines()
 
-            if "Exception fetching qualities" in line:
-                plot = re.search(r"/mnt/[^\s:]+\.plot", line)
-                prover_errors.append(plot.group(0) if plot else "unknown")
+    for line in log_lines:
+        ts_match = re.match(r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2})", line)
+        if not ts_match or ts_match.group(1) < cutoff_str:
+            continue
 
-            elif "Block validation:" in line:
-                m = re.search(r"Block validation: ([\d.]+)s", line)
-                if m and float(m.group(1)) >= VALIDATION_WARN_SEC:
-                    validation_spikes.append(float(m.group(1)))
+        if "Exception fetching qualities" in line:
+            plot = re.search(r"/mnt/[^\s:]+\.plot", line)
+            prover_errors.append(plot.group(0) if plot else "unknown")
 
-            elif "coin_store.*took" in line or ("took" in line and "coin_store" in line):
-                m = re.search(r"took ([\d.]+)s", line)
-                if m:
-                    coin_slow.append(float(m.group(1)))
+        elif "Block validation:" in line:
+            m = re.search(r"Block validation: ([\d.]+)s", line)
+            if m and float(m.group(1)) >= VALIDATION_WARN_SEC:
+                validation_spikes.append(float(m.group(1)))
 
-            elif "Error in pooling" in line:
-                pool_errors.append(line.strip())
+        elif "coin_store.*took" in line or ("took" in line and "coin_store" in line):
+            m = re.search(r"took ([\d.]+)s", line)
+            if m:
+                coin_slow.append(float(m.group(1)))
+
+        elif "Error in pooling" in line:
+            pool_errors.append(line.strip())
 
     return {
         "prover_errors": prover_errors,

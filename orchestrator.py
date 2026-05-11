@@ -111,10 +111,13 @@ def run_ai_agent(task: str):
     log.info(f"AI Agent: {task[:60]}")
     try:
         import subprocess
-        subprocess.Popen(
-            ["python3", "/home/work/gemma-agent/agent.py", "--model", "phi4", task],
-            env={**os.environ, "DISPLAY": ":0"}
-        )
+        log_path = f"/tmp/agent_{int(time.time())}.log"
+        with open(log_path, 'w') as lf:
+            subprocess.Popen(
+                ["python3", "/home/work/gemma-agent/agent.py", "--model", "phi4", task],
+                env={**os.environ, "DISPLAY": ":0"}, stdout=lf, stderr=lf
+            )
+        log.info(f"AI Agent started — output: {log_path}")
     except Exception as e:
         log.error(f"AI Agent launch failed: {e}")
 
@@ -123,12 +126,15 @@ def morning_analysis():
     log.info("AI Agent: morning analysis (smart router)")
     try:
         import subprocess
-        subprocess.Popen(
-            ["python3", "/home/work/gemma-agent/agent.py",
-             "Summarize overnight bot status: read /home/work/fraqtoos/logs/watchdog_latest.json "
-             "and write a 3-point morning action plan to /home/work/fraqtoos/logs/morning_plan.txt"],
-            env={**os.environ, "DISPLAY": ":0"}
-        )
+        log_path = f"/tmp/agent_{int(time.time())}.log"
+        with open(log_path, 'w') as lf:
+            subprocess.Popen(
+                ["python3", "/home/work/gemma-agent/agent.py",
+                 "Summarize overnight bot status: read /home/work/fraqtoos/logs/watchdog_latest.json "
+                 "and write a 3-point morning action plan to /home/work/fraqtoos/logs/morning_plan.txt"],
+                env={**os.environ, "DISPLAY": ":0"}, stdout=lf, stderr=lf
+            )
+        log.info(f"AI Agent started — output: {log_path}")
     except Exception as e:
         log.error(f"morning_analysis launch failed: {e}")
 

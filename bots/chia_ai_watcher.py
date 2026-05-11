@@ -191,7 +191,12 @@ def _is_safe_cmd(cmd: str) -> bool:
     if first_token == "sudo":
         parts = cmd.strip().split()
         first_token = parts[1].lower() if len(parts) > 1 else ""
-    return any(first_token.startswith(safe) for safe in SAFE_FIX_ALLOWLIST)
+    if not any(first_token.startswith(safe) for safe in SAFE_FIX_ALLOWLIST):
+        return False
+    # Reject shell chaining / piping — prevents prompt-injection multi-command attacks
+    if any(c in cmd for c in (';', '&&', '||', '|', '`', '$(')):
+        return False
+    return True
 
 
 def _run_fix(fix_cmd: str, fix_reason: str, issues: list[str]) -> str:

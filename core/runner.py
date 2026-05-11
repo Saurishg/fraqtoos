@@ -73,7 +73,7 @@ def run_bot(name: str, cmd: str, cwd: str,
     _bg("graphify update . 2>/dev/null", cwd)
     _bg(
         'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && { '
-        'git add -A && git diff --cached --quiet || '
+        'git add -u && git diff --cached --quiet || '
         'git commit -m "auto: bot run"; '
         'git push origin main >/dev/null 2>&1 || true; }',
         cwd
