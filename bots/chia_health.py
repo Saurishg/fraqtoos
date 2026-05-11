@@ -11,6 +11,7 @@ Checks:
 
 Sends WhatsApp alert if anything is critical, daily summary otherwise.
 """
+import os
 import re
 import subprocess
 from datetime import datetime, timedelta
@@ -21,6 +22,18 @@ EXPECTED_WIN_HOURS = 20          # from chia farm summary
 CRITICAL_GAP_MULTIPLIER = 3      # alert if gap > 3× expected (60h)
 VALIDATION_WARN_SEC = 10.0       # warn if block validation > 10s
 ERROR_SPIKE_THRESHOLD = 20       # alert if >20 prover errors in one day
+
+
+def _send_alert(msg: str) -> None:
+    """Send a WhatsApp alert using the shared sender."""
+    try:
+        subprocess.run(
+            ["python3", "/home/work/fraqtoos/shared/send_whatsapp.py",
+             os.getenv("WHATSAPP_RECIPIENT", "+919818187001"), msg],
+            timeout=60, env={**os.environ, "DISPLAY": ":0"}
+        )
+    except Exception as e:
+        print(f"WhatsApp alert failed: {e}")
 
 
 def _run(cmd: str) -> str:
@@ -179,7 +192,12 @@ def run() -> str:
     if alerts:
         lines.append("\n🚨 *ALERTS*: " + " | ".join(alerts))
 
-    return "\n".join(lines)
+    report = "\n".join(lines)
+
+    if "NOT FARMING" in report or "ERROR" in report or "0 plots" in report:
+        _send_alert(report)
+
+    return report
 
 
 if __name__ == "__main__":

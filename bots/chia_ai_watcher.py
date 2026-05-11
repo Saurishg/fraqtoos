@@ -220,15 +220,25 @@ def _run_fix(fix_cmd: str, fix_reason: str, issues: list[str]) -> str:
         return f"agent error: {e}"
 
 
+_FIX_LOG_MAX_LINES = 500
+
+
 def _append_fix_log(cmd: str, reason: str, result: str):
     FIX_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with open(FIX_LOG, "a") as fh:
-        fh.write(json.dumps({
-            "ts": datetime.now().isoformat(timespec="seconds"),
-            "cmd": cmd,
-            "reason": reason,
-            "result": result[:500],
-        }) + "\n")
+    new_entry = json.dumps({
+        "ts": datetime.now().isoformat(timespec="seconds"),
+        "cmd": cmd,
+        "reason": reason,
+        "result": result[:500],
+    })
+    existing: list[str] = []
+    if FIX_LOG.exists():
+        try:
+            existing = FIX_LOG.read_text(errors="replace").splitlines()
+        except Exception:
+            existing = []
+    lines = (existing + [new_entry])[-_FIX_LOG_MAX_LINES:]
+    FIX_LOG.write_text("\n".join(lines) + "\n")
 
 
 def run() -> str:
@@ -273,7 +283,6 @@ def run() -> str:
     }, indent=2))
 
     state["last_check"] = now_iso
-    _save_state(state)
 
     # ── WhatsApp alert on critical ───────────────────────────────────────────
     if severity == "critical":
@@ -290,7 +299,9 @@ def run() -> str:
                 msg += f"\n\n🔧 *Auto-fix applied:*\n`{fix_cmd}`\n{fix_result[:300]}"
             send_alert("Chia AI Watcher", msg)
             state["last_alerted"] = now_iso
-            _save_state(state)
+
+    # Single save after both last_check and last_alerted are updated — avoids two-write race
+    _save_state(state)
 
     # ── Console / orchestrator output ────────────────────────────────────────
     icon = {"ok": "✅", "warning": "⚠️", "critical": "🚨"}.get(severity, "❓")

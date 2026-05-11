@@ -7,11 +7,14 @@ Exit 0 = success, Exit 1 = failure.
 
 import sys
 import json
+import time
 import urllib.request
 import urllib.error
 
-WA_SERVICE = "http://127.0.0.1:3131"
-TIMEOUT    = 130  # seconds — allows for queue drain on startup
+WA_SERVICE  = "http://127.0.0.1:3131"
+TIMEOUT     = 130  # seconds per attempt — allows for queue drain on startup
+_MAX_TRIES  = 3
+_RETRY_WAIT = 5   # seconds between retries on URLError
 
 
 def send(phone: str, message: str) -> bool:
@@ -21,26 +24,32 @@ def send(phone: str, message: str) -> bool:
         return False
 
     payload = json.dumps({"phone": phone, "message": message}).encode()
-    req = urllib.request.Request(
-        f"{WA_SERVICE}/send",
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-            body = json.loads(resp.read())
-            if body.get("ok"):
-                print(f"[send_whatsapp] Sent to {phone}")
-                return True
-            print(f"[send_whatsapp] ERROR: {body.get('error')}", file=sys.stderr)
-            return False
-    except urllib.error.URLError as e:
-        print(f"[send_whatsapp] ERROR: wa-service unreachable — {e}", file=sys.stderr)
-        return False
-    except Exception as e:
-        print(f"[send_whatsapp] ERROR: {e}", file=sys.stderr)
-        return False
+
+    for attempt in range(1, _MAX_TRIES + 1):
+        req = urllib.request.Request(
+            f"{WA_SERVICE}/send",
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+                body = json.loads(resp.read())
+                if body.get("ok"):
+                    print(f"[send_whatsapp] Sent to {phone}")
+                    return True
+                print(f"[send_whatsapp] ERROR: {body.get('error')}", file=sys.stderr)
+                return False  # non-network error — no retry
+        except urllib.error.URLError as e:
+            print(f"[send_whatsapp] ERROR (attempt {attempt}/{_MAX_TRIES}): wa-service unreachable — {e}",
+                  file=sys.stderr)
+            if attempt < _MAX_TRIES:
+                time.sleep(_RETRY_WAIT)
+        except Exception as e:
+            print(f"[send_whatsapp] ERROR: {e}", file=sys.stderr)
+            return False  # non-URLError — no retry
+
+    return False
 
 
 if __name__ == "__main__":

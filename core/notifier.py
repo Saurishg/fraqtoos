@@ -10,8 +10,10 @@ WA_NUMBER  = os.getenv("WHATSAPP_RECIPIENT", "919818187001")
 LOCK_PATH  = "/tmp/fraqtoos_wa.lock"
 
 def send(message: str, phone: str = WA_NUMBER, retries: int = 2, max_wait: int = 60) -> bool:
+    """Send a WhatsApp message. Lock contention and send errors share the same attempt budget."""
     deadline = time.time() + max_wait
-    for attempt in range(retries + 1):
+    attempt = 0
+    while attempt <= retries:
         if time.time() > deadline:
             print(f"[notifier] TIMEOUT after {max_wait}s", file=sys.stderr)
             return False
@@ -28,18 +30,25 @@ def send(message: str, phone: str = WA_NUMBER, retries: int = 2, max_wait: int =
             lock_fd.close()
             if r.returncode == 0:
                 return True
+            attempt += 1
+            if attempt <= retries:
+                time.sleep(10)
         except BlockingIOError:
-            if lock_fd: lock_fd.close()
-            time.sleep(min(15, max(0, deadline - time.time())))
-            continue
+            if lock_fd:
+                lock_fd.close()
+            attempt += 1
+            wait = min(15, max(0, deadline - time.time()))
+            if wait > 0:
+                time.sleep(wait)
         except Exception as e:
             if lock_fd:
                 try: fcntl.flock(lock_fd, fcntl.LOCK_UN); lock_fd.close()
                 except Exception: pass
-            if attempt < retries:
+            attempt += 1
+            if attempt <= retries:
                 time.sleep(10)
             else:
-                print(f"[notifier] FAILED after {retries+1} attempts: {e}", file=sys.stderr)
+                print(f"[notifier] FAILED after {attempt} attempts: {e}", file=sys.stderr)
     return False
 
 def send_alert(title: str, body: str, phone: str = WA_NUMBER) -> bool:
