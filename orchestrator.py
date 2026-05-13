@@ -85,6 +85,10 @@ daily_results = []
 def job(key: str):
     import fcntl
     b = BOTS[key]
+    # Guard: skip if working directory doesn't exist
+    if not os.path.isdir(b["cwd"]):
+        log.error(f"↯ {b['name']} skipped — cwd not found: {b['cwd']}")
+        return
     lock_fd = None
     if b.get("firefox_lock"):
         lock_fd = open("/tmp/firefox.lock", "w")
