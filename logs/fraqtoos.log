@@ -2462,3 +2462,9 @@
 2026-05-14 02:40:22  watchdog          INFO      AI diagnosis: **State:** OK
 2026-05-14 02:49:36  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-14 02:49:43  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
+2026-05-14 02:50:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 03:20:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 03:50:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 04:20:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 04:51:02  runner            INFO      ✓ Chia AI Watcher (72s)
+2026-05-14 04:51:10  runner            INFO        ✎ context: Chia AI Watcher detected repeated 'GPU recompute failed' errors due to insuffici
