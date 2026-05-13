@@ -1,0 +1,2457 @@
+
+1. **Disk Usage (83%):**
+   - **Problem:** Disk space is nearing full capacity.
+   - **Fix:** Clean up unnecessary files or archive old data to free up dis
+2026-04-25 16:34:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 17:04:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 17:34:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 18:05:35  runner            INFO        ✎ context: The Selenium WebDriver failed due to an `InvalidSessionIdException`, indicating 
+2026-04-25 18:06:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 18:36:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 19:06:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 19:36:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 20:06:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 20:33:45  watchdog          INFO      Watchdog full check starting...
+2026-04-25 20:34:08  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage High (83%):**
+   - **Problem:** Disk space on `/dev/sdf2` is critically high at 83%, with only 287G free.
+   - **Fix:** Clean up unnecessar
+2026-04-25 20:36:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 21:06:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 21:36:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 22:00:32  runner            INFO      ✓ BTC Strategy Bot (16s)
+2026-04-25 22:00:37  runner            INFO        ✎ context: The BTC Strategy Bot completed successfully in 16 seconds but encountered a Futu
+2026-04-25 22:07:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 22:37:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 23:00:11  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-25 23:04:46  orchestrator      INFO      Daily digest sent.
+2026-04-25 23:07:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-25 23:37:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 00:07:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 00:34:22  watchdog          INFO      Watchdog full check starting...
+2026-04-26 00:34:41  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage (84%):**
+   - **Problem:** Disk space is critically high at 84%, which can lead to performance issues or failures.
+   - **Fix:** Clean up u
+2026-04-26 00:37:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 01:07:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 01:37:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 02:07:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 02:37:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 03:07:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 03:37:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 04:07:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 04:34:58  watchdog          INFO      Watchdog full check starting...
+2026-04-26 04:35:20  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage (84%):**
+   - **Problem:** Disk space on `/dev/sdf2` is at 84%, which could lead to performance issues or failures if it reaches full capac
+2026-04-26 04:38:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 05:08:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 05:38:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 06:00:48  runner            INFO      ✓ Portfolio Bot (22s)
+2026-04-26 06:00:54  runner            INFO        ✎ context: Portfolio Bot completed successfully in 22 seconds, but encountered an error sen
+2026-04-26 06:08:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 06:38:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 07:00:28  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-04-26 07:08:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 07:39:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 08:09:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 08:35:50  watchdog          INFO      Watchdog full check starting...
+2026-04-26 08:36:12  watchdog          INFO      AI diagnosis: **State:** CRITICAL
+
+### Problems and Fixes:
+
+1. **Disk Usage High (84%)**
+   - **Problem:** Disk space on `/dev/sdf2` is critically high at 84%.
+   - **Fix:** Clean up unnecessary files or move data 
+2026-04-26 08:39:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 09:10:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 09:40:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 10:00:07  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 1
+2026-04-26 10:00:07  runner            INFO        ↺ Retry 1/1: Utility Bill Bot
+2026-04-26 10:00:23  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 2
+2026-04-26 10:00:31  runner            INFO        ✎ context: The Utility Bill Bot failed to connect to the Gmail API due to an "invalid_grant
+2026-04-26 10:11:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 10:41:11  orchestrator      INFO      =======================================================
+2026-04-26 10:41:11  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-04-26 10:41:11  orchestrator      INFO        2026-04-26 10:41:11
+2026-04-26 10:41:11  orchestrator      INFO      =======================================================
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-04-26 10:41:11  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-04-26 11:11:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 11:41:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 12:00:16  watchdog          INFO      Watchdog full check starting...
+2026-04-26 12:00:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage (84%):**
+   - **Problem:** High disk usage on `/dev/sdf2`.
+   - **Fix:** Clean up unnecessary files or move data to another storage device.
+2026-04-26 12:11:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 12:41:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 13:11:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 13:41:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 14:11:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 14:41:11  watchdog          INFO      Watchdog full check starting...
+2026-04-26 14:41:34  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 84%, which is high and could lead to performance issues or failures if it continues to increase.
+   - *Fix*: Implement automated cleanup scr
+2026-04-26 14:42:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 15:12:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 15:42:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 16:12:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 16:42:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 17:12:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 17:42:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 18:12:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 18:42:07  watchdog          INFO      Watchdog full check starting...
+2026-04-26 18:42:26  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 84%, which is high and could lead to performance issues or failures if it continues to increase.
+   - *Fix*: Implement a cleanup script to r
+2026-04-26 18:43:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 19:13:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 19:43:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 20:13:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 20:43:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 21:13:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 21:43:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 22:00:09  runner            INFO      ✓ BTC Strategy Bot (8s)
+2026-04-26 22:00:18  runner            INFO        ✎ context: The BTC EMA5/13 Strategy backtest over two years yielded a 15.38% return with a 
+2026-04-26 22:13:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 22:42:50  watchdog          INFO      Watchdog full check starting...
+2026-04-26 22:43:12  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High (84%)**
+   - **Problem:** Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix:** Clean up unnecessary files or archive old data to free sp
+2026-04-26 22:44:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 23:00:03  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-26 23:04:35  orchestrator      INFO      Daily digest sent.
+2026-04-26 23:14:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-26 23:44:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 00:14:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 00:44:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 01:14:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 01:44:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 02:14:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 02:43:49  watchdog          INFO      Watchdog full check starting...
+2026-04-27 02:44:07  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 84%, which is high but not critical yet.
+   - *Fix*: Implement a cleanup script to remove unnecessary files and archive old logs.
+
+2. **RAM 
+2026-04-27 02:44:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 03:15:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 03:45:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 04:15:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 04:45:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 05:15:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 05:45:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 06:01:08  runner            INFO      ✓ Portfolio Bot (59s)
+2026-04-27 06:01:17  runner            INFO        ✎ context: Portfolio Bot completed its task in 59 seconds, reporting a total loss of Rs.-50
+2026-04-27 06:15:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 06:44:49  watchdog          INFO      Watchdog full check starting...
+2026-04-27 06:45:14  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 84%, which is high and could lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Implement automated cleanup scr
+2026-04-27 06:46:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 07:00:04  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-04-27 07:16:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 07:46:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 07:49:58  orchestrator      INFO      =======================================================
+2026-04-27 07:49:58  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-04-27 07:49:58  orchestrator      INFO        2026-04-27 07:49:58
+2026-04-27 07:49:58  orchestrator      INFO      =======================================================
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-04-27 07:49:58  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-04-27 08:20:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 08:50:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 09:15:15  orchestrator      INFO      =======================================================
+2026-04-27 09:15:15  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-04-27 09:15:15  orchestrator      INFO        2026-04-27 09:15:15
+2026-04-27 09:15:15  orchestrator      INFO      =======================================================
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-04-27 09:15:15  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-04-27 09:45:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 10:00:41  runner            INFO      ✓ Utility Bill Bot (23s)
+2026-04-27 10:01:05  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-04-27 10:15:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 10:45:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 11:15:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 11:45:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 12:00:12  watchdog          INFO      Watchdog full check starting...
+2026-04-27 12:00:30  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 84% on `/dev/sdf2`, which can lead to performance issues or failures if it reaches full capacity.
+  
+2026-04-27 12:15:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 12:45:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 13:15:22  watchdog          INFO      Watchdog full check starting...
+2026-04-27 13:15:36  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 84% on `/dev/sdf2`, risking performance issues or failures if it reaches full capacity.
+   - **Fix**
+2026-04-27 13:22:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 13:52:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 14:22:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 14:52:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 15:22:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 15:52:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 16:22:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 16:52:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 17:22:11  watchdog          INFO      Watchdog full check starting...
+2026-04-27 17:22:29  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-27 17:22:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 17:53:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 18:23:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 18:53:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 19:23:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 19:53:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 20:23:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 20:53:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 21:22:43  watchdog          INFO      Watchdog full check starting...
+2026-04-27 21:23:01  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-27 21:23:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 21:53:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 22:00:13  runner            INFO      ✓ BTC Strategy Bot (10s)
+2026-04-27 22:00:21  runner            INFO        ✎ context: The BTC EMA5/13 Strategy backtest over two years yielded a 14.84% return with a 
+2026-04-27 22:23:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 22:53:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 23:00:25  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-27 23:04:39  orchestrator      INFO      Daily digest sent.
+2026-04-27 23:24:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-27 23:54:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 00:24:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 00:54:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 01:23:18  watchdog          INFO      Watchdog full check starting...
+2026-04-28 01:23:50  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-28 01:24:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 01:54:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 02:24:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 02:54:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 03:24:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 03:54:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 04:24:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 04:54:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 05:24:05  watchdog          INFO      Watchdog full check starting...
+2026-04-28 05:24:21  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-28 05:24:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 05:54:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 06:00:48  runner            INFO      ✓ Portfolio Bot (24s)
+2026-04-28 06:00:55  runner            INFO        ✎ context: Portfolio Bot completed its task in 24 seconds, reporting a total loss of Rs.48,
+2026-04-28 06:24:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 06:54:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 07:00:28  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-04-28 07:25:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 07:55:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 08:25:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 08:55:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 09:24:37  watchdog          INFO      Watchdog full check starting...
+2026-04-28 09:24:55  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk is at 84% capacity, which can lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Implement a cleanup script to remove unnec
+2026-04-28 09:25:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 09:55:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 10:00:50  runner            INFO      ✓ Utility Bill Bot (23s)
+2026-04-28 10:00:57  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three messages with 
+2026-04-28 10:25:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 10:55:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 11:25:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 11:55:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 12:00:04  watchdog          INFO      Watchdog full check starting...
+2026-04-28 12:00:19  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-28 12:25:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 12:55:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 13:25:24  watchdog          INFO      Watchdog full check starting...
+2026-04-28 13:25:38  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Orchestrator Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to fre
+2026-04-28 13:26:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 13:56:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 14:26:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 14:56:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 15:26:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 15:56:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 16:26:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 16:56:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 17:25:53  watchdog          INFO      Watchdog full check starting...
+2026-04-28 17:26:10  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-28 17:26:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 17:56:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 18:26:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 18:56:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 19:26:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 19:56:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 20:26:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 20:56:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 21:26:25  watchdog          INFO      Watchdog full check starting...
+2026-04-28 21:26:42  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 84% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-28 21:27:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 21:57:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 22:00:24  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-04-28 22:00:30  runner            INFO        ✎ context: The BTC EMA5/13 strategy backtest over two years yielded a 16.65% total return w
+2026-04-28 22:27:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 22:57:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 23:00:03  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-28 23:04:05  orchestrator      INFO      Daily digest sent.
+2026-04-28 23:27:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-28 23:57:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 00:27:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 00:57:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 01:26:43  watchdog          INFO      Watchdog full check starting...
+2026-04-29 01:26:51  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 85%, which is high and could lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Implement a cleanup script to r
+2026-04-29 01:27:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 01:57:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 02:27:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 02:57:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 03:27:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 03:58:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 04:28:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 04:58:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 05:27:05  watchdog          INFO      Watchdog full check starting...
+2026-04-29 05:27:20  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-29 05:28:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 05:58:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 06:00:42  runner            INFO      ✓ Portfolio Bot (20s)
+2026-04-29 06:00:49  runner            INFO        ✎ context: Portfolio Bot completed its task in 20 seconds, reporting an overall loss of Rs.
+2026-04-29 06:28:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 06:58:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 07:00:23  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-04-29 07:28:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 07:58:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 08:28:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 08:59:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 09:27:32  watchdog          INFO      Watchdog full check starting...
+2026-04-29 09:27:47  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk is at 86% capacity, which can lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Implement automated cleanup scripts to rem
+2026-04-29 09:29:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 09:59:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 10:00:43  runner            INFO      ✓ Utility Bill Bot (23s)
+2026-04-29 10:00:50  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-04-29 10:29:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 10:59:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 11:29:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 11:59:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 12:00:27  watchdog          INFO      Watchdog full check starting...
+2026-04-29 12:00:39  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-29 12:29:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 12:59:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 13:28:15  watchdog          INFO      Watchdog full check starting...
+2026-04-29 13:28:23  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-29 13:29:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 13:59:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 14:29:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 14:59:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 15:30:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 16:00:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 16:30:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 17:00:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 17:28:37  watchdog          INFO      Watchdog full check starting...
+2026-04-29 17:28:54  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-29 17:30:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 18:00:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 18:30:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 19:00:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 19:30:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 20:00:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 20:30:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 21:00:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 21:29:09  watchdog          INFO      Watchdog full check starting...
+2026-04-29 21:29:20  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-29 21:30:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 22:00:33  runner            INFO      ✓ BTC Strategy Bot (11s)
+2026-04-29 22:00:44  runner            INFO        ✎ context: The BTC EMA5/13 Strategy backtest over two years yielded a 15.21% total return w
+2026-04-29 22:01:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 22:31:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 23:00:18  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-29 23:04:54  orchestrator      INFO      Daily digest sent.
+2026-04-29 23:05:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-29 23:35:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 00:05:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 00:35:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 01:05:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 01:29:32  watchdog          INFO      Watchdog full check starting...
+2026-04-30 01:30:17  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 86% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-30 01:35:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 02:05:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 02:35:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 03:05:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 03:35:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 04:05:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 04:35:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 05:06:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 05:30:32  watchdog          INFO      Watchdog full check starting...
+2026-04-30 05:31:07  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 92% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-30 05:31:07  watchdog          WARNING   Disk at 92% — alerting
+2026-04-30 05:36:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 06:00:32  runner            INFO      ✓ Portfolio Bot (23s)
+2026-04-30 06:00:43  runner            INFO        ✎ context: Portfolio Bot completed its task in 23 seconds, reporting a total loss of Rs.-38
+2026-04-30 06:06:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 06:36:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 07:00:17  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-04-30 07:06:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 07:36:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 08:15:35  orchestrator      INFO      =======================================================
+2026-04-30 08:15:35  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-04-30 08:15:35  orchestrator      INFO        2026-04-30 08:15:35
+2026-04-30 08:15:35  orchestrator      INFO      =======================================================
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-04-30 08:15:35  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-04-30 08:45:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 09:15:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 09:45:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 10:00:31  runner            INFO      ✓ Utility Bill Bot (19s)
+2026-04-30 10:00:57  runner            INFO        ✎ context: The bot checked Gmail for utility bills, found three matching messages with one 
+2026-04-30 10:15:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 10:45:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 11:16:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 11:46:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 12:00:04  watchdog          INFO      Watchdog full check starting...
+2026-04-30 12:00:11  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 92%, which is high and could lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Implement a cleanup script to r
+2026-04-30 12:00:11  watchdog          WARNING   Disk at 92% — alerting
+2026-04-30 12:15:42  watchdog          INFO      Watchdog full check starting...
+2026-04-30 12:15:51  watchdog          INFO      AI diagnosis: **Overall System State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 93%, which is high and could lead to performance issues or failures if it reaches ful
+2026-04-30 12:15:51  watchdog          WARNING   Disk at 93% — alerting
+2026-04-30 12:16:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 12:46:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 13:16:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 13:46:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 14:16:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 14:46:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 15:16:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 15:46:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 16:16:06  watchdog          INFO      Watchdog full check starting...
+2026-04-30 16:16:13  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk `/dev/sdf2` is at 99% capacity with only 32G free.
+   - *Fix*: Clean up unnecessary files or expand storage.
+
+2. **Orchestrator Bot**: Running and criti
+2026-04-30 16:16:13  watchdog          WARNING   Disk at 99% — alerting
+2026-04-30 16:16:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 16:46:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 17:16:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 17:46:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 18:09:22  orchestrator      INFO      =======================================================
+2026-04-30 18:09:22  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-04-30 18:09:22  orchestrator      INFO        2026-04-30 18:09:22
+2026-04-30 18:09:22  orchestrator      INFO      =======================================================
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-04-30 18:09:22  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-04-30 18:39:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 19:09:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 19:39:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 20:09:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 20:39:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 21:09:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 21:39:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 22:00:14  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-04-30 22:00:39  runner            INFO        ✎ context: The BTC EMA5/13 Strategy backtest over two years yielded a 15.60% return with a 
+2026-04-30 22:09:40  watchdog          INFO      Watchdog full check starting...
+2026-04-30 22:09:57  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 95% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-04-30 22:09:57  watchdog          WARNING   Disk at 95% — alerting
+2026-04-30 22:09:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 22:39:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 23:00:00  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-04-30 23:03:59  orchestrator      INFO      Daily digest sent.
+2026-04-30 23:10:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-04-30 23:40:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 00:10:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 00:40:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 01:10:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 01:40:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 02:10:11  watchdog          INFO      Watchdog full check starting...
+2026-05-01 02:10:30  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 95% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-05-01 02:10:30  watchdog          WARNING   Disk at 95% — alerting
+2026-05-01 02:10:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 02:40:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 03:10:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 03:40:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 04:10:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 04:40:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 05:10:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 05:40:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 06:00:38  runner            INFO      ✓ Portfolio Bot (24s)
+2026-05-01 06:00:55  runner            INFO        ✎ context: Portfolio Bot completed its task in 24 seconds, reporting a loss of Rs.-114,076 
+2026-05-01 06:10:56  watchdog          INFO      Watchdog full check starting...
+2026-05-01 06:11:11  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 95%, which can lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Clean up unnecessary files and consider archi
+2026-05-01 06:11:11  watchdog          WARNING   Disk at 95% — alerting
+2026-05-01 06:11:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 06:41:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 07:00:14  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-01 07:11:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 07:41:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 08:11:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 08:41:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 09:11:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 09:41:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 10:00:49  runner            INFO      ✓ Utility Bill Bot (25s)
+2026-05-01 10:01:22  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-05-01 10:11:22  watchdog          INFO      Watchdog full check starting...
+2026-05-01 10:11:36  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 95%, which can lead to performance issues or failures if it reaches full capacity.
+   - *Fix*: Clean up unnecessary files and consider archi
+2026-05-01 10:11:36  watchdog          WARNING   Disk at 95% — alerting
+2026-05-01 10:12:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 10:42:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 11:12:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 11:42:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 12:00:13  watchdog          INFO      Watchdog full check starting...
+2026-05-01 12:00:27  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High (95%)**
+   - **Problem:** Disk usage is at 95%, which can lead to performance issues or system failure.
+   - **Fix:** Clean up unneces
+2026-05-01 12:12:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 12:42:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 13:12:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 13:42:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 14:12:05  watchdog          INFO      Watchdog full check starting...
+2026-05-01 14:12:18  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 74% on `/dev/sdf2`.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-05-01 14:12:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 14:42:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 15:12:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 15:42:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 16:12:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 16:42:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 17:12:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 17:43:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 18:12:33  watchdog          INFO      Watchdog full check starting...
+2026-05-01 18:13:05  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High (74%)**
+   - **Problem:** Disk `/dev/sdf2` is at 74% capacity.
+   - **Fix:** Clean up unnecessary files or archive old logs to free sp
+2026-05-01 18:13:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 18:43:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 19:13:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 19:43:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 20:13:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 20:43:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 21:13:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 21:43:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 22:00:28  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-01 22:00:39  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-01 22:13:10  watchdog          INFO      Watchdog full check starting...
+2026-05-01 22:13:41  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High (74%)**
+   - **Problem:** The disk usage is at 74%, which could lead to performance issues if it continues to rise.
+   - **Fix:** Clea
+2026-05-01 22:14:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 22:44:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 23:00:13  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-01 23:04:57  orchestrator      INFO      Daily digest sent.
+2026-05-01 23:14:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-01 23:44:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 00:14:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 00:44:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 01:14:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 01:44:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 02:14:09  watchdog          INFO      Watchdog full check starting...
+2026-05-02 02:15:07  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 74% capacity.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+2. 
+2026-05-02 02:15:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 02:45:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 03:15:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 03:45:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 04:15:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 04:45:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 05:15:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 05:45:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 06:00:40  runner            INFO      ✓ Portfolio Bot (20s)
+2026-05-02 06:00:55  runner            INFO        ✎ context: Portfolio Bot completed its task, reporting a loss of Rs.-114,061 (-28.18%) on a
+2026-05-02 06:15:26  watchdog          INFO      Watchdog full check starting...
+2026-05-02 06:16:00  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Archive old logs and unnecessary files to free up space.
+
+2. **RAM Utilization**
+2026-05-02 06:16:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 06:46:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 07:00:03  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-02 07:16:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 07:46:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 08:16:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 08:46:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 09:16:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 09:46:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 10:00:32  runner            INFO      ✓ Utility Bill Bot (18s)
+2026-05-02 10:00:44  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-05-02 10:16:14  watchdog          INFO      Watchdog full check starting...
+2026-05-02 10:16:56  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Implement automated cleanup scripts to remove unnecessary files and archive old 
+2026-05-02 10:17:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 10:47:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 11:17:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 11:47:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 12:00:02  watchdog          INFO      Watchdog full check starting...
+2026-05-02 12:00:34  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage at 74% on `/dev/sdf2`.
+   - **Fix**: Archive or delete unnecessary files to free up space.
+
+2. **Memory Ut
+2026-05-02 12:17:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 12:47:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 13:17:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 13:47:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 14:17:12  watchdog          INFO      Watchdog full check starting...
+2026-05-02 14:17:36  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High (74%)**
+   - **Problem:** Disk space is nearing capacity, which can lead to performance issues.
+   - **Fix:** Clean up unnecessary fil
+2026-05-02 14:18:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 14:48:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 15:18:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 15:48:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 16:18:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 16:48:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 17:18:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 17:48:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 18:17:51  watchdog          INFO      Watchdog full check starting...
+2026-05-02 18:18:12  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage High**: 
+   - **Problem**: Disk `/dev/sdf2` is at 74% usage.
+   - **Fix**: Clean up unnecessary files or archive old logs to free space.
+
+2
+2026-05-02 18:18:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 18:48:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 19:18:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 19:48:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 20:18:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 20:48:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 21:18:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 21:48:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 22:00:34  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-02 22:00:42  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-02 22:18:13  watchdog          INFO      Watchdog full check starting...
+2026-05-02 22:18:28  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Archive or delete unnecessary files to free up space.
+
+2. **Memory Usage**: RAM 
+2026-05-02 22:18:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 22:49:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 23:00:01  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-02 23:04:13  orchestrator      INFO      Daily digest sent.
+2026-05-02 23:19:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-02 23:49:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 00:19:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 00:49:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 01:19:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 01:49:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 02:18:54  watchdog          INFO      Watchdog full check starting...
+2026-05-03 02:19:31  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 74% on `/dev/sdf2`.
+   - **Fix**: Clean up unnecessary files or archive old data to free up space.
+
+
+2026-05-03 02:20:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 02:50:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 03:20:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 03:50:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 04:20:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 04:50:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 05:20:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 05:50:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 06:00:34  runner            INFO      ✓ Portfolio Bot (20s)
+2026-05-03 06:00:42  runner            INFO        ✎ context: Portfolio Bot completed its task in 20 seconds, reporting a loss of Rs.-5,379 (-
+2026-05-03 06:19:43  watchdog          INFO      Watchdog full check starting...
+2026-05-03 06:20:00  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Archive old logs and remove unnecessary files to free up space.
+
+2. **RAM Utiliz
+2026-05-03 06:20:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 06:50:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 07:00:03  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-03 07:20:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 07:50:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 08:20:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 08:50:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 09:20:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 09:50:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 10:00:37  runner            INFO      ✓ Utility Bill Bot (23s)
+2026-05-03 10:00:43  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-05-03 10:20:14  watchdog          INFO      Watchdog full check starting...
+2026-05-03 10:20:31  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Archive old logs and unnecessary files to free up space.
+
+2. **RAM Utilization**
+2026-05-03 10:21:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 10:51:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 11:21:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 11:51:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 12:00:07  watchdog          INFO      Watchdog full check starting...
+2026-05-03 12:00:25  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Utilization**: 
+   - **Problem**: Disk usage at 74% on `/dev/sdf2`.
+   - **Fix**: Clean up unnecessary files or archive old data to free space.
+
+
+2026-05-03 12:21:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 12:51:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 13:21:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 13:51:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 14:20:33  watchdog          INFO      Watchdog full check starting...
+2026-05-03 14:20:49  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk `/dev/sdf2` is at 74% capacity.
+   - **Fix**: Archive or delete old data to free up space.
+
+2. **Orchestrator Bo
+2026-05-03 14:21:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 14:51:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 15:21:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 15:51:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 16:21:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 16:51:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 17:22:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 17:52:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 18:21:04  watchdog          INFO      Watchdog full check starting...
+2026-05-03 18:21:20  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Implement automated cleanup scripts to remove unnecessary files and archive old 
+2026-05-03 18:22:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 18:52:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 19:22:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 19:52:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 20:22:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 20:52:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 21:22:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 21:52:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 22:00:12  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-03 22:00:20  runner            INFO        ✎ context: The BTC EMA5/13 strategy backtest over two years yielded a 10.49% return with a 
+2026-05-03 22:21:21  watchdog          INFO      Watchdog full check starting...
+2026-05-03 22:21:36  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 74% on `/dev/sdf2`.
+   - **Fix**: Clean up unnecessary files or archive old data to free up space.
+
+
+2026-05-03 22:22:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 22:52:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 23:00:08  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-03 23:04:13  orchestrator      INFO      Daily digest sent.
+2026-05-03 23:22:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-03 23:52:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 00:22:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 00:52:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 01:22:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 01:52:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 02:21:54  watchdog          INFO      Watchdog full check starting...
+2026-05-04 02:22:12  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Disk Usage**: 
+   - **Problem**: Disk usage is at 74% on `/dev/sdf2`.
+   - **Fix**: Clean up unnecessary files or archive old data to free up space.
+
+
+2026-05-04 02:23:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 02:53:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 03:23:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 03:53:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 04:23:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 04:53:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 05:23:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 05:53:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 06:00:49  runner            INFO      ✓ Portfolio Bot (23s)
+2026-05-04 06:00:56  runner            INFO        ✎ context: Portfolio Bot completed its task in 23 seconds, reporting a loss of Rs.-114,061 
+2026-05-04 06:22:27  watchdog          INFO      Watchdog full check starting...
+2026-05-04 06:22:50  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Implement automated cleanup scripts to remove unnecessary files and archive old 
+2026-05-04 06:23:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 06:53:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 07:00:22  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-04 07:23:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 07:53:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 08:23:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 08:53:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 09:24:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 09:54:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 10:00:27  runner            INFO      ✓ Utility Bill Bot (24s)
+2026-05-04 10:00:30  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found all were reported, a
+2026-05-04 10:23:01  watchdog          INFO      Watchdog full check starting...
+2026-05-04 10:23:22  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk is at 74% capacity, which could lead to issues if it continues to fill up.
+   - *Fix*: Implement a cleanup script to remove unnecessary files and archiv
+2026-05-04 10:24:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 10:54:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 11:24:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 11:54:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 12:00:28  watchdog          INFO      Watchdog full check starting...
+2026-05-04 12:00:47  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Disk Usage**: The disk usage is at 74%, which is approaching a critical threshold.
+   - *Fix*: Implement automated cleanup scripts to remove unnecessary files and archive old 
+2026-05-04 12:18:59  orchestrator      INFO      =======================================================
+2026-05-04 12:18:59  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-04 12:18:59  orchestrator      INFO        2026-05-04 12:18:59
+2026-05-04 12:18:59  orchestrator      INFO      =======================================================
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-04 12:18:59  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-04 12:19:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 12:49:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 13:19:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 13:49:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 14:20:01  runner            INFO      ✓ Chia AI Watcher (54s)
+2026-05-04 14:20:02  runner            INFO        ✎ context: Chia AI detected peers sending invalid data, triggering bans for security on the
+2026-05-04 14:20:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 14:50:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 15:20:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 15:50:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 16:19:09  watchdog          INFO      Watchdog full check starting...
+2026-05-04 16:19:36  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage High (74%):**
+   - **Problem:** Disk usage is at 74%, which could lead to performance issues if it continues to rise.
+   - **Fix:** Clean u
+2026-05-04 16:20:48  runner            INFO      ✓ Chia AI Watcher (42s)
+2026-05-04 16:20:52  runner            INFO        ✎ context: Chia AI Watcher detected spam/malicious activity, block-fetching failures, and i
+2026-05-04 16:21:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 16:51:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 17:21:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 17:51:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 18:21:21  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-05-04 18:21:24  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 22 seconds, but there was a warnin
+2026-05-04 18:21:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 18:51:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 19:21:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 19:51:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 20:20:01  watchdog          INFO      Watchdog full check starting...
+2026-05-04 20:20:29  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (74%):**
+   - *Problem:* Disk usage is at 74%, which could lead to performance issues if it continues to rise.
+   - *Fix:* Clean up un
+2026-05-04 20:21:39  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-05-04 20:21:42  runner            INFO        ✎ context: The Chia AI Watcher detected a critical warning about incompatible versions of u
+2026-05-04 20:22:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 20:52:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 21:22:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 21:52:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 22:00:27  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-04 22:00:35  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-04 22:22:15  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-04 22:22:18  runner            INFO        ✎ context: Chia AI Watcher successfully completed its task in 8 seconds, identifying benign
+2026-05-04 22:22:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 22:52:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 23:00:20  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-04 23:04:56  orchestrator      INFO      Daily digest sent.
+2026-05-04 23:22:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-04 23:52:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 00:20:30  watchdog          INFO      Watchdog full check starting...
+2026-05-05 00:20:51  watchdog          INFO      AI diagnosis: **State:** OK
+
+**Analysis:**
+
+1. **System Resources:**
+   - Disk usage is at 74%, which is within acceptable limits.
+   - RAM utilization shows a healthy distribution with no immediate concerns.
+
+2. *
+2026-05-05 00:22:59  runner            INFO      ✓ Chia AI Watcher (38s)
+2026-05-05 00:23:01  runner            INFO        ✎ context: Chia AI Watcher identified unusual peer behavior and transaction rejection due t
+2026-05-05 00:23:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 00:53:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 01:23:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 01:53:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 02:23:15  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-05 02:23:16  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions, with a warning about i
+2026-05-05 02:23:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 02:53:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 03:23:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 03:53:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 04:20:53  watchdog          INFO      Watchdog full check starting...
+2026-05-05 04:21:14  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage High (74%):**
+   - **Problem:** Disk usage is at 74%, which could lead to performance issues if it continues to rise.
+   - **Fix:** Clean u
+2026-05-05 04:24:08  runner            INFO      ✓ Chia AI Watcher (24s)
+2026-05-05 04:24:10  runner            INFO        ✎ context: Chia AI Watcher completed in 24s, but issued a warning about incompatible versio
+2026-05-05 04:24:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 04:54:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 05:24:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 05:54:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 06:00:52  runner            INFO      ✓ Portfolio Bot (37s)
+2026-05-05 06:00:54  runner            INFO        ✎ context: Portfolio Bot reduced exposure to underperforming stocks like VEDL, reallocating
+2026-05-05 06:24:34  runner            INFO      ✓ Chia AI Watcher (9s)
+2026-05-05 06:24:38  runner            INFO        ✎ context: Chia AI Watcher succeeded in 9s, but encountered an exception due to the Gigahor
+2026-05-05 06:25:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 06:55:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 07:00:10  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-05 07:25:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 07:55:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 08:00:18  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-05 08:00:23  runner            INFO        ✎ context: Chia Health Monitor reports farming with plot issues, block validation delays, s
+2026-05-05 08:21:24  watchdog          INFO      Watchdog full check starting...
+2026-05-05 08:21:44  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Orchestrator Bot:**
+   - **Problem:** Encountered an exception during execution.
+   - **Fix:** Investigate the specific exception mentioned in the log
+2026-05-05 08:25:23  runner            INFO      ✓ Chia AI Watcher (39s)
+2026-05-05 08:25:25  runner            INFO        ✎ context: The Chia AI Watcher identified an issue with the Chia node and recommended resta
+2026-05-05 08:25:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 08:55:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 09:25:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 09:56:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 10:00:21  runner            INFO      ✓ Utility Bill Bot (20s)
+2026-05-05 10:00:27  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three matching messa
+2026-05-05 10:25:35  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-05 10:25:37  runner            INFO        ✎ context: Chia AI Watcher successfully identified an unsolicited transaction as benign in 
+2026-05-05 10:26:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 10:56:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 11:26:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 11:56:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 12:00:12  watchdog          INFO      Watchdog full check starting...
+2026-05-05 12:00:29  watchdog          INFO      AI diagnosis: **System Health: WARNING**
+
+1. **Orchestrator Bot**
+   - **State:** CRITICAL
+   - **Problem:** Encountered an exception during execution.
+   - **Fix:** Investigate the specific exception mentioned in 
+2026-05-05 12:22:01  watchdog          INFO      Watchdog full check starting...
+2026-05-05 12:22:17  watchdog          INFO      AI diagnosis: **System Health: WARNING**
+
+1. **Orchestrator Bot**
+   - **State:** CRITICAL
+   - **Problem:** Encountered an exception during execution.
+   - **Fix:** Investigate the specific exception mentioned in 
+2026-05-05 12:25:50  runner            INFO      ✓ Chia AI Watcher (3s)
+2026-05-05 12:25:53  runner            INFO        ✎ context: Chia AI Watcher succeeded in 3s, but encountered an exception due to Gigahorse g
+2026-05-05 12:26:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 12:56:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 13:26:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 13:56:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 14:26:09  runner            INFO      ✓ Chia AI Watcher (9s)
+2026-05-05 14:26:12  runner            INFO        ✎ context: Chia AI Watcher identified benign mempool updates due to the Gigahorse giga37 bu
+2026-05-05 14:26:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 14:56:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 15:26:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 15:56:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 16:22:19  watchdog          INFO      Watchdog full check starting...
+2026-05-05 16:22:27  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Issue:**
+   - **Problem:** Encountered an exception during execution.
+   - **Fix:** Investigate the specific exception mentioned in l
+2026-05-05 16:26:31  runner            INFO      ✓ Chia AI Watcher (4s)
+2026-05-05 16:26:32  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 4 seconds, confirming log entries are 
+2026-05-05 16:27:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 16:57:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 17:27:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 17:57:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 18:26:44  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-05 18:26:45  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 6 seconds, identifying benign slow-pat
+2026-05-05 18:27:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 18:57:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 19:27:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 19:57:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 20:22:52  watchdog          INFO      Watchdog full check starting...
+2026-05-05 20:22:59  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+1. **Orchestrator Bot**
+   - **Problem:** Encountered an exception during execution.
+   - **Fix:** Investigate the specific exception mentioned in logs.
+
+2. **Utility Bill Bot**
+  
+2026-05-05 20:27:09  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-05-05 20:27:10  runner            INFO        ✎ context: The Chia AI Watcher completed successfully, but there's a warning about incompat
+2026-05-05 20:27:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 20:57:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 21:27:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 21:57:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 22:00:25  runner            INFO      ✓ BTC Strategy Bot (10s)
+2026-05-05 22:00:31  runner            INFO        ✎ context: The BTC EMA5/13 strategy backtest over two years yielded a 9.72% return with a S
+2026-05-05 22:27:45  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-05 22:27:46  runner            INFO        ✎ context: Chia AI Watcher detected network issues with slow mempool updates and unsolicite
+2026-05-05 22:28:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 22:58:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 23:00:18  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-05 23:00:28  orchestrator      INFO      Daily digest sent.
+2026-05-05 23:28:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-05 23:58:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 00:23:02  watchdog          INFO      Watchdog full check starting...
+2026-05-06 00:23:12  watchdog          INFO      AI diagnosis: **State:** OK
+
+**Analysis:**
+
+1. **System Resources:**
+   - Disk usage is at 70%, which is within acceptable limits.
+   - RAM usage shows a healthy distribution with sufficient free memory available.
+
+2026-05-06 00:28:20  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-06 00:28:21  runner            INFO        ✎ context: Chia AI Watcher identified benign slow-path mempool updates caused by the Gigaho
+2026-05-06 00:28:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 00:58:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 01:28:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 01:58:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 02:28:43  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-05-06 02:28:43  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 15 seconds, but there was a warnin
+2026-05-06 02:29:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 02:59:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 03:29:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 03:59:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 04:23:20  watchdog          INFO      Watchdog full check starting...
+2026-05-06 04:23:32  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (70%):**
+   - Problem: Disk usage is at 70%, which could lead to issues if it continues to rise.
+   - Fix: Clean up unnecessary files 
+2026-05-06 04:29:08  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-06 04:29:09  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions from peers, with a warn
+2026-05-06 04:29:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 04:59:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 05:29:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 05:59:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 06:00:45  runner            INFO      ✓ Portfolio Bot (31s)
+2026-05-06 06:00:47  runner            INFO        ✎ context: Portfolio Bot successfully reduced exposure to underperforming stocks like VEDL,
+2026-05-06 06:29:25  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-06 06:29:26  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 6 seconds, identifying benign mempool 
+2026-05-06 06:29:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 06:59:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 07:00:28  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-06 07:29:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 08:00:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 08:00:06  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-06 08:00:11  runner            INFO        ✎ context: Chia Health Monitor reports successful farming with a recent win, minor prover e
+2026-05-06 08:23:42  watchdog          INFO      Watchdog full check starting...
+2026-05-06 08:23:52  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (70%):**
+   - *Problem:* Disk usage is at 70%, which could lead to performance issues if it continues to rise.
+   - *Fix:* Clean up un
+2026-05-06 08:29:58  runner            INFO      ✓ Chia AI Watcher (5s)
+2026-05-06 08:29:58  runner            INFO        ✎ context: Chia AI Watcher identified benign mempool update warnings, while noting outdated
+2026-05-06 08:30:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 09:00:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 09:30:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 10:00:31  runner            INFO      ✓ Utility Bill Bot (28s)
+2026-05-06 10:00:36  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found three messages with 
+2026-05-06 10:01:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 10:30:28  runner            INFO      ✓ Chia AI Watcher (20s)
+2026-05-06 10:30:31  runner            INFO        ✎ context: The Chia AI Watcher completed successfully, but there was a warning about incomp
+2026-05-06 10:31:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 11:01:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 11:31:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 12:00:06  watchdog          INFO      Watchdog full check starting...
+2026-05-06 12:00:15  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (70%):**
+   - *Problem:* Disk usage is at 70%, which could lead to performance issues if it continues to rise.
+   - *Fix:* Clean up un
+2026-05-06 12:01:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 12:24:16  watchdog          INFO      Watchdog full check starting...
+2026-05-06 12:24:27  watchdog          INFO      AI diagnosis: ### Bot Health Snapshot Analysis
+
+**Overall State:** WARNING
+
+#### Problems Identified:
+1. **High Disk Usage:**
+   - **Problem:** Disk usage is at 70%, risking performance issues.
+   - **Fix:** Clean 
+2026-05-06 12:31:04  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-06 12:31:07  runner            INFO        ✎ context: Chia AI Watcher identified benign mempool updates due to the Gigahorse giga37 bu
+2026-05-06 12:32:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 13:02:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 13:32:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 14:02:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 14:31:25  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-05-06 14:31:26  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 11 seconds, but there was a warnin
+2026-05-06 14:32:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 15:02:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 15:32:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 16:02:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 16:24:32  watchdog          INFO      Watchdog full check starting...
+2026-05-06 16:24:44  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Orchestrator Bot Warning:**
+   - **Problem:** The Orchestrator bot log indicates a warning message ("there was a warning") without further details.
+  
+2026-05-06 16:31:52  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-06 16:31:52  runner            INFO        ✎ context: Chia AI Watcher completed successfully, identifying all log lines as benign, but
+2026-05-06 16:32:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 17:02:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 17:32:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 18:02:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 18:32:07  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-06 18:32:08  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 7 seconds, but there was a warning
+2026-05-06 18:33:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 19:03:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 19:33:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 20:03:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 20:24:45  watchdog          INFO      Watchdog full check starting...
+2026-05-06 20:24:56  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (70%):**
+   - Problem: Disk usage is at 70%, which may lead to performance issues if it continues to rise.
+   - Fix: Clean up unnecess
+2026-05-06 20:32:40  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-05-06 20:32:41  runner            INFO        ✎ context: The 'Chia AI Watcher' completed its task in 14 seconds, but encountered a warnin
+2026-05-06 20:33:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 21:03:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 21:33:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 22:00:25  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-06 22:00:31  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-06 22:04:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 22:33:20  runner            INFO      ✓ Chia AI Watcher (17s)
+2026-05-06 22:33:21  runner            INFO        ✎ context: The bot 'Chia AI Watcher' completed its task in 17 seconds, encountering benign 
+2026-05-06 22:34:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 23:00:23  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-06 23:00:35  orchestrator      INFO      Daily digest sent.
+2026-05-06 23:04:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-06 23:34:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 00:04:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 00:25:10  watchdog          INFO      Watchdog full check starting...
+2026-05-07 00:25:21  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+### Problems and Fixes:
+
+1. **Disk Usage High (70%):**
+   - **Problem:** Disk usage is at 70%, which could lead to performance issues if it continues to rise.
+   - **Fix:** Clean u
+2026-05-07 00:33:29  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-07 00:33:30  runner            INFO        ✎ context: Chia AI Watcher completed successfully, identifying benign mempool and transacti
+2026-05-07 00:35:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 01:05:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 01:35:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 02:05:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 02:33:56  runner            INFO      ✓ Chia AI Watcher (20s)
+2026-05-07 02:33:57  runner            INFO        ✎ context: The Chia AI Watcher completed successfully, but there was a warning about incomp
+2026-05-07 02:35:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 03:05:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 03:35:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 04:05:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 04:25:34  watchdog          INFO      Watchdog full check starting...
+2026-05-07 04:25:45  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Disk Usage High (70%):**
+   - *Problem:* Disk usage is at 70%, which could lead to performance issues if it continues to rise.
+   - *Fix:* Clean up un
+2026-05-07 04:34:21  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-07 04:34:22  runner            INFO        ✎ context: Chia AI Watcher identified benign slow-path updates in the mempool due to Gigaho
+2026-05-07 04:35:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 05:05:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 05:35:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 06:00:58  runner            INFO      ✓ Portfolio Bot (30s)
+2026-05-07 06:01:00  runner            INFO        ✎ context: Portfolio Bot successfully executed its strategy in 30 seconds, advising to cut 
+2026-05-07 06:06:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 06:34:45  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-05-07 06:34:46  runner            INFO        ✎ context: The bot 'Chia AI Watcher' encountered an exception due to invalid plot size, rec
+2026-05-07 06:36:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 07:00:18  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-07 07:06:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 07:36:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 08:00:25  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-07 08:00:31  runner            INFO        ✎ context: Chia Health Monitor reports successful farming with minor issues, including prov
+2026-05-07 08:06:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 08:26:03  watchdog          INFO      Watchdog full check starting...
+2026-05-07 08:26:11  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** Encountered an exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in the
+2026-05-07 08:35:32  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-05-07 08:35:33  runner            INFO        ✎ context: The bot 'Chia AI Watcher' processed an unsolicited transaction and updated the m
+2026-05-07 08:36:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 09:06:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 09:36:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 10:00:45  runner            INFO      ✓ Utility Bill Bot (37s)
+2026-05-07 10:00:51  runner            INFO        ✎ context: The bot checked Gmail for utility bills, found three messages with one confirmed
+2026-05-07 10:06:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 10:36:02  runner            INFO      ✓ Chia AI Watcher (9s)
+2026-05-07 10:36:03  runner            INFO        ✎ context: The Chia AI Watcher succeeded in 9 seconds, but there was a warning about incomp
+2026-05-07 10:37:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 11:07:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 11:37:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 12:00:08  watchdog          INFO      Watchdog full check starting...
+2026-05-07 12:00:16  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** Encountered an exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in the
+2026-05-07 12:07:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 12:26:18  watchdog          INFO      Watchdog full check starting...
+2026-05-07 12:26:28  watchdog          INFO      AI diagnosis: **System State: WARNING**
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** Exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in Orchestrato
+2026-05-07 12:36:35  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-07 12:36:36  runner            INFO        ✎ context: Chia AI Watcher identified benign slow-path mempool updates due to the Gigahorse
+2026-05-07 12:37:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 13:07:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 13:37:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 14:07:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 14:36:53  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-05-07 14:36:54  runner            INFO        ✎ context: The Chia AI Watcher completed successfully, but there's a warning about incompat
+2026-05-07 14:37:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 15:07:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 15:37:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 16:07:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 16:26:30  watchdog          INFO      Watchdog full check starting...
+2026-05-07 16:26:39  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** Exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in Orchestrator logs 
+2026-05-07 16:37:23  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-07 16:37:24  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 13 seconds, but there was a warnin
+2026-05-07 16:38:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 17:08:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 17:38:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 18:08:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 18:37:39  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-07 18:37:39  runner            INFO        ✎ context: Chia AI Watcher completed in 8s, but encountered an exception due to the Gigahor
+2026-05-07 18:38:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 19:08:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 19:38:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 20:08:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 20:26:46  watchdog          INFO      Watchdog full check starting...
+2026-05-07 20:26:54  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** Exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in Orchestrator logs.
+2026-05-07 20:38:02  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-07 20:38:03  runner            INFO        ✎ context: Chia AI Watcher successfully identified and reported a benign peer ban due to su
+2026-05-07 20:39:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 21:09:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 21:39:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 22:00:17  runner            INFO      ✓ BTC Strategy Bot (10s)
+2026-05-07 22:00:24  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-07 22:09:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 22:38:38  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-07 22:38:39  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 13 seconds, but there was a warnin
+2026-05-07 22:39:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 23:00:10  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-07 23:00:21  orchestrator      INFO      Daily digest sent.
+2026-05-07 23:09:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-07 23:39:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 00:09:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 00:26:56  watchdog          INFO      Watchdog full check starting...
+2026-05-08 00:27:07  watchdog          INFO      AI diagnosis: **State: WARNING**
+
+### Problems and Fixes:
+
+1. **Orchestrator Bot Error**
+   - **Problem:** Exception related to "Chia AI Watcher."
+   - **Fix:** Investigate the specific error in Orchestrator logs.
+
+2026-05-08 00:39:14  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 00:39:15  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 6 seconds, identifying benign warnings
+2026-05-08 00:40:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 01:10:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 01:24:26  orchestrator      INFO      =======================================================
+2026-05-08 01:24:26  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-08 01:24:26  orchestrator      INFO        2026-05-08 01:24:26
+2026-05-08 01:24:26  orchestrator      INFO      =======================================================
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-08 01:24:26  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-08 01:24:32  watchdog          INFO      Watchdog full check starting...
+2026-05-08 01:24:41  watchdog          INFO      AI diagnosis: **State:** OK
+
+### Analysis:
+
+1. **Orchestrator Bot**
+   - **Status:** Running, not scheduled.
+   - **Criticality:** Yes.
+   - **Errors:** None detected in logs.
+   - **Conclusion:** No issues.
+
+2. **
+2026-05-08 01:26:00  watchdog          INFO      Watchdog full check starting...
+2026-05-08 01:26:00  orchestrator      INFO      =======================================================
+2026-05-08 01:26:00  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-08 01:26:00  orchestrator      INFO        2026-05-08 01:26:00
+2026-05-08 01:26:00  orchestrator      INFO      =======================================================
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-08 01:26:00  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-08 01:26:09  watchdog          INFO      AI diagnosis: **State:** OK
+
+**Analysis:**
+
+1. **Orchestrator Bot:**
+   - Status: Running, not scheduled.
+   - Critical: Yes.
+   - Errors: None detected in logs.
+   - **Conclusion:** No issues.
+
+2. **WhatsApp Servi
+2026-05-08 01:56:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 02:26:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 02:56:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 03:26:13  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 03:26:14  runner            INFO        ✎ context: Chia AI Watcher completed in 6s, encountering an exception due to the Gigahorse 
+2026-05-08 03:26:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 03:56:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 04:26:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 04:56:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 05:26:21  watchdog          INFO      Watchdog full check starting...
+2026-05-08 05:26:28  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Exception:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and 
+2026-05-08 05:26:37  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-08 05:26:37  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 7 seconds, but there was a warning
+2026-05-08 05:26:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 05:56:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 06:00:38  runner            INFO      ✓ Portfolio Bot (29s)
+2026-05-08 06:00:40  runner            INFO        ✎ context: Portfolio Bot completed its task in 29 seconds, advising on divestment from VEDL
+2026-05-08 06:26:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 06:56:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 07:00:13  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-08 07:26:52  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-08 07:26:52  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 7 seconds, noting benign mempool updat
+2026-05-08 07:26:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 07:56:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 08:00:29  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-08 08:00:35  runner            INFO        ✎ context: Chia Health Monitor reports 13,245 plots farming with delayed wins and prover er
+2026-05-08 08:27:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 08:57:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 09:26:40  watchdog          INFO      Watchdog full check starting...
+2026-05-08 09:26:49  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-08 09:27:27  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 09:27:27  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 6 seconds, but there was a warning
+2026-05-08 09:27:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 09:57:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 10:01:09  runner            INFO      ✓ Utility Bill Bot (40s)
+2026-05-08 10:01:14  runner            INFO        ✎ context: The bot checked Gmail for utility bills, found all were reported, and confirmed 
+2026-05-08 10:27:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 10:57:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 11:27:55  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 11:27:56  runner            INFO        ✎ context: Chia AI Watcher successfully identified and confirmed benign unsolicited transac
+2026-05-08 11:27:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 11:57:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 12:00:28  watchdog          INFO      Watchdog full check starting...
+2026-05-08 12:00:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-08 12:28:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 12:58:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 13:27:13  watchdog          INFO      Watchdog full check starting...
+2026-05-08 13:27:21  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-08 13:28:36  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-05-08 13:28:37  runner            INFO        ✎ context: Chia AI Watcher detected delays in plot quality lookups on the Chia blockchain, 
+2026-05-08 13:28:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 13:58:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 14:28:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 14:58:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 15:28:50  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 15:28:51  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 6 seconds, noting benign mempool updat
+2026-05-08 15:28:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 15:58:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 16:28:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 16:58:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 17:27:28  watchdog          INFO      Watchdog full check starting...
+2026-05-08 17:27:35  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-08 17:29:09  runner            INFO      ✓ Chia AI Watcher (2s)
+2026-05-08 17:29:10  runner            INFO        ✎ context: Chia AI Watcher successfully validated block time within limits, but encountered
+2026-05-08 17:29:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 17:59:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 18:29:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 18:59:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 19:29:23  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-08 19:29:25  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 6 seconds, noting benign slow-path mem
+2026-05-08 19:29:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 19:59:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 20:29:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 20:59:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 21:28:02  watchdog          INFO      Watchdog full check starting...
+2026-05-08 21:28:09  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-08 21:29:48  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-08 21:29:49  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions and mempool updates, wi
+2026-05-08 21:29:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 21:59:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 22:00:29  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-08 22:00:36  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-08 22:30:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 23:00:10  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-08 23:00:20  orchestrator      INFO      Daily digest sent.
+2026-05-08 23:00:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-08 23:30:05  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-08 23:30:06  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 13 seconds, but there was a warning ab
+2026-05-08 23:30:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 00:00:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 00:30:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 01:00:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 01:28:12  watchdog          INFO      Watchdog full check starting...
+2026-05-09 01:28:38  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 01:31:46  runner            INFO      ✓ Chia AI Watcher (97s)
+2026-05-09 01:31:51  runner            INFO        ✎ context: Chia AI Watcher identified prolonged plot quality lookup times and synchronizati
+2026-05-09 01:32:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 02:02:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 02:32:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 03:02:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 03:33:33  runner            INFO      ✓ Chia AI Watcher (95s)
+2026-05-09 03:33:37  runner            INFO        ✎ context: Chia AI Watcher identified long plot lookup times in the harvester, causing dela
+2026-05-09 03:34:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 04:04:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 04:34:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 05:04:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 05:28:43  watchdog          INFO      Watchdog full check starting...
+2026-05-09 05:29:19  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 05:34:00  runner            INFO      ✓ Chia AI Watcher (9s)
+2026-05-09 05:34:05  runner            INFO        ✎ context: Chia AI Watcher identified benign mempool updates caused by the Gigahorse giga37
+2026-05-09 05:34:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 06:00:46  runner            INFO      ✓ Portfolio Bot (40s)
+2026-05-09 06:00:54  runner            INFO        ✎ context: Portfolio Bot advised reallocating funds from underperforming VEDL to promising 
+2026-05-09 06:04:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 06:34:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 07:00:27  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-09 07:04:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 07:34:41  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-09 07:34:46  runner            INFO        ✎ context: Chia AI Watcher detected a benign WebSocket error due to no PONG response, with 
+2026-05-09 07:35:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 08:00:21  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-09 08:00:31  runner            INFO        ✎ context: Chia Health Monitor reports 13,245 plots farming with a delayed win by over thre
+2026-05-09 08:05:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 08:35:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 09:05:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 09:29:36  watchdog          INFO      Watchdog full check starting...
+2026-05-09 09:29:57  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 09:35:10  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-09 09:35:14  runner            INFO        ✎ context: Chia AI Watcher identified and reported a benign mempool update issue, with a wa
+2026-05-09 09:35:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 10:01:12  runner            INFO      ✓ Utility Bill Bot (57s)
+2026-05-09 10:01:22  runner            INFO        ✎ context: The bot checked Gmail for utility bills, found three messages with one confirmed
+2026-05-09 10:05:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 10:35:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 11:05:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 11:35:38  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-05-09 11:35:41  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 11 seconds, identifying benign mempool
+2026-05-09 11:36:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 12:00:13  watchdog          INFO      Watchdog full check starting...
+2026-05-09 12:00:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 12:06:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 12:36:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 13:06:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 13:30:14  watchdog          INFO      Watchdog full check starting...
+2026-05-09 13:30:38  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 13:36:57  runner            INFO      ✓ Chia AI Watcher (47s)
+2026-05-09 13:37:00  runner            INFO        ✎ context: Chia AI Watcher identified benign issues with Gigahorse giga37 and unsolicited t
+2026-05-09 13:37:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 14:07:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 14:37:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 15:07:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 15:37:19  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-09 15:37:23  runner            INFO        ✎ context: Chia AI Watcher identified benign mempool update and transaction warnings, with 
+2026-05-09 15:37:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 16:07:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 16:37:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 17:07:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 17:30:59  watchdog          INFO      Watchdog full check starting...
+2026-05-09 17:31:22  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and resolve the exception 
+2026-05-09 17:37:35  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-09 17:37:38  runner            INFO        ✎ context: Chia AI Watcher successfully validated block time within limits, but encountered
+2026-05-09 17:38:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 18:08:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 18:38:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 19:08:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 19:37:57  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-09 19:38:01  runner            INFO        ✎ context: Chia AI Watcher detected an unsolicited transaction from a peer, identified as b
+2026-05-09 19:38:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 20:08:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 20:38:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 21:08:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 21:31:38  watchdog          INFO      Watchdog full check starting...
+2026-05-09 21:32:02  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-09 21:38:16  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-09 21:38:20  runner            INFO        ✎ context: Chia AI Watcher successfully identified benign mempool update and transaction wa
+2026-05-09 21:38:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 22:00:31  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-09 22:00:41  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-09 22:09:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 22:39:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 23:00:14  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-09 23:00:48  orchestrator      INFO      Daily digest sent.
+2026-05-09 23:09:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-09 23:39:03  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-09 23:39:07  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 13 seconds, identifying benign mempool
+2026-05-09 23:39:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 00:09:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 00:39:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 01:09:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 01:32:13  watchdog          INFO      Watchdog full check starting...
+2026-05-10 01:32:49  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 01:40:21  runner            INFO      ✓ Chia AI Watcher (60s)
+2026-05-10 01:40:25  runner            INFO        ✎ context: The bot 'Chia AI Watcher' encountered benign exceptions due to invalid plot size
+2026-05-10 01:40:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 02:10:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 02:40:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 03:11:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 03:41:24  runner            INFO      ✓ Chia AI Watcher (51s)
+2026-05-10 03:41:27  runner            INFO        ✎ context: The Chia AI Watcher completed successfully in 51 seconds, but there was a warnin
+2026-05-10 03:41:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 04:11:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 04:42:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 05:12:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 05:33:04  watchdog          INFO      Watchdog full check starting...
+2026-05-10 05:33:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 05:41:50  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-10 05:41:56  runner            INFO        ✎ context: Chia AI Watcher identified benign unsolicited transactions due to Gigahorse giga
+2026-05-10 05:42:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 06:01:12  runner            INFO      ✓ Portfolio Bot (45s)
+2026-05-10 06:01:16  runner            INFO        ✎ context: Portfolio Bot completed its task in 45 seconds, advising reallocation from VEDL 
+2026-05-10 06:12:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 06:42:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 07:00:19  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-10 07:12:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 07:42:35  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-10 07:42:39  runner            INFO        ✎ context: Chia AI Watcher completed in 13s, encountering an exception due to invalid plot 
+2026-05-10 07:43:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 08:00:14  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-10 08:00:24  runner            INFO        ✎ context: Chia Health Monitor reports successful farming with 13,245 plots, a recent win 5
+2026-05-10 08:13:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 08:43:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 09:13:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 09:33:59  watchdog          INFO      Watchdog full check starting...
+2026-05-10 09:34:28  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 09:43:13  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-10 09:43:20  runner            INFO        ✎ context: Chia AI Watcher completed successfully in 13 seconds, encountering an exception 
+2026-05-10 09:43:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 10:00:57  runner            INFO      ✓ Utility Bill Bot (36s)
+2026-05-10 10:01:09  runner            INFO        ✎ context: Utility Bill Bot confirmed payments, identified new bills, and sent a WhatsApp m
+2026-05-10 10:14:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 10:44:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 11:14:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 11:43:57  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-10 11:44:01  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions from a peer, with a war
+2026-05-10 11:44:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 12:00:02  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:00:26  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 12:14:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 12:17:05  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:17:30  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 12:17:31  ruflo_fixer       INFO      [Orchestrator] skipped (skip): 2026-05-10 09:43:20  runner            INFO        ✎ context: Chia AI Watcher co
+2026-05-10 12:18:35  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:18:47  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 12:18:48  ruflo_fixer       INFO      [Orchestrator] skipped (skip): - **Problem:** The Orchestrator bot encountered an exception related to the Giga
+2026-05-10 12:19:19  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:19:42  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 12:19:43  ruflo_fixer       INFO      [Orchestrator] skipped (benign): 2026-05-10 12:18:48  ruflo_fixer       INFO      [Orchestrator] skipped (skip): 
+2026-05-10 12:20:39  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:20:58  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 12:21:45  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:22:07  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-10 12:22:37  watchdog          INFO      Watchdog full check starting...
+2026-05-10 12:23:19  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-10 12:45:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 13:15:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 13:34:33  watchdog          INFO      Watchdog full check starting...
+2026-05-10 13:34:40  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 13:44:32  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-05-10 13:44:32  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 19 seconds, issuing
+2026-05-10 13:45:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 14:15:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 14:45:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 15:15:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 15:44:59  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-05-10 15:45:03  runner            INFO        ✎ context: Chia AI Watcher identified insufficient GPU memory as the cause of 'out of memor
+2026-05-10 15:45:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 16:15:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 16:45:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 17:15:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 17:35:10  watchdog          INFO      Watchdog full check starting...
+2026-05-10 17:35:19  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and resolve the memory-rel
+2026-05-10 17:45:28  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-10 17:45:35  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a known Gigahorse giga37 bug
+2026-05-10 17:46:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 18:16:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 18:46:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 19:16:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 19:45:49  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-10 19:45:55  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
+2026-05-10 19:46:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 20:16:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 20:46:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 21:16:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 21:35:31  watchdog          INFO      Watchdog full check starting...
+2026-05-10 21:35:38  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-10 21:46:17  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-10 21:46:22  runner            INFO        ✎ context: The bot detected and confirmed that receiving multiple unsolicited transactions 
+2026-05-10 21:46:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 22:00:32  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-10 22:00:40  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-10 22:17:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 22:47:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 23:00:13  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-10 23:00:24  orchestrator      INFO      Daily digest sent.
+2026-05-10 23:17:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-10 23:46:36  runner            INFO      ✓ Chia AI Watcher (9s)
+2026-05-10 23:46:42  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 9 seconds, confirmi
+2026-05-10 23:47:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 00:17:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 00:47:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 01:17:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 01:35:48  watchdog          INFO      Watchdog full check starting...
+2026-05-11 01:35:59  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-11 01:47:15  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-05-11 01:47:21  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, issuing
+2026-05-11 01:47:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 02:17:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 02:47:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 03:17:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 03:47:34  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-11 03:47:40  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as 
+2026-05-11 03:48:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 04:18:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 04:48:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 05:18:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 05:36:16  watchdog          INFO      Watchdog full check starting...
+2026-05-11 05:36:27  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Error:**
+   - **Problem:** The Orchestrator bot encountered an exception related to the Gigahorse.
+   - **Fix:** Investigate and reso
+2026-05-11 05:48:11  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-11 05:48:17  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 12 seconds, issuing
+2026-05-11 05:48:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 06:00:44  runner            INFO      ✓ Portfolio Bot (26s)
+2026-05-11 06:00:49  runner            INFO        ✎ context: Portfolio Bot identified poor performance in VEDL, SHIVAMAUTO, and THINKINK stoc
+2026-05-11 06:18:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 06:48:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 07:00:23  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-11 07:18:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 07:48:37  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-11 07:48:43  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 12 seconds, confirm
+2026-05-11 07:49:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 08:00:18  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-11 08:00:25  runner            INFO        ✎ context: Chia Health Monitor detected a prover error spike with 594 errors, likely due to
+2026-05-11 08:19:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 08:49:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 09:19:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 09:36:30  watchdog          INFO      Watchdog full check starting...
+2026-05-11 09:36:43  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Issue:**
+   - **Problem:** The Orchestrator bot encountered a critical exception related to the Gigahorse, indicating potential insta
+2026-05-11 09:48:53  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-11 09:48:58  runner            INFO        ✎ context: The bot successfully identified that receiving an unsolicited transaction and a 
+2026-05-11 09:49:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 10:00:36  runner            INFO      ✓ Utility Bill Bot (8s)
+2026-05-11 10:00:41  runner            INFO        ✎ context: The Utility Bill Bot successfully checked Gmail for utility bills, confirming pa
+2026-05-11 10:20:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 10:50:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 11:20:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 11:49:40  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-05-11 11:49:47  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully restarted the `chia-farmer` service to re
+2026-05-11 11:50:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 12:00:17  watchdog          INFO      Watchdog full check starting...
+2026-05-11 12:00:27  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Critical Error**
+   - **Problem:** The Orchestrator bot encountered a critical exception related to the Gigahorse.
+   - **Fix:** Inve
+2026-05-11 12:20:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 12:50:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 13:20:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 13:37:04  watchdog          INFO      Watchdog full check starting...
+2026-05-11 13:37:14  watchdog          INFO      AI diagnosis: **State:** CRITICAL
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Critical Error**
+   - **Problem:** The Orchestrator bot encountered a critical exception related to the Gigahorse.
+   - **Fix:** Inv
+2026-05-11 13:50:22  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-11 13:50:28  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as harm
+2026-05-11 13:50:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 14:21:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 14:51:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 15:21:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 15:50:41  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-11 15:50:45  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as 
+2026-05-11 15:51:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 16:21:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 16:51:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 17:21:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 17:37:21  watchdog          INFO      Watchdog full check starting...
+2026-05-11 17:37:29  watchdog          INFO      AI diagnosis: **State:** WARNING
+
+**Problems and Fixes:**
+
+1. **Orchestrator Bot Critical Error**
+   - **Problem:** The Orchestrator bot encountered a critical exception related to the Gigahorse.
+   - **Fix:** Inve
+2026-05-11 17:51:21  runner            INFO      ✓ Chia AI Watcher (20s)
+2026-05-11 17:51:26  runner            INFO        ✎ context: Chia AI Watcher detected three benign mempool updates and one duplicate proof er
+2026-05-11 17:51:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 18:21:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 18:52:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 19:22:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 19:51:40  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-11 19:51:45  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign unsolicited transactions in
+2026-05-11 19:52:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 20:22:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 20:52:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 21:17:19  orchestrator      INFO      =======================================================
+2026-05-11 21:17:19  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-11 21:17:19  orchestrator      INFO        2026-05-11 21:17:19
+2026-05-11 21:17:19  orchestrator      INFO      =======================================================
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-11 21:17:19  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO      =======================================================
+2026-05-11 21:43:39  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-11 21:43:39  orchestrator      INFO        2026-05-11 21:43:39
+2026-05-11 21:43:39  orchestrator      INFO      =======================================================
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-11 21:43:39  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-11 22:00:19  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-11 22:00:26  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-11 22:13:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 22:20:25  orchestrator      INFO      =======================================================
+2026-05-11 22:20:25  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-11 22:20:25  orchestrator      INFO        2026-05-11 22:20:25
+2026-05-11 22:20:25  orchestrator      INFO      =======================================================
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-11 22:20:25  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO      =======================================================
+2026-05-11 22:30:27  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-11 22:30:27  orchestrator      INFO        2026-05-11 22:30:27
+2026-05-11 22:30:27  orchestrator      INFO      =======================================================
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-11 22:30:27  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO      =======================================================
+2026-05-11 22:34:00  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-11 22:34:00  orchestrator      INFO        2026-05-11 22:34:00
+2026-05-11 22:34:00  orchestrator      INFO      =======================================================
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto',), kwargs={})
+2026-05-11 22:34:00  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-11 22:34:18  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-11 22:34:23  runner            INFO        ✎ context: Chia Health Monitor reports farming with 13,245 plots, a win delay of 43h due to
+2026-05-11 22:34:32  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-11 22:34:38  runner            INFO        ✎ context: The bot 'Chia AI Watcher' successfully identified that slow-path mempool updates
+2026-05-11 22:35:29  runner            INFO      ✓ Portfolio Bot (24s)
+2026-05-11 22:35:35  runner            INFO        ✎ context: Portfolio Bot completed its task in 24 seconds, advising to trim underperforming
+2026-05-11 22:36:25  runner            INFO      ✓ Utility Bill Bot (9s)
+2026-05-11 22:36:32  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found four messages with t
+2026-05-11 23:00:02  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-11 23:00:14  orchestrator      INFO      Daily digest sent.
+2026-05-11 23:04:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-11 23:34:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 00:04:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 00:34:38  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-05-12 00:34:44  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully reported that Chia AI claimed 2.95 trillion c
+2026-05-12 00:34:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 01:04:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 01:34:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 02:04:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 02:34:21  watchdog          INFO      Watchdog full check starting...
+2026-05-12 02:34:30  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-12 02:35:09  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-12 02:35:15  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 8 seconds, issuing 
+2026-05-12 02:35:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 03:05:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 03:35:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 04:05:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 04:35:46  runner            INFO      ✓ Chia AI Watcher (24s)
+2026-05-12 04:35:51  runner            INFO        ✎ context: Chia AI Watcher encountered a memory error due to insufficient RAM and swap spac
+2026-05-12 04:35:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 05:05:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 05:35:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 06:00:46  runner            INFO      ✓ Portfolio Bot (20s)
+2026-05-12 06:00:52  runner            INFO        ✎ context: Portfolio Bot identified VEDL, SHIVAMAUTO, and TCS as major loss contributors, r
+2026-05-12 06:06:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 06:34:54  watchdog          INFO      Watchdog full check starting...
+2026-05-12 06:35:02  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-12 06:36:12  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-12 06:36:17  runner            INFO        ✎ context: The bot successfully identified that receiving unsolicited transactions and temp
+2026-05-12 06:36:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 07:00:18  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-12 07:00:18  orchestrator      INFO      AI Agent started — output: /tmp/agent_1778549418.log
+2026-05-12 07:06:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 07:36:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 08:00:26  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-12 08:00:33  runner            INFO        ✎ context: Chia Health Monitor reports farming with 13,245 plots, a win delay of 53 hours d
+2026-05-12 08:07:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 08:36:42  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-12 08:36:47  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed successfully in 7 seconds, encountering a benign
+2026-05-12 08:37:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 09:00:32  runner            INFO      ✓ Crypto Portfolio Bot (14s)
+2026-05-12 09:00:38  runner            INFO        ✎ context: Crypto Portfolio Bot reported a portfolio value of $16.90K with minor gains over
+2026-05-12 09:07:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 09:37:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 10:00:20  runner            INFO      ✓ Utility Bill Bot (9s)
+2026-05-12 10:00:25  runner            INFO        ✎ context: The Utility Bill Bot checked Gmail for utility bills, found four messages with t
+2026-05-12 10:07:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 10:35:28  watchdog          INFO      Watchdog full check starting...
+2026-05-12 10:35:40  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-12 10:37:20  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-12 10:37:26  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 8 seconds, issuing 
+2026-05-12 10:37:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 11:07:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 11:38:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 12:00:01  watchdog          INFO      Watchdog full check starting...
+2026-05-12 12:00:12  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-12 12:08:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 12:38:40  runner            INFO      ✓ Chia AI Watcher (54s)
+2026-05-12 12:38:45  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 54s, encountering exceptions from a known Gig
+2026-05-12 12:39:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 13:09:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 13:39:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 14:09:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 14:35:52  watchdog          INFO      Watchdog full check starting...
+2026-05-12 14:36:00  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-12 14:39:21  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-05-12 14:39:26  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully restarted the Chia farmer service to reso
+2026-05-12 14:39:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 15:09:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 15:39:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 16:10:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 16:39:38  runner            INFO      ✓ Chia AI Watcher (5s)
+2026-05-12 16:39:43  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully validated block times as being within acc
+2026-05-12 16:40:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 17:10:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 17:40:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 18:10:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 18:36:20  watchdog          INFO      Watchdog full check starting...
+2026-05-12 18:36:30  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-12 18:40:07  runner            INFO      ✓ Chia AI Watcher (5s)
+2026-05-12 18:40:12  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a beni
+2026-05-12 18:40:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 19:10:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 19:40:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 20:10:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 20:40:46  runner            INFO      ✓ Chia AI Watcher (27s)
+2026-05-12 20:40:51  runner            INFO        ✎ context: Chia AI Watcher identified duplicate proof submission and unsolicited transactio
+2026-05-12 20:41:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 21:00:32  runner            INFO      ✓ Crypto Portfolio Bot (10s)
+2026-05-12 21:00:38  runner            INFO        ✎ context: Crypto Portfolio Bot reported a $16.80K portfolio with minor declines, noting Bi
+2026-05-12 21:11:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 21:41:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 22:00:21  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-12 22:00:26  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-12 22:11:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 22:36:58  watchdog          INFO      Watchdog full check starting...
+2026-05-12 22:37:11  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-12 22:41:35  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-05-12 22:41:40  runner            INFO        ✎ context: Chia AI Watcher detected insufficient GPU memory causing 'out of memory' errors 
+2026-05-12 22:42:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 23:00:12  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-12 23:00:53  orchestrator      INFO      Daily digest sent.
+2026-05-12 23:12:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-12 23:42:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 00:12:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 00:42:06  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-13 00:42:12  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 7 seconds, issuing 
+2026-05-13 00:42:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 01:12:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 01:42:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 02:12:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 02:37:18  watchdog          INFO      Watchdog full check starting...
+2026-05-13 02:37:28  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-13 02:42:36  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-13 02:42:41  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow-path issue were harml
+2026-05-13 02:43:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 03:13:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 03:43:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 04:13:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 04:43:06  runner            INFO      ✓ Chia AI Watcher (18s)
+2026-05-13 04:43:12  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully restarted the Chia farmer service in 18 s
+2026-05-13 04:43:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 05:13:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 05:43:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 06:00:37  runner            INFO      ✓ Portfolio Bot (20s)
+2026-05-13 06:00:43  runner            INFO        ✎ context: Portfolio Bot adjusted holdings by reducing exposure to underperforming stocks l
+2026-05-13 06:14:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 06:37:45  watchdog          INFO      Watchdog full check starting...
+2026-05-13 06:37:55  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-13 06:43:33  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-13 06:43:38  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as 
+2026-05-13 06:44:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 07:00:09  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-13 07:00:09  orchestrator      INFO      AI Agent started — output: /tmp/agent_1778635809.log
+2026-05-13 07:14:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 07:44:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 08:00:17  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-13 08:00:22  runner            INFO        ✎ context: Chia Health Monitor reports 13,245 plots farming with no win in 78 hours due to 
+2026-05-13 08:14:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 08:44:05  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-05-13 08:44:10  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 11 seconds, confirm
+2026-05-13 08:45:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 09:00:22  runner            INFO      ✓ Crypto Portfolio Bot (11s)
+2026-05-13 09:00:27  runner            INFO        ✎ context: Crypto Portfolio Bot reported a total value of $16.93K with gains over the past 
+2026-05-13 09:15:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 09:45:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 10:00:09  runner            INFO      ✓ Utility Bill Bot (8s)
+2026-05-13 10:00:16  runner            INFO        ✎ context: The Utility Bill Bot successfully checked Gmail for utility bills, confirmed pay
+2026-05-13 10:15:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 10:38:18  watchdog          INFO      Watchdog full check starting...
+2026-05-13 10:38:29  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-13 10:44:48  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-05-13 10:44:54  runner            INFO        ✎ context: Chia AI Watcher detected five unsolicited transactions and a benign error relate
+2026-05-13 10:45:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 11:15:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 11:45:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 12:00:29  watchdog          INFO      Watchdog full check starting...
+2026-05-13 12:00:37  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-13 12:16:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 12:45:18  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-13 12:45:24  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified an unsolicited transaction as 
+2026-05-13 12:46:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 13:16:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 13:46:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 14:16:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 14:38:31  watchdog          INFO      Watchdog full check starting...
+2026-05-13 14:38:44  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-13 14:46:11  runner            INFO      ✓ Chia AI Watcher (26s)
+2026-05-13 14:46:16  runner            INFO        ✎ context: Chia AI Watcher identified and reported a duplicate proof submission for a signa
+2026-05-13 14:46:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 15:16:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 15:46:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 16:16:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 16:46:52  runner            INFO      ✓ Chia AI Watcher (29s)
+2026-05-13 16:46:59  runner            INFO        ✎ context: Chia AI Watcher detected three WebSocket errors due to no PONG response and one 
+2026-05-13 16:47:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 17:17:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 17:47:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 18:17:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 18:39:06  watchdog          INFO      Watchdog full check starting...
+2026-05-13 18:39:15  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-13 18:47:28  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-13 18:47:35  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 12 seconds, issuing
+2026-05-13 18:48:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 19:18:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 19:48:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 20:18:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 20:47:49  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-13 20:47:54  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully completed its task in 7 seconds, encountering
+2026-05-13 20:48:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 21:00:37  runner            INFO      ✓ Crypto Portfolio Bot (12s)
+2026-05-13 21:00:43  runner            INFO        ✎ context: Crypto Portfolio Bot reported a 1.4% drop in Bitcoin and slight decline in Ether
+2026-05-13 21:18:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 21:48:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 22:00:26  runner            INFO      ✓ BTC Strategy Bot (9s)
+2026-05-13 22:00:31  runner            INFO        ✎ context: The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strat
+2026-05-13 22:19:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 22:39:34  watchdog          INFO      Watchdog full check starting...
+2026-05-13 22:39:45  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-13 22:48:22  runner            INFO      ✓ Chia AI Watcher (5s)
+2026-05-13 22:48:28  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as 
+2026-05-13 22:49:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 23:00:28  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-13 23:00:40  orchestrator      INFO      Daily digest sent.
+2026-05-13 23:19:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-13 23:49:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 00:19:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 00:49:11  runner            INFO      ✓ Chia AI Watcher (24s)
+2026-05-14 00:49:17  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 24 seconds, confirm
+2026-05-14 00:49:48  watchdog          INFO      Watchdog lightweight: all critical processes OK

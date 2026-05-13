@@ -1,0 +1,126 @@
+{
+  "2026-04-24": {
+    "BTC Strategy Bot": "The 'BTC Strategy Bot' completed successfully in 16 seconds, but encountered warnings about incompatible library versions for `urllib3`, `chardet`, and missing `Axes3D` support due to multiple Matplot"
+  },
+  "2026-04-25": {
+    "Portfolio Bot": "Portfolio Bot completed successfully in 24 seconds, but encountered an error sending a WhatsApp message due to session creation issues with Selenium WebDriver.",
+    "Utility Bill Bot": "The Utility Bill Bot failed to connect to the Gmail API due to an \"invalid_grant\" error, preventing it from executing its task in once mode within 18 seconds.",
+    "Ads Launcher": "Ads Launcher v2: 2/2 campaigns drafted (\u20b9100/day total, AUTO targeting). Screenshots in logs/ads_launcher_*.png",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed successfully in 16 seconds but encountered a FutureWarning about deprecated DataFrame concatenation behavior and an Axes3D import warning due to multiple package version"
+  },
+  "2026-04-26": {
+    "Portfolio Bot": "Portfolio Bot completed successfully in 22 seconds, but encountered an error sending a WhatsApp message due to a session creation issue with Selenium WebDriver.",
+    "Utility Bill Bot": "The Utility Bill Bot failed to connect to the Gmail API due to an \"invalid_grant\" error, preventing it from executing its task in once mode within 18 seconds.",
+    "BTC Strategy Bot": "The BTC EMA5/13 Strategy backtest over two years yielded a 15.38% return with a Sharpe Ratio of 0.39, max drawdown of 23.17%, and final capital of $11,537.94 from 1019 trades."
+  },
+  "2026-04-27": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9357,607 | Current \u20b9309,653 | P&L \u20b9-47,953 (-13.4%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts specified, and determined no new BSES bill PDFs were received sin",
+    "BTC Strategy Bot": "The BTC EMA5/13 Strategy backtest over two years yielded a 14.84% return with a Sharpe Ratio of 0.38, max drawdown of 23.17%, and a win rate of 34.80%."
+  },
+  "2026-04-28": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9359,648 | P&L \u20b9-45,148 (-11.2%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three messages with one confirmed payment and two pending amounts, and determined no new BSES bill PDFs were received since the last check.",
+    "BTC Strategy Bot": "The BTC EMA5/13 strategy backtest over two years yielded a 16.65% total return with a Sharpe Ratio of 0.41, despite a max drawdown of 23.17%."
+  },
+  "2026-04-29": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9360,657 | P&L \u20b9-44,139 (-10.9%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts specified, and determined no new BSES bill PDFs were sent since t",
+    "BTC Strategy Bot": "The BTC EMA5/13 Strategy backtest over two years yielded a 15.21% total return with a Sharpe Ratio of 0.39, despite a maximum drawdown of 23.17%."
+  },
+  "2026-04-30": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9290,729 | P&L \u20b9-114,067 (-28.2%)",
+    "Utility Bill Bot": "The bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts specified, and determined no new BSES bill PDFs were received since the last c",
+    "BTC Strategy Bot": "The BTC EMA5/13 Strategy backtest over two years yielded a 15.60% return with a Sharpe Ratio of 0.39, despite a max drawdown of 23.17%, and resulted in final capital of $11,559.66 from 1019 trades."
+  },
+  "2026-05-01": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9290,735 | P&L \u20b9-114,061 (-28.2%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts specified, and determined no new BSES bill PDFs were received sin",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 20.19% total return with a final capital of $12,019.37, but encountered an error saving files due to a "
+  },
+  "2026-05-02": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9290,735 | P&L \u20b9-114,061 (-28.2%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts or due dates specified, and determined no new BSES bill PDFs were",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 13.55% total return with a final capital of $11,354.80, but encountered an error saving files due to a "
+  },
+  "2026-05-03": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9290,735 | P&L \u20b9-114,061 (-28.2%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one confirmed payment and two received bills without amounts specified, and determined no new BSES bill PDFs we",
+    "BTC Strategy Bot": "The BTC EMA5/13 strategy backtest over two years yielded a 10.49% return with a Sharpe Ratio of 0.32, but encountered a Git error when saving results."
+  },
+  "2026-05-04": {
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9293,410 | P&L \u20b9-111,386 (-27.5%)",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found all were reported, and confirmed no new BSES bill PDFs or emails since the last check.",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving an 8.86% total return with a final capital of $10,885.97, but encountered a Git error when saving results",
+    "Chia AI Watcher": "Chia AI Watcher successfully completed its task in 8 seconds, identifying benign unsolicited transaction updates despite a warning about outdated dependencies."
+  },
+  "2026-05-05": {
+    "Chia AI Watcher": "Chia AI Watcher detected network issues with slow mempool updates and unsolicited transactions, alongside outdated dependencies in the requests library.",
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9297,450 | P&L \u20b9-107,346 (-26.5%)",
+    "Chia Health Monitor": "Chia Health Monitor reports farming with plot issues, block validation delays, slow coin store writes, and pool submission errors.",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three matching messages with one payment confirmed and two without amounts or due dates, and determined no new BSES bill PDFs were available",
+    "BTC Strategy Bot": "The BTC EMA5/13 strategy backtest over two years yielded a 9.72% return with a Sharpe Ratio of 0.30, but encountered a fatal error saving the final state as 'HEAD' was not found."
+  },
+  "2026-05-06": {
+    "Chia AI Watcher": "The bot 'Chia AI Watcher' completed its task in 17 seconds, encountering benign WebSocket timeout and asynchronous operation errors, along with a RequestsDependencyWarning about incompatible urllib3 o",
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9305,350 | P&L \u20b9-99,446 (-24.6%)",
+    "Chia Health Monitor": "Chia Health Monitor reports successful farming with a recent win, minor prover errors due to a known bug, and two block validation spikes up to 15.7 seconds.\n\n(Note: The summary is concise and within ",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found three messages with one payment confirmed and two without amounts or due dates, and determined no new BSES bill PDFs were received since the",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving an 11.89% total return with a Sharpe Ratio of 0.34 and saving results as equity_curve.png and trade_log.c"
+  },
+  "2026-05-07": {
+    "Chia AI Watcher": "The Chia AI Watcher completed successfully in 13 seconds, but there was a warning about incompatible versions of urllib3 and chardet.",
+    "Portfolio Bot": "7 stocks | Invested \u20b9404,796 | Current \u20b9310,215 | P&L \u20b9-94,581 (-23.4%)",
+    "Chia Health Monitor": "Chia Health Monitor reports successful farming with minor issues, including prover errors due to a known bug and two pool errors related to duplicate proofs and late submissions.\n\n(Note: The summary i",
+    "Utility Bill Bot": "The bot checked Gmail for utility bills, found three messages with one confirmed payment and two pending amounts, and reported no new BSES bill PDFs since the last check.",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 13.35% total return with a final capital of $11,334.62, but encountered an error saving due to a 'bad r"
+  },
+  "2026-05-08": {
+    "Chia AI Watcher": "Chia AI Watcher completed successfully in 13 seconds, but there was a warning about incompatible versions of urllib3 and chardet.",
+    "Portfolio Bot": "Portfolio Bot completed its task in 29 seconds, advising on divestment from VEDL and SHIVAMAUTO while suggesting increased exposure to TMCV, and sent WhatsApp notifications before finishing successful",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,245 plots farming with delayed wins and prover errors due to a known bug, alongside pool submission issues.\n\n(Note: The summary is concise and within the character limit",
+    "Utility Bill Bot": "The bot checked Gmail for utility bills, found all were reported, and confirmed no new BSES bill PDFs or emails needed sending since the last check.",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 12.28% total return with a final capital of $11,227.86, but encountered an error saving due to 'bad rev"
+  },
+  "2026-05-09": {
+    "Chia AI Watcher": "Chia AI Watcher completed successfully in 13 seconds, identifying benign mempool updates and unsolicited transactions, with a warning about unsupported urllib3 or chardet versions.",
+    "Portfolio Bot": "Portfolio Bot advised reallocating funds from underperforming VEDL to promising TMCV, and successfully sent WhatsApp notifications to two contacts before completion.\n\n(Note: The warning about `urllib3",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,245 plots farming with a delayed win by over three times the expected time, two prover errors due to a known bug, normal block validation, and one pool error from duplic",
+    "Utility Bill Bot": "The bot checked Gmail for utility bills, found three messages with one confirmed payment and two pending amounts, and reported no new BSES bill PDFs since the last check.\n\n(Note: The summary is concis",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 12.36% total return with a final capital of $11,236.14, but encountered an error saving due to a 'bad r"
+  },
+  "2026-05-10": {
+    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 9 seconds, confirming that Chia AI is operational.",
+    "Portfolio Bot": "Portfolio Bot completed its task in 45 seconds, advising reallocation from VEDL stocks and notifying users via WhatsApp, despite a dependency warning.",
+    "Chia Health Monitor": "Chia Health Monitor reports successful farming with 13,245 plots, a recent win 5 hours ago, 4 prover errors due to a known bug, and normal block validation.\n\n(Note: The summary is concise and fits wit",
+    "Utility Bill Bot": "Utility Bill Bot confirmed payments, identified new bills, and sent a WhatsApp message, finding no new BSES bill PDFs since the last check.\n\n(Note: The summary is based on the provided output, which i",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 16.52% total return with a final capital of $11,652.36, but encountered an error saving files due to a "
+  },
+  "2026-05-11": {
+    "Chia AI Watcher": "The bot 'Chia AI Watcher' successfully identified that slow-path mempool updates in Chia AI are benign and expected within 6 seconds.",
+    "Portfolio Bot": "Portfolio Bot completed its task in 24 seconds, advising to trim underperforming stocks like VEDL and SHIVAMAUTO while increasing exposure to TMCV, then sent WhatsApp updates to two contacts.\n\n(Note: ",
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,245 plots, a win delay of 43h due to a known bug, 3 prover errors from 2 unique plots, normal block validation, and 4 pool errors related to duplicate proof",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found four messages with two confirmed payments and two received bills without amounts, and reported no new BSES emails since the last check.\n\n---",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 16.17% total return with a final capital of $11,617.12, but encountered an error saving results due to ",
+    "Crypto Portfolio Bot": "1 coins | Value \u20b97,731 | P&L \u20b9-769 (-9.0%)"
+  },
+  "2026-05-12": {
+    "Chia AI Watcher": "Chia AI Watcher detected insufficient GPU memory causing 'out of memory' errors during the Chia plotting process.",
+    "Portfolio Bot": "Portfolio Bot identified VEDL, SHIVAMAUTO, and TCS as major loss contributors, recommending rebalancing to improve portfolio health.\n\n(Note: The summary is concise and captures the key actions and rec",
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,245 plots, a win delay of 53 hours due to a known bug, one prover error, normal block validation, and three pool errors from duplicate proofs/late submissio",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a $16.80K portfolio with minor declines, noting Bitcoin and Ethereum's recent drops; it advises holding while monitoring BTC around $78,000 for support.\n\n(Note: The summa",
+    "Utility Bill Bot": "The Utility Bill Bot checked Gmail for utility bills, found four messages with two confirmed payments and two received bills without amounts, and noted no new BSES emails since the last check.\n\n(Note:",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 15.53% total return with a Sharpe Ratio of 0.39 and saving results as equity_curve.png and trade_log.cs"
+  },
+  "2026-05-13": {
+    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as harmless in 5 seconds.",
+    "Portfolio Bot": "Portfolio Bot adjusted holdings by reducing exposure to underperforming stocks like VEDL and reallocating funds to improve portfolio health.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,245 plots farming with no win in 78 hours due to pool errors and a known bug, exceeding the expected 19-hour interval by over three times.\n\n--- \n\nThis summary captures t",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a 1.4% drop in Bitcoin and slight decline in Ethereum, advising caution due to high fear levels and suggesting monitoring the $78,000 level for buying opportunities.\n\n(No",
+    "Utility Bill Bot": "The Utility Bill Bot successfully checked Gmail for utility bills, confirmed payments from Delhi Jal Board and Tata Neu, found no new BSES emails since the last check, and skipped sending updates via ",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 14.48% total return with a Sharpe Ratio of 0.38 and saving results as equity_curve.png and trade_log.cs"
+  },
+  "2026-05-14": {
+    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 24 seconds, confirming that Chia AI is operational."
+  }
+}

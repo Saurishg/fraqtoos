@@ -1,0 +1,47 @@
+{
+  "last_watchdog": "2026-05-13 22:39:46",
+  "runs": {
+    "Portfolio Bot": {
+      "last_run": "2026-05-13 06:00:37",
+      "success": true,
+      "duration": 20,
+      "last_output": "hose funds into more promising sectors or assets that align with current market trends.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-13 06:00:36,816  INFO  WhatsApp sent to +919818187001\n2026-05-13 06:00:37,005  INFO  WhatsApp sent to +919810238955\n2026-05-13 06:00:37,009  INFO  === Portfolio Bot Done ===",
+      "runs_today": 25
+    },
+    "Utility Bill Bot": {
+      "last_run": "2026-05-13 10:00:09",
+      "success": true,
+      "duration": 8,
+      "last_output": "und (due: Not specified)\n  \u2713 [bill_received] ebill.brpl@bsesdelhi.com: Amount not found (due: 02-05-2026)\n  \u2713 [payment_confirmed] Tata Neu: Amount not found\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 157253)\n\u2705 Done",
+      "runs_today": 25
+    },
+    "BTC Strategy Bot": {
+      "last_run": "2026-05-13 22:00:26",
+      "success": true,
+      "duration": 9,
+      "last_output": "  14.48%\n  Sharpe Ratio:         0.38\n  Max Drawdown:        23.17%\n  Win Rate:            34.97%\n  Profit Factor:        1.03\n  Total Trades:         1018\n  Final Capital:  $   11,448.44\n=============================================\nSaved: equity_curve.png + trade_log.csv\nfatal: bad revision 'HEAD'",
+      "runs_today": 24
+    },
+    "Chia AI Watcher": {
+      "last_run": "2026-05-14 00:49:11",
+      "success": true,
+      "duration": 24,
+      "last_output": "\u2705 Chia AI (ok):",
+      "runs_today": 113
+    },
+    "Chia Health Monitor": {
+      "last_run": "2026-05-13 08:00:17",
+      "success": true,
+      "duration": 4,
+      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13245 plots\n\ud83d\udea8 Last win: 78h ago (expected 19h)\n\u2705 Prover errors: 3 (2 unique plots) [known giga37 bug]\n\u2705 Block validation: normal\n\u26a0\ufe0f Pool errors: 4 (dup proofs / late submissions)\n\n\ud83d\udea8 *ALERTS*: No win in 78h (>3\u00d7 expected)",
+      "runs_today": 10
+    },
+    "Crypto Portfolio Bot": {
+      "last_run": "2026-05-13 21:00:37",
+      "success": true,
+      "duration": 12,
+      "last_output": "ound these levels before making further moves.\n\n**Actionable Insight:** Hold and monitor the $78,000 level closely for potential buying opportunities if BTC stabilizes or rebounds.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 4
+    }
+  }
+}
