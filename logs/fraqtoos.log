@@ -2457,3 +2457,8 @@
 2026-05-14 00:49:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-14 01:19:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-14 01:49:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 02:19:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 02:39:54  watchdog          INFO      Watchdog full check starting...
+2026-05-14 02:40:22  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-14 02:49:36  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-14 02:49:43  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
