@@ -1,12 +1,12 @@
 {
-  "last_watchdog": "2026-05-14 02:40:23",
+  "last_watchdog": "2026-05-14 06:40:51",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-05-13 06:00:37",
+      "last_run": "2026-05-14 06:00:46",
       "success": true,
-      "duration": 20,
-      "last_output": "hose funds into more promising sectors or assets that align with current market trends.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-13 06:00:36,816  INFO  WhatsApp sent to +919818187001\n2026-05-13 06:00:37,005  INFO  WhatsApp sent to +919810238955\n2026-05-13 06:00:37,009  INFO  === Portfolio Bot Done ===",
-      "runs_today": 25
+      "duration": 33,
+      "last_output": " or restructuring is necessary to mitigate further losses and improve portfolio health.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-14 06:00:46,551  INFO  WhatsApp sent to +919818187001\n2026-05-14 06:00:46,696  INFO  WhatsApp sent to +919810238955\n2026-05-14 06:00:46,700  INFO  === Portfolio Bot Done ===",
+      "runs_today": 26
     },
     "Utility Bill Bot": {
       "last_run": "2026-05-13 10:00:09",
@@ -23,11 +23,11 @@
       "runs_today": 24
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-14 04:51:02",
+      "last_run": "2026-05-14 06:52:29",
       "success": true,
-      "duration": 72,
+      "duration": 68,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Repeated 'GPU recompute failed' errors due to insufficient memory during Chia farming operation.\n  \u2022 {'issue': 'Insufficient RAM or VRAM for processing plots.', 'suggestion': 'Ensure at least 16GB of RAM is available and verify GPU resources.'}",
-      "runs_today": 115
+      "runs_today": 116
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-13 08:00:17",

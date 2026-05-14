@@ -121,7 +121,8 @@
     "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 14.48% total return with a Sharpe Ratio of 0.38 and saving results as equity_curve.png and trade_log.cs"
   },
   "2026-05-14": {
-    "Chia AI Watcher": "Chia AI Watcher detected repeated 'GPU recompute failed' errors due to insufficient memory during Chia farming, suggesting more RAM/VRAM be ensured.",
-    "BTC Strategy Bot": "BTC 2y backtest (EMA21/55+vol+trend): return 88.3%, Sharpe 0.78, MaxDD 29.5%, WR 43.6% on 454 trades, final $18,833"
+    "Chia AI Watcher": "Chia AI Watcher identified insufficient memory causing repeated GPU recompute failures during Chia farming, suggesting more RAM and GPU checks.",
+    "BTC Strategy Bot": "BTC 2y backtest (EMA21/55+vol+trend): return 88.3%, Sharpe 0.78, MaxDD 29.5%, WR 43.6% on 454 trades, final $18,833",
+    "Portfolio Bot": "Portfolio Bot identified VEDL as the major loss contributor at 52.72%, suggesting a reassessment of holdings to improve portfolio health."
   }
 }

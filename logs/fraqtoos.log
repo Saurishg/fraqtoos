@@ -2468,3 +2468,13 @@
 2026-05-14 04:20:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-14 04:51:02  runner            INFO      ✓ Chia AI Watcher (72s)
 2026-05-14 04:51:10  runner            INFO        ✎ context: Chia AI Watcher detected repeated 'GPU recompute failed' errors due to insuffici
+2026-05-14 04:51:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 05:21:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 05:51:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 06:00:46  runner            INFO      ✓ Portfolio Bot (33s)
+2026-05-14 06:00:54  runner            INFO        ✎ context: Portfolio Bot identified VEDL as the major loss contributor at 52.72%, suggestin
+2026-05-14 06:21:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 06:40:27  watchdog          INFO      Watchdog full check starting...
+2026-05-14 06:40:50  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-14 06:52:29  runner            INFO      ✓ Chia AI Watcher (68s)
+2026-05-14 06:52:36  runner            INFO        ✎ context: Chia AI Watcher identified insufficient memory causing repeated GPU recompute fa
