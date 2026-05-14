@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-14 12:00:45",
+  "last_watchdog": "2026-05-14 14:42:00",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-14 06:00:46",
@@ -23,11 +23,11 @@
       "runs_today": 24
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-14 12:54:41",
+      "last_run": "2026-05-14 14:55:28",
       "success": true,
-      "duration": 53,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): \n  \ud83d\udd27 Fix (sudo systemctl restart chia-farmer): To address the issue of duplicate proof submissions on your Chia node, follow these steps:\n\n1. **Restart the Farmer Serv",
-      "runs_today": 119
+      "duration": 27,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Encountering an 'out of memory' error while fetching plot qualities for Chia plots due to insufficient RAM or GPU memory.\n  \u2022 System running the Chia harvester lacks sufficient available RAM or GPU memory to process all requested operations simultaneously.",
+      "runs_today": 120
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-14 08:00:14",

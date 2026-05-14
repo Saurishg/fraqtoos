@@ -76,10 +76,6 @@
 2026-04-26 08:39:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-04-26 09:10:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-04-26 09:40:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
-2026-04-26 10:00:07  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 1
-2026-04-26 10:00:07  runner            INFO        ↺ Retry 1/1: Utility Bill Bot
-2026-04-26 10:00:23  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 2
-2026-04-26 10:00:31  runner            INFO        ✎ context: The Utility Bill Bot failed to connect to the Gmail API due to an "invalid_grant
 2026-04-26 10:11:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-04-26 10:41:11  orchestrator      INFO      =======================================================
 2026-04-26 10:41:11  orchestrator      INFO        FraqtoOS Orchestrator STARTED
