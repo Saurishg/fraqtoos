@@ -39,7 +39,7 @@ def ensure_ollama_up(attempts: int = 2) -> bool:
                 log.error(f"ollama restart failed: {e}")
             time.sleep(8)
     log.error("Ollama unreachable after restart attempt")
-    send_alert("FraqtoOS", "⚠ Ollama is DOWN and failed to auto-restart")
+    log.error("Ollama is DOWN and failed to auto-restart (WhatsApp suppressed)")
     return False
 
 # ── Bot registry ──────────────────────────────────────────────────────────────
@@ -223,7 +223,7 @@ def run_lightweight() -> bool:
         if bot["critical"] and not running:
             issues.append(f"CRITICAL: {bot['name']} is NOT running!")
     if issues:
-        send_alert("FraqtoOS Watchdog", "\n".join(issues))
+        log.warning("Watchdog issues (WhatsApp suppressed): " + "; ".join(issues))
         return False
     log.info("Watchdog lightweight: all critical processes OK")
     return True
@@ -310,9 +310,7 @@ def run_full(force_alert: bool = False) -> dict:
             if fixer_results:
                 summary = format_wa_summary(fixer_results)
                 if summary:
-                    from core.notifier import send
-                    send(summary)
-                    log.info(f"RuFlo fixer sent: {len(fixer_results)} result(s)")
+                    log.info(f"RuFlo fixer result (silent): {summary[:100]}")
         except Exception as _fe:
             log.warning(f"ruflo_fixer error: {_fe}")
 
@@ -341,7 +339,7 @@ def run_full(force_alert: bool = False) -> dict:
             for b in snapshot["bots"]
         ])
         extra = "\n⚠ SearXNG DOWN" if searx_down else ""
-        send_alert("FraqtoOS Watchdog", f"{bots_status}{extra}\n\n{analysis[:400]}")
+        log.warning(f"Watchdog alert suppressed (WATCHDOG_SILENT=1): {bots_status}")
     else:
         log.info("Watchdog: all systems healthy")
 

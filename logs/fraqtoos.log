@@ -2508,3 +2508,6 @@
 2026-05-14 12:25:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-14 12:54:41  runner            INFO      ✓ Chia AI Watcher (53s)
 2026-05-14 12:54:49  runner            INFO        ✎ context: The bot 'Chia AI Watcher' successfully identified and provided a fix for duplica
+2026-05-14 12:55:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 13:25:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 13:55:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
