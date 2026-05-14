@@ -2500,3 +2500,11 @@
 2026-05-14 10:41:28  watchdog          INFO      AI diagnosis: **State:** OK
 2026-05-14 10:53:40  runner            INFO      ✓ Chia AI Watcher (10s)
 2026-05-14 10:53:46  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified and reported a benign issue with u
+2026-05-14 10:54:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 11:24:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 11:54:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 12:00:20  watchdog          INFO      Watchdog full check starting...
+2026-05-14 12:00:44  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-14 12:25:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 12:54:41  runner            INFO      ✓ Chia AI Watcher (53s)
+2026-05-14 12:54:49  runner            INFO        ✎ context: The bot 'Chia AI Watcher' successfully identified and provided a fix for duplica
