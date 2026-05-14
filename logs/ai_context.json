@@ -123,6 +123,7 @@
   "2026-05-14": {
     "Chia AI Watcher": "Chia AI Watcher identified insufficient memory causing repeated GPU recompute failures during Chia farming, suggesting more RAM and GPU checks.",
     "BTC Strategy Bot": "BTC 2y backtest (EMA21/55+vol+trend): return 88.3%, Sharpe 0.78, MaxDD 29.5%, WR 43.6% on 454 trades, final $18,833",
-    "Portfolio Bot": "Portfolio Bot identified VEDL as the major loss contributor at 52.72%, suggesting a reassessment of holdings to improve portfolio health."
+    "Portfolio Bot": "Portfolio Bot identified VEDL as the major loss contributor at 52.72%, suggesting a reassessment of holdings to improve portfolio health.",
+    "Chia Health Monitor": "Chia Health Monitor reports successful farming with minor issues, including a known bug and pool submission errors.\n\n(Note: The summary is concise and within the character limit.)"
   }
 }
