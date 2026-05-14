@@ -2488,3 +2488,15 @@
 2026-05-14 08:23:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-14 08:53:06  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-14 08:53:12  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a beni
+2026-05-14 08:53:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 09:00:29  runner            INFO      ✓ Crypto Portfolio Bot (16s)
+2026-05-14 09:00:39  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a modest gain of $64.81 over the past 24 hours
+2026-05-14 09:24:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 09:54:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 10:00:23  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-05-14 10:00:30  runner            INFO        ✎ context: The bot checked Gmail for utility bills, found five matching messages with missi
+2026-05-14 10:24:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-14 10:41:03  watchdog          INFO      Watchdog full check starting...
+2026-05-14 10:41:28  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-14 10:53:40  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-05-14 10:53:46  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified and reported a benign issue with u
