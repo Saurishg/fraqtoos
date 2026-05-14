@@ -121,11 +121,11 @@
     "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 2-year backtest of the EMA5/13 strategy, achieving a 14.48% total return with a Sharpe Ratio of 0.38 and saving results as equity_curve.png and trade_log.cs"
   },
   "2026-05-14": {
-    "Chia AI Watcher": "Chia AI Watcher identified that mempool updates via the slow-path were harmless, linked to the Gigahorse giga37 bug.",
-    "BTC Strategy Bot": "BTC 2y backtest (EMA21/55+vol+trend): return 15.8%, Sharpe 0.70, MaxDD 13.0%, WR 48.0% on 100 trades, final $11,578",
+    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 11 seconds, confirming that Chia AI is operational.",
+    "BTC Strategy Bot": "The BTC Strategy Bot completed a successful 4-year backtest of the EMA21/55 strategy, achieving a total return of 15.51% with a Sharpe Ratio of 0.69 and saving results as equity_curve.png and trade_lo",
     "Portfolio Bot": "Portfolio Bot identified VEDL as the major loss contributor at 52.72%, suggesting a reassessment of holdings to improve portfolio health.",
     "Chia Health Monitor": "Chia Health Monitor reports successful farming with minor issues, including a known bug and pool submission errors.\n\n(Note: The summary is concise and within the character limit.)",
-    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a modest gain of $64.81 over the past 24 hours, with Bitcoin and Ethereum both dropping by 2.2%, while advising to hold positions for potential stabilization above ke",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a $17.03K portfolio value with gains of 0.2% over 12h and 1.3% over 24h, while BTC rose 2.2% to $80,988 amid improving market sentiment.\n\n(Note: The summary is based on t",
     "Utility Bill Bot": "The bot checked Gmail for utility bills, found five matching messages with missing amounts and due dates, confirmed all were reported, and detected no new BSES bill PDFs since the last check."
   }
 }
