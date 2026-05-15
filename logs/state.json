@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-15 06:43:36",
+  "last_watchdog": "2026-05-15 10:44:00",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-15 06:00:20",
@@ -9,11 +9,11 @@
       "runs_today": 27
     },
     "Utility Bill Bot": {
-      "last_run": "2026-05-14 10:00:23",
+      "last_run": "2026-05-15 10:00:44",
       "success": true,
-      "duration": 10,
-      "last_output": "l_received] ebill.brpl@bsesdelhi.com: Amount not found (due: Not specified)\n  \u2713 [bill_received] ebill.brpl@bsesdelhi.com: Amount not found (due: 28-05-2026)\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 157253)\n\u2705 Done",
-      "runs_today": 26
+      "duration": 18,
+      "last_output": "ebill.brpl@bsesdelhi.com: Rs.4098.01 (due: 28-05-2026)\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 158827)\n\n\ud83d\udcb3 Checking for new ICICI credit card bill PDFs...\n\ud83d\udced No new ICICI emails since last send (UID 136738)\n\u2705 Done",
+      "runs_today": 27
     },
     "BTC Strategy Bot": {
       "last_run": "2026-05-14 22:00:14",
@@ -23,11 +23,11 @@
       "runs_today": 25
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-15 08:59:04",
+      "last_run": "2026-05-15 10:59:40",
       "success": true,
-      "duration": 3,
-      "last_output": "\u2705 Chia AI (ok): Mempool updates using the slow-path are benign due to Gigahorse giga37 bug.",
-      "runs_today": 129
+      "duration": 8,
+      "last_output": "\u2705 Chia AI (ok): Updating the mempool using the slow-path is a known benign issue.",
+      "runs_today": 130
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-15 08:00:23",
@@ -37,11 +37,11 @@
       "runs_today": 12
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-05-14 21:00:25",
+      "last_run": "2026-05-15 09:00:17",
       "success": true,
-      "duration": 10,
-      "last_output": "r\" levels at 34/100. ETH follows with a 1.5% gain to $2,287.38. Portfolio value increased by 1.3% to $17.03K. Actionable insight: Hold for potential further gains as fear subsides.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 6
+      "duration": 8,
+      "last_output": " the market sentiment remains cautious at 'Fear' (43/100). **Actionable Insight:** Hold for now; watch BTC's resistance level around $82,000 closely for potential breakout signals.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 7
     }
   }
 }
