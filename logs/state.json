@@ -1,12 +1,12 @@
 {
-  "last_watchdog": "2026-05-15 02:43:00",
+  "last_watchdog": "2026-05-15 06:43:36",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-05-14 06:00:46",
+      "last_run": "2026-05-15 06:00:20",
       "success": true,
-      "duration": 33,
-      "last_output": " or restructuring is necessary to mitigate further losses and improve portfolio health.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-14 06:00:46,551  INFO  WhatsApp sent to +919818187001\n2026-05-14 06:00:46,696  INFO  WhatsApp sent to +919810238955\n2026-05-14 06:00:46,700  INFO  === Portfolio Bot Done ===",
-      "runs_today": 26
+      "duration": 18,
+      "last_output": "nds into more promising stocks like TMCV or explore other high-potential opportunities.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-15 06:00:19,927  INFO  WhatsApp sent to +919818187001\n2026-05-15 06:00:20,060  INFO  WhatsApp sent to +919810238955\n2026-05-15 06:00:20,063  INFO  === Portfolio Bot Done ===",
+      "runs_today": 27
     },
     "Utility Bill Bot": {
       "last_run": "2026-05-14 10:00:23",
@@ -23,11 +23,11 @@
       "runs_today": 25
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-15 04:58:23",
+      "last_run": "2026-05-15 06:58:43",
       "success": true,
       "duration": 6,
-      "last_output": "\u2705 Chia AI (ok): Updating the mempool using the slow-path is a known benign issue.",
-      "runs_today": 127
+      "last_output": "\u2705 Chia AI (ok):",
+      "runs_today": 128
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-14 08:00:14",
