@@ -129,10 +129,10 @@
     "Utility Bill Bot": "The bot checked Gmail for utility bills, found five matching messages with missing amounts and due dates, confirmed all were reported, and detected no new BSES bill PDFs since the last check."
   },
   "2026-05-15": {
-    "Chia AI Watcher": "Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a benign issue in 3 seconds.",
+    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully identified that mempool updates with slow-path and IP bans in Chia AI are harmless, completing the task in 7 seconds.",
     "Portfolio Bot": "Portfolio Bot identified VEDL as a major drag with a 50.45% decline and suggested reassessing its position for potential divestment to invest in promising stocks like TMCV.",
     "Chia Health Monitor": "Chia Health Monitor reports successful farming with a recent win, one prover error due to a known bug, normal block validation, and a pool error from duplicate or late proofs.",
-    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a slight decline in portfolio value, while Bitcoin and Ethereum showed gains; it advised holding due to cautious market sentiment.\n\n---\n\nThis summary captures the key",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a $248.33 loss (-1.5%) in 12s, with Bitcoin and Ethereum down by 2.3% and 3.2%, respectively; market sentiment is cautious at \"Fear\" level 43/100.\n\n(Note: The action of s",
     "Utility Bill Bot": "Utility Bill Bot processed BSES and ICICI bills, confirming payments and noting no new emails for both services.\n\n(Note: The summary assumes that \"Tata Neu\" is a payment method or service related to t"
   }
 }
