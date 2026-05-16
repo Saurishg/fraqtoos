@@ -2634,3 +2634,18 @@
 2026-05-16 23:43:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-17 00:13:48  runner            INFO      ✓ Chia AI Watcher (19s)
 2026-05-17 00:13:53  runner            INFO        ✎ context: Chia AI detected benign warnings and an error from duplicate proof submission, l
+2026-05-17 00:13:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 00:43:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 01:13:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 01:43:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 02:13:30  watchdog          INFO      Watchdog full check starting...
+2026-05-17 02:13:41  watchdog          INFO      AI diagnosis: **System Health Snapshot Analysis**
+2026-05-17 02:13:43  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 02:14:33  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-05-17 02:14:39  runner            INFO        ✎ context: Chia AI Watcher detected warnings of delayed transaction processing due to slow-
