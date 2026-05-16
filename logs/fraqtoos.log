@@ -2600,3 +2600,11 @@
 🟡 Chia AI Watcher
 2026-05-16 19:28:54  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-05-16 19:28:59  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, confirm
+2026-05-16 19:29:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-16 19:59:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-16 20:29:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-16 20:59:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-16 21:00:16  runner            INFO      ✓ Crypto Portfolio Bot (11s)
+2026-05-16 21:00:22  runner            INFO        ✎ context: Bitcoin and Ethereum both declined by ~1.5% over 24 hours, with HINT dropping 2.
+2026-05-16 21:29:30  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-16 21:29:35  runner            INFO        ✎ context: Chia AI Watcher confirmed that slow-path mempool updates in Chia AI are normal a
