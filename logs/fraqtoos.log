@@ -2649,3 +2649,9 @@
 🟡 Chia AI Watcher
 2026-05-17 02:14:33  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-05-17 02:14:39  runner            INFO        ✎ context: Chia AI Watcher detected warnings of delayed transaction processing due to slow-
+2026-05-17 02:14:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 02:44:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 03:14:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 03:44:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 04:15:01  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-05-17 04:15:07  runner            INFO        ✎ context: Chia AI Watcher confirmed normal operations with benign issues, including Gigaho
