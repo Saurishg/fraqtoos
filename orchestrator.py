@@ -14,7 +14,6 @@ Schedule:
   12:00      Watchdog full check
   09:00      Crypto Portfolio Bot (Hive)
   21:00      Crypto Portfolio Bot (Hive)
-  22:00      BTC Strategy Bot
   23:00      Daily WhatsApp digest
 """
 import schedule, time, sys, os
@@ -45,13 +44,6 @@ BOTS = {
         "cwd":     "/home/work/utility-bill-bot",
         "timeout": 300,
         "retries": 1,
-    },
-    "crypto": {
-        "name":    "BTC Strategy Bot",
-        "cmd":     "python3 btc_strategy.py",
-        "cwd":     "/home/work/crypto-trading-bot",
-        "timeout": 300,
-        "retries": 0,
     },
     "btc_live": {
         "name":    "BTC Live Bot",
@@ -178,7 +170,6 @@ schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("08:00").do(job, "chia_health")
 schedule.every().day.at("09:00").do(job, "crypto_portfolio")
 schedule.every().day.at("21:00").do(job, "crypto_portfolio")
-schedule.every().day.at("22:00").do(job, "crypto")
 schedule.every().day.at("23:00").do(send_daily_digest)
 
 # ── Entry point ───────────────────────────────────────────────────────────────
