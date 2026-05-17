@@ -146,6 +146,7 @@
   },
   "2026-05-17": {
     "Chia AI Watcher": "Chia AI Watcher detected inefficiencies in mempool updates due to high load or issues, completing the task in 24 seconds.",
-    "Portfolio Bot": "Portfolio Bot completed its task in 22 seconds, identifying VEDL as a major loss contributor and suggesting fund reallocation for better performance."
+    "Portfolio Bot": "Portfolio Bot completed its task in 22 seconds, identifying VEDL as a major loss contributor and suggesting fund reallocation for better performance.",
+    "Chia Health Monitor": "Chia Health Monitor reports successful farming with minor issues, including prover errors due to a known bug and pool submission errors."
   }
 }
