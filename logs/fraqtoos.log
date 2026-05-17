@@ -2655,3 +2655,20 @@
 2026-05-17 03:44:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-17 04:15:01  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-05-17 04:15:07  runner            INFO        ✎ context: Chia AI Watcher confirmed normal operations with benign issues, including Gigaho
+2026-05-17 04:15:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 04:45:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 05:15:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 05:45:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 06:00:36  runner            INFO      ✓ Portfolio Bot (22s)
+2026-05-17 06:00:41  runner            INFO        ✎ context: Portfolio Bot completed its task in 22 seconds, identifying VEDL as a major loss
+2026-05-17 06:14:12  watchdog          INFO      Watchdog full check starting...
+2026-05-17 06:14:21  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-17 06:14:22  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 06:15:46  runner            INFO      ✓ Chia AI Watcher (24s)
+2026-05-17 06:15:52  runner            INFO        ✎ context: Chia AI Watcher detected inefficiencies in mempool updates due to high load or i
