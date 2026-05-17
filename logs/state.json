@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-17 12:00:13",
+  "last_watchdog": "2026-05-17 14:15:07",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-17 06:00:36",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-17 12:17:43",
+      "last_run": "2026-05-17 14:18:15",
       "success": true,
-      "duration": 30,
-      "last_output": "mempool using the slow-path, which may suggest network latency or synchronization issues. Additionally, there are entries related to block validation times and costs.\n  \u2022 Frequent mentions of updating the mempool using the slow-path could indicate potential network latency or synchronization issues.",
-      "runs_today": 153
+      "duration": 8,
+      "last_output": "\u26a0\ufe0f Chia AI (warning):",
+      "runs_today": 154
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-17 08:00:32",

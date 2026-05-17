@@ -2716,3 +2716,18 @@
 🟡 Chia AI Watcher
 2026-05-17 12:17:43  runner            INFO      ✓ Chia AI Watcher (30s)
 2026-05-17 12:17:48  runner            INFO        ✎ context: Chia AI identified frequent slow-path mempool updates, suggesting possible netwo
+2026-05-17 12:17:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 12:47:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 13:17:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 13:47:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 14:14:55  watchdog          INFO      Watchdog full check starting...
+2026-05-17 14:15:06  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-17 14:15:07  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 14:18:15  runner            INFO      ✓ Chia AI Watcher (8s)
+2026-05-17 14:18:21  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 8 seconds, issuing 
