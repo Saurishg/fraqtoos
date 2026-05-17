@@ -2737,3 +2737,18 @@
 2026-05-17 15:48:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-17 16:18:35  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-05-17 16:18:40  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified that warnings about slow-path memp
+2026-05-17 16:18:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 16:48:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 17:18:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 17:48:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 18:15:17  watchdog          INFO      Watchdog full check starting...
+2026-05-17 18:15:30  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-17 18:15:31  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 18:19:07  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-17 18:19:13  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully validated block times as being within acc
