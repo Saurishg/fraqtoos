@@ -2775,3 +2775,11 @@
 🟡 Chia AI Watcher
 2026-05-17 22:20:04  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-05-17 22:20:09  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
+2026-05-17 22:20:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 22:50:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 23:00:11  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-17 23:00:20  orchestrator      INFO      Daily digest sent.
+2026-05-17 23:20:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 23:50:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 00:20:31  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-18 00:20:37  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
