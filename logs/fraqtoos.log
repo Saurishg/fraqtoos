@@ -2731,3 +2731,9 @@
 🟡 Chia AI Watcher
 2026-05-17 14:18:15  runner            INFO      ✓ Chia AI Watcher (8s)
 2026-05-17 14:18:21  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 8 seconds, issuing 
+2026-05-17 14:18:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 14:48:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 15:18:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 15:48:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 16:18:35  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-17 16:18:40  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified that warnings about slow-path memp
