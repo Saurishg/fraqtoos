@@ -2682,3 +2682,22 @@
 2026-05-17 08:00:38  runner            INFO        ✎ context: Chia Health Monitor reports successful farming with minor issues, including prov
 2026-05-17 08:16:17  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-05-17 08:16:21  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully completed its task in 7 seconds, encountering
+2026-05-17 08:16:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 08:46:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 09:00:34  runner            INFO      ✓ Crypto Portfolio Bot (10s)
+2026-05-17 09:00:41  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a slight increase in total value by $23.26 ove
+2026-05-17 09:16:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 09:46:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 10:00:26  runner            INFO      ✓ Utility Bill Bot (12s)
+2026-05-17 10:00:32  runner            INFO        ✎ context: Utility Bill Bot processed BSES and ICICI bills, confirming receipt of multiple 
+2026-05-17 10:14:33  watchdog          INFO      Watchdog full check starting...
+2026-05-17 10:14:44  watchdog          INFO      AI diagnosis: **State:** OK
+2026-05-17 10:14:46  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 10:16:53  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-17 10:16:58  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l

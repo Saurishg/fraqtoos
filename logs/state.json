@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-17 06:14:22",
+  "last_watchdog": "2026-05-17 10:14:46",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-17 06:00:36",
@@ -9,11 +9,11 @@
       "runs_today": 29
     },
     "Utility Bill Bot": {
-      "last_run": "2026-05-16 10:00:17",
+      "last_run": "2026-05-17 10:00:26",
       "success": true,
-      "duration": 11,
+      "duration": 12,
       "last_output": "ebill.brpl@bsesdelhi.com: Rs.4098.01 (due: 28-05-2026)\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 158827)\n\n\ud83d\udcb3 Checking for new ICICI credit card bill PDFs...\n\ud83d\udced No new ICICI emails since last send (UID 136738)\n\u2705 Done",
-      "runs_today": 28
+      "runs_today": 29
     },
     "BTC Strategy Bot": {
       "last_run": "2026-05-16 22:00:15",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-17 08:16:17",
+      "last_run": "2026-05-17 10:16:53",
       "success": true,
       "duration": 7,
-      "last_output": "\u2705 Chia AI (ok): WebSocket error due to no PONG received, likely benign unless frequent.",
-      "runs_today": 151
+      "last_output": "\u2705 Chia AI (ok): Mempool updates using the slow-path are benign due to Gigahorse giga37 bug.",
+      "runs_today": 152
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-17 08:00:32",
@@ -37,11 +37,11 @@
       "runs_today": 14
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-05-16 21:00:16",
+      "last_run": "2026-05-17 09:00:34",
       "success": true,
-      "duration": 11,
-      "last_output": "ightened caution in sentiment, it's prudent to hold your positions for now and watch closely for any reversal signals or support levels being tested.\n\n**Actionable Insight:** Hold.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 10
+      "duration": 10,
+      "last_output": "r index at 27/100. HINT and SAI also saw declines of 2.2% and 1.4%. Consider taking profit on ETH as it shows more significant movement; watch for stabilization in BTC around $77K.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 11
     }
   }
 }
