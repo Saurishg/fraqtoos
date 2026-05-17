@@ -2758,3 +2758,20 @@
 2026-05-17 19:49:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-17 20:19:49  runner            INFO      ✓ Chia AI Watcher (29s)
 2026-05-17 20:19:54  runner            INFO        ✎ context: Chia AI Watcher detected that the Chia node is inefficiently processing transact
+2026-05-17 20:19:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 20:49:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 21:00:36  runner            INFO      ✓ Crypto Portfolio Bot (10s)
+2026-05-17 21:00:43  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a slight increase in portfolio value, with Bit
+2026-05-17 21:20:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 21:50:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-17 22:15:47  watchdog          INFO      Watchdog full check starting...
+2026-05-17 22:15:56  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-17 22:15:57  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-17 22:20:04  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-05-17 22:20:09  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
