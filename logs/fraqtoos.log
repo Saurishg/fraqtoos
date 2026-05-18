@@ -2823,3 +2823,11 @@
 🟡 Chia AI Watcher
 2026-05-18 06:21:46  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-05-18 06:21:52  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully analyzed logs in 6 seconds, confirming al
+2026-05-18 06:22:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 06:52:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 07:00:24  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-18 07:00:24  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779067824.log
+2026-05-18 07:22:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 07:52:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 08:00:32  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-18 08:00:36  runner            INFO        ✎ context: Chia Health Monitor reports successful farming with a delayed win, one prover er
