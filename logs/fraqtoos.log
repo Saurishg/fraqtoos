@@ -2804,3 +2804,22 @@
 2026-05-18 03:51:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-18 04:21:19  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-05-18 04:21:25  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 6 seconds, confirmi
+2026-05-18 04:21:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 04:51:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 05:21:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 05:52:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 06:00:22  runner            INFO      ✓ Portfolio Bot (21s)
+2026-05-18 06:00:27  runner            INFO        ✎ context: Portfolio Bot identified top gainers and underperforming stocks like VEDL, sugge
+2026-05-18 06:16:28  watchdog          INFO      Watchdog full check starting...
+2026-05-18 06:16:38  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-18 06:16:40  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-18 06:16:40  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 32.3h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-18 06:21:46  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-05-18 06:21:52  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully analyzed logs in 6 seconds, confirming al
