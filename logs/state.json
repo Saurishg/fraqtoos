@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-18 16:24:45",
+      "last_run": "2026-05-18 20:32:41",
       "success": true,
-      "duration": 18,
-      "last_output": "ions are within expected parameters.\n  \u2022 {'message': 'updating the mempool using the slow-path', 'details': 'This is a known benign issue related to Gigahorse giga37.'}\n  \u2022 {'message': 'Block validation times', 'details': 'All block validations are under 60 seconds, which is normal post-fork load.'}",
-      "runs_today": 167
+      "duration": 120,
+      "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
+      "runs_today": 168
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-18 08:00:32",
