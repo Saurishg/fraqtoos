@@ -2963,3 +2963,11 @@
 2026-05-18 22:34:48  watchdog          INFO      Watchdog: all systems healthy
 2026-05-18 22:37:18  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-05-18 22:37:49  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-05-18 22:37:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 23:00:20  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-18 23:04:31  orchestrator      INFO      Daily digest sent.
+2026-05-18 23:08:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 23:38:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 00:08:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 00:39:35  runner            INFO      ✓ Chia AI Watcher (89s)
+2026-05-19 00:39:45  runner            INFO        ✎ context: Chia AI Watcher detected significant delays in the harvester's plot quality look
