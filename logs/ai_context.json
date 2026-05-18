@@ -152,10 +152,10 @@
     "Utility Bill Bot": "Utility Bill Bot processed BSES and ICICI bills, confirming receipt of multiple BSES bills and noting no new PDFs for either service since the last check.\n\n(Note: The summary is based on the provided "
   },
   "2026-05-18": {
-    "Chia AI Watcher": "The Chia AI Watcher encountered a read timeout error after 120 seconds when attempting to classify with phi4 on localhost port 11434.",
+    "Chia AI Watcher": "The Chia AI Watcher's phi4 classification attempt failed due to a read timeout after 120 seconds on localhost:11434.",
     "Portfolio Bot": "Portfolio Bot identified top gainers and underperforming stocks like VEDL, suggesting reallocation to improve portfolio performance.",
     "Chia Health Monitor": "Chia Health Monitor reports successful farming with a delayed win, one prover error due to a known bug, normal block validation, and a pool error from duplicate or late proofs.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a $17.20K total with gains of 3.3% in 12h and 3.7% in 24h, while Bitcoin and Ethereum declined but HINT gained 3.9%.",
+    "Crypto Portfolio Bot": "The \"Crypto Portfolio Bot\" failed due to a timeout occurring after 120 seconds of operation.",
     "Utility Bill Bot": "Utility Bill Bot checked Gmail, found and reported existing BSES and ICICI bills via WhatsApp, noting no new emails for either service since the last check.\n\n(Note: The summary assumes that \"reported\""
   }
 }

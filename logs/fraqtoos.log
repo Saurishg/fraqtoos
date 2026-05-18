@@ -2947,3 +2947,19 @@
 2026-05-18 20:00:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-18 20:32:41  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-05-18 20:33:08  runner            INFO        ✎ context: The Chia AI Watcher encountered a read timeout error after 120 seconds when atte
+2026-05-18 20:33:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 21:02:09  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-05-18 21:02:31  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-05-18 21:05:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 21:35:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 22:05:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-18 22:30:46  watchdog          INFO      Watchdog full check starting...
+2026-05-18 22:32:46  watchdog          WARNING   AI model phi4 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-18 22:34:46  watchdog          WARNING   AI model deepseek-r1:14b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-18 22:34:46  watchdog          WARNING   AI model qwen3:14b failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2026-05-18 22:34:46  watchdog          INFO      AI diagnosis: AI unavailable
+2026-05-18 22:34:48  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-05-18 22:34:48  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-18 22:34:48  watchdog          INFO      Watchdog: all systems healthy
+2026-05-18 22:37:18  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-05-18 22:37:49  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
