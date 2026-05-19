@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-19 12:00:52",
+  "last_watchdog": "2026-05-19 16:06:10",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-19 06:05:13",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-19 14:06:37",
+      "last_run": "2026-05-19 16:07:43",
       "success": true,
-      "duration": 60,
-      "last_output": "\u2705 Chia AI (ok): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Plot quality lookup took over 20 seconds multiple times, increasing risk of losing rewards.",
-      "runs_today": 175
+      "duration": 33,
+      "last_output": "}\n  \u2022 {'message': 'Block validation: 2.07s, pre_validation: 0.28s, CLVM: 0.27s, add-block: 1.70s, post-process: 0.10s, post-process2: 0.03s, cost: 256783245, percent full: 2.334% header_hash: ... height: 8746982', 'count': 1}\n  \u2022 {'message': 'Looking up hints for 84 spends took 3.9722s', 'count': 1}",
+      "runs_today": 176
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-19 08:00:24",

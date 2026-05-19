@@ -3217,3 +3217,22 @@
 2026-05-19 13:35:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-19 14:06:37  runner            INFO      ✓ Chia AI Watcher (60s)
 2026-05-19 14:06:46  runner            INFO        ✎ context: Chia AI Watcher identified excessive plot quality lookup times exceeding 20 seco
+2026-05-19 14:06:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 14:36:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 15:06:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 15:36:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 16:05:53  watchdog          INFO      Watchdog full check starting...
+2026-05-19 16:06:09  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-19 16:06:10  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-19 16:06:10  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-19 16:06:10  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 66.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-19 16:07:43  runner            INFO      ✓ Chia AI Watcher (33s)
+2026-05-19 16:07:52  runner            INFO        ✎ context: Chia AI Watcher identified benign log entries, including mempool updates and blo
