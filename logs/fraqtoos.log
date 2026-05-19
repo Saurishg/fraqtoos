@@ -3236,3 +3236,9 @@
 🟡 Chia AI Watcher
 2026-05-19 16:07:43  runner            INFO      ✓ Chia AI Watcher (33s)
 2026-05-19 16:07:52  runner            INFO        ✎ context: Chia AI Watcher identified benign log entries, including mempool updates and blo
+2026-05-19 16:07:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 16:37:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 17:07:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 17:37:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 18:08:28  runner            INFO      ✓ Chia AI Watcher (30s)
+2026-05-19 18:08:38  runner            INFO        ✎ context: Chia AI Watcher identified slow block validation and mempool updates with a dupl
