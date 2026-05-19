@@ -166,6 +166,6 @@
     "Utility Bill Bot": "Utility Bill Bot processed bills, found a new ICICI credit card bill but failed to send a WhatsApp message due to service unavailability."
   },
   "2026-05-20": {
-    "Chia AI Watcher": "Chia AI Watcher identified that mempool updates via the slow-path are harmless, linked to the Gigahorse giga37 bug."
+    "Chia AI Watcher": "Chia AI Watcher flagged that plot quality lookups exceeded 20 seconds, taking between 34.324 and 40.698 seconds for 25 instances."
   }
 }
