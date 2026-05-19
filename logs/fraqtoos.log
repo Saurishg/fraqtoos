@@ -3261,3 +3261,11 @@
 🟡 Chia AI Watcher
 2026-05-19 20:09:25  runner            INFO      ✓ Chia AI Watcher (25s)
 2026-05-19 20:09:34  runner            INFO        ✎ context: Chia AI Watcher detected two WebSocket errors and two unsolicited transactions w
+2026-05-19 20:09:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 20:39:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 21:02:07  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-05-19 21:02:15  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-05-19 21:09:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 21:39:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 22:10:10  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-19 22:10:19  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified and reported a benign unsolici
