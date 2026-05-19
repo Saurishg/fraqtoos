@@ -3269,3 +3269,26 @@
 2026-05-19 21:39:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-19 22:10:10  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-19 22:10:19  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified and reported a benign unsolici
+2026-05-19 22:10:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 22:40:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 23:00:22  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-19 23:02:47  orchestrator      INFO      Daily digest sent.
+2026-05-19 23:10:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 23:40:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 00:06:50  watchdog          INFO      Watchdog full check starting...
+2026-05-20 00:07:07  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-20 00:07:08  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-05-20 00:07:08  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-20 00:07:08  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-20 00:07:08  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-05-19 21:02:07  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 74.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-20 00:10:50  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-20 00:10:59  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully analyzed in 12s, confirming that mempool upda
