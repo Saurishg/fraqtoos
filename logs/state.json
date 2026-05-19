@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-19 16:06:10",
+  "last_watchdog": "2026-05-19 20:06:30",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-19 06:05:13",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-19 18:08:28",
+      "last_run": "2026-05-19 20:09:25",
       "success": true,
-      "duration": 30,
-      "last_output": "checkpoint(TRUNCATE);'\", 'fix_reason': 'Improves database performance by truncating the write-ahead log.'}\n  \u2022 {'message': 'updating the mempool using the slow-path', 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'message': \"Error in pooling: (4, 'Duplicate proof')\", 'fix_cmd': 'none', 'fix_reason': ''}",
-      "runs_today": 177
+      "duration": 25,
+      "last_output": "rning): Multiple WebSocket errors and unsolicited transactions received.\n  \u2022 {'issue': 'WebSocket Error: No PONG received after 30.0 seconds', 'count': 2, 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'issue': 'Received unsolicited transaction from peer', 'count': 2, 'fix_cmd': 'none', 'fix_reason': ''}",
+      "runs_today": 178
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-19 08:00:24",

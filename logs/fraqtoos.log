@@ -3242,3 +3242,22 @@
 2026-05-19 17:37:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-19 18:08:28  runner            INFO      ✓ Chia AI Watcher (30s)
 2026-05-19 18:08:38  runner            INFO        ✎ context: Chia AI Watcher identified slow block validation and mempool updates with a dupl
+2026-05-19 18:08:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 18:38:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 19:08:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 19:38:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-19 20:06:14  watchdog          INFO      Watchdog full check starting...
+2026-05-19 20:06:29  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-19 20:06:30  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-19 20:06:30  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-19 20:06:30  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 70.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-19 20:09:25  runner            INFO      ✓ Chia AI Watcher (25s)
+2026-05-19 20:09:34  runner            INFO        ✎ context: Chia AI Watcher detected two WebSocket errors and two unsolicited transactions w
