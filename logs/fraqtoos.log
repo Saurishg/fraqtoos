@@ -3292,3 +3292,9 @@
 🟡 Chia AI Watcher
 2026-05-20 00:10:50  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-20 00:10:59  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully analyzed in 12s, confirming that mempool upda
+2026-05-20 00:11:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 00:41:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 01:11:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 01:41:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 02:11:18  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-20 02:11:27  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via the slow-path are harmless, 
