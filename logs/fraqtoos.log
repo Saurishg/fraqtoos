@@ -3360,3 +3360,37 @@
 2026-05-20 10:02:33  runner            INFO        ✎ context: The bot confirmed payments for Tata Neu, found no new BSES or ICICI bills, and f
 2026-05-20 10:15:02  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-05-20 10:15:11  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 28 seconds, confirm
+2026-05-20 10:15:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 10:45:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 11:15:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 11:45:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 12:00:17  watchdog          INFO      Watchdog full check starting...
+2026-05-20 12:00:33  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-20 12:00:34  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-05-20 12:00:34  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-20 12:00:34  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-20 12:00:34  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-05-20 09:02:21  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 86.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-20 12:08:35  watchdog          INFO      Watchdog full check starting...
+2026-05-20 12:08:49  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-20 12:08:50  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-20 12:08:50  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-20 12:08:50  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 86.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-20 12:16:03  runner            INFO      ✓ Chia AI Watcher (42s)
+2026-05-20 12:16:11  runner            INFO        ✎ context: Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, risk
