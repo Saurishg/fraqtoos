@@ -173,6 +173,6 @@
     "Utility Bill Bot": "The bot confirmed payments for Tata Neu, found no new BSES or ICICI bills, and failed to send a WhatsApp message due to an unreachable service.\n\n(Note: The date \"e: 28-05-2026\" seems like a typo or fu"
   },
   "2026-05-21": {
-    "Chia AI Watcher": "The bot successfully identified and confirmed that receiving unsolicited transactions from a peer in the Chia network was harmless within 12 seconds."
+    "Chia AI Watcher": "Chia AI Watcher detected a node banning an IP and updating the mempool via the slow-path in 24 seconds."
   }
 }
