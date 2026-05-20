@@ -166,7 +166,7 @@
     "Utility Bill Bot": "Utility Bill Bot processed bills, found a new ICICI credit card bill but failed to send a WhatsApp message due to service unavailability."
   },
   "2026-05-20": {
-    "Chia AI Watcher": "Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, risking reward loss.",
+    "Chia AI Watcher": "Chia AI detected a node banning an IP and updating the mempool via a slower method, triggering warnings in the system logs.",
     "Portfolio Bot": "9 stocks | Invested \u20b9454,714 | Current \u20b9337,687 | P&L \u20b9-117,027 (-25.7%)",
     "Chia Health Monitor": "Chia Health Monitor reports normal farming with 13,245 plots but alerts on no wins for 77 hours and two pool errors due to duplicate proofs/late submissions.\n\n(Note: The summary is concise and within ",
     "Crypto Portfolio Bot": "The \"Crypto Portfolio Bot\" failed due to a timeout occurring after 120 seconds of execution without completing its task.",

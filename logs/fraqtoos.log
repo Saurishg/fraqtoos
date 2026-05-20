@@ -3400,3 +3400,22 @@
 2026-05-20 13:46:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-20 14:17:01  runner            INFO      ✓ Chia AI Watcher (43s)
 2026-05-20 14:17:10  runner            INFO        ✎ context: Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, risk
+2026-05-20 14:17:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 14:47:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 15:17:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 15:47:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 16:09:17  watchdog          INFO      Watchdog full check starting...
+2026-05-20 16:09:32  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-20 16:09:33  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-20 16:09:33  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-20 16:09:33  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 90.2h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-20 16:17:58  runner            INFO      ✓ Chia AI Watcher (25s)
+2026-05-20 16:18:07  runner            INFO        ✎ context: Chia AI detected a node banning an IP and updating the mempool via a slower meth
