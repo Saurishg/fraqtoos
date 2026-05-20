@@ -3333,3 +3333,20 @@
 2026-05-20 07:44:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-20 08:00:29  runner            INFO      ✓ Chia Health Monitor (3s)
 2026-05-20 08:00:39  runner            INFO        ✎ context: Chia Health Monitor reports normal farming with 13,245 plots but alerts on no wi
+2026-05-20 08:08:09  watchdog          INFO      Watchdog full check starting...
+2026-05-20 08:08:27  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-20 08:08:29  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-05-20 08:08:29  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-20 08:08:29  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-20 08:08:29  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-05-20 06:05:11  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 82.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-20 08:14:10  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-05-20 08:14:19  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign mempool updates and IP bans
