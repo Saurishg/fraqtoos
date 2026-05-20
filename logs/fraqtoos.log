@@ -3350,3 +3350,13 @@
 🟡 Chia AI Watcher
 2026-05-20 08:14:10  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-20 08:14:19  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign mempool updates and IP bans
+2026-05-20 08:14:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 08:44:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 09:02:21  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-05-20 09:02:30  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-05-20 09:15:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 09:45:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 10:02:23  runner            INFO      ✓ Utility Bill Bot (130s)
+2026-05-20 10:02:33  runner            INFO        ✎ context: The bot confirmed payments for Tata Neu, found no new BSES or ICICI bills, and f
+2026-05-20 10:15:02  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-05-20 10:15:11  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 28 seconds, confirm
