@@ -3325,3 +3325,11 @@
 2026-05-20 06:05:19  runner            INFO        ✎ context: The Portfolio Bot exceeded the time limit of 300 seconds, resulting in a timeout
 2026-05-20 06:13:41  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-20 06:13:49  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a beni
+2026-05-20 06:14:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 06:44:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 07:00:22  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-20 07:00:22  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779240622.log
+2026-05-20 07:14:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 07:44:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 08:00:29  runner            INFO      ✓ Chia Health Monitor (3s)
+2026-05-20 08:00:39  runner            INFO        ✎ context: Chia Health Monitor reports normal farming with 13,245 plots but alerts on no wi
