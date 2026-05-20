@@ -3317,3 +3317,11 @@
 🟡 Chia AI Watcher
 2026-05-20 04:12:54  runner            INFO      ✓ Chia AI Watcher (63s)
 2026-05-20 04:13:04  runner            INFO        ✎ context: Chia AI Watcher flagged that plot quality lookups exceeded 20 seconds, taking be
+2026-05-20 04:13:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 04:43:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 05:13:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 05:43:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 06:05:11  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+2026-05-20 06:05:19  runner            INFO        ✎ context: The Portfolio Bot exceeded the time limit of 300 seconds, resulting in a timeout
+2026-05-20 06:13:41  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-05-20 06:13:49  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a beni
