@@ -3419,3 +3419,9 @@
 🟡 Chia AI Watcher
 2026-05-20 16:17:58  runner            INFO      ✓ Chia AI Watcher (25s)
 2026-05-20 16:18:07  runner            INFO        ✎ context: Chia AI detected a node banning an IP and updating the mempool via a slower meth
+2026-05-20 16:18:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 16:48:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 17:18:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 17:48:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-20 18:18:26  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-20 18:18:35  runner            INFO        ✎ context: The bot successfully identified and confirmed that receiving unsolicited transac
