@@ -3475,3 +3475,9 @@
 🟡 Chia AI Watcher
 2026-05-21 00:20:40  runner            INFO      ✓ Chia AI Watcher (16s)
 2026-05-21 00:20:49  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 16 seconds, issuing
+2026-05-21 00:21:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 00:51:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 01:21:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 01:51:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 02:21:08  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-21 02:21:17  runner            INFO        ✎ context: The bot successfully identified and confirmed that receiving unsolicited transac
