@@ -2,11 +2,11 @@
   "last_watchdog": "2026-05-21 04:10:40",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-05-20 06:05:11",
+      "last_run": "2026-05-21 06:05:19",
       "success": false,
       "duration": 300,
       "last_output": "TIMEOUT after 300s",
-      "runs_today": 32
+      "runs_today": 33
     },
     "Utility Bill Bot": {
       "last_run": "2026-05-20 10:02:23",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-21 04:22:05",
+      "last_run": "2026-05-21 06:22:50",
       "success": true,
-      "duration": 24,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Node banned an IP and mempool updated using the slow-path.\n  \u2022 {'message': 'Banning 120.196.95.179 for 10 seconds'}\n  \u2022 {'message': 'updating the mempool using the slow-path'}",
-      "runs_today": 194
+      "duration": 11,
+      "last_output": "\u2705 Chia AI (ok): Received unsolicited transactions from a peer, which is benign.",
+      "runs_today": 195
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-20 08:00:29",
