@@ -3508,3 +3508,11 @@
 2026-05-21 06:05:28  runner            INFO        ✎ context: The Portfolio Bot exceeded the time limit, resulting in a timeout after 300 seco
 2026-05-21 06:22:50  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-21 06:22:58  runner            INFO        ✎ context: The bot detected and confirmed that receiving unsolicited transactions from a pe
+2026-05-21 06:23:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 06:53:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 07:00:00  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-21 07:00:00  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779327000.log
+2026-05-21 07:23:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 07:53:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 08:00:08  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-21 08:00:18  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with one prover error due to
