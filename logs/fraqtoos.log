@@ -3602,3 +3602,9 @@
 🟡 Chia AI Watcher
 2026-05-21 16:26:37  runner            INFO      ✓ Chia AI Watcher (17s)
 2026-05-21 16:26:45  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 17 seconds, confirm
+2026-05-21 16:27:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 16:57:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 17:27:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 17:57:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 18:27:04  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-21 18:27:13  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign warnings about mempool upda
