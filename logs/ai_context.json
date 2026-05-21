@@ -180,6 +180,6 @@
     "Utility Bill Bot": "The bot processed utility bills, confirming payments and identifying BSES and ICICI bill statuses without finding any new items to report via WhatsApp or email."
   },
   "2026-05-22": {
-    "Chia AI Watcher": "Chia AI Watcher detected excessive plot quality lookup times, exceeding recommended thresholds by 14-20 seconds."
+    "Chia AI Watcher": "The bot 'Chia AI Watcher' completed its task in 12 seconds but encountered an exception while fetching qualities due to a Gigahorse giga37 bug."
   }
 }
