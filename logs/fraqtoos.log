@@ -3533,3 +3533,13 @@
 🟡 Chia AI Watcher
 2026-05-21 08:23:30  runner            INFO      ✓ Chia AI Watcher (25s)
 2026-05-21 08:23:39  runner            INFO        ✎ context: Chia AI Watcher identified and reported multiple unsolicited transactions from a
+2026-05-21 08:24:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 08:54:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 09:02:11  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-05-21 09:02:19  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-05-21 09:24:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 09:54:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-21 10:00:12  runner            INFO      ✓ Utility Bill Bot (9s)
+2026-05-21 10:00:21  runner            INFO        ✎ context: The bot processed utility bills, confirming payments and identifying BSES and IC
+2026-05-21 10:24:04  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-21 10:24:13  runner            INFO        ✎ context: The 'Chia AI Watcher' bot successfully identified that the mempool update with a
