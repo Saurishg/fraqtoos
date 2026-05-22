@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-22 07:19:43",
+  "last_watchdog": "2026-05-22 11:20:26",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-22 06:05:03",
@@ -9,11 +9,11 @@
       "runs_today": 34
     },
     "Utility Bill Bot": {
-      "last_run": "2026-05-21 10:00:12",
+      "last_run": "2026-05-22 10:00:23",
       "success": true,
-      "duration": 9,
+      "duration": 11,
       "last_output": "und\n  \u2713 [payment_confirmed] Tata Neu: Amount not found\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 158827)\n\n\ud83d\udcb3 Checking for new ICICI credit card bill PDFs...\n\ud83d\udced No new ICICI emails since last send (UID 159101)\n\u2705 Done",
-      "runs_today": 33
+      "runs_today": 34
     },
     "BTC Strategy Bot": {
       "last_run": "2026-05-16 22:00:15",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-22 09:24:01",
+      "last_run": "2026-05-22 11:24:58",
       "success": true,
-      "duration": 45,
-      "last_output": "g): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took over 34 seconds, exceeding the 20-second recommendation.\n  \u2022 Several additional plots had lookup times between 40 and 41 seconds, further exceeding the 20-second recommendation.",
-      "runs_today": 208
+      "duration": 33,
+      "last_output": "nsolicited transaction from peer bb7432eeea962d19eebd5d5b53584f050abc5127e35ea15ea31662cef5624039', 'context': 'chia.full_node.full_node_api'}\n  \u2022 {'message': 'updating the mempool using the slow-path. peak: 1e7356371dc777f1f4d04bffe3f6147a74c7e760f07b82d03d7da18c9062182a new-peak-p', 'context': ''}",
+      "runs_today": 209
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-22 08:00:14",

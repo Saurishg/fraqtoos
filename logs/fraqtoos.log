@@ -3720,3 +3720,26 @@
 2026-05-22 09:02:34  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
 2026-05-22 09:24:01  runner            INFO      ✓ Chia AI Watcher (45s)
 2026-05-22 09:24:10  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, with some over 34 s
+2026-05-22 09:24:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 09:54:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 10:00:23  runner            INFO      ✓ Utility Bill Bot (11s)
+2026-05-22 10:00:33  runner            INFO        ✎ context: The bot processed utility bills, confirming payments and identifying BSES and IC
+2026-05-22 10:25:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 10:55:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 11:20:08  watchdog          INFO      Watchdog full check starting...
+2026-05-22 11:20:24  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-22 11:20:26  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-05-22 11:20:26  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-22 11:20:26  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-22 11:20:26  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-05-22 09:02:26  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 133.3h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-22 11:24:58  runner            INFO      ✓ Chia AI Watcher (33s)
+2026-05-22 11:25:08  runner            INFO        ✎ context: Chia AI Watcher detected peer warnings and unsolicited transactions, with mempoo
