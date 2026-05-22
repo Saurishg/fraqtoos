@@ -3714,3 +3714,9 @@
 2026-05-22 07:53:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-22 08:00:14  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-05-22 08:00:23  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with a recent win, one prove
+2026-05-22 08:23:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 08:53:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 09:02:26  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-05-22 09:02:34  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-05-22 09:24:01  runner            INFO      ✓ Chia AI Watcher (45s)
+2026-05-22 09:24:10  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, with some over 34 s
