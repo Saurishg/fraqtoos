@@ -3814,3 +3814,24 @@
 2026-05-22 21:00:33  runner            INFO        ✎ context: Crypto Portfolio Bot sent a WhatsApp message but faced multiple request failures
 2026-05-22 21:29:56  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-05-22 21:30:05  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 22 seconds, confirm
+2026-05-22 21:30:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 22:00:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 22:30:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 23:00:10  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-22 23:00:26  orchestrator      INFO      Daily digest sent.
+2026-05-22 23:00:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 23:21:57  watchdog          INFO      Watchdog full check starting...
+2026-05-22 23:22:14  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-22 23:22:15  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-22 23:22:15  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-22 23:22:15  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 145.4h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-22 23:30:28  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-22 23:30:38  runner            INFO        ✎ context: Chia AI Watcher identified and confirmed the use of a farmer's reward from block
