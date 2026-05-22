@@ -3841,3 +3841,22 @@
 2026-05-23 01:01:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-23 01:31:15  runner            INFO      ✓ Chia AI Watcher (31s)
 2026-05-23 01:31:24  runner            INFO        ✎ context: Chia AI Watcher identified benign warnings about transaction broadcasting and un
+2026-05-23 01:31:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 02:01:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 02:31:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 03:01:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 03:22:30  watchdog          INFO      Watchdog full check starting...
+2026-05-23 03:22:45  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-23 03:22:47  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-23 03:22:47  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-23 03:22:47  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 149.4h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-23 03:32:06  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-05-23 03:32:15  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 19 seconds, confirm
