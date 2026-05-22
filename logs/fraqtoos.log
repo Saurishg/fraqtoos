@@ -3787,3 +3787,22 @@
 2026-05-22 16:57:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-22 17:27:42  runner            INFO      ✓ Chia AI Watcher (44s)
 2026-05-22 17:27:50  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, exceeding 20 second
+2026-05-22 17:28:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 17:58:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 18:28:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 18:58:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 19:21:27  watchdog          INFO      Watchdog full check starting...
+2026-05-22 19:21:42  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-22 19:21:43  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-05-22 19:21:43  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-22 19:21:43  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 141.4h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-22 19:28:57  runner            INFO      ✓ Chia AI Watcher (43s)
+2026-05-22 19:29:05  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, surpassing the reco
