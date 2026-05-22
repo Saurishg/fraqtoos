@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-22 11:20:26",
+  "last_watchdog": "2026-05-22 12:00:27",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-22 06:05:03",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-22 11:24:58",
+      "last_run": "2026-05-22 13:25:58",
       "success": true,
-      "duration": 33,
-      "last_output": "nsolicited transaction from peer bb7432eeea962d19eebd5d5b53584f050abc5127e35ea15ea31662cef5624039', 'context': 'chia.full_node.full_node_api'}\n  \u2022 {'message': 'updating the mempool using the slow-path. peak: 1e7356371dc777f1f4d04bffe3f6147a74c7e760f07b82d03d7da18c9062182a new-peak-p', 'context': ''}",
-      "runs_today": 209
+      "duration": 27,
+      "last_output": "e warnings.\n  \u2022 {'message': 'Used farmer reward of block 8760288 as dev fee (3.125 % on average)', 'classification': 'benign'}\n  \u2022 {'message': 'Banning 185.182.167.71 for 10 seconds', 'classification': 'benign'}\n  \u2022 {'message': 'updating the mempool using the slow-path.', 'classification': 'benign'}",
+      "runs_today": 210
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-22 08:00:14",
