@@ -3781,3 +3781,9 @@
 🟡 Chia AI Watcher
 2026-05-22 15:26:43  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-22 15:26:51  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
+2026-05-22 15:27:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 15:57:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 16:27:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 16:57:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-22 17:27:42  runner            INFO      ✓ Chia AI Watcher (44s)
+2026-05-22 17:27:50  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, exceeding 20 second

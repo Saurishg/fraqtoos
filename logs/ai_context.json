@@ -180,7 +180,7 @@
     "Utility Bill Bot": "The bot processed utility bills, confirming payments and identifying BSES and ICICI bill statuses without finding any new items to report via WhatsApp or email."
   },
   "2026-05-22": {
-    "Chia AI Watcher": "Chia AI Watcher identified that mempool updates via a slow path were harmless, linked to the Gigahorse giga37 bug.",
+    "Chia AI Watcher": "Chia AI Watcher flagged excessive plot quality lookup times, exceeding 20 seconds for multiple plots.",
     "Portfolio Bot": "9 stocks | Invested \u20b9454,714 | Current \u20b9337,711 | P&L \u20b9-117,003 (-25.7%)",
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with a recent win, one prover error due to a known bug, and normal block validation.",
     "Crypto Portfolio Bot": "The \"Crypto Portfolio Bot\" failed due to a timeout occurring after 120 seconds of operation.",
