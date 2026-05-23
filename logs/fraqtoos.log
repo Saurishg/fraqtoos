@@ -3969,3 +3969,11 @@
 2026-05-23 19:28:56  watchdog          INFO      Watchdog: all systems healthy
 2026-05-23 19:39:57  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-05-23 19:40:57  runner            INFO        ✎ context: Chia AI Watcher OK in 120s.
+2026-05-23 19:41:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 20:11:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 20:41:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 21:00:50  runner            INFO      ✓ Crypto Portfolio Bot (49s)
+2026-05-23 21:01:50  runner            INFO        ✎ context: Crypto Portfolio Bot OK in 49s.
+2026-05-23 21:11:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 21:41:37  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-05-23 21:41:45  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 15 seconds, confirm

@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-23 19:39:57",
+      "last_run": "2026-05-23 21:41:37",
       "success": true,
-      "duration": 120,
-      "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
-      "runs_today": 225
+      "duration": 15,
+      "last_output": "\u2705 Chia AI (ok):",
+      "runs_today": 226
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-23 08:00:06",
@@ -37,11 +37,11 @@
       "runs_today": 20
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-05-23 09:00:34",
+      "last_run": "2026-05-23 21:00:50",
       "success": true,
-      "duration": 16,
-      "last_output": "\" mode with an index at 28/100. **Actionable Insight:** Given the current fear sentiment, consider holding your positions for now to avoid selling in a potentially oversold market.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 23
+      "duration": 49,
+      "last_output": "2 = $0.34\n\n*BSC* ($51.16)\n\u2022 MNEB: 150.00K = $45.36\n\u2022 WBNB: 0.007251 = $4.69\n\u2022 ANY: 2.0000 = $1.11\n\n\ud83d\udcbc *Total: $17.06K*\n  \ud83d\udcc9 $236.28 (-1.4%) vs 12h ago\n  \ud83d\udcc8 +$17.06K (+0.0%) vs 24h ago\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 24
     }
   }
 }
