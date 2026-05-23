@@ -3916,3 +3916,20 @@
 🟡 Chia AI Watcher
 2026-05-23 11:35:08  runner            INFO      ✓ Chia AI Watcher (17s)
 2026-05-23 11:35:17  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 17 seconds, confirm
+2026-05-23 11:36:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 12:00:18  watchdog          INFO      Watchdog full check starting...
+2026-05-23 12:00:35  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-23 12:00:36  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-23 12:00:36  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 158.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-23 12:06:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 12:36:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 13:06:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 13:35:54  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-23 13:36:02  runner            INFO        ✎ context: Chia AI Watcher identified that mempool updates via a slow path were harmless, l
