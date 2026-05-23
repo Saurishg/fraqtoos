@@ -3956,3 +3956,16 @@
 2026-05-23 17:07:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-23 17:37:39  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-23 17:37:48  runner            INFO        ✎ context: The bot 'Chia AI Watcher' successfully analyzed and confirmed that frequent slow
+2026-05-23 17:38:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 18:08:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 18:38:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 19:08:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-23 19:24:54  watchdog          INFO      Watchdog full check starting...
+2026-05-23 19:26:54  watchdog          WARNING   AI model phi4 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-23 19:28:54  watchdog          WARNING   AI model deepseek-r1:14b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-23 19:28:54  watchdog          WARNING   AI model qwen3:14b failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2026-05-23 19:28:54  watchdog          INFO      AI diagnosis: AI unavailable
+2026-05-23 19:28:56  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-23 19:28:56  watchdog          INFO      Watchdog: all systems healthy
+2026-05-23 19:39:57  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-05-23 19:40:57  runner            INFO        ✎ context: Chia AI Watcher OK in 120s.
