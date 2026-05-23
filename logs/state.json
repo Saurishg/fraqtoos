@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-23 23:42:38",
+      "last_run": "2026-05-24 01:43:24",
       "success": true,
-      "duration": 43,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeding recommended time, potential reward loss.\n  \u2022 Looking up qualities on multiple plots took over 40 seconds, which should be below 20 seconds to minimize risk of losing rewards.",
-      "runs_today": 227
+      "duration": 30,
+      "last_output": "rning): Received multiple unsolicited transactions from the same peer and mempool update using slow-path.\n  \u2022 Multiple unsolicited transactions received from a single peer, indicating potential network or security issue.\n  \u2022 Mempool updated using the slow path, which may indicate performance issues.",
+      "runs_today": 228
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-23 08:00:06",

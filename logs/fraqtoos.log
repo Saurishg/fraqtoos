@@ -3996,3 +3996,9 @@
 🟡 Chia AI Watcher
 2026-05-23 23:42:38  runner            INFO      ✓ Chia AI Watcher (43s)
 2026-05-23 23:42:47  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded 40 seconds, risking 
+2026-05-23 23:43:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 00:13:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 00:43:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 01:13:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 01:43:24  runner            INFO      ✓ Chia AI Watcher (30s)
+2026-05-24 01:43:32  runner            INFO        ✎ context: Chia AI detected multiple unsolicited transactions and a mempool update via the 
