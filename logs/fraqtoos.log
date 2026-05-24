@@ -4159,3 +4159,9 @@
 🟡 Chia AI Watcher
 2026-05-24 23:51:48  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-24 23:51:57  runner            INFO        ✎ context: The bot successfully identified that DNS resolution timeouts for Chia AI are nor
+2026-05-24 23:52:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 00:22:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 00:52:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 01:22:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 01:52:34  runner            INFO      ✓ Chia AI Watcher (30s)
+2026-05-25 01:52:43  runner            INFO        ✎ context: Chia AI Watcher experienced repeated DNS resolution failures due to network conf
