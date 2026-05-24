@@ -4140,3 +4140,22 @@
 2026-05-24 21:21:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-24 21:51:07  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-24 21:51:16  runner            INFO        ✎ context: Chia AI Watcher identified that DNS resolution timeouts were harmless, attributi
+2026-05-24 21:51:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 22:21:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 22:51:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 23:00:20  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-24 23:01:20  orchestrator      INFO      Daily digest sent.
+2026-05-24 23:21:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 23:32:22  watchdog          INFO      Watchdog full check starting...
+2026-05-24 23:32:34  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-24 23:32:36  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-24 23:32:36  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 193.5h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-24 23:51:48  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-24 23:51:57  runner            INFO        ✎ context: The bot successfully identified that DNS resolution timeouts for Chia AI are nor
