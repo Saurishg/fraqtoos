@@ -4046,3 +4046,6 @@
 🟡 Chia AI Watcher
 2026-05-24 07:45:10  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-24 07:45:19  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying the slow-pat
+2026-05-24 07:45:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 08:00:24  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-24 08:00:33  runner            INFO        ✎ context: Chia Health Monitor reports farming with 13,245 plots, a win delay of 30 hours, 
