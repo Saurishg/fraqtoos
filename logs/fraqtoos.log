@@ -4056,3 +4056,22 @@
 2026-05-24 09:16:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-24 09:45:45  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-05-24 09:45:54  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from a peer in the Chia
+2026-05-24 09:46:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 10:00:33  runner            INFO      ✓ Utility Bill Bot (8s)
+2026-05-24 10:00:43  runner            INFO        ✎ context: The Utility Bill Bot processed and reported existing bills, found no new BSES or
+2026-05-24 10:17:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 10:47:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 11:17:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 11:30:48  watchdog          INFO      Watchdog full check starting...
+2026-05-24 11:31:02  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-24 11:31:03  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-24 11:31:03  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 181.5h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-24 11:46:46  runner            INFO      ✓ Chia AI Watcher (43s)
+2026-05-24 11:46:56  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality checks took over 20 seconds,
