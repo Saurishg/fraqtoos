@@ -4132,3 +4132,11 @@
 🟡 Chia AI Watcher
 2026-05-24 19:50:19  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-24 19:50:28  runner            INFO        ✎ context: The bot successfully identified that DNS resolution timeouts for Chia AI are nor
+2026-05-24 19:50:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 20:20:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 20:51:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 21:00:42  runner            INFO      ✓ Crypto Portfolio Bot (40s)
+2026-05-24 21:00:52  runner            INFO        ✎ context: The bot attempted to fetch market data via Hive and CoinGecko, but both attempts
+2026-05-24 21:21:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 21:51:07  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-24 21:51:16  runner            INFO        ✎ context: Chia AI Watcher identified that DNS resolution timeouts were harmless, attributi

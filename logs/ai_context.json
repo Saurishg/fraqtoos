@@ -194,10 +194,10 @@
     "Utility Bill Bot": "The bot processed utility bills, confirming payments and identifying BSES and ICICI bill statuses without finding any new items to report via WhatsApp or email."
   },
   "2026-05-24": {
-    "Chia AI Watcher": "The bot successfully identified that DNS resolution timeouts for Chia AI are normal due to network conditions in 12 seconds.",
+    "Chia AI Watcher": "Chia AI Watcher identified that DNS resolution timeouts were harmless, attributing them to the Gigahorse giga37 bug.",
     "Portfolio Bot": "Portfolio Bot identified significant losses in TCS and ITC stocks, suggesting reallocating funds from underperformers like VEDL to more promising sectors for better portfolio health.",
     "Chia Health Monitor": "Chia Health Monitor reports farming with 13,245 plots, a win delay of 30 hours, one prover error due to a known bug, and a block validation spike lasting 11 seconds.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot advised holding due to Bitcoin and Ethereum gains amid Extreme Fear sentiment, suggesting profit-taking if the index shifts to Neutral.\n\n--- \n\nThis summary captures the key points",
+    "Crypto Portfolio Bot": "The bot attempted to fetch market data via Hive and CoinGecko, but both attempts timed out, resulting in no update being performed.\n\n--- \n\nIf you have any further questions or need additional informat",
     "Utility Bill Bot": "The Utility Bill Bot processed and reported existing bills, found no new BSES or ICICI bill PDFs, and confirmed all tasks were completed in 8 seconds.\n\n(Note: The summary is concise and within the cha"
   }
 }
