@@ -4109,3 +4109,9 @@
 🟡 Chia AI Watcher
 2026-05-24 15:48:51  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-24 15:48:59  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified warnings in the Chia network as no
+2026-05-24 15:49:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 16:19:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 16:49:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 17:19:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-24 17:49:34  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-05-24 17:49:43  runner            INFO        ✎ context: Chia AI Watcher detected multiple WebSocket errors due to server timeouts and DN
