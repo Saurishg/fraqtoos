@@ -4215,3 +4215,6 @@
 🟡 Chia AI Watcher
 2026-05-25 07:55:11  runner            INFO      ✓ Chia AI Watcher (26s)
 2026-05-25 07:55:20  runner            INFO        ✎ context: Chia AI Watcher identified repeated DNS resolution failures for an introducer, w
+2026-05-25 07:55:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 08:00:24  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-25 08:00:32  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a recent 
