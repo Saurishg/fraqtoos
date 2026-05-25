@@ -4317,3 +4317,11 @@
 🟡 Chia AI Watcher
 2026-05-25 19:55:43  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-25 19:55:52  runner            INFO        ✎ context: Bot 'Chia AI Watcher' identified that generator runtime errors in Chia AI are ha
+2026-05-25 19:56:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 20:26:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 20:56:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 21:00:40  runner            INFO      ✓ Crypto Portfolio Bot (14s)
+2026-05-25 21:00:49  runner            INFO        ✎ context: Crypto Portfolio Bot reported minor portfolio losses (-1.1%) while BTC and ETH g
+2026-05-25 21:26:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 21:57:53  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-05-25 21:58:01  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
