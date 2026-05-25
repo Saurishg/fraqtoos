@@ -4188,3 +4188,30 @@
 2026-05-25 05:24:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-25 05:54:18  runner            INFO      ✓ Chia AI Watcher (44s)
 2026-05-25 05:54:26  runner            INFO        ✎ context: Chia AI Watcher detected excessive plot quality lookup times exceeding 20 second
+2026-05-25 05:54:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 06:01:51  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 1
+2026-05-25 06:01:51  runner            INFO        ↺ Retry 1/1: Portfolio Bot
+2026-05-25 06:03:28  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 2
+2026-05-25 06:03:37  runner            INFO        ✎ context: The Portfolio Bot failed to fetch a Kite request token via Selenium due to navig
+2026-05-25 06:25:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 06:55:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 07:00:26  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-25 07:00:26  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779672626.log
+2026-05-25 07:25:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 07:33:28  watchdog          INFO      Watchdog full check starting...
+2026-05-25 07:33:43  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-25 07:33:44  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-05-25 07:33:44  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-25 07:33:44  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: .sys.mjs:33:25
+
+2026-05-25 06:03:09,366  ERROR  Current URL: https://kite.zerodha.com/connect/login?api_key=cgxsoenzjzri
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 201.6h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-25 07:55:11  runner            INFO      ✓ Chia AI Watcher (26s)
+2026-05-25 07:55:20  runner            INFO        ✎ context: Chia AI Watcher identified repeated DNS resolution failures for an introducer, w

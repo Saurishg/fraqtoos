@@ -1,12 +1,12 @@
 {
-  "last_watchdog": "2026-05-25 03:33:06",
+  "last_watchdog": "2026-05-25 07:33:44",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-05-24 06:00:57",
-      "success": true,
-      "duration": 29,
-      "last_output": "table or promising sectors that show potential for recovery or growth in the near term.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-24 06:00:57,491  INFO  WhatsApp sent to +919818187001\n2026-05-24 06:00:57,587  INFO  WhatsApp sent to +919810238955\n2026-05-24 06:00:57,590  INFO  === Portfolio Bot Done ===",
-      "runs_today": 36
+      "last_run": "2026-05-25 06:03:28",
+      "success": false,
+      "duration": 181,
+      "last_output": ".sys.mjs:33:25\n\n2026-05-25 06:03:09,366  ERROR  Current URL: https://kite.zerodha.com/connect/login?api_key=cgxsoenzjzritcbd&v=3\n2026-05-25 06:03:28,600  ERROR  Kite fetch failed: Could not get Kite request_token via Selenium\n2026-05-25 06:03:28,600  ERROR  No holdings from either account. Aborting.",
+      "runs_today": 37
     },
     "Utility Bill Bot": {
       "last_run": "2026-05-24 10:00:33",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-25 05:54:18",
+      "last_run": "2026-05-25 07:55:11",
       "success": true,
-      "duration": 44,
-      "last_output": "\u2705 Chia AI (ok): Multiple plot quality lookups exceeded the recommended time threshold, indicating potential performance issues.\n  \u2022 Plot quality lookup times exceed 20 seconds for multiple plots, risking reward loss.",
-      "runs_today": 242
+      "duration": 26,
+      "last_output": "\u2705 Chia AI (ok): Repeated DNS resolution failures for introducer.\n  \u2022 {'issue': 'DNS resolution failure', 'details': 'The resolution lifetime expired after 32.004 seconds with multiple timeouts.'}",
+      "runs_today": 243
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-24 08:00:24",
