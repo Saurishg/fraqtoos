@@ -4225,3 +4225,43 @@
 2026-05-25 09:26:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-25 09:56:14  runner            INFO      ✓ Chia AI Watcher (40s)
 2026-05-25 09:56:23  runner            INFO        ✎ context: Chia AI Watcher identified multiple rejected SpendBundles due to synchronization
+2026-05-25 09:56:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 10:00:38  runner            INFO      ✓ Utility Bill Bot (14s)
+2026-05-25 10:00:47  runner            INFO        ✎ context: The bot processed utility bills, confirming payments and identifying BSES and IC
+2026-05-25 10:27:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 10:57:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 11:52:48  orchestrator      INFO      =======================================================
+2026-05-25 11:52:48  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-05-25 11:52:48  orchestrator      INFO        2026-05-25 11:52:48
+2026-05-25 11:52:48  orchestrator      INFO      =======================================================
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-05-25 11:52:48  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-05-25 12:00:19  watchdog          INFO      Watchdog full check starting...
+2026-05-25 12:00:51  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-25 12:00:53  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-05-25 12:00:53  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-25 12:00:53  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: .sys.mjs:33:25
+
+2026-05-25 06:03:09,366  ERROR  Current URL: https://kite.zerodha.com/connect/login?api_key=cgxsoenzjzri
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 206.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-25 12:22:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 12:52:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 13:22:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 13:53:55  runner            INFO      ✓ Chia AI Watcher (56s)
+2026-05-25 13:54:09  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality checks took over 20 seconds,
