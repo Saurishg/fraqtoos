@@ -4218,3 +4218,10 @@
 2026-05-25 07:55:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-25 08:00:24  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-05-25 08:00:32  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a recent 
+2026-05-25 08:26:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 08:56:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 09:00:21  runner            INFO      ✓ Crypto Portfolio Bot (15s)
+2026-05-25 09:00:31  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a slight decrease in portfolio value by $249.6
+2026-05-25 09:26:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-25 09:56:14  runner            INFO      ✓ Chia AI Watcher (40s)
+2026-05-25 09:56:23  runner            INFO        ✎ context: Chia AI Watcher identified multiple rejected SpendBundles due to synchronization
