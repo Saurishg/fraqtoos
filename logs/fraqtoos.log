@@ -4506,3 +4506,13 @@
 🟡 Chia AI Watcher
 2026-05-26 21:00:36  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-26 21:00:45  runner            INFO        ✎ context: Chia AI Watcher identified unsolicited transactions as harmless, attributing the
+2026-05-26 21:00:59  runner            INFO      ✓ Crypto Portfolio Bot (14s)
+2026-05-26 21:01:09  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a slight portfolio increase of 0.7% over the l
+2026-05-26 21:01:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 21:31:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 22:01:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 22:31:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 23:00:16  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-26 23:00:31  orchestrator      INFO      Daily digest sent.
+2026-05-26 23:01:19  runner            INFO      ✓ Chia AI Watcher (18s)
+2026-05-26 23:01:28  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 18 seconds, confirm

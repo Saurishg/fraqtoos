@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-26 21:00:36",
+      "last_run": "2026-05-26 23:01:19",
       "success": true,
-      "duration": 12,
-      "last_output": "\u2705 Chia AI (ok): Received unsolicited transactions are benign due to Gigahorse giga37 bug.",
-      "runs_today": 260
+      "duration": 18,
+      "last_output": "\u2705 Chia AI (ok):",
+      "runs_today": 261
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-26 08:00:19",
@@ -37,11 +37,11 @@
       "runs_today": 23
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-05-26 09:00:41",
+      "last_run": "2026-05-26 21:00:59",
       "success": true,
-      "duration": 33,
-      "last_output": " 34/100. **Actionable Insight:** Consider taking profits on strong-performing altcoins like HINT and SAI while watching BTC for any signs of stabilization or reversal near $76,000.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 29
+      "duration": 14,
+      "last_output": "towards fear at 34/100. Your portfolio is up slightly by 0.7%.\n\n**Actionable Insight:** Hold for now and watch BTC closely around $75,000 for potential support or further declines.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 30
     }
   }
 }
