@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-26 16:57:37",
+  "last_watchdog": "2026-05-26 20:58:24",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-26 06:00:49",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-26 18:59:50",
+      "last_run": "2026-05-26 21:00:36",
       "success": true,
-      "duration": 16,
-      "last_output": "\u2705 Chia AI (ok):",
-      "runs_today": 259
+      "duration": 12,
+      "last_output": "\u2705 Chia AI (ok): Received unsolicited transactions are benign due to Gigahorse giga37 bug.",
+      "runs_today": 260
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-26 08:00:19",
