@@ -4377,3 +4377,11 @@
 🟡 Chia AI Watcher
 2026-05-26 04:00:08  runner            INFO      ✓ Chia AI Watcher (44s)
 2026-05-26 04:00:17  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded the recommended time
+2026-05-26 04:00:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 04:30:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 05:00:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 05:30:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-26 06:00:49  runner            INFO      ✓ Portfolio Bot (25s)
+2026-05-26 06:00:58  runner            INFO        ✎ context: Portfolio Bot identified VEDL as the biggest underperformer and suggested reallo
+2026-05-26 06:01:42  runner            INFO      ✓ Chia AI Watcher (44s)
+2026-05-26 06:01:51  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded the recommended time
