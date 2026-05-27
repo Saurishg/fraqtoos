@@ -2,11 +2,11 @@
   "last_watchdog": "2026-05-27 04:59:31",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-05-26 06:00:49",
+      "last_run": "2026-05-27 06:00:32",
       "success": true,
-      "duration": 25,
-      "last_output": "howing resilience, while keeping an eye on TMCV's momentum for potential further gains.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-26 06:00:49,110  INFO  WhatsApp sent to +919818187001\n2026-05-26 06:00:49,205  INFO  WhatsApp sent to +919810238955\n2026-05-26 06:00:49,207  INFO  === Portfolio Bot Done ===",
-      "runs_today": 38
+      "duration": 28,
+      "last_output": "rsifying into different asset classes to mitigate risk and potentially enhance returns.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-05-27 06:00:31,948  INFO  WhatsApp sent to +919818187001\n2026-05-27 06:00:32,048  INFO  WhatsApp sent to +919810238955\n2026-05-27 06:00:32,051  INFO  === Portfolio Bot Done ===",
+      "runs_today": 39
     },
     "Utility Bill Bot": {
       "last_run": "2026-05-26 10:00:41",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-27 05:03:22",
+      "last_run": "2026-05-27 07:04:48",
       "success": true,
-      "duration": 21,
-      "last_output": "\u26a0\ufe0f Chia AI (warning):",
-      "runs_today": 264
+      "duration": 64,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which may increase risk of losing rewards.",
+      "runs_today": 265
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-26 08:00:19",
