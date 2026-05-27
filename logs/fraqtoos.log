@@ -4587,3 +4587,11 @@
 2026-05-27 09:01:01  runner            INFO        ✎ context: Crypto Portfolio Bot reported a total value of $17,650 with gains over the past 
 2026-05-27 09:05:15  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-05-27 09:05:24  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, issuing
+2026-05-27 09:05:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 09:35:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 10:00:36  runner            INFO      ✓ Utility Bill Bot (8s)
+2026-05-27 10:00:46  runner            INFO        ✎ context: The Utility Bill Bot processed and reported existing bills, found no new BSES or
+2026-05-27 10:06:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 10:36:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 11:06:01  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-27 11:06:10  runner            INFO        ✎ context: Bot 'Chia AI Watcher' detected benign WebSocket timeout errors from Chia AI due 

@@ -215,9 +215,10 @@
     "Utility Bill Bot": "The Utility Bill Bot processed and reported existing bills, found no new BSES or ICICI bill PDFs, and confirmed all tasks were completed in 16 seconds.\n\n(Note: The summary is concise and within the ch"
   },
   "2026-05-27": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 14 seconds, issuing a warning about Chia AI.\n\n(Note: The summary is concise and within the character limit.)",
+    "Chia AI Watcher": "Bot 'Chia AI Watcher' detected benign WebSocket timeout errors from Chia AI due to missing PONG responses in 12 seconds.",
     "Portfolio Bot": "Portfolio Bot identified significant declines in stocks like VEDL and advised reallocating funds to mitigate risk and enhance returns.",
     "Chia Health Monitor": "The Chia Health Monitor reports successful farming with 13,245 plots, a last win 39 hours ago instead of the expected 18, and three prover errors due to a known giga37 bug, while block validation is n",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a total value of $17,650 with gains over the past 12 and 24 hours, while Bitcoin and Ethereum experienced slight declines amid market fear.\n\n(Note: The summary is concise"
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a total value of $17,650 with gains over the past 12 and 24 hours, while Bitcoin and Ethereum experienced slight declines amid market fear.\n\n(Note: The summary is concise",
+    "Utility Bill Bot": "The Utility Bill Bot processed and reported existing bills, found no new BSES or ICICI bill PDFs, and confirmed all tasks were completed in 8 seconds.\n\n(Note: The summary is concise and captures the k"
   }
 }
