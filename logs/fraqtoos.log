@@ -4652,3 +4652,22 @@
 2026-05-27 18:39:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-27 19:10:13  runner            INFO      ✓ Chia AI Watcher (44s)
 2026-05-27 19:10:21  runner            INFO        ✎ context: Chia AI Watcher detected excessive plot quality lookup times exceeding 20 second
+2026-05-27 19:10:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 19:40:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 20:10:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 20:40:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 21:00:53  runner            INFO      ✓ Crypto Portfolio Bot (25s)
+2026-05-27 21:01:03  runner            INFO        ✎ context: Crypto Portfolio Bot successfully sent a WhatsApp message but encountered multip
+2026-05-27 21:01:33  watchdog          INFO      Watchdog full check starting...
+2026-05-27 21:01:50  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-27 21:01:51  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-27 21:01:51  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 263.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-27 21:10:35  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-27 21:10:43  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions caused by the Gigahorse
