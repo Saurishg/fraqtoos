@@ -4595,3 +4595,31 @@
 2026-05-27 10:36:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-27 11:06:01  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-27 11:06:10  runner            INFO        ✎ context: Bot 'Chia AI Watcher' detected benign WebSocket timeout errors from Chia AI due 
+2026-05-27 11:06:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 11:36:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 12:00:13  watchdog          INFO      Watchdog full check starting...
+2026-05-27 12:00:29  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-27 12:00:30  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-27 12:00:30  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 254.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-27 12:07:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 12:37:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 13:00:34  watchdog          INFO      Watchdog full check starting...
+2026-05-27 13:00:48  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-27 13:00:50  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-27 13:00:50  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 255.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-27 13:07:04  runner            INFO      ✓ Chia AI Watcher (45s)
+2026-05-27 13:07:13  runner            INFO        ✎ context: Chia AI Watcher identified a WebSocket timeout and consensus error with a peer, 
