@@ -216,6 +216,7 @@
   },
   "2026-05-27": {
     "Chia AI Watcher": "Chia AI Watcher flagged a warning for plot quality lookups exceeding 20 seconds, risking potential reward loss.",
-    "Portfolio Bot": "Portfolio Bot identified significant declines in stocks like VEDL and advised reallocating funds to mitigate risk and enhance returns."
+    "Portfolio Bot": "Portfolio Bot identified significant declines in stocks like VEDL and advised reallocating funds to mitigate risk and enhance returns.",
+    "Chia Health Monitor": "The Chia Health Monitor reports successful farming with 13,245 plots, a last win 39 hours ago instead of the expected 18, and three prover errors due to a known giga37 bug, while block validation is n"
   }
 }
