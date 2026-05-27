@@ -4623,3 +4623,9 @@
 🟡 Chia AI Watcher
 2026-05-27 13:07:04  runner            INFO      ✓ Chia AI Watcher (45s)
 2026-05-27 13:07:13  runner            INFO        ✎ context: Chia AI Watcher identified a WebSocket timeout and consensus error with a peer, 
+2026-05-27 13:07:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 13:37:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 14:07:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 14:37:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-27 15:08:27  runner            INFO      ✓ Chia AI Watcher (66s)
+2026-05-27 15:08:35  runner            INFO        ✎ context: Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, sign
