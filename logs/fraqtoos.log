@@ -4696,3 +4696,9 @@
 🟡 Chia AI Watcher
 2026-05-28 01:12:05  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-28 01:12:14  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified and reported a benign issue with u
+2026-05-28 01:12:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 01:42:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 02:12:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 02:42:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 03:12:33  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-28 03:12:42  runner            INFO        ✎ context: Chia AI Watcher confirmed that banning IPs is standard for security, not a sign 
