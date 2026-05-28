@@ -4792,3 +4792,20 @@
 2026-05-28 14:49:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-28 15:19:17  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-05-28 15:19:25  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 13s, encountering a known Gigahorse giga37 bu
+2026-05-28 15:19:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 15:49:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 16:19:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 16:50:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 17:05:02  watchdog          INFO      Watchdog full check starting...
+2026-05-28 17:05:18  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-28 17:05:19  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-28 17:05:19  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 283.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-28 17:20:02  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-28 17:20:11  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions from a peer due to the 
