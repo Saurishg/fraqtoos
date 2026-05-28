@@ -4729,3 +4729,7 @@
 2026-05-28 07:00:07  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779931807.log
 2026-05-28 07:14:42  runner            INFO      ✓ Chia AI Watcher (64s)
 2026-05-28 07:14:50  runner            INFO        ✎ context: Chia AI Watcher flagged a warning for excessive plot quality lookup times exceed
+2026-05-28 07:15:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 07:45:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 08:00:27  runner            INFO      ✓ Chia Health Monitor (3s)
+2026-05-28 08:00:36  runner            INFO        ✎ context: Chia Health Monitor reports no wins for 64 hours, exceeding the expected 21-hour
