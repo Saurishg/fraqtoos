@@ -9,11 +9,11 @@
       "runs_today": 40
     },
     "Utility Bill Bot": {
-      "last_run": "2026-05-27 10:00:36",
+      "last_run": "2026-05-28 10:00:22",
       "success": true,
-      "duration": 8,
+      "duration": 12,
       "last_output": "und\n  \u2713 [payment_confirmed] Tata Neu: Amount not found\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 158827)\n\n\ud83d\udcb3 Checking for new ICICI credit card bill PDFs...\n\ud83d\udced No new ICICI emails since last send (UID 159101)\n\u2705 Done",
-      "runs_today": 39
+      "runs_today": 40
     },
     "BTC Strategy Bot": {
       "last_run": "2026-05-16 22:00:15",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-28 09:15:59",
+      "last_run": "2026-05-28 11:17:43",
       "success": true,
       "duration": 66,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which may increase risk of losing rewards.",
-      "runs_today": 278
+      "runs_today": 279
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-28 08:00:27",
