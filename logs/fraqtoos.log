@@ -4842,3 +4842,20 @@
 2026-05-28 23:00:24  orchestrator      INFO      Daily digest sent.
 2026-05-28 23:22:12  runner            INFO      ✓ Chia AI Watcher (17s)
 2026-05-28 23:22:21  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 17 seconds, confirm
+2026-05-28 23:22:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 23:52:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 00:22:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 00:52:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 01:06:27  watchdog          INFO      Watchdog full check starting...
+2026-05-29 01:06:45  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-29 01:06:46  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-29 01:06:46  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 291.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-29 01:23:00  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-29 01:23:08  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified peer banning and unsolicited trans
