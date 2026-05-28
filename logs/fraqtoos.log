@@ -4719,3 +4719,13 @@
 🟡 Chia AI Watcher
 2026-05-28 05:13:19  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-28 05:13:28  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool in 12 seconds, identifyin
+2026-05-28 05:13:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 05:43:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 06:00:24  runner            INFO      ✓ Portfolio Bot (23s)
+2026-05-28 06:00:33  runner            INFO        ✎ context: Portfolio Bot reported a 0.57% portfolio increase but advised reallocating funds
+2026-05-28 06:14:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 06:44:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 07:00:07  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-05-28 07:00:07  orchestrator      INFO      AI Agent started — output: /tmp/agent_1779931807.log
+2026-05-28 07:14:42  runner            INFO      ✓ Chia AI Watcher (64s)
+2026-05-28 07:14:50  runner            INFO        ✎ context: Chia AI Watcher flagged a warning for excessive plot quality lookup times exceed
