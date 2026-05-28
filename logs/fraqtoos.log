@@ -4859,3 +4859,9 @@
 🟡 Chia AI Watcher
 2026-05-29 01:23:00  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-29 01:23:08  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified peer banning and unsolicited trans
+2026-05-29 01:23:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 01:53:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 02:23:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 02:53:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 03:23:28  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-29 03:23:36  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from Chia AI within 12 
