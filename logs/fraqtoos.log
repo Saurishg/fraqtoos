@@ -4786,3 +4786,9 @@
 🟡 Chia AI Watcher
 2026-05-28 13:18:48  runner            INFO      ✓ Chia AI Watcher (45s)
 2026-05-28 13:18:57  runner            INFO        ✎ context: Chia AI Watcher flagged a warning for excessive plot quality lookup times exceed
+2026-05-28 13:19:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 13:49:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 14:19:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 14:49:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 15:19:17  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-05-28 15:19:25  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 13s, encountering a known Gigahorse giga37 bu
