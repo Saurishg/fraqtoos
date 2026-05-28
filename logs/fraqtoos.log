@@ -4834,3 +4834,11 @@
 🟡 Chia AI Watcher
 2026-05-28 21:21:25  runner            INFO      ✓ Chia AI Watcher (20s)
 2026-05-28 21:21:33  runner            INFO        ✎ context: Chia AI Watcher successfully identified and confirmed that multiple unsolicited 
+2026-05-28 21:22:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 21:52:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 22:22:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 22:52:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-28 23:00:09  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-05-28 23:00:24  orchestrator      INFO      Daily digest sent.
+2026-05-28 23:22:12  runner            INFO      ✓ Chia AI Watcher (17s)
+2026-05-28 23:22:21  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 17 seconds, confirm
