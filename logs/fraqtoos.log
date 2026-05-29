@@ -4896,3 +4896,20 @@
 2026-05-29 07:56:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-05-29 08:00:25  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-05-29 08:00:35  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a recent 
+2026-05-29 08:26:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 08:56:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 09:00:24  runner            INFO      ✓ Crypto Portfolio Bot (16s)
+2026-05-29 09:00:35  runner            INFO        ✎ context: Bitcoin fell slightly by 0.4% amid high market fear, while Ethereum gained 0.7%;
+2026-05-29 09:07:35  watchdog          INFO      Watchdog full check starting...
+2026-05-29 09:07:51  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-05-29 09:07:53  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-05-29 09:07:53  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 299.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-05-29 09:26:06  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-05-29 09:26:14  runner            INFO        ✎ context: Chia AI Watcher detected and confirmed benign unsolicited transactions from peer
