@@ -4892,3 +4892,7 @@
 2026-05-29 07:00:27  orchestrator      INFO      AI Agent started — output: /tmp/agent_1780018227.log
 2026-05-29 07:25:41  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-05-29 07:25:50  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool in 12 seconds, identifyin
+2026-05-29 07:26:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 07:56:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-29 08:00:25  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-05-29 08:00:35  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a recent 
