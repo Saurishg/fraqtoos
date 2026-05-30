@@ -5056,3 +5056,11 @@
 🟡 Chia AI Watcher
 2026-05-30 04:17:43  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-05-30 04:17:52  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 15 seconds, confirm
+2026-05-30 04:18:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 04:48:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 05:18:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 05:48:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 06:00:52  runner            INFO      ✓ Portfolio Bot (24s)
+2026-05-30 06:01:01  runner            INFO        ✎ context: Portfolio Bot identified significant declines in EDL, TCS, and ITC stocks, sugge
+2026-05-30 06:18:47  runner            INFO      ✓ Chia AI Watcher (45s)
+2026-05-30 06:18:56  runner            INFO        ✎ context: Chia AI Watcher detected 28 plot quality lookups exceeding 20s, risking reward l
