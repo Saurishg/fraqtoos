@@ -5123,3 +5123,9 @@
 🟡 Chia AI Watcher
 2026-05-30 12:20:56  runner            INFO      ✓ Chia AI Watcher (17s)
 2026-05-30 12:21:05  runner            INFO        ✎ context: The bot detected and confirmed that the Chia AI received several harmless unsoli
+2026-05-30 12:21:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 12:51:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 13:21:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 13:51:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-30 14:22:34  runner            INFO      ✓ Chia AI Watcher (83s)
+2026-05-30 14:23:13  runner            INFO        ✎ context: Chia AI Watcher detected a block validation delay of 2.74 seconds, exceeding the
