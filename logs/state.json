@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-30 20:17:59",
+  "last_watchdog": "2026-05-31 00:18:51",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-30 06:00:52",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-30 22:26:51",
+      "last_run": "2026-05-31 00:28:25",
       "success": true,
-      "duration": 68,
-      "last_output": "ef2f39cf66c7c912f7912b3f432c8e63c60867.plot: Invalid size for deltas: 45015 > 858', 'type': 'Gigahorse giga37 bug'}\n  \u2022 {'message': \"Exception: Failed to fetch block 8799164 from PeerInfo(_ip=IPv4Address('86.220.236.123'), _port=8444), timed out, closing connection.\", 'type': 'Peer timeout and ban'}",
-      "runs_today": 307
+      "duration": 63,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took between 23.529935448000003 and 28.896056092000038 seconds, exceeding the recommended maximum of 20 seconds.",
+      "runs_today": 308
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-30 08:00:06",
