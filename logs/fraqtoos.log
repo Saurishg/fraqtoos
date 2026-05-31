@@ -5365,3 +5365,20 @@
 2026-06-01 02:15:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-01 02:47:07  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-06-01 02:47:18  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-06-01 02:47:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 03:17:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 03:47:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 04:17:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 04:22:54  watchdog          INFO      Watchdog full check starting...
+2026-06-01 04:23:15  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-01 04:23:17  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-01 04:23:17  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 366.4h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-01 04:49:48  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-06-01 04:49:59  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
