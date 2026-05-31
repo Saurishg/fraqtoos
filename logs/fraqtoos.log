@@ -5359,3 +5359,9 @@
 🟡 Chia AI Watcher
 2026-06-01 00:44:49  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-06-01 00:45:00  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-06-01 00:45:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 01:15:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 01:45:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 02:15:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 02:47:07  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-06-01 02:47:18  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
