@@ -5332,3 +5332,11 @@
 🟡 Chia AI Watcher
 2026-05-31 20:41:16  runner            INFO      ✓ Chia AI Watcher (52s)
 2026-05-31 20:41:26  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded the recommended time
+2026-05-31 20:41:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 21:00:52  runner            INFO      ✓ Crypto Portfolio Bot (24s)
+2026-05-31 21:01:06  runner            INFO        ✎ context: Crypto Portfolio Bot reported slight declines in Bitcoin and Ethereum, advising 
+2026-05-31 21:12:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 21:42:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 22:12:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 22:42:22  runner            INFO      ✓ Chia AI Watcher (40s)
+2026-05-31 22:42:33  runner            INFO        ✎ context: Chia AI Watcher detected unsolicited transactions and banned peer 217.123.89.122
