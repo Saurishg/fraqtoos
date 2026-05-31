@@ -5219,3 +5219,11 @@
 🟡 Chia AI Watcher
 2026-05-31 04:29:59  runner            INFO      ✓ Chia AI Watcher (33s)
 2026-05-31 04:30:10  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 33 seconds, confirm
+2026-05-31 04:30:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 05:00:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 05:30:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 06:00:54  runner            INFO      ✓ Portfolio Bot (39s)
+2026-05-31 06:01:08  runner            INFO        ✎ context: Portfolio Bot identified a significant downturn in stocks like VEDL and advised 
+2026-05-31 06:01:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 06:31:22  runner            INFO      ✓ Chia AI Watcher (43s)
+2026-05-31 06:31:32  runner            INFO        ✎ context: Chia AI Watcher detected and banned a peer for runtime errors and received an un
