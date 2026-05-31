@@ -5309,3 +5309,9 @@
 🟡 Chia AI Watcher
 2026-05-31 16:39:34  runner            INFO      ✓ Chia AI Watcher (17s)
 2026-05-31 16:39:46  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully validated block times as being within acc
+2026-05-31 16:40:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 17:10:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 17:40:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 18:10:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 18:40:08  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-05-31 18:40:19  runner            INFO        ✎ context: Bot 'Chia AI Watcher' identified and addressed a benign issue of banning IPs due
