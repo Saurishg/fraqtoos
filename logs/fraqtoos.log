@@ -5248,3 +5248,13 @@
 🟡 Chia AI Watcher
 2026-05-31 08:32:22  runner            INFO      ✓ Chia AI Watcher (24s)
 2026-05-31 08:32:33  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 24 seconds, issuing
+2026-05-31 08:33:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 09:00:33  runner            INFO      ✓ Crypto Portfolio Bot (29s)
+2026-05-31 09:00:44  runner            INFO        ✎ context: The bot attempted to send Hive market data via WhatsApp but encountered an API e
+2026-05-31 09:03:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 09:33:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 10:00:28  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-05-31 10:00:42  runner            INFO        ✎ context: The Utility Bill Bot processed and confirmed payments, identified BSES bills, an
+2026-05-31 10:03:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-05-31 10:33:07  runner            INFO      ✓ Chia AI Watcher (23s)
+2026-05-31 10:33:18  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 23 seconds, confirm
