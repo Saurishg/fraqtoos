@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-05-31 04:19:25",
+  "last_watchdog": "2026-05-31 08:19:57",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-05-31 06:00:54",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-05-31 06:31:22",
+      "last_run": "2026-05-31 08:32:22",
       "success": true,
-      "duration": 43,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Peer banned due to GENERATOR_RUNTIME_ERROR, and unsolicited transaction received.\n  \u2022 Error code: GENERATOR_RUNTIME_ERROR encountered with a peer, leading to the peer being banned.\n  \u2022 Received an unsolicited transaction from a peer, which is not expected behavior.",
-      "runs_today": 311
+      "duration": 24,
+      "last_output": "\u26a0\ufe0f Chia AI (warning):",
+      "runs_today": 312
     },
     "Chia Health Monitor": {
       "last_run": "2026-05-31 08:00:11",
