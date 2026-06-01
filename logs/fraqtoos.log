@@ -5506,3 +5506,11 @@
 🟡 Chia AI Watcher
 2026-06-01 20:18:26  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-06-01 20:18:34  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 15 seconds, confirm
+2026-06-01 20:18:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 20:48:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 21:00:19  runner            INFO      ✓ Crypto Portfolio Bot (12s)
+2026-06-01 21:00:28  runner            INFO        ✎ context: The bot sent a WhatsApp message successfully but encountered multiple service fa
+2026-06-01 21:18:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 21:49:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 22:19:36  runner            INFO      ✓ Chia AI Watcher (33s)
+2026-06-01 22:19:44  runner            INFO        ✎ context: Chia AI Watcher detected repeated delays in plot quality lookups exceeding 20 se
