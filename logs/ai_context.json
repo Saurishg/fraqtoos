@@ -257,6 +257,6 @@
     "Utility Bill Bot": "Utility Bill Bot failed to connect to Gmail's IMAP server after three attempts due to DNS resolution errors, specifically `getaddrinfo EAI_AGAIN`."
   },
   "2026-06-02": {
-    "Chia AI Watcher": "Chia AI Watcher completed successfully despite a non-critical exception caused by the Gigahorse giga37 bug when fetching qualities with more than 20 items in a batch."
+    "Chia AI Watcher": "Chia AI Watcher detected 28 plot quality lookups exceeding the 20-second threshold, risking reward loss."
   }
 }

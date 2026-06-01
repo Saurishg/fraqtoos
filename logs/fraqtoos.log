@@ -5542,3 +5542,23 @@
 2026-06-02 01:50:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-02 02:20:31  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-02 02:20:40  runner            INFO        ✎ context: Chia AI Watcher completed successfully despite a non-critical exception caused b
+2026-06-02 02:21:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 02:51:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 03:21:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 03:51:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 04:17:47  watchdog          INFO      Watchdog full check starting...
+2026-06-02 04:18:00  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-02 04:18:01  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
+2026-06-02 04:18:01  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-02 04:18:01  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+   ↳ last run failed: 🤖 Utility Bill Bot [--once mode]
+⚠️  IMAP connect attempt 1/3 failed: getaddrinfo EAI_AGAIN imap.gmail.com — retrying in
+🟡 BTC Strategy Bot
+   ↳ stale: last run 390.3h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-02 04:21:37  runner            INFO      ✓ Chia AI Watcher (36s)
+2026-06-02 04:21:46  runner            INFO        ✎ context: Chia AI Watcher detected 28 plot quality lookups exceeding the 20-second thresho
