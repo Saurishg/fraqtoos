@@ -5536,3 +5536,9 @@
 🟡 Chia AI Watcher
 2026-06-02 00:20:04  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-06-02 00:20:13  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 12s, encountering exceptions while fetching q
+2026-06-02 00:20:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 00:50:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 01:20:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 01:50:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 02:20:31  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-02 02:20:40  runner            INFO        ✎ context: Chia AI Watcher completed successfully despite a non-critical exception caused b
