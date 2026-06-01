@@ -5411,3 +5411,15 @@
 🟡 Chia AI Watcher
 2026-06-01 08:55:00  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-06-01 08:55:12  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-06-01 08:55:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 09:00:38  runner            INFO      ✓ Crypto Portfolio Bot (25s)
+2026-06-01 09:00:52  runner            INFO        ✎ context: The Crypto Portfolio Bot successfully sent a WhatsApp message with an update on 
+2026-06-01 09:25:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 09:55:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 10:01:41  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 1
+2026-06-01 10:01:41  runner            INFO        ↺ Retry 1/1: Utility Bill Bot
+2026-06-01 10:03:05  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 2
+2026-06-01 10:03:17  runner            INFO        ✎ context: Utility Bill Bot failed to connect to Gmail's IMAP server after three attempts d
+2026-06-01 10:25:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 10:56:31  runner            INFO      ✓ Chia AI Watcher (61s)
+2026-06-01 10:56:42  runner            INFO        ✎ context: Chia AI Watcher detected slow plot quality lookups and WebSocket errors, indicat
