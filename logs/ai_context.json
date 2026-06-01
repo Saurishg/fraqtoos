@@ -255,5 +255,8 @@
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with one prover error due to a known bug, and the last win was earlier than expected.\n\n(Note: The summary is concise and within the character limit ",
     "Crypto Portfolio Bot": "The bot sent a WhatsApp message successfully but encountered multiple service failures, receiving HTTP 503 errors from Hive market data and several wallet requests across different networks.\n\n(Note: T",
     "Utility Bill Bot": "Utility Bill Bot failed to connect to Gmail's IMAP server after three attempts due to DNS resolution errors, specifically `getaddrinfo EAI_AGAIN`."
+  },
+  "2026-06-02": {
+    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed in 12s, encountering exceptions while fetching qualities due to a known Gigahorse giga37 bug."
   }
 }
