@@ -5423,3 +5423,40 @@
 2026-06-01 10:25:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-01 10:56:31  runner            INFO      ✓ Chia AI Watcher (61s)
 2026-06-01 10:56:42  runner            INFO        ✎ context: Chia AI Watcher detected slow plot quality lookups and WebSocket errors, indicat
+2026-06-01 10:57:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 11:27:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 11:57:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 12:00:16  watchdog          INFO      Watchdog full check starting...
+2026-06-01 12:00:40  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-01 12:00:42  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
+2026-06-01 12:00:42  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-01 12:00:42  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+   ↳ last run failed: 🤖 Utility Bill Bot [--once mode]
+⚠️  IMAP connect attempt 1/3 failed: getaddrinfo EAI_AGAIN imap.gmail.com — retrying in
+🟡 BTC Strategy Bot
+   ↳ stale: last run 374.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-01 12:15:47  orchestrator      INFO      =======================================================
+2026-06-01 12:15:47  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-06-01 12:15:47  orchestrator      INFO        2026-06-01 12:15:47
+2026-06-01 12:15:47  orchestrator      INFO      =======================================================
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-06-01 12:15:47  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-06-01 12:45:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 13:15:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 13:45:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-01 14:16:25  runner            INFO      ✓ Chia AI Watcher (32s)
+2026-06-01 14:16:34  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 32 seconds, confirm
