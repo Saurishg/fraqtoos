@@ -5678,3 +5678,11 @@
 🟡 Chia AI Watcher
 2026-06-02 19:56:59  runner            INFO      ✓ Chia AI Watcher (10s)
 2026-06-02 19:57:07  runner            INFO        ✎ context: The bot successfully identified and reported a harmless unsolicited transaction 
+2026-06-02 19:57:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 20:27:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 20:57:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 21:00:23  runner            INFO      ✓ Crypto Portfolio Bot (12s)
+2026-06-02 21:00:31  runner            INFO        ✎ context: Crypto Portfolio Bot sent a WhatsApp message but encountered multiple service fa
+2026-06-02 21:27:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 21:57:44  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-06-02 21:57:52  runner            INFO        ✎ context: The bot successfully identified and reported a harmless unsolicited transaction 
