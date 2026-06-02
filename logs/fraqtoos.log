@@ -5562,3 +5562,11 @@
 🟡 Chia AI Watcher
 2026-06-02 04:21:37  runner            INFO      ✓ Chia AI Watcher (36s)
 2026-06-02 04:21:46  runner            INFO        ✎ context: Chia AI Watcher detected 28 plot quality lookups exceeding the 20-second thresho
+2026-06-02 04:22:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 04:52:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 05:22:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 05:52:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 06:00:44  runner            INFO      ✓ Portfolio Bot (23s)
+2026-06-02 06:00:53  runner            INFO        ✎ context: Portfolio Bot identified VEDL as the biggest underperformer at -50.69%, suggesti
+2026-06-02 06:22:29  runner            INFO      ✓ Chia AI Watcher (35s)
+2026-06-02 06:22:38  runner            INFO        ✎ context: Chia AI Watcher flagged that all 28 plot quality lookups exceeded the 20-second 

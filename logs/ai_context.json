@@ -257,6 +257,7 @@
     "Utility Bill Bot": "Utility Bill Bot failed to connect to Gmail's IMAP server after three attempts due to DNS resolution errors, specifically `getaddrinfo EAI_AGAIN`."
   },
   "2026-06-02": {
-    "Chia AI Watcher": "Chia AI Watcher detected 28 plot quality lookups exceeding the 20-second threshold, risking reward loss."
+    "Chia AI Watcher": "Chia AI Watcher flagged that all 28 plot quality lookups exceeded the 20-second threshold, risking reward loss.",
+    "Portfolio Bot": "Portfolio Bot identified VEDL as the biggest underperformer at -50.69%, suggesting reducing exposure to it and reallocating funds to better-performing stocks like TMCV."
   }
 }
