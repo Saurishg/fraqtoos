@@ -5705,3 +5705,9 @@
 🟡 Chia AI Watcher
 2026-06-02 23:58:09  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-02 23:58:16  runner            INFO        ✎ context: Bot 'Chia AI Watcher' detected benign unsolicited transactions from a single pee
+2026-06-02 23:58:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 00:28:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 00:58:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 01:28:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 01:58:56  runner            INFO      ✓ Chia AI Watcher (33s)
+2026-06-03 01:59:04  runner            INFO        ✎ context: Chia AI Watcher detected multiple slow plot quality checks exceeding 20 seconds,
