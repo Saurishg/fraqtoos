@@ -5655,3 +5655,9 @@
 🟡 Chia AI Watcher
 2026-06-02 15:55:42  runner            INFO      ✓ Chia AI Watcher (34s)
 2026-06-02 15:55:50  runner            INFO        ✎ context: Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, risk
+2026-06-02 15:55:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 16:25:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 16:55:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 17:25:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-02 17:56:19  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-06-02 17:56:27  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 22 seconds, issuing

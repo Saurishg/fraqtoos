@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-02 15:55:42",
+      "last_run": "2026-06-02 17:56:19",
       "success": true,
-      "duration": 34,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Plot quality lookup times exceed 20 seconds, increasing risk of losing rewards.",
-      "runs_today": 338
+      "duration": 22,
+      "last_output": "\u26a0\ufe0f Chia AI (warning):",
+      "runs_today": 339
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-02 08:00:17",
