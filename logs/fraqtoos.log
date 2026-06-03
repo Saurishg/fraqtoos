@@ -5868,3 +5868,9 @@
 🟡 Chia AI Watcher
 2026-06-04 00:07:22  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-04 00:07:30  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 11s; detected a benign WebSocket error with n
+2026-06-04 00:08:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 00:38:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 01:08:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 01:38:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 02:08:05  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-06-04 02:08:14  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 28 seconds, confirm
