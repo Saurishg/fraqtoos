@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-03 12:03:19",
+      "last_run": "2026-06-03 14:04:02",
       "success": true,
-      "duration": 33,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup took over 20 seconds multiple times, increasing risk of losing rewards.'}",
-      "runs_today": 348
+      "duration": 28,
+      "last_output": "t errors due to server timeout and mempool slow-path updates.\n  \u2022 WebSocket Error: No PONG received after 30.0 seconds, indicating potential connectivity issues with peers.\n  \u2022 Mempool updated using the slow-path multiple times, suggesting possible congestion or inefficiencies in mempool management.",
+      "runs_today": 349
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-03 08:00:20",

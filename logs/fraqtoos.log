@@ -5795,3 +5795,9 @@
 🟡 Chia AI Watcher
 2026-06-03 12:03:19  runner            INFO      ✓ Chia AI Watcher (33s)
 2026-06-03 12:03:27  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded the recommended time
+2026-06-03 12:03:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 12:33:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 13:04:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 13:34:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 14:04:02  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-06-03 14:04:10  runner            INFO        ✎ context: Chia AI Watcher detected WebSocket errors and frequent slow-path updates due to 
