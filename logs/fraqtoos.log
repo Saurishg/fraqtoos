@@ -5841,3 +5841,11 @@
 🟡 Chia AI Watcher
 2026-06-03 20:06:04  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-03 20:06:12  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a beni
+2026-06-03 20:06:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 20:36:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 21:00:30  runner            INFO      ✓ Crypto Portfolio Bot (14s)
+2026-06-03 21:00:39  runner            INFO        ✎ context: Crypto Portfolio Bot reported a stable $16.96K gain over the past 12 and 24 hour
+2026-06-03 21:07:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 21:37:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 22:06:55  runner            INFO      ✓ Chia AI Watcher (43s)
+2026-06-03 22:07:03  runner            INFO        ✎ context: Chia AI Watcher identified that plot quality lookups exceeded the recommended ti

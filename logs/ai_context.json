@@ -264,10 +264,10 @@
     "Utility Bill Bot": "The Utility Bill Bot processed and reported bills, confirming payments for Tata Neu and identifying BSES bills due, while finding no new emails from BSES or ICICI since the last check.\n\n(Note: The sum"
   },
   "2026-06-03": {
-    "Chia AI Watcher": "Bot 'Chia AI Watcher' successfully updated the mempool, identifying it as a benign issue in 11 seconds.",
+    "Chia AI Watcher": "Chia AI Watcher identified that plot quality lookups exceeded the recommended time threshold by taking over 33 seconds for multiple plots.",
     "Portfolio Bot": "Portfolio Bot identified a lack of diversification in the portfolio, driven by losses from VEDL, TCS, and ITC, recommending reallocation to more stable sectors or stocks for risk mitigation.\n\n(Note: T",
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with 13,245 plots, a win delay of 4 hours due to a known bug, and no block validation issues.\n\n(Note: The summary is within the character limit and ",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot sent a WhatsApp message and encountered multiple service failures, including Hive market data and requests to various wallets returning HTTP 503 errors.\n\n(Note: The summary is con",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a stable $16.96K gain over the past 12 and 24 hours, despite Bitcoin and Ethereum's declines amid market fear.\n\n(Note: The summary is concise and captures the key points ",
     "Utility Bill Bot": "The bot processed utility bills, confirming payments and identifying BSES and ICICI bill statuses without finding any new items to report via WhatsApp or email."
   }
 }
