@@ -5818,3 +5818,9 @@
 🟡 Chia AI Watcher
 2026-06-03 16:04:45  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-03 16:04:53  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, confirm
+2026-06-03 16:05:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 16:35:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 17:05:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 17:35:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 18:05:22  runner            INFO      ✓ Chia AI Watcher (23s)
+2026-06-03 18:05:31  runner            INFO        ✎ context: Chia AI Watcher encountered a WebSocket timeout and peer ban due to a generator 
