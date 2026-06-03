@@ -5801,3 +5801,20 @@
 2026-06-03 13:34:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-03 14:04:02  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-06-03 14:04:10  runner            INFO        ✎ context: Chia AI Watcher detected WebSocket errors and frequent slow-path updates due to 
+2026-06-03 14:04:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 14:34:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 15:04:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 15:34:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-03 15:57:17  watchdog          INFO      Watchdog full check starting...
+2026-06-03 15:57:30  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-03 15:57:31  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-03 15:57:31  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 426.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-03 16:04:45  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-03 16:04:53  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, confirm
