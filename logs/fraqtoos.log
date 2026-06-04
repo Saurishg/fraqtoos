@@ -5891,3 +5891,11 @@
 🟡 Chia AI Watcher
 2026-06-04 04:09:07  runner            INFO      ✓ Chia AI Watcher (29s)
 2026-06-04 04:09:15  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 29 seconds, confirm
+2026-06-04 04:09:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 04:39:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 05:09:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 05:39:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 06:00:45  runner            INFO      ✓ Portfolio Bot (23s)
+2026-06-04 06:00:53  runner            INFO        ✎ context: Portfolio Bot identified VEDL and SHIVAMAUTO as major loss contributors due to o
+2026-06-04 06:09:51  runner            INFO      ✓ Chia AI Watcher (27s)
+2026-06-04 06:09:59  runner            INFO        ✎ context: Chia AI Watcher confirmed normal harvester operation without detecting any V1 or
