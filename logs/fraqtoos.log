@@ -5899,3 +5899,22 @@
 2026-06-04 06:00:53  runner            INFO        ✎ context: Portfolio Bot identified VEDL and SHIVAMAUTO as major loss contributors due to o
 2026-06-04 06:09:51  runner            INFO      ✓ Chia AI Watcher (27s)
 2026-06-04 06:09:59  runner            INFO        ✎ context: Chia AI Watcher confirmed normal harvester operation without detecting any V1 or
+2026-06-04 06:10:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 06:40:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 07:00:02  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-04 07:00:02  orchestrator      INFO      AI Agent started — output: /tmp/agent_1780536602.log
+2026-06-04 07:10:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 07:40:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 07:59:06  watchdog          INFO      Watchdog full check starting...
+2026-06-04 07:59:21  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-04 07:59:22  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-04 07:59:22  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 442.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-04 08:00:26  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-06-04 08:00:35  runner            INFO        ✎ context: The Chia Health Monitor reports successful farming with 13,245 plots, a win dela
