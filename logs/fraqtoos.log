@@ -6031,3 +6031,9 @@
 🟡 Chia AI Watcher
 2026-06-05 00:16:24  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-05 00:16:33  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully banned an IP for suspicious activity in 11 se
+2026-06-05 00:17:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 00:47:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 01:17:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 01:47:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 02:17:07  runner            INFO      ✓ Chia AI Watcher (27s)
+2026-06-05 02:17:16  runner            INFO        ✎ context: Chia AI Watcher identified benign issues in logs, including a dev fee deduction 
