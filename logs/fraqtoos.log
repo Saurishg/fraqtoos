@@ -5930,3 +5930,31 @@
 2026-06-04 10:00:40  runner            INFO        ✎ context: The Utility Bill Bot processed and reported existing bills, found no new BSES or
 2026-06-04 10:11:41  runner            INFO      ✓ Chia AI Watcher (30s)
 2026-06-04 10:11:50  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully monitored and confirmed normal operation 
+2026-06-04 10:12:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 10:42:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 11:12:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 11:42:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 11:59:26  watchdog          INFO      Watchdog full check starting...
+2026-06-04 11:59:40  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-04 11:59:41  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-04 11:59:41  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 446.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-04 12:00:11  watchdog          INFO      Watchdog full check starting...
+2026-06-04 12:00:27  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-04 12:00:28  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-04 12:00:28  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 446.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-04 12:12:27  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-06-04 12:12:36  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 28 seconds, confirm
