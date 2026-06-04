@@ -5981,3 +5981,9 @@
 🟡 Chia AI Watcher
 2026-06-04 16:13:58  runner            INFO      ✓ Chia AI Watcher (29s)
 2026-06-04 16:14:06  runner            INFO        ✎ context: Chia AI Watcher confirmed normal harvester operation without detecting any V1 or
+2026-06-04 16:14:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 16:44:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 17:14:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 17:44:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 18:14:52  runner            INFO      ✓ Chia AI Watcher (38s)
+2026-06-04 18:15:00  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 38 seconds, confirm
