@@ -6012,3 +6012,22 @@
 2026-06-04 21:46:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-04 22:15:57  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-04 22:16:06  runner            INFO        ✎ context: The bot detected and confirmed that receiving unsolicited transactions from a pe
+2026-06-04 22:17:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 22:47:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 23:00:08  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-06-04 23:00:25  orchestrator      INFO      Daily digest sent.
+2026-06-04 23:17:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-04 23:47:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 00:00:28  watchdog          INFO      Watchdog full check starting...
+2026-06-05 00:00:41  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-05 00:00:42  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-05 00:00:42  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 458.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-05 00:16:24  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-05 00:16:33  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully banned an IP for suspicious activity in 11 se
