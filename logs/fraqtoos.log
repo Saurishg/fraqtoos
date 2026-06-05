@@ -6093,3 +6093,31 @@
 2026-06-05 10:00:31  runner            INFO        ✎ context: The Utility Bill Bot processed and reported existing bills, found no new BSES or
 2026-06-05 10:19:43  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-05 10:19:51  runner            INFO        ✎ context: The Chia AI node successfully executed a routine security action by banning an I
+2026-06-05 10:20:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 10:50:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 11:20:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 11:50:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 12:00:27  watchdog          INFO      Watchdog full check starting...
+2026-06-05 12:00:40  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-05 12:00:42  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-05 12:00:42  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 470.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-05 12:02:12  watchdog          INFO      Watchdog full check starting...
+2026-06-05 12:02:26  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-05 12:02:27  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-05 12:02:27  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 470.0h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-05 12:20:09  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-05 12:20:17  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 11s, encountering a known Gigahorse giga37 bu
