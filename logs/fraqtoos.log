@@ -6062,3 +6062,11 @@
 2026-06-05 06:00:40  runner            INFO        ✎ context: Portfolio Bot advised reducing high-risk stocks like VEDL and reallocating to st
 2026-06-05 06:18:40  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-06-05 06:18:48  runner            INFO        ✎ context: The Bot "Chia AI Watcher" successfully completed its task in 28 seconds, confirm
+2026-06-05 06:19:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 06:49:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 07:00:21  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-05 07:00:21  orchestrator      INFO      AI Agent started — output: /tmp/agent_1780623021.log
+2026-06-05 07:19:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 07:49:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 08:00:28  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-06-05 08:00:37  runner            INFO        ✎ context: Chia Health Monitor reports no wins for 72 hours, exceeding the expected 16-hour
