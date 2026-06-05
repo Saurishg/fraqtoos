@@ -6167,3 +6167,11 @@
 🟡 Chia AI Watcher
 2026-06-05 20:22:36  runner            INFO      ✓ Chia AI Watcher (16s)
 2026-06-05 20:22:44  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 16 seconds, confirm
+2026-06-05 20:23:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 20:53:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 21:00:31  runner            INFO      ✓ Crypto Portfolio Bot (15s)
+2026-06-05 21:00:40  runner            INFO        ✎ context: The Crypto Portfolio Bot successfully executed a strategy in 15 seconds, sending
+2026-06-05 21:23:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 21:53:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 22:23:07  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-06-05 22:23:15  runner            INFO        ✎ context: Chia AI Watcher detected an unsolicited transaction and banned the associated IP

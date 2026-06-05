@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-05 20:22:36",
+      "last_run": "2026-06-05 22:23:07",
       "success": true,
-      "duration": 16,
-      "last_output": "\u2705 Chia AI (ok):",
-      "runs_today": 376
+      "duration": 22,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Received unsolicited transaction and banned IP address.\n  \u2022 {'issue': 'Banning IP for suspicious activity'}\n  \u2022 {'issue': 'Unsolicited transaction received'}",
+      "runs_today": 377
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-05 08:00:28",
@@ -37,11 +37,11 @@
       "runs_today": 33
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-06-05 09:00:29",
+      "last_run": "2026-06-05 21:00:31",
       "success": true,
-      "duration": 16,
-      "last_output": "cant decline in your portfolio by 5.8%, it's advisable to watch key support levels closely before considering any further action.\n\n**Actionable Insight:** Watch level: BTC $60,000.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 49
+      "duration": 15,
+      "last_output": " key support levels closely before making further moves.\n\n**Actionable Insight:** Watch for BTC to stabilize above $60,000; consider holding until clearer signs of recovery emerge.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 50
     }
   }
 }
