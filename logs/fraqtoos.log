@@ -6200,3 +6200,20 @@
 2026-06-06 01:54:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-06 02:24:20  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-06-06 02:24:28  runner            INFO        ✎ context: Chia AI Watcher confirmed normal operation as no V1 or V2 proofs were found in t
+2026-06-06 02:24:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 02:55:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 03:25:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 03:55:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 04:04:35  watchdog          INFO      Watchdog full check starting...
+2026-06-06 04:04:50  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-06 04:04:51  ruflo_fixer       INFO      [BTC Strategy Bot] skipped (benign)
+2026-06-06 04:04:51  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 BTC Strategy Bot
+   ↳ stale: last run 486.1h ago
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-06 04:25:03  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-06 04:25:12  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified an unsolicited transaction as 
