@@ -6054,3 +6054,11 @@
 🟡 Chia AI Watcher
 2026-06-05 04:17:52  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-06-05 04:18:00  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 13 seconds, confirm
+2026-06-05 04:18:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 04:48:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 05:18:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 05:48:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 06:00:31  runner            INFO      ✓ Portfolio Bot (25s)
+2026-06-05 06:00:40  runner            INFO        ✎ context: Portfolio Bot advised reducing high-risk stocks like VEDL and reallocating to st
+2026-06-05 06:18:40  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-06-05 06:18:48  runner            INFO        ✎ context: The Bot "Chia AI Watcher" successfully completed its task in 28 seconds, confirm
