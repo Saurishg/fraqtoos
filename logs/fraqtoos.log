@@ -6144,3 +6144,9 @@
 🟡 Chia AI Watcher
 2026-06-05 16:21:16  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-05 16:21:25  runner            INFO        ✎ context: Chia AI Watcher detected benign unsolicited transactions caused by the Gigahorse
+2026-06-05 16:21:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 16:51:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 17:21:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 17:52:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-05 18:21:47  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-06-05 18:21:56  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 16 seconds, confirm
