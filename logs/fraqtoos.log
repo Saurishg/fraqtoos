@@ -6225,3 +6225,11 @@
 2026-06-06 06:00:50  runner            INFO        ✎ context: Portfolio Bot analyzed performance, suggesting rebalancing by reducing exposure 
 2026-06-06 06:25:32  runner            INFO      ✓ Chia AI Watcher (10s)
 2026-06-06 06:25:40  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully identified an unsolicited transaction as 
+2026-06-06 06:26:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 06:56:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 07:00:12  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-06 07:00:12  orchestrator      INFO      AI Agent started — output: /tmp/agent_1780709412.log
+2026-06-06 07:26:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 07:56:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 08:00:20  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-06-06 08:00:29  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a win 16 
