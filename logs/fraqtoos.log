@@ -6371,3 +6371,9 @@
 2026-06-06 22:01:46  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
 2026-06-06 22:01:46  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
 2026-06-06 22:31:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 23:00:19  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-06-06 23:00:34  orchestrator      INFO      Daily digest sent.
+2026-06-06 23:02:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-06 23:32:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 00:02:19  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-06-07 00:02:27  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign mempool updates and peer ba

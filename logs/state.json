@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-06 21:16:01",
+      "last_run": "2026-06-07 00:02:19",
       "success": true,
-      "duration": 15,
-      "last_output": "\u2705 Chia AI (ok):",
-      "runs_today": 388
+      "duration": 12,
+      "last_output": "\u2705 Chia AI (ok): Mempool update using slow-path and peer ban are benign events.",
+      "runs_today": 389
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-06 08:00:20",
