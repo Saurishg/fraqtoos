@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-06 12:06:01",
+  "last_watchdog": "2026-06-06 16:06:45",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-06 06:00:41",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-06 14:28:13",
+      "last_run": "2026-06-06 16:28:57",
       "success": true,
-      "duration": 15,
-      "last_output": "\u2705 Chia AI (ok):",
-      "runs_today": 385
+      "duration": 11,
+      "last_output": "\u2705 Chia AI (ok): Banned IP address due to suspicious activity, benign unless frequent.",
+      "runs_today": 386
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-06 08:00:20",
