@@ -82,14 +82,8 @@ BOTS = [
         "scheduled": True,   # one-shot at 10:00
         "max_age_h": 30,
     },
-    {
-        "name":      "BTC Strategy Bot",
-        "proc":      "btc_strategy.py",
-        "log":       "/home/work/fraqtoos/logs/fraqtoos.log",
-        "critical":  False,
-        "scheduled": True,   # one-shot at 22:00
-        "max_age_h": 30,
-    },
+    # BTC Strategy Bot removed from orchestrator schedule 2026-05-16; dropped from
+    # watchdog 2026-06-06 to stop a permanent stale WARNING (bot no longer runs).
     {
         "name":      "Chia Health Monitor",
         "proc":      "chia_health",

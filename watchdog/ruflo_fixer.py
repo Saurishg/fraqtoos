@@ -33,10 +33,6 @@ BOT_REGISTRY = {
         "/home/work/utility-bill-bot",
         "node -e \"require('./check_bills_imap'); console.log('import OK')\" 2>&1 | head -5",
     ),
-    "BTC Strategy Bot": (
-        "/home/work/crypto-trading-bot",
-        "python3 -c \"import btc_strategy; print('import OK')\" 2>&1 | head -5",
-    ),
     "Chia AI Watcher": (
         "/home/work/fraqtoos",
         "python3 -c \"from bots.chia_ai_watcher import run; print('import OK')\" 2>&1 | head -5",
