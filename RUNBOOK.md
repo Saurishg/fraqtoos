@@ -139,7 +139,6 @@ The data that matters (not derivable from code):
 | `/home/work/fraqtoos/shared/wa_profile/` | WhatsApp session | re-login by hand |
 | `/home/work/portfolio_bot/.env` | broker credentials | secrets vault |
 | `/home/work/utility-bill-bot/.env` | Gmail OAuth token | re-auth flow |
-| `/home/work/crypto-trading-bot/btc_1h_cache.csv` | BTC OHLC cache | regenerates from binance |
 
 ## Memory-aware context
 

@@ -33,7 +33,6 @@ BOTS_DISPLAY = [
     ("Orchestrator",     "orchestrator.py"),
     ("Portfolio Bot",    "portfolio_bot.py"),
     ("Utility Bill Bot", "bot.js"),
-    ("BTC Bot",          "btc_strategy.py"),
     ("Gemma Agent",      "agent.py"),
     ("Watchdog",         "watchdog.py"),
 ]
@@ -43,7 +42,6 @@ SCHEDULE = [
     ("07:00", "AI Agent Analysis"),
     ("10:00", "Utility Bill Bot"),
     ("12:00", "Watchdog Full Check"),
-    ("22:00", "BTC Bot"),
     ("23:00", "Daily WhatsApp Digest"),
 ]
 

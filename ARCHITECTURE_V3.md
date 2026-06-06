@@ -14,7 +14,6 @@ fraqtoos/
 │   ├── chia_health.py       ← Rule-based Chia farming health check
 │   ├── chia_ai_watcher.py   ← phi4 classifies Chia log errors
 │   ├── ai_agent/run.py      ← Wraps gemma-agent/agent.py
-│   ├── crypto/__init__.py   ← Wraps crypto-trading-bot/btc_strategy.py
 │   ├── portfolio/__init__.py← Wraps portfolio_bot/portfolio_bot.py
 │   └── utility_bill/__init__.py ← Wraps utility-bill-bot/bot.js
 └── watchdog/
@@ -25,7 +24,6 @@ fraqtoos/
 External bot directories (each has its own git repo):
   /home/work/portfolio_bot/        portfolio_bot.py
   /home/work/utility-bill-bot/     bot.js
-  /home/work/crypto-trading-bot/   btc_strategy.py
   /home/work/Desktop/crypto/       index.js  (Crypto Portfolio / Hive)
   /home/work/gemma-agent/          agent.py
 ```
@@ -43,7 +41,6 @@ External bot directories (each has its own git repo):
 | 10:00      | Utility Bill Bot       | ✅ |
 | 12:00      | Watchdog full          | ✅ |
 | 21:00      | Crypto Portfolio Bot   | ✅ |
-| 22:00      | BTC Strategy Bot       | ✅ |
 | 23:00      | Daily WhatsApp Digest  | ✅ |
 
 ## Data Flow

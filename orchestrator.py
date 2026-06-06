@@ -45,13 +45,6 @@ BOTS = {
         "timeout": 300,
         "retries": 1,
     },
-    "btc_live": {
-        "name":    "BTC Live Bot",
-        "cmd":     "python3 live_bot.py --loop",
-        "cwd":     "/home/work/crypto-trading-bot",
-        "timeout": 86400,  # runs all day
-        "retries": 2,
-    },
     "crypto_portfolio": {
         "name":    "Crypto Portfolio Bot",
         "cmd":     "node index.js --once",
