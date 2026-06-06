@@ -292,6 +292,6 @@
     "Utility Bill Bot": "Utility Bill Bot processed and reported existing bills, found no new BSES or ICICI bill PDFs, and confirmed all actions completed successfully.\n\n(Note: The summary is concise and captures the key outc"
   },
   "2026-06-07": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 29 seconds, confirming that the Chia AI harvester is operating normally without any issues."
+    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed in 12s, encountering a known Gigahorse giga37 bug while fetching qualities."
   }
 }

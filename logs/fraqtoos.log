@@ -6391,3 +6391,9 @@
 🟡 Chia AI Watcher
 2026-06-07 02:03:20  runner            INFO      ✓ Chia AI Watcher (29s)
 2026-06-07 02:03:28  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 29 seconds, confirm
+2026-06-07 02:03:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 02:33:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 03:03:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 03:33:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 04:03:47  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-06-07 04:03:56  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 12s, encountering a known Gigahorse giga37 bu
