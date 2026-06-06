@@ -6377,3 +6377,17 @@
 2026-06-06 23:32:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-07 00:02:19  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-06-07 00:02:27  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified benign mempool updates and peer ba
+2026-06-07 00:02:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 00:32:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 01:02:31  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 01:32:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 02:02:04  watchdog          INFO      Watchdog full check starting...
+2026-06-07 02:02:19  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-07 02:02:20  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-07 02:03:20  runner            INFO      ✓ Chia AI Watcher (29s)
+2026-06-07 02:03:28  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 29 seconds, confirm
