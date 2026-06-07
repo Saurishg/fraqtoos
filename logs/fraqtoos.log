@@ -6397,3 +6397,19 @@
 2026-06-07 03:33:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-07 04:03:47  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-06-07 04:03:56  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 12s, encountering a known Gigahorse giga37 bu
+2026-06-07 04:03:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 04:33:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 05:03:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 05:34:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 06:00:27  runner            INFO      ✓ Portfolio Bot (25s)
+2026-06-07 06:00:37  runner            INFO        ✎ context: Portfolio Bot identified VEDL as a major loss contributor and suggested realloca
+2026-06-07 06:02:37  watchdog          INFO      Watchdog full check starting...
+2026-06-07 06:02:51  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-07 06:02:52  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-07 06:04:48  runner            INFO      ✓ Chia AI Watcher (26s)
+2026-06-07 06:04:56  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 26 seconds, confirm
