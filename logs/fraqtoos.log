@@ -6533,3 +6533,9 @@
 🟡 Chia AI Watcher
 2026-06-08 02:11:45  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-08 02:11:53  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully detected and identified an unsolicited tr
+2026-06-08 02:12:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 02:42:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 03:12:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 03:42:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 04:12:11  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-08 04:12:19  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from Chia AI within 11 
