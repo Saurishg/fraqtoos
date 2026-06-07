@@ -6495,3 +6495,19 @@
 2026-06-07 19:40:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-07 20:09:46  runner            INFO      ✓ Chia AI Watcher (12s)
 2026-06-07 20:09:55  runner            INFO        ✎ context: Chia AI Watcher identified unsolicited transactions as harmless, attributing the
+2026-06-07 20:10:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 20:40:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 21:00:39  runner            INFO      ✓ Crypto Portfolio Bot (11s)
+2026-06-07 21:00:49  runner            INFO        ✎ context: Crypto Portfolio Bot encountered multiple "Request failed with status code 429" 
+2026-06-07 21:10:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 21:40:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 22:04:52  watchdog          INFO      Watchdog full check starting...
+2026-06-07 22:05:07  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-07 22:05:08  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-07 22:10:19  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-06-07 22:10:27  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from Chia AI within 10 
