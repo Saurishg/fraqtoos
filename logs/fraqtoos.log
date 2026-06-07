@@ -6511,3 +6511,11 @@
 🟡 Chia AI Watcher
 2026-06-07 22:10:19  runner            INFO      ✓ Chia AI Watcher (10s)
 2026-06-07 22:10:27  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from Chia AI within 10 
+2026-06-07 22:10:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 22:40:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 23:00:00  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-06-07 23:00:14  orchestrator      INFO      Daily digest sent.
+2026-06-07 23:11:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 23:41:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 00:11:01  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-06-08 00:11:09  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified and reported that corrupted pl
