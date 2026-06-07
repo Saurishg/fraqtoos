@@ -6519,3 +6519,17 @@
 2026-06-07 23:41:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-08 00:11:01  runner            INFO      ✓ Chia AI Watcher (13s)
 2026-06-08 00:11:09  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified and reported that corrupted pl
+2026-06-08 00:11:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 00:41:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 01:11:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 01:41:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 02:05:16  watchdog          INFO      Watchdog full check starting...
+2026-06-08 02:05:32  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-08 02:05:33  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-08 02:11:45  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-08 02:11:53  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully detected and identified an unsolicited tr
