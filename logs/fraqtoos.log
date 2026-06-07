@@ -6423,3 +6423,21 @@
 2026-06-07 08:00:17  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a win 8 h
 2026-06-07 08:05:46  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-06-07 08:05:54  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 28 seconds, confirm
+2026-06-07 08:05:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 08:35:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 09:00:42  runner            INFO      ✓ Crypto Portfolio Bot (15s)
+2026-06-07 09:00:52  runner            INFO        ✎ context: Crypto Portfolio Bot reported a $14.01K portfolio value, up by $112.84 in the la
+2026-06-07 09:06:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 09:36:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-07 10:00:34  runner            INFO      ✓ Utility Bill Bot (9s)
+2026-06-07 10:00:44  runner            INFO        ✎ context: The bot processed utility bills, confirming payments and identifying BSES and IC
+2026-06-07 10:03:14  watchdog          INFO      Watchdog full check starting...
+2026-06-07 10:03:29  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-07 10:03:30  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-07 10:06:13  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-06-07 10:06:22  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 13 seconds, confirm

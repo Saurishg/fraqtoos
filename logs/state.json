@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-07 06:02:52",
+  "last_watchdog": "2026-06-07 10:03:30",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-07 06:00:27",
@@ -9,11 +9,11 @@
       "runs_today": 50
     },
     "Utility Bill Bot": {
-      "last_run": "2026-06-06 10:00:34",
+      "last_run": "2026-06-07 10:00:34",
       "success": true,
       "duration": 9,
       "last_output": "und\n  \u2713 [payment_confirmed] Tata Neu: Amount not found\n\ud83d\udced All bills already reported \u2014 skipping WhatsApp\n\n\ud83d\udce9 Checking for new BSES bill PDFs...\n\ud83d\udced No new BSES emails since last send (UID 158827)\n\n\ud83d\udcb3 Checking for new ICICI credit card bill PDFs...\n\ud83d\udced No new ICICI emails since last send (UID 159101)\n\u2705 Done",
-      "runs_today": 49
+      "runs_today": 50
     },
     "BTC Strategy Bot": {
       "last_run": "2026-05-16 22:00:15",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-07 08:05:46",
+      "last_run": "2026-06-07 10:06:13",
       "success": true,
-      "duration": 28,
-      "last_output": "\u2705 Chia AI (ok): Harvester logs show normal operation with no issues.",
-      "runs_today": 393
+      "duration": 13,
+      "last_output": "\u2705 Chia AI (ok):",
+      "runs_today": 394
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-07 08:00:07",
@@ -37,11 +37,11 @@
       "runs_today": 35
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-06-06 21:00:18",
+      "last_run": "2026-06-07 09:00:42",
       "success": true,
-      "duration": 16,
-      "last_output": " remain unchanged, but the overall portfolio sees a slight decline of 3.6%. **Actionable Insight:** Hold positions as extreme fear could signal potential buying opportunities soon.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 52
+      "duration": 15,
+      "last_output": "00, indicating potential volatility ahead. Consider taking profit on strong positions as this fear index suggests a possible downturn; watch for support levels around $60K for BTC.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 53
     }
   }
 }
