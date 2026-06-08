@@ -6649,3 +6649,9 @@
 🟡 Chia AI Watcher
 2026-06-08 18:17:33  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-08 18:17:42  runner            INFO        ✎ context: The Chia AI node successfully executed a routine security action by banning an I
+2026-06-08 18:18:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 18:48:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 19:18:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 19:48:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 20:18:02  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-08 20:18:10  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 14 seconds, confirm
