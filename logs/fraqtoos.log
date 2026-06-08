@@ -6539,3 +6539,19 @@
 2026-06-08 03:42:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-08 04:12:11  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-08 04:12:19  runner            INFO        ✎ context: The bot detected an unsolicited but harmless transaction from Chia AI within 11 
+2026-06-08 04:12:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 04:42:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 05:12:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 05:42:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 06:00:53  runner            INFO      ✓ Portfolio Bot (28s)
+2026-06-08 06:01:02  runner            INFO        ✎ context: Portfolio Bot identified significant losses in VEDL, TCS, and ITC stocks, sugges
+2026-06-08 06:06:03  watchdog          INFO      Watchdog full check starting...
+2026-06-08 06:06:17  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-08 06:06:18  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-08 06:13:18  runner            INFO      ✓ Chia AI Watcher (29s)
+2026-06-08 06:13:26  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 29 seconds, confirm

@@ -299,6 +299,7 @@
     "Utility Bill Bot": "The bot processed utility bills, confirming payments and identifying BSES and ICICI bill statuses without finding any new emails to report via WhatsApp or other channels.\n\n(Note: The summary is concis"
   },
   "2026-06-08": {
-    "Chia AI Watcher": "The bot detected an unsolicited but harmless transaction from Chia AI within 11 seconds."
+    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully completed its task in 29 seconds, confirming that the Chia AI harvester is operating normally without any issues.",
+    "Portfolio Bot": "Portfolio Bot identified significant losses in VEDL, TCS, and ITC stocks, suggesting reallocation to stabilize the portfolio using RITES gains.\n\n(Note: The summary is concise and captures the key acti"
   }
 }
