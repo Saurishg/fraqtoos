@@ -6589,3 +6589,21 @@
 🟡 Chia AI Watcher
 2026-06-08 10:14:42  runner            INFO      ✓ Chia AI Watcher (11s)
 2026-06-08 10:14:50  runner            INFO        ✎ context: The Chia AI node successfully banned an IP address as part of its standard secur
+2026-06-08 10:15:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 10:45:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 11:15:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 11:45:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-08 12:00:26  watchdog          INFO      Watchdog full check starting...
+2026-06-08 12:00:42  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-08 12:00:43  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
+2026-06-08 12:00:43  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+   ↳ last run failed: 🤖 Utility Bill Bot [--once mode]
+⚠️  IMAP connect attempt 1/3 failed: Command failed — retrying in 5s
+⚠️  IMAP connect a
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-08 12:15:25  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-06-08 12:15:34  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 12s, encountering a known Gigahorse giga37 bu
