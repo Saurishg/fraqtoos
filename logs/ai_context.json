@@ -306,6 +306,6 @@
     "Utility Bill Bot": "Utility Bill Bot failed after three unsuccessful IMAP connection attempts, resulting in a fatal command failure within 56 seconds.\n\n--- \n\nIf you need further assistance or details about troubleshootin"
   },
   "2026-06-09": {
-    "Chia AI Watcher": "Chia AI Watcher detected multiple slow plot quality checks exceeding 20 seconds, risking reward loss."
+    "Chia AI Watcher": "Chia AI Watcher flagged a warning for plot quality lookups exceeding the 20-second threshold, risking potential reward loss."
   }
 }
