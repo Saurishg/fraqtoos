@@ -6719,3 +6719,11 @@
 🟡 Chia AI Watcher
 2026-06-09 04:38:03  runner            INFO      ✓ Chia AI Watcher (33s)
 2026-06-09 04:38:12  runner            INFO        ✎ context: Chia AI Watcher flagged a warning for plot quality lookups exceeding the 20-seco
+2026-06-09 04:38:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-09 05:08:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-09 05:38:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-09 06:00:41  runner            INFO      ✓ Portfolio Bot (24s)
+2026-06-09 06:00:50  runner            INFO        ✎ context: Portfolio Bot identified underperforming stocks like VEDL and suggested realloca
+2026-06-09 06:08:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-09 06:38:57  runner            INFO      ✓ Chia AI Watcher (34s)
+2026-06-09 06:39:05  runner            INFO        ✎ context: Chia AI Watcher flagged a delay in plot quality lookups exceeding 20 seconds, ri
