@@ -306,8 +306,10 @@
     "Utility Bill Bot": "Utility Bill Bot failed after three unsuccessful IMAP connection attempts, resulting in a fatal command failure within 56 seconds.\n\n--- \n\nIf you need further assistance or details about troubleshootin"
   },
   "2026-06-09": {
-    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed in 11s, encountering a known Gigahorse giga37 bug while fetching qualities.",
+    "Chia AI Watcher": "Chia AI Watcher detected that plot quality lookups exceeded the recommended time threshold, risking reward loss.",
     "Portfolio Bot": "Portfolio Bot identified underperforming stocks like VEDL and suggested reallocating funds to improve portfolio performance after a 98.19% gain was offset by significant losses.",
-    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,245 plots, a win delay of 35 hours due to a known bug, one prover error, and normal block validation.\n\n(Note: The summary is concise and within the characte"
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,245 plots, a win delay of 35 hours due to a known bug, one prover error, and normal block validation.\n\n(Note: The summary is concise and within the characte",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported a slight increase in total value by $20.60 over the last 12 hours and $206.82 over 24 hours, with BTC and ETH down slightly; HINT rose notably by 2.5%.",
+    "Utility Bill Bot": "The Utility Bill Bot failed due to invalid Gmail app password authentication, requiring a new one from Google Account settings."
   }
 }
