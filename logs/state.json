@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-09 20:39:03",
+  "last_watchdog": "2026-06-10 00:39:18",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-09 06:00:41",
@@ -23,11 +23,11 @@
       "runs_today": 27
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-09 22:45:03",
+      "last_run": "2026-06-10 00:45:29",
       "success": true,
-      "duration": 34,
-      "last_output": "\u2705 Chia AI (ok): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Plot quality lookup took over 20 seconds multiple times, increasing risk of losing rewards.",
-      "runs_today": 423
+      "duration": 11,
+      "last_output": "\u2705 Chia AI (ok): Exception fetching qualities due to known Gigahorse giga37 bug.",
+      "runs_today": 424
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-09 08:00:14",
