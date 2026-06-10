@@ -320,6 +320,6 @@
     "Utility Bill Bot": "The Utility Bill Bot successfully processed and reported a new BSES electricity bill, confirmed multiple Tata Neu payments, sent updates via WhatsApp, and verified no new ICICI credit card bills or em"
   },
   "2026-06-11": {
-    "Chia AI Watcher": "Chia AI Watcher flagged a warning for slow plot quality lookups exceeding 20 seconds, risking reward loss."
+    "Chia AI Watcher": "Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, risking reward loss."
   }
 }
