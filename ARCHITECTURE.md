@@ -31,8 +31,8 @@ FraqtoOS is a single-orchestrator automation server that runs ~10 sub-bots (port
 | 08:00 | `chia_health` | 60s | silent |
 | 10:00 | `utility_bill` | 300s | yes |
 | 12:00 | `run_full` | — | conditional |
-| 22:00 | `crypto` (BTC strategy) | 300s | yes (no retry) |
-| 23:00 | `send_daily_digest` (llama4 300s → phi4 120s → static) | — | — |
+| 09:00, 21:00 | `crypto_portfolio` (Hive) | 120s | yes |
+| 23:00 | `send_daily_digest` (qwen3:30b-a3b 300s → phi4 120s → static) | — | — |
 
 ## Data flow
 

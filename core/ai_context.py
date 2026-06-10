@@ -71,7 +71,7 @@ def summarize_run(bot_name: str, output: str, success: bool, duration: int) -> s
 
 def generate_digest() -> str:
     """
-    Use llama4 to write a narrative daily digest from today's bot summaries.
+    Use mistral-small to write a narrative daily digest from today's bot summaries.
     Called at 23:00 by orchestrator.
     """
     summaries = read_today()
@@ -92,15 +92,15 @@ def generate_digest() -> str:
 
     try:
         r = requests.post(OLLAMA_URL, json={
-            "model": "llama4",
-            "messages": [{"role": "user", "content": prompt}],
+            "model": "mistral-small",  # non-thinking model — thinking tokens
+            "messages": [{"role": "user", "content": prompt}],  # would eat num_predict
             "stream": False,
             "options": {"temperature": 0.2, "num_predict": 400}
         }, timeout=300)
         r.raise_for_status()
         return r.json()["message"]["content"].strip()
     except Exception as e:
-        # Fallback to phi4 if llama4 times out
+        # Fallback to phi4 if mistral-small times out
         try:
             r = requests.post(OLLAMA_URL, json={
                 "model": "phi4",

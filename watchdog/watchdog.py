@@ -16,7 +16,7 @@ from core          import state as st
 log = get_logger("watchdog")
 OLLAMA_URL   = "http://localhost:11434/api/generate"
 OLLAMA_PROBE = "http://localhost:11434/api/tags"
-MODEL_CHAIN  = ["phi4", "deepseek-r1:14b", "qwen3:14b"]
+MODEL_CHAIN  = ["phi4", "deepseek-r1:14b", "qwen3:30b-a3b"]
 DISK_WARN_PCT = 90
 
 def ensure_ollama_up(attempts: int = 2) -> bool:

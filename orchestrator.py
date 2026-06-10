@@ -110,7 +110,7 @@ def run_ai_agent(task: str):
         log_path = f"/tmp/agent_{int(time.time())}.log"
         with open(log_path, 'w') as lf:
             subprocess.Popen(
-                ["python3", "/home/work/gemma-agent/agent.py", "--model", "phi4", task],
+                ["python3", "/home/work/gemma-agent/agent.py", task],
                 env={**os.environ, "DISPLAY": ":0"}, stdout=lf, stderr=lf
             )
         log.info(f"AI Agent started — output: {log_path}")
