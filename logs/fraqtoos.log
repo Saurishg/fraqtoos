@@ -6900,3 +6900,17 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-10 07:48:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-10 08:00:17  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-06-10 08:00:27  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,245 plots, a win 15 
+2026-06-10 08:18:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-10 08:40:00  watchdog          INFO      Watchdog full check starting...
+2026-06-10 08:40:15  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-10 08:40:17  ruflo_fixer       INFO      [Utility Bill Bot] skipped (skip)
+2026-06-10 08:40:17  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+   ↳ last run failed: 🤖 Utility Bill Bot [--once mode]
+Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a new one
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-10 08:47:58  runner            INFO      ✓ Chia AI Watcher (11s)
+2026-06-10 08:48:07  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 11s; detected a benign WebSocket error with n
