@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-11 13:50:20",
+  "last_watchdog": "2026-06-11 17:50:39",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-11 06:00:36",
@@ -16,11 +16,11 @@
       "runs_today": 54
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-11 15:52:45",
+      "last_run": "2026-06-11 17:53:25",
       "success": true,
-      "duration": 26,
-      "last_output": "erTimeoutError('No PONG received after 30.0 seconds'))\", 'count': 3}\n  \u2022 {'message': 'Received unsolicited transaction from peer'}\n  \ud83d\udd27 Fix (sudo systemctl restart chia-full-node): To address the issue with your Chia node, I will execute the necessary steps to restart the full node and then check its",
-      "runs_today": 443
+      "duration": 16,
+      "last_output": "ssue': 'Unsolicited transaction from peer', 'count': 2, 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'issue': 'WebSocket Error: No PONG received after 30.0 seconds', 'fix_cmd': 'sudo systemctl restart chia-full-node', 'fix_reason': 'Restarting the full node may resolve WebSocket communication issues.'}",
+      "runs_today": 444
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-11 08:00:05",
