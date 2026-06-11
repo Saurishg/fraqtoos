@@ -7111,3 +7111,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-11 11:22:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-11 11:51:41  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-06-11 11:51:46  runner            INFO        ✎ context: Bot 'Chia AI Watcher' successfully identified that the mempool update and peer c
+2026-06-11 11:52:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-11 12:00:16  watchdog          INFO      Watchdog full check starting...
+2026-06-11 12:00:28  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-11 12:00:29  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-11 12:22:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-11 12:52:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-11 13:22:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-11 13:50:05  watchdog          INFO      Watchdog full check starting...
+2026-06-11 13:50:19  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-11 13:50:20  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-11 13:52:07  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-06-11 13:52:12  runner            INFO        ✎ context: Chia AI Watcher detected a GENERATOR_RUNTIME_ERROR from peer 74.104.130.66, resu
