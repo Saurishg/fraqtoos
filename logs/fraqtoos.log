@@ -7241,3 +7241,6 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-12 07:38:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-12 08:00:14  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-06-12 08:00:20  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,238 plots, a win 7 h
+2026-06-12 08:08:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-12 08:38:07  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-12 08:38:11  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
