@@ -327,7 +327,7 @@
     "Utility Bill Bot": "The Utility Bill Bot successfully processed and confirmed multiple BSES bills, noted no new BSES or ICICI credit card bill PDFs since the last check, and skipped sending a WhatsApp message as all bill"
   },
   "2026-06-12": {
-    "Chia AI Watcher": "Chia AI Watcher identified warnings about a non-existent directory and unexpected data but found no critical issues in the Chia system logs.",
+    "Chia AI Watcher": "Chia AI Watcher detected a missing directory error for plotting on the harvester, indicating '/media/work/Hdd500/Final' does not exist.\n\n(Note: The summary is concise and within the character limit.)",
     "Portfolio Bot": "Portfolio Bot identified significant losses in VEDL, SHIVAMAUTO, and THINKINK stocks, advising reduced exposure to these underperformers and reallocating funds into more promising sectors like TMCV's ",
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with 13,238 plots, a win 7 hours late due to a known bug, and two prover errors on unique plots, while block validation remained normal.\n\n(Note: The",
     "Crypto Portfolio Bot": "Crypto Portfolio Bot successfully sent a WhatsApp message about BTC's potential buy signal, but encountered empty responses from multiple Hive and wallet data sources.\n\n(Note: The summary is concise a",

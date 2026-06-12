@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-12 10:36:29",
+  "last_watchdog": "2026-06-12 12:00:13",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-12 06:00:33",
@@ -16,11 +16,11 @@
       "runs_today": 55
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-12 10:38:50",
+      "last_run": "2026-06-12 12:39:30",
       "success": true,
-      "duration": 21,
-      "last_output": "  \u2022 {'message': 'Received unsolicited transaction from peer 8f26beff6c5a3d54e978a0240fe585835086161eaab7db577747ad01a2fa844c', 'component': 'chia.full_node.full_node_api', 'level': 'WARNING'}\n  \u2022 {'message': 'Bad SES, expected SubEpochSummary ... got ChallengeChainSub', 'component': '', 'level': ''}",
-      "runs_today": 452
+      "duration": 15,
+      "last_output": "\u2705 Chia AI (ok): Harvester warning about missing directory for plotting.\n  \u2022 {'message': 'Directory: /media/work/Hdd500/Final does not exist.', 'component': 'chia.plotting.util'}",
+      "runs_today": 453
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-12 08:00:14",
