@@ -341,6 +341,6 @@
     "Utility Bill Bot": "The Utility Bill Bot successfully checked and confirmed that all utility bills were reported, finding no new BSES or ICICI credit card bill emails since the last check.\n\n(Note: The summary is concise "
   },
   "2026-06-14": {
-    "Chia AI Watcher": "Chia AI Watcher identified a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final."
+    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting: /media/work/Hdd500/Final."
   }
 }
