@@ -7608,3 +7608,19 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-14 13:17:51  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
 2026-06-14 13:48:14  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-06-14 13:48:19  runner            INFO        ✎ context: Chia AI Watcher flagged a warning for plot quality lookups exceeding 20 seconds,
+2026-06-14 13:48:19  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 14:18:21  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 14:48:23  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 15:18:24  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 15:47:56  watchdog          INFO      Watchdog full check starting...
+2026-06-14 15:48:06  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-14 15:48:07  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-06-14 15:48:07  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🔴 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ stale: last run 33.8h ago
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-14 15:48:51  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-14 15:48:56  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
