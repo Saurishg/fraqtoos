@@ -7646,3 +7646,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-06-14 19:49:49  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-14 19:49:54  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory for plotting, reporting that `/medi
+2026-06-14 19:49:54  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 20:19:56  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 20:49:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-14 21:00:47  runner            INFO      ✓ Crypto Portfolio Bot (19s)
+2026-06-14 21:00:52  runner            INFO        ✎ context: Crypto Portfolio Bot advised caution due to extreme fear index levels, while Wha
+2026-06-14 21:20:23  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 21:50:11  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-06-14 21:50:16  runner            INFO        ✎ context: Chia AI Watcher encountered warnings about non-existent directories and an error
