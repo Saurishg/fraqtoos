@@ -7558,3 +7558,21 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-14 08:00:13  runner            INFO        ✎ context: The Chia Health Monitor detected that SSL file permissions are too open, recomme
 2026-06-14 08:07:44  runner            INFO      ✓ Chia AI Watcher (30s)
 2026-06-14 08:07:48  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 30 seconds, confirm
+2026-06-14 08:07:48  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 08:37:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-14 09:00:39  runner            INFO      ✓ Crypto Portfolio Bot (18s)
+2026-06-14 09:00:45  runner            INFO        ✎ context: Crypto Portfolio Bot advised caution due to "Extreme Fear" sentiment, suggesting
+2026-06-14 09:08:15  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-14 09:38:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-14 10:00:29  runner            INFO      ✓ Utility Bill Bot (11s)
+2026-06-14 10:00:35  runner            INFO        ✎ context: The Utility Bill Bot confirmed bill payments, found a BSES electricity bill due 
+2026-06-14 10:07:05  watchdog          INFO      Watchdog full check starting...
+2026-06-14 10:07:16  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-14 10:07:19  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🔴 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-14 10:08:03  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-14 10:08:07  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester

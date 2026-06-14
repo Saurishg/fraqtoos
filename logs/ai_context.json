@@ -341,7 +341,9 @@
     "Utility Bill Bot": "The Utility Bill Bot successfully checked and confirmed that all utility bills were reported, finding no new BSES or ICICI credit card bill emails since the last check.\n\n(Note: The summary is concise "
   },
   "2026-06-14": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 30 seconds, confirming that Chia AI is operational.",
-    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.\n\n--- \n\nIf you need further assistance or have more ques"
+    "Chia AI Watcher": "Chia AI Watcher detected a missing directory error for plotting on the harvester, specifically \"/media/work/Hdd500/Final does not exist.\"",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.\n\n--- \n\nIf you need further assistance or have more ques",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot advised caution due to \"Extreme Fear\" sentiment, suggesting monitoring Bitcoin's $63,000 support level; WhatsApp notifications failed after three attempts.\n\n(Note: The summary is ",
+    "Utility Bill Bot": "The Utility Bill Bot confirmed bill payments, found a BSES electricity bill due in 2026, and detected no new PDFs for BSES, ICICI, or HDFC accounts since the last check.\n\n(Note: The summary is concise"
   }
 }
