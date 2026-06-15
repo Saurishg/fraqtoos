@@ -354,6 +354,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed bill payments, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails without finding any updates since the last check."
   },
   "2026-06-16": {
-    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting: /media/work/Hdd500/Final."
+    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final."
   }
 }

@@ -7840,3 +7840,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-06-16 02:37:27  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-16 02:37:32  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
+2026-06-16 02:38:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 03:08:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 03:38:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 04:08:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 04:37:53  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-16 04:37:58  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
