@@ -348,6 +348,7 @@
   },
   "2026-06-15": {
     "Chia AI Watcher": "Chia AI Watcher identified a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final.\n\n(Note: The summary is within the character limit and specifically addr",
-    "Portfolio Bot": "Portfolio Bot successfully rebalanced the portfolio by shifting to stable sectors like TMCV but failed to send updates via WhatsApp due to connection issues.\n\n(Note: The timestamp indicates a future d"
+    "Portfolio Bot": "Portfolio Bot successfully rebalanced the portfolio by shifting to stable sectors like TMCV but failed to send updates via WhatsApp due to connection issues.\n\n(Note: The timestamp indicates a future d",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
