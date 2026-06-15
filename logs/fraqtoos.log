@@ -7721,3 +7721,10 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-15 07:53:12  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
 2026-06-15 08:00:16  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-06-15 08:00:21  runner            INFO        ✎ context: The Chia Health Monitor detected that SSL file permissions are too open, recomme
+2026-06-15 08:23:23  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-15 08:53:24  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-15 09:00:33  runner            INFO      ✓ Crypto Portfolio Bot (9s)
+2026-06-15 09:00:39  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a portfolio value of $556.38K, with SAI down b
+2026-06-15 09:23:41  watchdog          WARNING   Watchdog issues (WhatsApp suppressed): CRITICAL: WhatsApp Service is NOT running!
+2026-06-15 09:52:56  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-15 09:53:01  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory for plotting, reporting that '/medi
