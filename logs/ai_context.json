@@ -354,7 +354,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed bill payments, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails without finding any updates since the last check."
   },
   "2026-06-16": {
-    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final.",
+    "Chia AI Watcher": "Chia AI Watcher identified a non-existent directory and an error in fetching plot qualities due to incorrect source size.",
     "Portfolio Bot": "14 stocks | Invested \u20b9552,672 | Current \u20b9474,556 | P&L \u20b9-78,117 (-14.1%)",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "The \"Crypto Portfolio Bot\" failed due to a timeout occurring after 120 seconds of operation.",
