@@ -7873,3 +7873,6 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-16 07:38:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-16 08:00:29  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-06-16 08:00:34  runner            INFO        ✎ context: The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were
+2026-06-16 08:09:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 08:38:51  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-06-16 08:38:56  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
