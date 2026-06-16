@@ -7876,3 +7876,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-16 08:09:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-16 08:38:51  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-06-16 08:38:56  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
+2026-06-16 08:39:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 09:02:28  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-16 09:02:32  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-06-16 09:09:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 09:39:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 10:02:28  runner            INFO      ✓ Utility Bill Bot (132s)
+2026-06-16 10:02:33  runner            INFO        ✎ context: Utility Bill Bot processed PDFs and checked emails for ICICI and HDFC cards, but
+2026-06-16 10:10:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-16 10:35:35  watchdog          INFO      Watchdog full check starting...
+2026-06-16 10:35:45  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-16 10:35:46  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-16 10:35:46  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-16 10:35:46  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-16 09:02:28  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-16 10:39:37  runner            INFO      ✓ Chia AI Watcher (20s)
+2026-06-16 10:39:41  runner            INFO        ✎ context: Chia AI Watcher identified a non-existent directory warning and reported normal 
