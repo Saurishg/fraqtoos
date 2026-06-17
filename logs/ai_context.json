@@ -362,6 +362,7 @@
   },
   "2026-06-17": {
     "Chia AI Watcher": "Chia AI Watcher detected a missing directory and an invalid plot size, causing warnings and errors in the harvester component.",
-    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9310,067 | P&L \u20b9-36,686 (-10.6%)"
+    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9310,067 | P&L \u20b9-36,686 (-10.6%)",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
