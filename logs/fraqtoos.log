@@ -8120,3 +8120,23 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-17 20:19:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-17 20:49:02  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-17 20:49:07  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
+2026-06-17 20:49:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 21:02:08  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-17 21:02:13  runner            INFO        ✎ context: The 'Crypto Portfolio Bot' failed due to a timeout occurring after 120 seconds o
+2026-06-17 21:19:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 21:49:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 22:19:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 22:39:28  watchdog          INFO      Watchdog full check starting...
+2026-06-17 22:39:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-17 22:39:38  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-17 22:39:38  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-17 22:39:38  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-17 21:02:08  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-17 22:49:23  runner            INFO      ✓ Chia AI Watcher (14s)
+2026-06-17 22:49:28  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
