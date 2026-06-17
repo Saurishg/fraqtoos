@@ -366,5 +366,8 @@
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "The 'Crypto Portfolio Bot' failed due to a timeout occurring after 120 seconds of operation.",
     "Utility Bill Bot": "Utility Bill Bot processed PDFs, checked emails for ICICI and HDFC cards with no new updates, but failed to send a WhatsApp message due to service unavailability, deferring UID 160901 for the next run"
+  },
+  "2026-06-18": {
+    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final."
   }
 }
