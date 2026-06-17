@@ -8038,3 +8038,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-17 08:15:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-17 08:45:43  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-17 08:45:48  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
+2026-06-17 08:46:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 09:02:19  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-17 09:02:23  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-06-17 09:16:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 09:46:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 10:02:19  runner            INFO      ✓ Utility Bill Bot (132s)
+2026-06-17 10:02:24  runner            INFO        ✎ context: Utility Bill Bot processed PDFs, checked emails for ICICI and HDFC cards with no
+2026-06-17 10:16:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 10:37:56  watchdog          INFO      Watchdog full check starting...
+2026-06-17 10:38:05  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-17 10:38:07  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-17 10:38:07  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-17 10:38:07  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-17 09:02:19  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-17 10:46:17  runner            INFO      ✓ Chia AI Watcher (10s)
+2026-06-17 10:46:22  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 10 seconds, confirm
