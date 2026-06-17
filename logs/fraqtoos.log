@@ -8008,3 +8008,23 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-17 04:14:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-17 04:44:43  runner            INFO      ✓ Chia AI Watcher (20s)
 2026-06-17 04:44:48  runner            INFO        ✎ context: Chia AI Watcher detected missing directories and an invalid plot size error in t
+2026-06-17 04:45:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 05:15:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 05:45:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 06:05:22  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+2026-06-17 06:05:27  runner            INFO        ✎ context: The Portfolio Bot exceeded its time limit, resulting in a timeout after 300 seco
+2026-06-17 06:15:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-17 06:37:39  watchdog          INFO      Watchdog full check starting...
+2026-06-17 06:37:49  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-17 06:37:50  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-17 06:37:50  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-17 06:37:50  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-17 06:05:22  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-17 06:45:07  runner            INFO      ✓ Chia AI Watcher (17s)
+2026-06-17 06:45:12  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory and an invalid plot size, causing w

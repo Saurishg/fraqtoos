@@ -1,12 +1,12 @@
 {
-  "last_watchdog": "2026-06-17 02:37:27",
+  "last_watchdog": "2026-06-17 06:37:50",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-06-16 06:05:03",
+      "last_run": "2026-06-17 06:05:22",
       "success": false,
       "duration": 300,
       "last_output": "TIMEOUT after 300s",
-      "runs_today": 58
+      "runs_today": 59
     },
     "Utility Bill Bot": {
       "last_run": "2026-06-16 10:02:28",
@@ -16,11 +16,11 @@
       "runs_today": 59
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-17 04:44:43",
+      "last_run": "2026-06-17 06:45:07",
       "success": true,
-      "duration": 20,
-      "last_output": "level': 'WARNING'}\n  \u2022 {'message': 'Exception fetching qualities for /mnt/52/c19/plot-k32-c19-2024-06-09-01-27-2a2ffcd175cef7a78a3dccbbeeef2f39cf66c7c912f7912b3f432c8e63c60867.plot: Invalid size for deltas: 2382 > 858 (t=5, pos=1850596418)', 'component': 'chia.harvester.harvester', 'level': 'ERROR'}",
-      "runs_today": 507
+      "duration": 17,
+      "last_output": "nd invalid plot size for deltas.\n  \u2022 {'message': 'Directory: /media/work/Hdd500/Final does not exist.', 'component': 'chia.plotting.util', 'level': 'WARNING'}\n  \u2022 {'message': 'Exception fetching qualities for plot: Invalid size for deltas.', 'component': 'chia.harvester.harvester', 'level': 'ERROR'}",
+      "runs_today": 508
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-16 08:00:29",
