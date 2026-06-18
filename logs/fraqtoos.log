@@ -8262,3 +8262,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-06-18 18:55:12  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-18 18:55:17  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
+2026-06-18 18:55:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-18 19:25:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-18 19:55:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-18 20:25:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-18 20:55:38  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-06-18 20:55:43  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
