@@ -16,11 +16,11 @@
       "runs_today": 61
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-19 02:57:51",
+      "last_run": "2026-06-19 04:58:22",
       "success": true,
       "duration": 19,
-      "last_output": "oducer failed: The resolution lifetime expired after 32.003 seconds', 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'message': 'Directory does not exist: /media/work/Hdd500/Final', 'fix_cmd': 'sudo mkdir -p /media/work/Hdd500/Final', 'fix_reason': 'Creates the missing directory to resolve the warning.'}",
-      "runs_today": 530
+      "last_output": "ia.plotting.util', 'level': 'WARNING'}\n  \u2022 {'message': 'Exception fetching qualities for /mnt/16/c19/plot-k32-c19-2024-04-06-01-16-12305188c5f83f6c44088633e7faa7a91b412afa6ca8c0974be896e34c1c4155.plot: Invalid size for deltas: 65455 > 1102', 'component': 'chia.harvester.harvester', 'level': 'ERROR'}",
+      "runs_today": 531
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-18 08:00:20",
