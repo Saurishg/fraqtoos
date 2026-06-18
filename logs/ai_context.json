@@ -368,7 +368,7 @@
     "Utility Bill Bot": "Utility Bill Bot processed PDFs, checked emails for ICICI and HDFC cards with no new updates, but failed to send a WhatsApp message due to service unavailability, deferring UID 160901 for the next run"
   },
   "2026-06-18": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 10 seconds, confirming that Chia AI is operational.",
+    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting: /media/work/Hdd500/Final.",
     "Portfolio Bot": "Portfolio Bot completed its task in 24 seconds, identifying VOGL and VEDL as major underperformers and suggesting reallocation to improve portfolio health.",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
