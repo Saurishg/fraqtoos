@@ -369,6 +369,7 @@
   },
   "2026-06-18": {
     "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 10 seconds, confirming that Chia AI is operational.",
-    "Portfolio Bot": "Portfolio Bot completed its task in 24 seconds, identifying VOGL and VEDL as major underperformers and suggesting reallocation to improve portfolio health."
+    "Portfolio Bot": "Portfolio Bot completed its task in 24 seconds, identifying VOGL and VEDL as major underperformers and suggesting reallocation to improve portfolio health.",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
