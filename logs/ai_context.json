@@ -375,6 +375,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed bill payments, reported existing bills via email, and found no new PDFs or emails for BSES, ICICI, and HDFC accounts."
   },
   "2026-06-19": {
-    "Chia AI Watcher": "Chia AI Watcher identified DNS resolution failures and a missing harvester directory, suggesting no fix for DNS but recommending creating the directory with `sudo mkdir -p /media/work/Hdd500/Final`."
+    "Chia AI Watcher": "Chia AI Watcher identified DNS resolution failures and a missing directory, suggesting fixes for both issues."
   }
 }

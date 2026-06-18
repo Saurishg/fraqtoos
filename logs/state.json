@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-18 22:42:12",
+  "last_watchdog": "2026-06-19 02:42:31",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-18 06:00:38",
@@ -16,11 +16,11 @@
       "runs_today": 61
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-19 00:57:08",
+      "last_run": "2026-06-19 02:57:51",
       "success": true,
-      "duration": 16,
-      "last_output": "y for harvester.\n  \u2022 {'issue': 'querying DNS introducer failed repeatedly', 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'issue': 'Harvester directory does not exist', 'fix_cmd': 'sudo mkdir -p /media/work/Hdd500/Final', 'fix_reason': 'Creates the missing directory for harvester to function properly.'}",
-      "runs_today": 529
+      "duration": 19,
+      "last_output": "oducer failed: The resolution lifetime expired after 32.003 seconds', 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'message': 'Directory does not exist: /media/work/Hdd500/Final', 'fix_cmd': 'sudo mkdir -p /media/work/Hdd500/Final', 'fix_reason': 'Creates the missing directory to resolve the warning.'}",
+      "runs_today": 530
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-18 08:00:20",
