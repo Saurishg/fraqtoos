@@ -380,5 +380,8 @@
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "Crypto Portfolio Bot executed successfully, suggesting a BTC buy at $60K if it holds, but faced data retrieval issues from Hive for wallet and market information.\n\n(Note: The phone number in the origi",
     "Utility Bill Bot": "Utility Bill Bot confirmed bill amounts, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails with no updates since the last check."
+  },
+  "2026-06-20": {
+    "Chia AI Watcher": "Chia AI Watcher detected a missing directory and an invalid plot size error in the harvester logs, indicating potential configuration issues."
   }
 }

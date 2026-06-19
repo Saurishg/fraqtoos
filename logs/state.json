@@ -16,11 +16,11 @@
       "runs_today": 62
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-19 23:04:28",
+      "last_run": "2026-06-20 01:05:00",
       "success": true,
-      "duration": 26,
-      "last_output": ">, data=ServerTimeoutError('No PONG received after 30.0 seconds'), extra=None)\", 'type': 'ERROR', 'component': 'full_node_server'}\n  \ud83d\udd27 Fix (sudo systemctl restart chia-harvester): To address the issue with your Chia node, follow these steps:\n\n1. **Restart the Chia Harvester Service**: Run the follow",
-      "runs_today": 540
+      "duration": 20,
+      "last_output": "evel': 'WARNING'}\n  \u2022 {'message': 'Exception fetching qualities for /mnt/49/c19/plot-k32-c19-2024-05-30-21-50-89ee40667fe3ae46e393aa0e342d4e4ca32a663cfd3c7596750ba38d79e3092b.plot: Invalid size for deltas: 51152 > 858 (t=5, pos=2281897817)', 'component': 'chia.harvester.harvester', 'level': 'ERROR'}",
+      "runs_today": 541
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-19 08:00:30",
