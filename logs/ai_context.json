@@ -382,6 +382,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed bill amounts, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails with no updates since the last check."
   },
   "2026-06-20": {
-    "Chia AI Watcher": "Chia AI Watcher identified a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final."
+    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 9 seconds, issuing a warning about Chia AI.\n\n(Note: The summary is concise and within the character limit.)"
   }
 }
