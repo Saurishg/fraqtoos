@@ -8344,3 +8344,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-19 08:30:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-19 08:59:53  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-19 08:59:58  runner            INFO        ✎ context: Chia AI Watcher detected a missing directory error for plotting on the harvester
+2026-06-19 09:00:36  runner            INFO      ✓ Crypto Portfolio Bot (8s)
+2026-06-19 09:00:42  runner            INFO        ✎ context: Crypto Portfolio Bot executed successfully in 8s, advising to hold and monitor t
+2026-06-19 09:00:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 09:30:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 10:00:26  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-06-19 10:00:31  runner            INFO        ✎ context: Utility Bill Bot confirmed bill amounts, found no new bills to report via WhatsA
+2026-06-19 10:01:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 10:31:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 10:43:04  watchdog          INFO      Watchdog full check starting...
+2026-06-19 10:43:13  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-19 10:43:14  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-06-19 10:43:14  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: mpt 5/6), waiting 10s...
+2026-06-19 06:07:18,906  ERROR  DNS resolution failed for kite.zerodha.com after 6 attempts
+202
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-19 11:00:32  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-06-19 11:00:37  runner            INFO        ✎ context: Chia AI Watcher identified a non-existent directory warning and noted the use of
