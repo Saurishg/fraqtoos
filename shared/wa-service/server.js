@@ -81,14 +81,46 @@ client.on("disconnected", (reason) => {
 
 client.initialize();
 
+// ── Delivery confirmation ───────────────────────────────────────────────────
+// client.sendMessage() resolves when the message is queued LOCALLY, not when
+// WhatsApp's servers accept it. Right after a (re)link the queue can silently
+// drop a send while still resolving — callers then advance their state on a
+// message that never left. Wait for ACK >= 1 (ACK_SERVER) so a phantom send
+// surfaces as a failure and the caller retries instead of losing the message.
+function waitForAck(msg, minAck = 1, timeoutMs = 20000) {
+    return new Promise((resolve) => {
+        if ((msg.ack || 0) >= minAck) return resolve(true);
+        const id = msg.id?._serialized;
+        let done = false;
+        const onAck = (m, ack) => {
+            if (m.id?._serialized === id && ack >= minAck) finish(true);
+        };
+        const finish = (ok) => {
+            if (done) return;
+            done = true;
+            client.removeListener("message_ack", onAck);
+            clearTimeout(timer);
+            resolve(ok);
+        };
+        const timer = setTimeout(() => finish((msg.ack || 0) >= minAck), timeoutMs);
+        client.on("message_ack", onAck);
+    });
+}
+
 // ── Send helper ────────────────────────────────────────────────────────────
 async function doSend(phone, message, res) {
     try {
         // Normalise: strip leading +, ensure @c.us suffix
         const clean = phone.replace(/^\+/, "").replace(/\s/g, "");
         const chatId = `${clean}@c.us`;
-        await client.sendMessage(chatId, message);
-        console.log(`[wa-service] Sent to ${clean}`);
+        const msg = await client.sendMessage(chatId, message);
+        const confirmed = await waitForAck(msg, 1, 20000);
+        if (!confirmed) {
+            console.error(`[wa-service] Send to ${clean} not confirmed (ack timeout)`);
+            if (res) res.status(504).json({ ok: false, error: "send not confirmed by server (ack timeout)" });
+            return;
+        }
+        console.log(`[wa-service] Sent to ${clean} (ack confirmed)`);
         if (res) res.json({ ok: true });
     } catch (err) {
         console.error("[wa-service] Send error:", err.message);
@@ -148,8 +180,15 @@ app.post("/send-file", async (req, res) => {
         const clean  = phone.replace(/^\+/, "").replace(/\s/g, "");
         const chatId = `${clean}@c.us`;
         const media  = MessageMedia.fromFilePath(file_path);
-        await client.sendMessage(chatId, media, { caption: caption || "" });
-        console.log(`[wa-service] File sent to ${clean}: ${path.basename(file_path)}`);
+        const msg = await client.sendMessage(chatId, media, { caption: caption || "" });
+        // Media uploads are the most likely to silently fail post-relink — give
+        // the upload + server ack a longer window before confirming.
+        const confirmed = await waitForAck(msg, 1, 45000);
+        if (!confirmed) {
+            console.error(`[wa-service] File to ${clean} not confirmed (ack timeout): ${path.basename(file_path)}`);
+            return res.status(504).json({ ok: false, error: "file send not confirmed by server (ack timeout)" });
+        }
+        console.log(`[wa-service] File sent to ${clean}: ${path.basename(file_path)} (ack confirmed)`);
         res.json({ ok: true });
     } catch (err) {
         console.error("[wa-service] Send-file error:", err.message);
