@@ -375,10 +375,10 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed bill payments, reported existing bills via email, and found no new PDFs or emails for BSES, ICICI, and HDFC accounts."
   },
   "2026-06-19": {
-    "Chia AI Watcher": "Chia AI Watcher identified benign issues, including an invalid size error and a directory non-existence warning from the harvester.",
+    "Chia AI Watcher": "Chia AI Watcher identified a non-existent directory and full node syncing issues, providing warnings without fix commands.",
     "Portfolio Bot": "The bot failed to fetch data from kite.zerodha.com due to DNS resolution issues after six attempts, resulting in no holdings being retrieved and the process aborted.",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot executed successfully in 8s, advising to hold and monitor the Fear & Greed index; faced issues with empty responses from Hive market data for multiple wallets, using CoinGecko as ",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot executed successfully, suggesting a BTC buy at $60K if it holds, but faced data retrieval issues from Hive for wallet and market information.\n\n(Note: The phone number in the origi",
     "Utility Bill Bot": "Utility Bill Bot confirmed bill amounts, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails with no updates since the last check."
   }
 }
