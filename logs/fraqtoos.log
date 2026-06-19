@@ -8440,3 +8440,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-19 21:00:38  runner            INFO        ✎ context: Crypto Portfolio Bot executed successfully, suggesting a BTC buy at $60K if it h
 2026-06-19 21:03:28  runner            INFO      ✓ Chia AI Watcher (20s)
 2026-06-19 21:03:33  runner            INFO        ✎ context: Chia AI Watcher identified a non-existent directory and full node syncing issues
+2026-06-19 21:04:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 21:34:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 22:04:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 22:34:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-19 22:44:09  watchdog          INFO      Watchdog full check starting...
+2026-06-19 22:44:18  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-19 22:44:20  ruflo_fixer       INFO      [Orchestrator] skipped (benign)
+2026-06-19 22:44:20  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-06-19 22:44:20  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-19 06:07:18,906  ERROR  DNS resolution failed for kite.zerodha.com after 6 attempts
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: mpt 5/6), waiting 10s...
+2026-06-19 06:07:18,906  ERROR  DNS resolution failed for kite.zerodha.com after 6 attempts
+202
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-19 23:00:21  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-06-19 23:00:32  orchestrator      INFO      Daily digest sent.
+2026-06-19 23:04:28  runner            INFO      ✓ Chia AI Watcher (26s)
+2026-06-19 23:04:33  runner            INFO        ✎ context: Chia AI Watcher detected warnings about a missing directory and a WebSocket erro

@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-19 18:43:58",
+  "last_watchdog": "2026-06-19 22:44:20",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-19 06:07:19",
@@ -16,11 +16,11 @@
       "runs_today": 62
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-19 21:03:28",
+      "last_run": "2026-06-19 23:04:28",
       "success": true,
-      "duration": 20,
-      "last_output": "er_hash 655ea32f3b5fdb0c8112ee857636170b364450af56bdb9a639b3f56fbc7beb15', 'component': 'full_node', 'fix_cmd': 'none', 'fix_reason': ''}\n  \u2022 {'message': \"Error with syncing: <class 'RuntimeError'>Traceback (most recent call last): ...\", 'component': 'full_node', 'fix_cmd': 'none', 'fix_reason': ''}",
-      "runs_today": 539
+      "duration": 26,
+      "last_output": ">, data=ServerTimeoutError('No PONG received after 30.0 seconds'), extra=None)\", 'type': 'ERROR', 'component': 'full_node_server'}\n  \ud83d\udd27 Fix (sudo systemctl restart chia-harvester): To address the issue with your Chia node, follow these steps:\n\n1. **Restart the Chia Harvester Service**: Run the follow",
+      "runs_today": 540
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-19 08:00:30",
