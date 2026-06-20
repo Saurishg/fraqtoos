@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-20 14:46:09",
+  "last_watchdog": "2026-06-20 18:46:39",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-20 06:00:28",
@@ -16,11 +16,11 @@
       "runs_today": 63
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-20 17:09:16",
+      "last_run": "2026-06-20 19:09:56",
       "success": true,
-      "duration": 9,
-      "last_output": "\u26a0\ufe0f Chia AI (warning):",
-      "runs_today": 549
+      "duration": 16,
+      "last_output": "ings about non-existent directory and WebSocket error.\n  \u2022 {'message': 'Directory: /media/work/Hdd500/Final does not exist.', 'type': 'warning'}\n  \u2022 {'message': \"WebSocket Error: WSMessage(type=<WSMsgType.ERROR: 258>, data=ServerTimeoutError('No PONG received after 30.0 seconds'))\", 'type': 'error'}",
+      "runs_today": 550
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-20 08:00:16",
