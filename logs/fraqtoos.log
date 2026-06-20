@@ -8494,3 +8494,23 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-20 04:36:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-20 05:06:00  runner            INFO      ✓ Chia AI Watcher (9s)
 2026-06-20 05:06:04  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 9 seconds, issuing 
+2026-06-20 05:06:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-20 05:36:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-20 06:00:28  runner            INFO      ✓ Portfolio Bot (21s)
+2026-06-20 06:00:33  runner            INFO        ✎ context: Portfolio Bot reported an 836.62% portfolio increase but advised reducing exposu
+2026-06-20 06:07:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-20 06:37:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-20 06:45:06  watchdog          INFO      Watchdog full check starting...
+2026-06-20 06:45:15  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-20 06:45:16  ruflo_fixer       INFO      [Orchestrator] skipped (benign)
+2026-06-20 06:45:16  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-19 06:07:18,906  ERROR  DNS resolution failed for kite.zerodha.com after 6 attempts
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-20 07:00:17  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-20 07:00:17  orchestrator      INFO      AI Agent started — output: /tmp/agent_1781919017.log
+2026-06-20 07:06:35  runner            INFO      ✓ Chia AI Watcher (17s)
+2026-06-20 07:06:39  runner            INFO        ✎ context: Chia AI Watcher detected a warning about a missing directory and an error in plo
