@@ -389,6 +389,6 @@
     "Utility Bill Bot": "The Utility Bill Bot successfully processed and reported two BSES electricity bills via IMAP, found no new emails for ICICI Amazon Pay or HDFC Credit Cards since the last check, and skipped WhatsApp n"
   },
   "2026-06-21": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 12 seconds, confirming that Chia AI is operational."
+    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final."
   }
 }
