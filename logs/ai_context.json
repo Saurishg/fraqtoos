@@ -382,9 +382,10 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed bill amounts, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails with no updates since the last check."
   },
   "2026-06-20": {
-    "Chia AI Watcher": "Chia AI Watcher identified a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final.",
+    "Chia AI Watcher": "Chia AI Watcher detected a missing directory error for plotting on the harvester, indicating \"/media/work/Hdd500/Final\" does not exist.",
     "Portfolio Bot": "Portfolio Bot reported an 836.62% portfolio increase but advised reducing exposure to underperforming stocks like VEDL for better balance and growth potential.",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot successfully executed in 8s, but faced issues with empty responses from Hive for market data and wallet information, falling back to CoinGecko.\n\n(Note: The summary is concise and "
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot successfully executed in 8s, but faced issues with empty responses from Hive for market data and wallet information, falling back to CoinGecko.\n\n(Note: The summary is concise and ",
+    "Utility Bill Bot": "The Utility Bill Bot successfully processed and reported two BSES electricity bills via IMAP, found no new emails for ICICI Amazon Pay or HDFC Credit Cards since the last check, and skipped WhatsApp n"
   }
 }
