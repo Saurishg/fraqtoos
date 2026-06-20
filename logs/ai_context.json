@@ -383,6 +383,7 @@
   },
   "2026-06-20": {
     "Chia AI Watcher": "Chia AI Watcher detected a warning about a missing directory and an error in plot quality fetching due to invalid size data.",
-    "Portfolio Bot": "Portfolio Bot reported an 836.62% portfolio increase but advised reducing exposure to underperforming stocks like VEDL for better balance and growth potential."
+    "Portfolio Bot": "Portfolio Bot reported an 836.62% portfolio increase but advised reducing exposure to underperforming stocks like VEDL for better balance and growth potential.",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
