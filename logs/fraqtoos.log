@@ -8656,3 +8656,7 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-21 07:00:09  orchestrator      INFO      AI Agent started — output: /tmp/agent_1782005409.log
 2026-06-21 07:13:24  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-21 07:13:29  runner            INFO        ✎ context: Chia AI Watcher identified a warning from the harvester about a non-existent dir
+2026-06-21 07:14:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-21 07:44:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-21 08:00:05  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-06-21 08:00:11  runner            INFO        ✎ context: The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were
