@@ -16,11 +16,11 @@
       "runs_today": 64
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-22 07:20:00",
+      "last_run": "2026-06-22 09:20:22",
       "success": true,
-      "duration": 14,
-      "last_output": "\u2705 Chia AI (ok): Harvester warning about non-existent directory for plotting.\n  \u2022 {'message': 'Directory: /media/work/Hdd500/Final does not exist.', 'component': 'chia.plotting.util'}",
-      "runs_today": 568
+      "duration": 16,
+      "last_output": "t non-existent directories and a known benign exception fetching qualities.\n  \u2022 {'message': 'Directory: /media/work/Hdd500/Final does not exist.', 'context': 'chia.plotting.util'}\n  \u2022 {'message': 'Exception fetching qualities for plot: Invalid size for deltas', 'context': 'chia.harvester.harvester'}",
+      "runs_today": 569
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-22 08:00:11",
@@ -30,11 +30,11 @@
       "runs_today": 50
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-06-21 21:00:11",
+      "last_run": "2026-06-22 09:00:29",
       "success": true,
       "duration": 9,
       "last_output": "ack to CoinGecko\n  \u26a0 Base L2 wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 BSC wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 ETH wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 BSC wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 ETH wallet 0xB38F0e\u2026: Empty Hive response",
-      "runs_today": 82
+      "runs_today": 83
     }
   }
 }
