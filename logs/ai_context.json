@@ -403,6 +403,6 @@
     "Utility Bill Bot": "Utility Bill Bot processed and reported two BSES electricity bills via IMAP, found no new PDFs for BSES, ICICI, or HDFC accounts, and skipped WhatsApp notifications as all bills were already reported."
   },
   "2026-06-23": {
-    "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory: /media/work/Hdd500/Final."
+    "Chia AI Watcher": "Chia AI Watcher identified a warning from the harvester about the non-existent directory `/media/work/Hdd500/Final`."
   }
 }
