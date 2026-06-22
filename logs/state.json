@@ -23,11 +23,11 @@
       "runs_today": 568
     },
     "Chia Health Monitor": {
-      "last_run": "2026-06-21 08:00:05",
+      "last_run": "2026-06-22 08:00:11",
       "success": true,
       "duration": 4,
       "last_output": " @\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\nPermissions 0664 for '/opt/chia/resources/app.asar.unpacked/daemon/chia/ssl/cacert.pem' are too open. Expected 0644\nOne or more SSL files were found with permission issues.\nRun the following to fix issues: chia init --fix-ssl-permissions",
-      "runs_today": 49
+      "runs_today": 50
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-06-21 21:00:11",
