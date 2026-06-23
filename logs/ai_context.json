@@ -404,6 +404,7 @@
   },
   "2026-06-23": {
     "Chia AI Watcher": "Chia AI Watcher detected a warning from the harvester about a non-existent directory for plotting at /media/work/Hdd500/Final.",
-    "Portfolio Bot": "Portfolio Bot analyzed performance, suggesting reallocating from underperformers like VEDL to promising stocks such as VAML or TMCV after a 20-second analysis.\n\n(Note: The summary is concise and captu"
+    "Portfolio Bot": "Portfolio Bot analyzed performance, suggesting reallocating from underperformers like VEDL to promising stocks such as VAML or TMCV after a 20-second analysis.\n\n(Note: The summary is concise and captu",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.\n\n--- \n\nIf you need further assistance or have more ques"
   }
 }
