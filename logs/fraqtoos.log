@@ -9088,3 +9088,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-06-24 04:38:31  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-06-24 04:38:36  runner            INFO        ✎ context: Chia AI Watcher detected a warning from the harvester about a non-existent direc
+2026-06-24 04:39:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 05:09:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 05:39:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 06:05:11  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+2026-06-24 06:05:15  runner            INFO        ✎ context: The Portfolio Bot exceeded the time limit of 300 seconds, resulting in a timeout
+2026-06-24 06:09:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 06:39:15  runner            INFO      ✓ Chia AI Watcher (18s)
+2026-06-24 06:39:20  runner            INFO        ✎ context: Chia AI Watcher identified missing directories and a WebSocket timeout error, su
