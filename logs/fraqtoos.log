@@ -9197,3 +9197,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-06-24 19:06:58  runner            INFO      ✓ Chia AI Watcher (18s)
 2026-06-24 19:07:02  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 18 seconds, confirm
+2026-06-24 19:07:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 19:37:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 20:07:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 20:37:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-24 21:02:09  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-24 21:02:13  runner            INFO        ✎ context: The "Crypto Portfolio Bot" failed due to a timeout occurring after 120 seconds o
+2026-06-24 21:07:30  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-06-24 21:07:35  runner            INFO        ✎ context: Bot 'Chia AI Watcher' succeeded in 7s but encountered an exception due to a know
