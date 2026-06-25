@@ -417,7 +417,7 @@
     "Utility Bill Bot": "Utility Bill Bot checked for new PDFs, found none since last send, and failed to send a WhatsApp message due to service unavailability."
   },
   "2026-06-25": {
-    "Chia AI Watcher": "Chia AI Watcher detected a missing directory for plots, reporting that '/media/work/Hdd500' does not exist.",
+    "Chia AI Watcher": "Chia AI Watcher flagged a warning as plot quality lookups exceeded the 20-second threshold, risking potential reward loss.",
     "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9306,626 | P&L \u20b9-40,126 (-11.6%)",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "The 'Crypto Portfolio Bot' failed due to a timeout occurring after 120 seconds of operation.",
