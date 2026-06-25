@@ -418,6 +418,7 @@
   },
   "2026-06-25": {
     "Chia AI Watcher": "Chia AI Watcher detected multiple WebSocket errors from Chia AI due to server timeouts and lack of PONG responses within 30 seconds, indicating connectivity issues.",
-    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9306,626 | P&L \u20b9-40,126 (-11.6%)"
+    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9306,626 | P&L \u20b9-40,126 (-11.6%)",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
