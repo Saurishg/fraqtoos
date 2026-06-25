@@ -9348,3 +9348,23 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-25 18:35:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-25 19:06:07  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-06-25 19:06:11  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded the 20-second
+2026-06-25 19:06:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 19:36:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 20:06:15  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 20:36:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 21:02:18  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-25 21:02:22  runner            INFO        ✎ context: The Crypto Portfolio Bot failed due to a timeout occurring after 120 seconds of 
+2026-06-25 21:05:03  watchdog          INFO      Watchdog full check starting...
+2026-06-25 21:05:12  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-25 21:05:14  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-25 21:05:14  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-25 21:05:14  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-25 21:02:18  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-25 21:06:35  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-06-25 21:06:40  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded 20 seconds, r
