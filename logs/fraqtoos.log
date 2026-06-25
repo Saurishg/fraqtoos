@@ -9279,3 +9279,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-25 07:40:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-25 08:00:30  runner            INFO      ✓ Chia Health Monitor (4s)
 2026-06-25 08:00:35  runner            INFO        ✎ context: The Chia Health Monitor detected that SSL file permissions are too open, recomme
+2026-06-25 08:10:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 08:40:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 09:02:08  runner            ERROR     ✗ Crypto Portfolio Bot TIMEOUT after 120s
+2026-06-25 09:02:13  runner            INFO        ✎ context: The 'Crypto Portfolio Bot' failed due to a timeout occurring after 120 seconds o
+2026-06-25 09:10:16  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-06-25 09:10:21  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality checks exceeded the safe 20-
