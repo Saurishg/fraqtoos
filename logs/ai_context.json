@@ -424,6 +424,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments for Tata Neu but found no new PDFs or emails for BSES, ICICI, and HDFC; WhatsApp message failed, leaving bills to retry.\n\n(Note: The summary is concise and captures"
   },
   "2026-06-26": {
-    "Chia AI Watcher": "Chia AI Watcher detected excessive plot quality lookup times over 20 seconds, indicating potential performance issues and risk of reward loss."
+    "Chia AI Watcher": "Chia AI Watcher detected excessive plot quality lookup times exceeding 20 seconds, indicating potential performance issues and risk of reward loss."
   }
 }
