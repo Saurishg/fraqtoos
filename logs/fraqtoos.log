@@ -9253,3 +9253,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-25 04:39:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-25 05:09:26  runner            INFO      ✓ Chia AI Watcher (19s)
 2026-06-25 05:09:31  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 19 seconds, confirm
+2026-06-25 05:10:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 05:40:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 06:05:04  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+2026-06-25 06:05:08  runner            INFO        ✎ context: The Portfolio Bot exceeded its time limit, resulting in a timeout after 300 seco
+2026-06-25 06:10:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 06:40:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-25 07:00:21  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-25 07:00:21  orchestrator      INFO      AI Agent started — output: /tmp/agent_1782351021.log
+2026-06-25 07:06:52  watchdog          INFO      Watchdog full check starting...
+2026-06-25 07:07:01  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-06-25 07:07:02  ruflo_fixer       INFO      [Orchestrator] skipped (skip)
+2026-06-25 07:07:02  ruflo_fixer       INFO      [Portfolio Bot] skipped (skip)
+2026-06-25 07:07:02  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+   ↳ 2026-06-25 06:05:04  runner            ERROR     ✗ Portfolio Bot TIMEOUT after 300s
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+   ↳ last run failed: TIMEOUT after 300s
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-25 07:09:48  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-06-25 07:09:53  runner            INFO        ✎ context: Chia AI Watcher detected multiple WebSocket errors from Chia AI due to server ti
