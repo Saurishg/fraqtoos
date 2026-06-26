@@ -425,6 +425,7 @@
   },
   "2026-06-26": {
     "Chia AI Watcher": "Chia AI Watcher detected that multiple plot quality lookups exceeded the recommended 20-second threshold, taking over 40 seconds each.",
-    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9301,526 | P&L \u20b9-45,226 (-13.0%)"
+    "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9301,526 | P&L \u20b9-45,226 (-13.0%)",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
