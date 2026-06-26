@@ -424,7 +424,7 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments for Tata Neu but found no new PDFs or emails for BSES, ICICI, and HDFC; WhatsApp message failed, leaving bills to retry.\n\n(Note: The summary is concise and captures"
   },
   "2026-06-26": {
-    "Chia AI Watcher": "Chia AI Watcher identified a missing directory and an invalid plot size, suggesting creating the directory but no fix for the plot error.\n\n(Note: The summary is exactly 119 characters long.)",
+    "Chia AI Watcher": "Chia AI Watcher detected plot quality lookups exceeding 20 seconds, risking reward loss.",
     "Portfolio Bot": "10 stocks | Invested \u20b9346,752 | Current \u20b9301,526 | P&L \u20b9-45,226 (-13.0%)",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "The Crypto Portfolio Bot failed due to a timeout occurring after 120 seconds of operation.",
