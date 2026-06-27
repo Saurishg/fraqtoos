@@ -431,10 +431,10 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, found no new PDFs or emails for BSES, ICICI, and HDFC, but failed to send a WhatsApp message with the summary of 5 new bills.\n\n(Note: The sentence is concise and c"
   },
   "2026-06-27": {
-    "Chia AI Watcher": "Chia AI Watcher detected excessive plot quality lookup times over 20 seconds, risking potential reward loss due to inefficiency in Chia plotting operations.",
+    "Chia AI Watcher": "Chia AI Watcher detected excessive plot quality lookup times over 20 seconds, risking potential reward loss.",
     "Portfolio Bot": "Portfolio Bot completed its task in 27 seconds, advising to reduce exposure to underperforming stocks VOGL and VEDL for better portfolio health.",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot sent a WhatsApp message about market conditions, but encountered empty responses from Hive and multiple wallets across different networks.\n\n(Note: The phone number in the original",
+    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a stable portfolio value of $14.21K, with slight gains in Bitcoin and Ethereum, while the market is in \"Extreme Fear\" mode, suggesting holding positions for potential",
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata Neu, BSES Electricity, ICICI Amazon Pay Credit Card, or HDFC Credit Card since the last check.\n\n(Note: The original outp"
   }
 }
