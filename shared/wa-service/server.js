@@ -12,13 +12,22 @@ const qrcode   = require("qrcode-terminal");
 const express  = require("express");
 const fs       = require("fs");
 const path     = require("path");
-const { execSync } = require("child_process");
+const { execSync, execFile } = require("child_process");
 
 const QR_TXT  = "/tmp/wa_qr.txt";
 const QR_PNG  = "/tmp/wa_qr.png";
 
 const PORT     = 3131;
 const SESSION  = "/home/work/fraqtoos/shared/wa-service/session";
+const COMMANDS_FILE = path.join(__dirname, "commands.json");
+
+// Inbound command registry: { owners:[num...], commands:{ keyword:{cmd,cwd,timeout_ms} } }
+// Reloaded on each message so edits take effect without a restart.
+function loadCommands() {
+    try { return JSON.parse(fs.readFileSync(COMMANDS_FILE, "utf8")); }
+    catch (e) { return { owners: [], commands: {} }; }
+}
+const stripId = (s) => (s || "").replace(/@c\.us$/, "").replace(/^\+/, "");
 
 // ── State ──────────────────────────────────────────────────────────────────
 let state   = "initializing";   // initializing | qr_pending | ready | disconnected
@@ -79,6 +88,42 @@ client.on("disconnected", (reason) => {
     }, 10_000);
 });
 
+// ── Inbound command router ──────────────────────────────────────────────────
+// Reply only when an authorised owner sends a known keyword (e.g. "arb"). All
+// other inbound text is ignored — the service never messages unprompted. The
+// keyword only *selects* a fixed command from commands.json; the message body is
+// never interpolated into the shell, so there's no injection surface.
+client.on("message_create", (msg) => {
+    try {
+        const body = (msg.body || "").trim().toLowerCase();
+        if (!body) return;
+        const cfg = loadCommands();
+        const cmd = cfg.commands && cfg.commands[body];
+        if (!cmd) return;                                   // unknown text → ignore
+        const me       = stripId(client.info && client.info.wid && client.info.wid._serialized);
+        const sender   = stripId(msg.from);
+        const owners   = cfg.owners || [];
+        const selfChat = msg.fromMe && stripId(msg.to) === me;   // user typed in their own self-chat
+        if (!(owners.includes(sender) || selfChat)) {
+            console.log(`[wa-service] cmd '${body}' from ${sender} ignored (not an owner)`);
+            return;
+        }
+        console.log(`[wa-service] cmd '${body}' from ${sender} → ${cmd.cmd}`);
+        execFile("/bin/bash", ["-lc", cmd.cmd],
+            { cwd: cmd.cwd || undefined, timeout: cmd.timeout_ms || 60000, maxBuffer: 2 * 1024 * 1024 },
+            async (err, stdout, stderr) => {
+                let out = (stdout || "").trim();
+                if (!out) out = err ? `⚠️ command failed: ${(stderr || err.message || "").trim().slice(0, 300)}`
+                                    : "(no output)";
+                if (out.length > 3500) out = out.slice(0, 3500) + "\n… (truncated)";
+                try { await client.sendMessage(msg.from, out); }
+                catch (e) { console.error("[wa-service] reply error:", e.message); }
+            });
+    } catch (e) {
+        console.error("[wa-service] inbound handler error:", e.message);
+    }
+});
+
 client.initialize();
 
 // ── Delivery confirmation ───────────────────────────────────────────────────
@@ -133,6 +178,11 @@ const app = express();
 app.use(express.json());
 
 app.get("/status", (_req, res) => res.json({ state }));
+
+app.get("/whoami", (_req, res) => res.json({
+    wid: (client.info && client.info.wid && client.info.wid._serialized) || null,
+    pushname: (client.info && client.info.pushname) || null,
+}));
 
 app.get("/qr", (_req, res) => {
     if (state !== "qr_pending" || !lastQr) {

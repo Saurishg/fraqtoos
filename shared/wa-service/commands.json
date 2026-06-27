@@ -1,0 +1,23 @@
+{
+  "owners": ["919818187001", "919810238955"],
+  "commands": {
+    "arb": {
+      "cmd": "python3 /home/work/cex-dex-arb/monitor.py --report --threshold 0.5",
+      "cwd": "/home/work/cex-dex-arb",
+      "timeout_ms": 60000,
+      "description": "Current CEX<->DEX arb spreads, net of fees"
+    },
+    "crypto": {
+      "cmd": "node /home/work/Desktop/crypto/index.js --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cwd": "/home/work/Desktop/crypto",
+      "timeout_ms": 120000,
+      "description": "All crypto wallet holdings (Base/ETH/BSC) + market + AI brief"
+    },
+    "stocks": {
+      "cmd": "python3 /home/work/portfolio_bot/portfolio_bot.py --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cwd": "/home/work/portfolio_bot",
+      "timeout_ms": 200000,
+      "description": "Stock holdings (5paisa + Kite) + AI brief"
+    }
+  }
+}
