@@ -184,6 +184,8 @@ RULES:
 - Only flag scheduled bots if their logs show recent errors or they haven't run in >24h.
 - For scheduled bots, trust their "errors" array. If errors is empty, the scheduled bot is OK.
 - Do not infer stale status from last_run text; stale scheduled runs are already listed in errors.
+- A running=true service with an empty log_tail is HEALTHY (no errors logged) — do NOT flag "no recent logs" as a problem.
+- The errors array is the ONLY source of truth for failures. If a bot's errors array is empty, it is OK — do NOT invent problems from words like "exception" appearing in log_tail prose.
 - Disk usage below 90% is NORMAL and acceptable — do NOT flag it. Only flag disk if use% >= 90.
 - Disk threshold is 90%. Current usage around 70% is fine.
 
@@ -259,6 +261,11 @@ def run_full(force_alert: bool = False) -> dict:
             l for l in log_tail.splitlines()
             if _ts.match(l.strip())
             and not any(s in l.lower() for s in _skip_loggers)
+            # Drop benign "✎ context:" runner notes. These are AI-prose annotations
+            # on SUCCESSFUL runs (e.g. "...succeeded but encountered an exception while
+            # fetching...") and contain scary words the diagnosis LLM misreads as real
+            # failures — the structured errors[] extraction already excludes them (above).
+            and "context:" not in l.lower()
         ) if not bot.get("scheduled") else log_tail
 
         snapshot["bots"].append({
