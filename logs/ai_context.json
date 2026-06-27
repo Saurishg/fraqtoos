@@ -432,6 +432,7 @@
   },
   "2026-06-27": {
     "Chia AI Watcher": "Chia AI Watcher detected plot quality lookups exceeding 20 seconds, risking reward loss.",
-    "Portfolio Bot": "Portfolio Bot completed its task in 27 seconds, advising to reduce exposure to underperforming stocks VOGL and VEDL for better portfolio health."
+    "Portfolio Bot": "Portfolio Bot completed its task in 27 seconds, advising to reduce exposure to underperforming stocks VOGL and VEDL for better portfolio health.",
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them."
   }
 }
