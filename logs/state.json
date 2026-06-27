@@ -2,11 +2,11 @@
   "last_watchdog": "2026-06-27 04:15:04",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-06-26 06:05:24",
-      "success": false,
-      "duration": 300,
-      "last_output": "TIMEOUT after 300s",
-      "runs_today": 68
+      "last_run": "2026-06-27 06:00:34",
+      "success": true,
+      "duration": 27,
+      "last_output": "d VEDL, potentially reallocating those funds into more stable or promising investments.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-06-27 06:00:33,295  INFO  WhatsApp sent to +919818187001\n2026-06-27 06:00:34,043  INFO  WhatsApp sent to +919810238955\n2026-06-27 06:00:34,046  INFO  === Portfolio Bot Done ===",
+      "runs_today": 69
     },
     "Utility Bill Bot": {
       "last_run": "2026-06-26 10:02:20",
@@ -16,11 +16,11 @@
       "runs_today": 69
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-27 04:20:56",
+      "last_run": "2026-06-27 06:21:31",
       "success": true,
       "duration": 21,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup times consistently above 20 seconds, increasing risk of losing rewards.'}",
-      "runs_today": 624
+      "runs_today": 625
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-26 08:00:15",
