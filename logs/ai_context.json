@@ -445,6 +445,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata Neu, BSES Electricity, ICICI Amazon Pay Credit Card, or HDFC Credit Card since the last check."
   },
   "2026-06-29": {
-    "Chia AI Watcher": "Chia AI Watcher detected that multiple plot quality lookups exceeded the recommended 20-second threshold, taking over 31 seconds each."
+    "Chia AI Watcher": "Chia AI Watcher flagged that multiple plot quality checks exceeded the recommended 20-second threshold, taking over 31 seconds each."
   }
 }
