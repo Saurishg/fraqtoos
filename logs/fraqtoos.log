@@ -9761,3 +9761,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-28 06:01:01  runner            INFO        ✎ context: Portfolio Bot identified underperforming stocks like VEDL and suggested realloca
 2026-06-28 06:28:23  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-06-28 06:28:28  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme
+2026-06-28 06:28:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-28 06:59:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-28 07:00:00  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-06-28 07:00:00  orchestrator      INFO      AI Agent started — output: /tmp/agent_1782610200.log
+2026-06-28 07:29:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-28 07:59:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-28 08:00:07  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-06-28 08:00:13  runner            INFO        ✎ context: Chia Health Monitor reports farming with 13,476 plots, a win delay of 23 hours d
