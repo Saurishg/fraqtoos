@@ -9984,3 +9984,19 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-29 18:37:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-06-29 19:07:47  runner            INFO      ✓ Chia AI Watcher (23s)
 2026-06-29 19:07:52  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, exceeding recommend
+2026-06-29 19:08:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 19:38:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 20:08:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 20:38:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 21:00:40  runner            INFO      ✓ Crypto Portfolio Bot (11s)
+2026-06-29 21:00:45  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a $14.10K portfolio value with minor declines 
+2026-06-29 21:00:45  watchdog          INFO      Watchdog full check starting...
+2026-06-29 21:00:56  watchdog          INFO      AI diagnosis: **State:** OK
+2026-06-29 21:00:57  watchdog          WARNING   Watchdog alert suppressed (WATCHDOG_SILENT=1): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-06-29 21:08:20  runner            INFO      ✓ Chia AI Watcher (23s)
+2026-06-29 21:08:25  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme

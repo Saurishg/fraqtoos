@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-06-29 17:00:27",
+  "last_watchdog": "2026-06-29 21:00:57",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-06-29 06:00:29",
@@ -16,11 +16,11 @@
       "runs_today": 72
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-29 19:07:47",
+      "last_run": "2026-06-29 21:08:20",
       "success": true,
       "duration": 23,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup took over 31 seconds for multiple plots, exceeding the 20-second recommendation.'}\n  \u2022 {'issue': 'One instance of plot quality lookup took 39.75 seconds.'}",
-      "runs_today": 654
+      "runs_today": 655
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-29 08:00:09",
@@ -30,11 +30,11 @@
       "runs_today": 57
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-06-29 09:00:14",
+      "last_run": "2026-06-29 21:00:40",
       "success": true,
-      "duration": 13,
-      "last_output": "reme fear levels (12/100). **Actionable Insight:** Consider holding your current positions as the market stabilizes; watch for any shifts in sentiment that might trigger a rebound.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 97
+      "duration": 11,
+      "last_output": "timent is in extreme fear, as indicated by a Fear & Greed Index of 12/100. Given the current conditions, consider watching for potential support levels before making further moves.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 98
     }
   }
 }
