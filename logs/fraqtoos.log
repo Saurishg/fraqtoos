@@ -9928,3 +9928,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-06-29 09:00:20  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a stable portfolio value of $14.21K with minor
 2026-06-29 09:04:41  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-06-29 09:04:46  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme
+2026-06-29 09:05:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 09:35:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 10:00:31  runner            INFO      ✓ Utility Bill Bot (12s)
+2026-06-29 10:00:37  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to repo
+2026-06-29 10:05:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 10:35:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-06-29 11:05:32  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-06-29 11:05:37  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme
