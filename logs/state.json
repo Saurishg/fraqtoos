@@ -16,11 +16,11 @@
       "runs_today": 72
     },
     "Chia AI Watcher": {
-      "last_run": "2026-06-29 17:07:13",
+      "last_run": "2026-06-29 19:07:47",
       "success": true,
-      "duration": 15,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Mempool update slow-path triggered and invalid size for deltas in plot.\n  \u2022 {'message': 'updating the mempool using the slow-path'}\n  \u2022 {'message': 'Exception fetching qualities: Invalid size for deltas'}",
-      "runs_today": 653
+      "duration": 23,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup took over 31 seconds for multiple plots, exceeding the 20-second recommendation.'}\n  \u2022 {'issue': 'One instance of plot quality lookup took 39.75 seconds.'}",
+      "runs_today": 654
     },
     "Chia Health Monitor": {
       "last_run": "2026-06-29 08:00:09",
