@@ -75,6 +75,8 @@ client.on("ready", () => {
 client.on("auth_failure", (msg) => {
     state = "disconnected";
     console.error("[wa-service] Auth failure:", msg);
+    // Re-init so a QR is offered again instead of staying disconnected forever
+    setTimeout(() => { state = "initializing"; safeInitialize(); }, 30_000);
 });
 
 client.on("disconnected", (reason) => {
@@ -84,7 +86,7 @@ client.on("disconnected", (reason) => {
     setTimeout(() => {
         console.log("[wa-service] Reconnecting…");
         state = "initializing";
-        client.initialize();
+        safeInitialize();
     }, 10_000);
 });
 
@@ -124,7 +126,26 @@ client.on("message_create", (msg) => {
     }
 });
 
-client.initialize();
+// initialize() can reject (e.g. puppeteer "auth timeout"); unhandled, that
+// kills the whole process and drops every queued send with it. Catch and
+// retry with backoff instead.
+let initAttempt = 0;
+function safeInitialize() {
+    client.initialize().then(() => { initAttempt = 0; }).catch((err) => {
+        initAttempt++;
+        const delay = Math.min(15_000 * initAttempt, 120_000);
+        console.error(`[wa-service] initialize failed (${(err && err.message) || err}); retry in ${delay / 1000}s`);
+        state = "disconnected";
+        setTimeout(() => { state = "initializing"; safeInitialize(); }, delay);
+    });
+}
+
+// Safety net: any other stray rejection gets logged, not a process crash.
+process.on("unhandledRejection", (reason) => {
+    console.error("[wa-service] Unhandled rejection:", (reason && reason.message) || reason);
+});
+
+safeInitialize();
 
 // ── Delivery confirmation ───────────────────────────────────────────────────
 // client.sendMessage() resolves when the message is queued LOCALLY, not when
@@ -200,18 +221,28 @@ app.post("/send", (req, res) => {
     if (state === "ready") {
         doSend(phone, message, res);
     } else if (state === "initializing" || state === "qr_pending") {
-        // Queue and respond once ready (up to 120 s)
-        const timer = setTimeout(() => {
-            msgQueue = msgQueue.filter(i => i.res !== res);
-            res.status(503).json({ ok: false, error: `WA not ready (state: ${state})` });
-        }, 120_000);
-        msgQueue.push({
+        // Queue and respond once ready (up to 120 s). `respond` guards against
+        // answering twice (timer fired AND drain later reached the item), which
+        // previously crashed with ERR_HTTP_HEADERS_SENT.
+        let responded = false;
+        const respond = (code, body) => {
+            if (responded) return;
+            responded = true;
+            clearTimeout(timer);
+            res.status(code).json(body);
+        };
+        const item = {
             phone, message,
             res: {
-                json: (body) => { clearTimeout(timer); res.json(body); },
-                status: (code) => ({ json: (body) => { clearTimeout(timer); res.status(code).json(body); } }),
+                json: (body) => respond(200, body),
+                status: (code) => ({ json: (body) => respond(code, body) }),
             },
-        });
+        };
+        const timer = setTimeout(() => {
+            msgQueue = msgQueue.filter(i => i !== item);
+            respond(503, { ok: false, error: `WA not ready (state: ${state})` });
+        }, 120_000);
+        msgQueue.push(item);
     } else {
         res.status(503).json({ ok: false, error: `WA disconnected` });
     }

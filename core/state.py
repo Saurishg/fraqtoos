@@ -44,12 +44,16 @@ def record_run(bot_name: str, success: bool, output: str = "", duration: int = 0
         state = _load()
         if "runs" not in state:
             state["runs"] = {}
+        now = datetime.now()
+        prev = state["runs"].get(bot_name, {})
+        # runs_today resets when the calendar day changes
+        same_day = str(prev.get("last_run", "")).startswith(now.strftime("%Y-%m-%d"))
         state["runs"][bot_name] = {
-            "last_run":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "last_run":    now.strftime("%Y-%m-%d %H:%M:%S"),
             "success":     success,
             "duration":    duration,
             "last_output": output[-300:] if output else "",
-            "runs_today":  state["runs"].get(bot_name, {}).get("runs_today", 0) + 1,
+            "runs_today":  (prev.get("runs_today", 0) if same_day else 0) + 1,
         }
         _save(state)
 

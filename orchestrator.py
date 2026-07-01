@@ -49,7 +49,8 @@ BOTS = {
         "name":    "Crypto Portfolio Bot",
         "cmd":     "node index.js --once",
         "cwd":     "/home/work/Desktop/crypto",
-        "timeout": 120,
+        # Worst case: Hive 429 retries (~30s) + phi4 brief (45s) + WhatsApp send (120s)
+        "timeout": 300,
         "retries": 1,
     },
     "chia_health": {
