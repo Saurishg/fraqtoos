@@ -331,15 +331,34 @@ def run_full(force_alert: bool = False) -> dict:
     if searx_down:
         log.warning("SearXNG is DOWN — web context will be empty")
 
-    if force_alert or critical_down or ai_bad or disk_full or searx_down:
+    # Alert only on hard signals — critical process down, disk, or a bot with a
+    # real error. AI prose ("WARNING" in the diagnosis) is logged but never
+    # paged: that noise is why alerts were once silenced entirely, which then
+    # hid genuine failures (e.g. Crypto Portfolio timeout 2026-07-01).
+    hard_errors = [b for b in snapshot["bots"] if b.get("errors")]
+    if force_alert or critical_down or ai_bad or disk_full or searx_down or hard_errors:
         bots_status = "\n".join([
             f"{'🟢' if b['running'] else ('🔴' if b['critical'] else '🟡')} {b['name']}"
             + (f"\n   ↳ {b['errors'][-1]}" if b['errors'] else "")
             for b in snapshot["bots"]
         ])
         extra = "\n⚠ SearXNG DOWN" if searx_down else ""
-        log.warning(f"Watchdog alert suppressed (WATCHDOG_SILENT=1): {bots_status}")
+        if force_alert or critical_down or disk_full or hard_errors:
+            # Dedupe: don't re-page the same failure signature every 4h cycle
+            sig = "|".join(sorted(
+                [f"{b['name']}:{b['errors'][-1]}" for b in hard_errors]
+                + (["critical_down"] if critical_down else [])
+                + (["disk_full"] if disk_full else [])
+            ))
+            if force_alert or sig != st.get("last_watchdog_alert_sig"):
+                st.set("last_watchdog_alert_sig", sig)
+                send_alert("Watchdog", f"{bots_status}{extra}")
+            else:
+                log.info("Watchdog: issue unchanged since last alert — not re-paging")
+        else:
+            log.warning(f"Watchdog soft warning (not paged): {bots_status}{extra}")
     else:
+        st.set("last_watchdog_alert_sig", "")
         log.info("Watchdog: all systems healthy")
 
     return snapshot
