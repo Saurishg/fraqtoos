@@ -129,8 +129,28 @@ client.on("message_create", (msg) => {
 // initialize() can reject (e.g. puppeteer "auth timeout"); unhandled, that
 // kills the whole process and drops every queued send with it. Catch and
 // retry with backoff instead.
+//
+// It can also HANG silently — neither resolve nor reject, no qr/ready event
+// (seen 2026-07-02: stuck "initializing" for 10h, every bot send 503'd). No
+// in-process recovery is reliable once puppeteer wedges, so if we aren't
+// ready/qr_pending within INIT_HANG_MS, exit and let systemd start a fresh
+// process with a clean chrome.
+const INIT_HANG_MS = 4 * 60_000;
+let initHangTimer = null;
+function armInitHangWatchdog() {
+    clearTimeout(initHangTimer);
+    initHangTimer = setTimeout(() => {
+        if (state === "ready" || state === "qr_pending") return;
+        console.error(`[wa-service] initialize hung >${INIT_HANG_MS / 60000}min (state: ${state}) — exiting for clean restart`);
+        process.exit(1);
+    }, INIT_HANG_MS);
+}
+client.on("ready", () => clearTimeout(initHangTimer));
+client.on("qr", () => clearTimeout(initHangTimer));  // waiting on a human scan — don't recycle
+
 let initAttempt = 0;
 function safeInitialize() {
+    armInitHangWatchdog();
     client.initialize().then(() => { initAttempt = 0; }).catch((err) => {
         initAttempt++;
         const delay = Math.min(15_000 * initAttempt, 120_000);
