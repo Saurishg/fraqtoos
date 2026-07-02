@@ -10368,3 +10368,19 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-02 08:14:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-02 08:44:22  runner            INFO      ✓ Chia AI Watcher (19s)
 2026-07-02 08:44:27  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 19 seconds, confirm
+2026-07-02 08:44:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 09:01:45  runner            INFO      ✓ Crypto Portfolio Bot (77s)
+2026-07-02 09:01:51  runner            INFO        ✎ context: The bot attempted to fetch market data using Hive and CoinGecko, but both attemp
+2026-07-02 09:14:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 09:44:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 10:01:39  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 1
+2026-07-02 10:01:39  runner            INFO        ↺ Retry 1/1: Utility Bill Bot
+2026-07-02 10:03:08  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 2
+2026-07-02 10:03:13  runner            INFO        ✎ context: The Utility Bill Bot failed to connect to the IMAP server at imap.gmail.com afte
+2026-07-02 10:14:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 10:43:25  watchdog          INFO      Watchdog full check starting...
+2026-07-02 10:43:35  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-07-02 10:43:36  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-07-02 10:43:36  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
+2026-07-02 10:46:31  runner            INFO      ✓ Chia AI Watcher (15s)
+2026-07-02 10:46:36  runner            INFO        ✎ context: Chia AI Watcher detected repeated DNS resolution timeouts for introducer queries
