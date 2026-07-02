@@ -10384,3 +10384,20 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-02 10:43:36  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
 2026-07-02 10:46:31  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-07-02 10:46:36  runner            INFO        ✎ context: Chia AI Watcher detected repeated DNS resolution timeouts for introducer queries
+2026-07-02 10:46:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 11:16:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 11:46:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 12:00:10  watchdog          INFO      Watchdog full check starting...
+2026-07-02 12:00:19  watchdog          INFO      AI diagnosis: **System State:** OK
+2026-07-02 12:00:21  ruflo_fixer       INFO      [Portfolio Bot] skipped (benign)
+2026-07-02 12:00:21  ruflo_fixer       INFO      [Utility Bill Bot] skipped (benign)
+2026-07-02 12:00:21  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
+2026-07-02 12:16:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-02 12:40:49  runner            INFO      ✓ Portfolio Bot (21s)
+2026-07-02 12:40:55  runner            INFO        ✎ context: Portfolio Bot reported an 835.09% portfolio increase and advised reducing exposu
+2026-07-02 12:40:57  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-07-02 12:41:04  runner            INFO      ✓ Crypto Portfolio Bot (8s)
+2026-07-02 12:41:06  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to repo
+2026-07-02 12:41:08  runner            INFO        ✎ context: The Crypto Portfolio Bot reported a $14.41K portfolio with gains, while Bitcoin 
+2026-07-02 12:47:19  runner            INFO      ✓ Chia AI Watcher (26s)
+2026-07-02 12:47:24  runner            INFO        ✎ context: Chia AI Watcher identified benign DNS and WebSocket errors, including a known Gi
