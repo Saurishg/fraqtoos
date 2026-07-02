@@ -16,11 +16,11 @@
       "runs_today": 2
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-02 16:25:16",
+      "last_run": "2026-07-02 21:05:35",
       "success": true,
-      "duration": 40,
+      "duration": 21,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which may increase risk of losing rewards.",
-      "runs_today": 686
+      "runs_today": 687
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-02 08:00:25",
@@ -30,11 +30,11 @@
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-07-02 12:41:04",
+      "last_run": "2026-07-02 21:01:09",
       "success": true,
-      "duration": 8,
-      "last_output": "ipped by extreme fear, as indicated by the Fear & Greed Index at 19/100. Consider holding your positions for now; watch BTC closely around $60K for potential support or resistance.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 2
+      "duration": 62,
+      "last_output": "e5223\u2026: Request failed with status code 429\n  \u26a0 ETH wallet 0xB38F0e\u2026: Request failed with status code 429\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Request failed with status code 429\n  \u26a0 BSC wallet 0xB38F0e\u2026: Request failed with status code 429\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
+      "runs_today": 3
     }
   },
   "last_watchdog_alert_sig": "Portfolio Bot:last run failed: mpt 5/6), waiting 10s...\n2026-07-02 06:07:19,495  ERROR  DNS resolution failed for kite.zerodha.com after 6 attempts\n202|Utility Bill Bot:last run failed: \ud83e\udd16 Utility Bill Bot [--once mode]\n\u26a0\ufe0f  IMAP connect attempt 1/3 failed: getaddrinfo EAI_AGAIN imap.gmail.com \u2014 retrying in"
