@@ -473,10 +473,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC emails without finding any updates since the last che"
   },
   "2026-07-03": {
-    "Chia AI Watcher": "Chia AI Watcher detected a WebSocket timeout and an unhandled future exception due to no PONG response in 30 seconds.",
+    "Chia AI Watcher": "Chia AI Watcher detected that 25 plot quality lookups exceeded the recommended 20-second threshold, risking reward loss.",
     "Portfolio Bot": "Portfolio Bot adjusted holdings by reducing exposure in underperforming stocks like VEDL and increasing stakes in high-performing ones such as VAML, then notified stakeholders via WhatsApp.\n\n(Note: Th",
     "Chia Health Monitor": "The Chia Health Monitor reports successful farming with 13,476 plots, a recent win 3 hours ago, two prover errors due to a known bug, and normal block validation.\n\n(Note: The summary is concise and in",
-    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a slight decline in total portfolio value, with Ethereum showing strong performance and Bitcoin steady amid market fear.\n\n(Note: The summary is concise and captures t",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot sent a WhatsApp message but faced multiple request failures due to rate limiting, resulting in an unavailable portfolio report.\n\n(Note: The summary is concise and captures the key",
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to report via WhatsApp, and checked multiple accounts (BSES, ICICI, HDFC) with no new PDFs or emails since the last check.\n\n(No"
   }
 }
