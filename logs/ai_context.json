@@ -481,6 +481,7 @@
   },
   "2026-07-04": {
     "Chia AI Watcher": "Chia AI Watcher detected that plot quality lookups took over 20 seconds for 37 instances, risking reward loss.",
-    "Portfolio Bot": "Portfolio Bot identified significant losses in VOGL, VEDL, and VEDPOWER stocks, recommending rebalancing by reducing exposure to underperformers like VEDL and reallocating funds into growth sectors su"
+    "Portfolio Bot": "Portfolio Bot identified significant losses in VOGL, VEDL, and VEDPOWER stocks, recommending rebalancing by reducing exposure to underperformers like VEDL and reallocating funds into growth sectors su",
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,476 plots, a win delay of 10 hours due to a known bug, one prover error, and normal block validation.\n\n(Note: The summary is within the character limit and "
   }
 }
