@@ -480,10 +480,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to report via WhatsApp, and checked multiple accounts (BSES, ICICI, HDFC) with no new PDFs or emails since the last check.\n\n(No"
   },
   "2026-07-04": {
-    "Chia AI Watcher": "Chia AI Watcher identified multiple plots with plot quality lookups exceeding the recommended time threshold, indicating potential performance issues.",
+    "Chia AI Watcher": "Chia AI Watcher detected that quality lookups for multiple plots exceeded the recommended 20-second threshold, increasing reward loss risk.",
     "Portfolio Bot": "Portfolio Bot identified significant losses in VOGL, VEDL, and VEDPOWER stocks, recommending rebalancing by reducing exposure to underperformers like VEDL and reallocating funds into growth sectors su",
     "Chia Health Monitor": "Chia Health Monitor reports farming with 13,476 plots, a win delay of 10 hours due to a known bug, one prover error, and normal block validation.\n\n(Note: The summary is within the character limit and ",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot executed a successful transaction in 12 seconds, with the portfolio value increasing by 0.4% since 24 hours ago.\n\n(Note: The summary focuses on the key outcome of the bot's activi",
+    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a $14.52K portfolio value with gains of 1.8% over 12 hours and 2.2% over 24 hours, while Bitcoin and Ethereum showed increases amid market fear.\n\n(Note: The summary i",
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata Neu, BSES Electricity, ICICI Amazon Pay Credit Card, or HDFC Credit Card since the last check.\n\n(Note: The original outp"
   }
 }
