@@ -10677,3 +10677,19 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-04 09:00:42  runner            INFO        ✎ context: Crypto Portfolio Bot executed a successful transaction in 12 seconds, with the p
 2026-07-04 09:16:19  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-07-04 09:16:23  runner            INFO        ✎ context: The bot successfully identified a harmless connection error with Chia AI after 6
+2026-07-04 09:17:24  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-04 09:47:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-04 10:00:35  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-07-04 10:00:41  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata 
+2026-07-04 10:17:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-04 10:47:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-04 11:08:45  watchdog          INFO      Watchdog full check starting...
+2026-07-04 11:08:58  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-04 11:08:59  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-04 11:16:51  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-07-04 11:16:56  runner            INFO        ✎ context: Chia AI Watcher flagged that plot quality lookups exceeded the recommended time 
