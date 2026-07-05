@@ -32,7 +32,7 @@ FraqtoOS is a single-orchestrator automation server that runs ~10 sub-bots (port
 | 10:00 | `utility_bill` | 300s | yes |
 | 12:00 | `run_full` | — | conditional |
 | 09:00, 21:00 | `crypto_portfolio` (Hive) | 120s | yes |
-| 23:00 | `send_daily_digest` (qwen3:30b-a3b 300s → phi4 120s → static) | — | — |
+| 23:00 | `send_daily_digest` (gpt-oss:20b 300s → phi4 120s → static) | — | — |
 
 ## Data flow
 
