@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-07-06 11:40:13",
+  "last_watchdog": "2026-07-06 12:00:38",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-07-06 06:00:32",
@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-06 11:43:22",
+      "last_run": "2026-07-06 13:44:06",
       "success": true,
-      "duration": 9,
-      "last_output": "\u26a0\ufe0f Chia AI (warning):",
-      "runs_today": 6
+      "duration": 21,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which may increase risk of losing rewards.",
+      "runs_today": 7
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-06 08:00:14",
