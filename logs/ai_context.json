@@ -501,6 +501,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, or HDFC credit cards since the last check.\n\n(Note: The summary is based on the assumption that \"Amount not found"
   },
   "2026-07-07": {
-    "Chia AI Watcher": "Chia AI Watcher successfully completed in 7 seconds despite a benign error related to the Gigahorse giga37 bug affecting transport closure."
+    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed successfully in 6 seconds, encountering a benign WebSocket error with no PONG response."
   }
 }
