@@ -501,6 +501,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, or HDFC credit cards since the last check.\n\n(Note: The summary is based on the assumption that \"Amount not found"
   },
   "2026-07-07": {
-    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed successfully in 6 seconds, encountering a benign WebSocket error with no PONG response."
+    "Chia AI Watcher": "Chia AI Watcher detected multiple errors, including a GENERATOR_RUNTIME_ERROR with peer 129.228.24.251 and a WebSocket timeout due to no PONG response after 30 seconds."
   }
 }
