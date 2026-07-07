@@ -11094,3 +11094,16 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-07 05:18:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-07 05:48:39  runner            INFO      ✓ Chia AI Watcher (15s)
 2026-07-07 05:48:44  runner            INFO        ✎ context: Chia AI Watcher detected multiple errors, including a GENERATOR_RUNTIME_ERROR wi
+2026-07-07 05:49:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-07 06:00:34  runner            INFO      ✓ Portfolio Bot (19s)
+2026-07-07 06:00:39  runner            INFO        ✎ context: Portfolio Bot analyzed performance, suggesting rebalancing by reducing exposure 
+2026-07-07 06:19:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-07 06:49:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-07 07:00:13  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-07-07 07:00:13  orchestrator      INFO      AI Agent started — output: /tmp/agent_1783387813.log
+2026-07-07 07:19:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-07 07:41:45  watchdog          INFO      Watchdog full check starting...
+2026-07-07 07:41:58  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-07 07:41:59  watchdog          INFO      Watchdog: all systems healthy
+2026-07-07 07:49:06  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-07-07 07:49:11  runner            INFO        ✎ context: Chia AI Watcher succeeded despite a Gigahorse error affecting quality fetches, w
