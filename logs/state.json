@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-07 07:49:06",
+      "last_run": "2026-07-07 09:49:20",
       "success": true,
       "duration": 7,
-      "last_output": "\u2705 Chia AI (ok): Exception fetching qualities due to Gigahorse giga37 bug, harmless unless count >20 in batch.",
-      "runs_today": 4
+      "last_output": "\u2705 Chia AI (ok): Exception fetching qualities due to known Gigahorse giga37 bug.",
+      "runs_today": 5
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-07 08:00:16",
@@ -30,11 +30,11 @@
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-07-06 21:01:11",
+      "last_run": "2026-07-07 09:00:35",
       "success": true,
-      "duration": 44,
-      "last_output": "e5223\u2026: Request failed with status code 429\n  \u26a0 ETH wallet 0xB38F0e\u2026: Request failed with status code 429\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Request failed with status code 429\n  \u26a0 BSC wallet 0xB38F0e\u2026: Request failed with status code 429\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
-      "runs_today": 2
+      "duration": 10,
+      "last_output": "urges by 3.5%, showing standout momentum amid overall market caution as the Fear & Greed Index sits at 'Fear' (27/100). Consider taking profit on HINT given its strong performance.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 1
     }
   },
   "last_watchdog_alert_sig": ""
