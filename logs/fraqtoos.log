@@ -11225,3 +11225,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-08 03:54:58  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-07-08 03:55:02  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded the 20-second
+2026-07-08 03:55:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-08 04:25:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-08 04:55:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-08 05:25:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-08 05:55:31  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-07-08 05:55:35  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded the 20-second
