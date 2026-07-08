@@ -515,6 +515,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, or HDFC credit cards since the last check."
   },
   "2026-07-09": {
-    "Chia AI Watcher": "Chia AI Watcher succeeded despite a Gigahorse error affecting quality fetches, which is harmless if fewer than 21 items are processed."
+    "Chia AI Watcher": "Chia AI Watcher flagged a warning as plot quality lookups exceeded the 20-second threshold, risking potential reward loss."
   }
 }
