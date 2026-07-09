@@ -11446,3 +11446,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-09 13:34:53  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-07-09 13:34:58  runner            INFO        ✎ context: Chia AI Watcher detected a consensus error with a peer, resulting in a ban due t
+2026-07-09 13:34:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-09 14:05:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-09 14:35:02  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-09 15:05:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-09 15:35:30  runner            INFO      ✓ Chia AI Watcher (25s)
+2026-07-09 15:35:35  runner            INFO        ✎ context: Chia AI Watcher detected a critical consensus error, banned an IP due to suspici
