@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-10 01:38:37",
+      "last_run": "2026-07-10 03:39:03",
       "success": true,
-      "duration": 16,
+      "duration": 15,
       "last_output": "\ud83d\udea8 Chia AI (critical):",
-      "runs_today": 1
+      "runs_today": 2
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-09 08:00:20",
