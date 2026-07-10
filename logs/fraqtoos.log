@@ -11553,3 +11553,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-10 09:40:43  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-07-10 09:40:48  runner            INFO        ✎ context: Chia AI Watcher detected critical consensus errors and slow plot quality lookups
+2026-07-10 09:41:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-10 10:00:29  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-07-10 10:00:35  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to repo
+2026-07-10 10:12:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-10 10:42:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-10 11:12:10  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-10 11:41:33  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-07-10 11:41:39  runner            INFO        ✎ context: Chia AI Watcher detected critical consensus errors and slow plot quality lookups
