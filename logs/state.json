@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-10 17:44:04",
+      "last_run": "2026-07-10 19:44:44",
       "success": true,
-      "duration": 52,
-      "last_output": "64s, pre_validation: 0.45s, CLVM: 0.45s, add-block: 1.53s, post-process: 0.66s, post-process2: 0.12s, cost: 3982738907, percent full: 36.207% header_hash: c704ca787befa0a3b68347ee9ae9ac241bbdfe3431af610cc1208f69ef64c2d7 height: 8986664', 'issue': 'Block validation time is within acceptable limits.'}",
-      "runs_today": 9
+      "duration": 26,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold, indicating potential performance issues.\n  \u2022 Plot quality lookup times consistently above 20 seconds for multiple plots.",
+      "runs_today": 10
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-10 08:00:11",
