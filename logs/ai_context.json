@@ -529,8 +529,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments for Tata Neu, found no new bills to report via WhatsApp, and checked for new PDFs in BSES, ICICI, and HDFC accounts without finding any updates since the last c"
   },
   "2026-07-11": {
-    "Chia AI Watcher": "Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, signaling potential performance problems.",
+    "Chia AI Watcher": "The Chia AI Watcher succeeded in 82 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434 after 60 seconds.",
     "Portfolio Bot": "Portfolio Bot successfully completed its task in 21 seconds, suggesting reallocation from underperformers like VEDL to promising stocks such as VAML for better portfolio health.",
-    "Chia Health Monitor": "The Chia Health Monitor reported successful farming with a slight delay in the last win, one prover error due to a known bug, and normal block validation.\n\n(Note: The summary is within the character l"
+    "Chia Health Monitor": "The Chia Health Monitor reported successful farming with a slight delay in the last win, one prover error due to a known bug, and normal block validation.\n\n(Note: The summary is within the character l",
+    "Crypto Portfolio Bot": "The Crypto Portfolio Bot attempted to send market data via WhatsApp but faced multiple failures in retrieving wallet and market information, resulting in an unavailable portfolio report.\n\n(Note: The s",
+    "Utility Bill Bot": "The Utility Bill Bot confirmed Tata Neu payments, reported a BRPL bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   }
 }
