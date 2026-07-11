@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-11 12:58:25",
+      "last_run": "2026-07-11 14:59:00",
       "success": true,
       "duration": 23,
-      "last_output": "ommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 29.966763019000012 seconds, exceeding the recommended 20 seconds.\n  \u2022 Several instances of looking up qualities on plots took between 36.78744314299999 and 38.53987969900001 seconds, significantly above the threshold.",
-      "runs_today": 5
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time, indicating potential performance issues.\n  \u2022 Plot quality lookup times consistently above 20 seconds for multiple plots.",
+      "runs_today": 6
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-11 08:00:32",
