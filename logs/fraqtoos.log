@@ -11791,3 +11791,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-11 21:00:16  runner            INFO        ✎ context: Crypto Portfolio Bot successfully sent a WhatsApp message but encountered empty 
 2026-07-11 21:00:52  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-07-11 21:00:57  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 6s, encountering a known Gigahorse giga37 bug
+2026-07-11 21:01:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-11 21:31:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-11 22:01:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-11 22:31:32  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-11 23:00:04  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-07-11 23:00:34  orchestrator      INFO      Daily digest sent.
+2026-07-11 23:01:27  runner            INFO      ✓ Chia AI Watcher (22s)
+2026-07-11 23:01:31  runner            INFO        ✎ context: Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, sign
