@@ -536,6 +536,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed Tata Neu payments, reported a BRPL bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-12": {
-    "Chia AI Watcher": "Bot 'Chia AI Watcher' completed its task in 6 seconds, encountering a benign WebSocket error due to missing PONG messages."
+    "Chia AI Watcher": "Chia AI Watcher detected multiple plot quality checks exceeding 20 seconds, signaling potential performance problems."
   }
 }
