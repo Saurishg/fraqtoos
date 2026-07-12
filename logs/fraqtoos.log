@@ -11861,3 +11861,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-12 09:00:27  runner            INFO        ✎ context: The bot attempted to send market data via WhatsApp but faced multiple failures i
 2026-07-12 09:04:18  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-07-12 09:04:23  runner            INFO        ✎ context: Chia AI Watcher detected that plot quality lookups exceeded the 20-second thresh
+2026-07-12 09:05:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-12 09:35:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-12 10:00:40  runner            INFO      ✓ Utility Bill Bot (14s)
+2026-07-12 10:00:45  runner            INFO        ✎ context: The Utility Bill Bot confirmed a Tata Neu payment, reported an upcoming BSES ele
+2026-07-12 10:05:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-12 10:35:47  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-12 11:05:10  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-07-12 11:05:15  runner            INFO        ✎ context: Chia AI Watcher identified that plot quality lookups exceeded the 20-second thre
