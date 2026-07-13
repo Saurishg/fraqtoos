@@ -11975,3 +11975,7 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-13 07:00:00  orchestrator      INFO      AI Agent started — output: /tmp/agent_1783906200.log
 2026-07-13 07:10:07  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-07-13 07:10:12  runner            INFO        ✎ context: Bot 'Chia AI Watcher' succeeded in 7s but encountered an exception while fetchin
+2026-07-13 07:11:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-13 07:41:14  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-13 08:00:19  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-07-13 08:00:25  runner            INFO        ✎ context: Chia Health Monitor reports no wins for 67 hours, exceeding the expected 17-hour
