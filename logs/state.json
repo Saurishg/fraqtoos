@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-07-14 05:03:27",
+  "last_watchdog": "2026-07-14 09:04:07",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-07-14 06:00:47",
@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-14 07:16:48",
+      "last_run": "2026-07-14 09:17:30",
       "success": true,
-      "duration": 21,
+      "duration": 22,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which is above the recommended threshold to minimize risk of losing rewards.",
-      "runs_today": 4
+      "runs_today": 5
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-14 08:00:28",
@@ -30,11 +30,11 @@
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-07-13 21:00:34",
+      "last_run": "2026-07-14 09:00:17",
       "success": true,
-      "duration": 9,
-      "last_output": "  \u26a0 BSC wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 ETH wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 BSC wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 ETH wallet 0xB38F0e\u2026: Empty Hive response\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
-      "runs_today": 2
+      "duration": 10,
+      "last_output": "  \u26a0 BSC wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 ETH wallet 0x0e5223\u2026: Empty Hive response\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 BSC wallet 0xB38F0e\u2026: Empty Hive response\n  \u26a0 ETH wallet 0xB38F0e\u2026: Empty Hive response\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
+      "runs_today": 1
     }
   },
   "last_watchdog_alert_sig": ""
