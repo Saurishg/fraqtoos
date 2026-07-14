@@ -12125,3 +12125,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-14 09:17:30  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-07-14 09:17:34  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded 20 seconds, r
+2026-07-14 09:18:34  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-14 09:48:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-14 10:00:19  runner            INFO      ✓ Utility Bill Bot (12s)
+2026-07-14 10:00:25  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata 
+2026-07-14 10:18:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-14 10:48:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-14 11:18:20  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-07-14 11:18:25  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded 20 seconds, r
