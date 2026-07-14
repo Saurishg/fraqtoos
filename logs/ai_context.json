@@ -550,10 +550,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu bill, found no new PDFs or emails for BSES, ICICI, and HDFC accounts, and completed its task successfully.\n\n(Note: The summary is concise and captures the key"
   },
   "2026-07-14": {
-    "Chia AI Watcher": "Chia AI Watcher detected that looking up plot qualities took over 33 seconds, surpassing the recommended 20-second threshold.",
+    "Chia AI Watcher": "Chia AI Watcher flagged that checking plot qualities took over 33 seconds, surpassing the recommended 20 seconds.",
     "Portfolio Bot": "Portfolio Bot analyzed stock performance, recommending reducing exposure to underperforming stocks like VEDL and reallocating funds for better growth potential.\n\n(Note: The summary is based on the pro",
     "Chia Health Monitor": "The Chia Health Monitor reports successful farming with 13,476 plots, a recent win 2 hours ago, no prover errors, and normal block validation despite a known giga37 bug.\n\n(Note: The summary is within ",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot attempted to send market data via WhatsApp but faced multiple failures in retrieving Hive and wallet information, resulting in an unavailable portfolio report.\n\n(Note: The phone n",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered multiple data retrieval failures from Hive and reported the portfolio as unavailable, despite successfully sending a WhatsApp message.\n\n--- \n\nIf you have any more ques",
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata Neu, BSES Electricity, ICICI Amazon Pay Credit Card, and HDFC Credit Card since the last check."
   }
 }
