@@ -571,6 +571,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu payment issue, reported an upcoming BSES bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-17": {
-    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully validated a block in 6 seconds, confirming it met the required standards."
+    "Chia AI Watcher": "Chia AI Watcher completed successfully in 7 seconds, encountering an exception while fetching plot qualities due to the Gigahorse giga37 bug."
   }
 }
