@@ -12585,3 +12585,7 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
 2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
 2026-07-17 16:26:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 16:56:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 17:26:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 17:56:57  runner            INFO      ✓ Chia AI Watcher (43s)
+2026-07-17 17:57:03  runner            INFO        ✎ context: Chia AI Watcher detected multiple double spend errors and slow plot quality look
