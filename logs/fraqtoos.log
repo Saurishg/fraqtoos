@@ -12566,3 +12566,22 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-17 13:38:28  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-07-17 13:38:33  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme
+2026-07-17 13:39:33  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 14:09:35  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 14:39:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-17 15:56:08  orchestrator      INFO      =======================================================
+2026-07-17 15:56:08  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-07-17 15:56:08  orchestrator      INFO        2026-07-17 15:56:08
+2026-07-17 15:56:08  orchestrator      INFO      =======================================================
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-17 15:56:08  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-07-17 16:26:09  watchdog          INFO      Watchdog lightweight: all critical processes OK
