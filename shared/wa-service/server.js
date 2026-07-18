@@ -193,6 +193,19 @@ function waitForAck(msg, minAck = 1, timeoutMs = 20000) {
     });
 }
 
+// ── Delivered-but-threw detector ─────────────────────────────────────────────
+// On some WhatsApp Web builds, whatsapp-web.js sendMessage() DELIVERS the message
+// but then throws while building the return object (getMessageModel → Message.js
+// `this.ack = data.ack`, with data undefined → "Cannot read properties of
+// undefined (reading 'ack')"). The message is already sent. Reporting this as a
+// failure makes callers retry, so the user receives duplicates — observed
+// 2026-07-18 as the SAME message ×3 (send_whatsapp.py's 3 retries), and it was
+// also the trigger for the chia-win-notifier flood. Treat this specific
+// serialization error as a successful send.
+function deliveredButModelThrew(err) {
+    return /reading 'ack'|reading 'id'|getMessageModel/.test((err && err.message) || "");
+}
+
 // ── Send helper ────────────────────────────────────────────────────────────
 async function doSend(phone, message, res) {
     try {
@@ -209,6 +222,11 @@ async function doSend(phone, message, res) {
         console.log(`[wa-service] Sent to ${clean} (ack confirmed)`);
         if (res) res.json({ ok: true });
     } catch (err) {
+        if (deliveredButModelThrew(err)) {
+            console.warn(`[wa-service] send delivered but ack-model threw (known wwebjs bug) — treating as sent: ${err.message}`);
+            if (res) res.json({ ok: true, note: "sent; ack unconfirmed (wwebjs serialization bug)" });
+            return;
+        }
         console.error("[wa-service] Send error:", err.message);
         if (res) res.status(500).json({ ok: false, error: err.message });
     }
@@ -292,6 +310,10 @@ app.post("/send-file", async (req, res) => {
         console.log(`[wa-service] File sent to ${clean}: ${path.basename(file_path)} (ack confirmed)`);
         res.json({ ok: true });
     } catch (err) {
+        if (deliveredButModelThrew(err)) {
+            console.warn(`[wa-service] file delivered but ack-model threw (known wwebjs bug) — treating as sent: ${err.message}`);
+            return res.json({ ok: true, note: "sent; ack unconfirmed (wwebjs serialization bug)" });
+        }
         console.error("[wa-service] Send-file error:", err.message);
         res.status(500).json({ ok: false, error: err.message });
     }
