@@ -12770,3 +12770,20 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-18 19:28:52  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-18 19:59:00  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-07-18 19:59:05  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed successfully in 6 seconds, reporting a benign We
+2026-07-18 19:59:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 20:29:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 20:59:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 21:00:17  runner            INFO      ✓ Crypto Portfolio Bot (9s)
+2026-07-18 21:00:23  runner            INFO        ✎ context: The Crypto Portfolio Bot attempted to send market data via WhatsApp but faced mu
+2026-07-18 21:29:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 21:57:56  watchdog          INFO      Watchdog full check starting...
+2026-07-18 21:58:07  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-18 21:58:07  watchdog          WARNING   ruflo push failed: [Errno 2] No such file or directory: '/home/work/.local/share/fnm/node-versions/v20.20.2/installation/bin/ruflo'
+2026-07-18 21:58:07  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-18 21:59:13  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-07-18 21:59:19  runner            INFO        ✎ context: Bot 'Chia AI Watcher' completed in 6s, encountering an exception while fetching 
