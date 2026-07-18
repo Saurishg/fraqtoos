@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-18 03:58:59",
+      "last_run": "2026-07-18 05:59:25",
       "success": true,
       "duration": 14,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Warnings about slow mempool update and connection issues.\n  \u2022 {'message': 'updating the mempool using the slow-path'}\n  \u2022 {'message': 'Cannot write to closing transport'}",
-      "runs_today": 2
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Generator runtime error encountered, peer banned.\n  \u2022 Error code: GENERATOR_RUNTIME_ERROR encountered with peer 116.202.161.208.",
+      "runs_today": 3
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-17 08:00:11",
