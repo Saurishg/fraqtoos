@@ -12719,3 +12719,27 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-18 11:26:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-18 11:57:01  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-07-18 11:57:06  runner            INFO        ✎ context: Chia AI Watcher flagged that plot quality lookups exceeded the 20-second thresho
+2026-07-18 11:57:06  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 12:00:06  watchdog          INFO      Watchdog full check starting...
+2026-07-18 12:00:18  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-18 12:00:18  watchdog          WARNING   ruflo push failed: [Errno 2] No such file or directory: '/home/work/.local/share/fnm/node-versions/v20.20.2/installation/bin/ruflo'
+2026-07-18 12:00:18  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-18 12:27:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 12:57:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 13:27:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-18 13:56:54  watchdog          INFO      Watchdog full check starting...
+2026-07-18 13:57:07  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-18 13:57:07  watchdog          WARNING   ruflo push failed: [Errno 2] No such file or directory: '/home/work/.local/share/fnm/node-versions/v20.20.2/installation/bin/ruflo'
+2026-07-18 13:57:07  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-18 13:57:53  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-07-18 13:57:58  runner            INFO        ✎ context: Chia AI Watcher detected a runtime error and WebSocket timeout due to no respons
