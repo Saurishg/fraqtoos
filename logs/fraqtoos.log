@@ -12843,3 +12843,22 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-19 08:00:28  runner            INFO        ✎ context: The Chia Health Monitor reported successful farming with 13,476 plots, a recent 
 2026-07-19 08:01:50  runner            INFO      ✓ Chia AI Watcher (22s)
 2026-07-19 08:01:55  runner            INFO        ✎ context: Chia AI Watcher flagged a warning as plot quality lookups exceeded 20 seconds, r
+2026-07-19 08:02:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-19 08:32:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-19 09:00:37  runner            INFO      ✓ Crypto Portfolio Bot (9s)
+2026-07-19 09:00:43  runner            INFO        ✎ context: Crypto Portfolio Bot encountered empty responses from Hive, causing all holding 
+2026-07-19 09:02:43  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-19 09:32:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-19 09:59:16  watchdog          INFO      Watchdog full check starting...
+2026-07-19 09:59:30  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-19 09:59:30  watchdog          WARNING   ruflo push failed: [Errno 2] No such file or directory: '/home/work/.local/share/fnm/node-versions/v20.20.2/installation/bin/ruflo'
+2026-07-19 09:59:30  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-19 10:01:20  runner            INFO      ✓ Utility Bill Bot (80s)
+2026-07-19 10:01:25  runner            INFO        ✎ context: Utility Bill Bot confirmed a Tata Neu payment error, reported an upcoming BSES b
+2026-07-19 10:02:01  runner            INFO      ✓ Chia AI Watcher (6s)
+2026-07-19 10:02:06  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully detected and reported a benign transport 
