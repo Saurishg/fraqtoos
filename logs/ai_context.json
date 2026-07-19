@@ -592,6 +592,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed a Tata Neu payment error, reported an upcoming BSES bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-20": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 9 seconds, issuing a warning about Chia AI.\n\n(Note: The summary is concise and within the character limit.)"
+    "Chia AI Watcher": "Chia AI Watcher identified and confirmed that the invalid size of deltas in plot files from Gigahorse giga37 is a non-critical, known issue."
   }
 }
