@@ -251,12 +251,12 @@ def run_full(force_alert: bool = False) -> dict:
                         if _ts.match(l.strip())
                         and any(k in l.lower() for k in ["error","traceback","exception","timeout","failed"])
                         and "watchdog"    not in l.lower()
-                        and "ruflo_fixer" not in l.lower()
+                        and True
                         and "context:"    not in l.lower()]
         # For daemon logs: keep only timestamped operational lines.
         # Exclude watchdog/fixer meta-lines — phi4 reads log_tail and would
         # re-diagnose its own previous diagnosis in an infinite feedback loop.
-        _skip_loggers = ("watchdog", "ruflo_fixer", "ai diagnosis")
+        _skip_loggers = ("watchdog", "ai diagnosis")
         clean_tail = "\n".join(
             l for l in log_tail.splitlines()
             if _ts.match(l.strip())
@@ -286,32 +286,7 @@ def run_full(force_alert: bool = False) -> dict:
     with open("/home/work/fraqtoos/logs/watchdog_latest.json", "w") as f:
         json.dump({"snapshot": snapshot, "analysis": analysis}, f, indent=2)
 
-    # Push to ruflo memory for agent context (non-blocking, best-effort)
-    try:
-        import importlib.util as _ilu
-        _spec = _ilu.spec_from_file_location(
-            "ruflo_report", "/home/work/fraqtoos/watchdog/ruflo_report.py")
-        _mod = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_mod)
-        _mod.push_to_ruflo(snapshot, analysis)
-    except Exception as _e:
-        log.warning(f"ruflo push failed: {_e}")
-
     st.set("last_watchdog", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-
-    # ── RuFlo auto-fixer ──────────────────────────────────────────────────────
-    # Spawn Claude Code agents to fix any code-level errors, then commit+push.
-    fixer_results = []
-    any_errors = any(b.get("errors") for b in snapshot["bots"])
-    if any_errors:
-        try:
-            from watchdog.ruflo_fixer import run_fixer, format_wa_summary
-            fixer_results = run_fixer(snapshot)
-            if fixer_results:
-                summary = format_wa_summary(fixer_results)
-                if summary:
-                    log.info(f"RuFlo fixer result (silent): {summary[:100]}")
-        except Exception as _fe:
-            log.warning(f"ruflo_fixer error: {_fe}")
 
     critical_down = any(b["critical"] and not b["running"] for b in snapshot["bots"])
     ai_bad = any(k in analysis.upper() for k in ["CRITICAL", "WARNING"])

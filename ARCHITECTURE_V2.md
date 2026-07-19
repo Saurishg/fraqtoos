@@ -142,7 +142,7 @@ run_full()  [every 4h + 12:00]
        model chain: phi4 --> deepseek-r1:14b --> qwen3:14b
        prompt guards: scheduled=false-running is normal; disk<90% is fine
   6. write logs/watchdog_latest.json
-  7. ruflo_report.push_to_ruflo() -- best-effort, 30s timeout
+  7. state.set("last_watchdog", ...)
   8. if CRITICAL/disk>=90%/searxng_down/force_alert:
        send_alert(bot status + analysis[:400])
 

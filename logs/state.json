@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-19 12:02:44",
+      "last_run": "2026-07-19 15:04:36",
       "success": true,
-      "duration": 18,
-      "last_output": " errors due to server timeout and warnings about closing transports.\n  \u2022 {'issue': \"WebSocket Error: ServerTimeoutError('No PONG received after 30.0 seconds')\", 'count': 8}\n  \u2022 {'issue': 'Cannot write to closing transport', 'instances': ['41.132.64.165', '2a01:cb19:76b:d100::1337', '152.36.154.35']}",
-      "runs_today": 6
+      "duration": 22,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Spend bundle validation took too long and was rejected.\n  \u2022 {'issue': 'add_spendbundle took 3.23 seconds', 'details': 'Cost: 975170960 (8.865% of max block cost)'}\n  \u2022 {'issue': 'validating spend took too long, rejecting'}",
+      "runs_today": 7
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-19 08:00:23",

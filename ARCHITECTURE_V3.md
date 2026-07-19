@@ -18,8 +18,7 @@ fraqtoos/
 │   └── utility_bill/__init__.py ← Wraps utility-bill-bot/bot.js
 └── watchdog/
     ├── watchdog.py          ← Process health + AI diagnosis
-    ├── ruflo_fixer.py       ← Auto-fix known Chia errors
-    └── ruflo_report.py      ← Chia report formatter
+    └── watchdog.py           ← Health monitor + AI diagnosis
 
 External bot directories (each has its own git repo):
   /home/work/portfolio_bot/        portfolio_bot.py

@@ -16,7 +16,6 @@ FraqtoOS is a single-orchestrator automation server that runs ~10 sub-bots (port
 | Logger | `core/logger.py` | Shared formatter; `RotatingFileHandler(5MB×3)` to `logs/fraqtoos.log` + stdout | all modules |
 | Web Search | `core/web_search.py` | SearXNG wrapper at `127.0.0.1:8888`; `is_up()` health probe | watchdog + agent |
 | Watchdog | `watchdog/watchdog.py` | `run_lightweight()` pgrep check; `run_full()` snapshot+AI diagnose+disk/SearXNG alerts; `ensure_ollama_up()` self-heal via `sudo systemctl restart` | 30m / 4h |
-| Ruflo Push | `watchdog/ruflo_report.py` | `push_to_ruflo()` — store snapshot in ruflo memory for agent context (best-effort, 30s timeout) | after `run_full` |
 | Bots dir | `bots/{chia_health,chia_ai_watcher,...}` | Bot implementations imported by orchestrator | — |
 
 ### Schedule (authoritative — `orchestrator.py`)
@@ -70,7 +69,6 @@ watchdog/watchdog.py :: run_full()
    │   ai_diagnose(phi4 → deepseek-r1:14b → qwen3:14b)
    ├──► logs/watchdog_latest.json
    ├──► state.set("last_watchdog", ...)
-   ├──► ruflo_report.push_to_ruflo()  (best-effort)
    └──► if CRITICAL/disk≥90%/searx_down: notifier.send_alert()
 
 23:00: send_daily_digest()
@@ -85,7 +83,6 @@ watchdog/watchdog.py :: run_full()
 | SearXNG | `127.0.0.1:8888` | `core/web_search.py` | watchdog flags as `searxng_up: false`, alert sent |
 | WhatsApp service | `shared/send_whatsapp.py` (Firefox + `wa_profile/`) | `notifier.py` | `fcntl` lock prevents concurrent sessions; falls back to stderr |
 | gemma-agent | `/home/work/gemma-agent/agent.py` | `morning_analysis`, `run_ai_agent` | fire-and-forget Popen (zombies possible — see gotchas) |
-| ruflo CLI | `~/.local/share/fnm/.../ruflo` | `watchdog/ruflo_report.py` | `capture_output, timeout=30`, errors logged as `log.warning` |
 | graphify | shell `graphify update .` | `runner._bg` per bot run | daemon thread, 120s wait, errors swallowed |
 
 ## State files
@@ -99,7 +96,6 @@ watchdog/watchdog.py :: run_full()
 | `logs/chia_ai_latest.json` | `bots/chia_ai_watcher.py` | last AI watcher classification batch |
 | `logs/chia_watcher_state.json` | `bots/chia_ai_watcher.py` | last-seen log offsets |
 | `logs/morning_plan.txt` | gemma-agent (07:00) | 3-point morning action plan |
-| `agentdb.rvf`, `ruvector.db` | claude-flow / ruflo | swarm + vector memory (not orchestrator state) |
 | `/tmp/fraqtoos_wa.lock` | `core/notifier.py` | `fcntl.LOCK_EX` for WhatsApp |
 | `/tmp/firefox.lock` | `orchestrator.py::job` | `fcntl.LOCK_NB` for `firefox_lock: True` bots |
 
