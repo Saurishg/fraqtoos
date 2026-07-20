@@ -13046,3 +13046,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-20 17:12:01  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-07-20 17:12:05  runner            INFO        ✎ context: Chia AI Watcher identified DNS resolution timeouts as harmless, attributing them
+2026-07-20 17:12:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-20 17:42:37  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-20 18:12:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-20 18:42:41  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-20 19:12:19  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-07-20 19:12:24  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified that DNS resolution timeouts i
