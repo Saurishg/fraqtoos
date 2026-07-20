@@ -592,7 +592,7 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed a Tata Neu payment error, reported an upcoming BSES bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-20": {
-    "Chia AI Watcher": "Chia AI Watcher succeeded, but Chia AI reported repeated DNS resolution failures for introducer due to timeouts over 32 seconds.",
+    "Chia AI Watcher": "Chia AI Watcher identified DNS resolution failures causing outbound connection issues, with errors including temporary name resolution failure and query timeouts.",
     "Portfolio Bot": "Portfolio Bot identified underperforming stocks like VEDL and suggested reallocating funds to improve portfolio health.\n\n(Note: The summary is concise and captures the key action taken by Portfolio Bo",
     "Chia Health Monitor": "Chia Health Monitor reports farming with 13,476 plots, a win delay of 12 hours due to a known bug, and two prover errors on unique plots while block validation is normal.\n\n(Note: The summary assumes t",
     "Crypto Portfolio Bot": "The Crypto Portfolio Bot attempted to fetch market data via Hive and CoinGecko, but both attempts failed due to timeouts, resulting in no update being performed.",
