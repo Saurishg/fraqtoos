@@ -599,6 +599,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu payment issue, reported an upcoming BSES bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-21": {
-    "Chia AI Watcher": "Chia AI Watcher identified repeated DNS resolution failures due to network or configuration issues."
+    "Chia AI Watcher": "Chia AI Watcher succeeded, but Chia AI faced repeated DNS resolution failures due to network configuration issues, causing connection and query timeouts."
   }
 }
