@@ -606,6 +606,6 @@
     "Utility Bill Bot": "The Utility Bill Bot failed to connect to the IMAP server at imap.gmail.com after three attempts due to DNS resolution errors, specifically \"getaddrinfo EAI_AGAIN.\""
   },
   "2026-07-22": {
-    "Chia AI Watcher": "Chia AI Watcher flagged a warning for plot quality lookups exceeding the recommended time threshold, risking reward loss."
+    "Chia AI Watcher": "Chia AI Watcher flagged a warning for plot quality checks exceeding the recommended time threshold, risking reward loss."
   }
 }
