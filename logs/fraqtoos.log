@@ -13110,3 +13110,15 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-21 05:15:13  runner            INFO      ✓ Chia AI Watcher (6s)
 2026-07-21 05:15:18  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' completed its task successfully in 6 seconds, encounte
+2026-07-21 05:15:48  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 05:45:50  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 06:03:52  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 1
+2026-07-21 06:03:52  runner            INFO        ↺ Retry 1/1: Portfolio Bot
+2026-07-21 06:07:38  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 2
+2026-07-21 06:07:43  runner            INFO        ✎ context: The bot failed to connect to kite.zerodha.com after six DNS resolution attempts,
+2026-07-21 06:15:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 06:45:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 07:00:26  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-07-21 07:00:26  orchestrator      INFO      AI Agent started — output: /tmp/agent_1784597426.log
+2026-07-21 07:15:34  runner            INFO      ✓ Chia AI Watcher (7s)
+2026-07-21 07:15:39  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully identified that DNS resolution timeouts i
