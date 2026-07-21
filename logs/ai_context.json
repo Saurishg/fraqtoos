@@ -599,9 +599,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu payment issue, reported an upcoming BSES bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-07-21": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 7 seconds, confirming that DNS resolution timeouts are normal for Chia AI under some network conditions.",
+    "Chia AI Watcher": "Chia AI Watcher faced repeated DNS resolution failures and executed a restart command to resolve the issue with the full node.",
     "Portfolio Bot": "The bot failed to connect to kite.zerodha.com after six DNS resolution attempts, resulting in no data retrieval and subsequent abortion of the process.",
     "Chia Health Monitor": "The Chia Health Monitor reports successful farming with 13,476 plots, a recent win 1 hour ago, no prover errors due to a known bug, and normal block validation.\n\n(Note: The summary is concise and with",
-    "Crypto Portfolio Bot": "The bot attempted to fetch market data from Hive and CoinGecko, but both attempts timed out, resulting in no update being performed."
+    "Crypto Portfolio Bot": "The bot attempted to fetch market data from Hive and CoinGecko, but both attempts timed out, resulting in no update being performed.",
+    "Utility Bill Bot": "The Utility Bill Bot failed to connect to the IMAP server at imap.gmail.com after three attempts due to DNS resolution errors, specifically \"getaddrinfo EAI_AGAIN.\""
   }
 }

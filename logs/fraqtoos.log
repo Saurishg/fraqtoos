@@ -13134,3 +13134,31 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-21 09:09:27  watchdog          INFO      AI diagnosis: **State:** WARNING
 2026-07-21 09:16:14  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-07-21 09:16:19  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 7 seconds, confirmi
+2026-07-21 09:16:49  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 09:46:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 10:01:37  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 1
+2026-07-21 10:01:37  runner            INFO        ↺ Retry 1/1: Utility Bill Bot
+2026-07-21 10:03:08  runner            WARNING   ✗ Utility Bill Bot exit 1 attempt 2
+2026-07-21 10:03:13  runner            INFO        ✎ context: The Utility Bill Bot failed to connect to the IMAP server at imap.gmail.com afte
+2026-07-21 10:16:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 10:46:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 14:57:14  orchestrator      INFO      =======================================================
+2026-07-21 14:57:14  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-07-21 14:57:14  orchestrator      INFO        2026-07-21 14:57:14
+2026-07-21 14:57:14  orchestrator      INFO      =======================================================
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-21 14:57:14  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-07-21 15:27:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 15:57:19  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 16:27:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-21 16:58:12  runner            INFO      ✓ Chia AI Watcher (50s)
+2026-07-21 16:58:17  runner            INFO        ✎ context: Chia AI Watcher faced repeated DNS resolution failures and executed a restart co
