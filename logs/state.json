@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-07-22 06:59:20",
+  "last_watchdog": "2026-07-22 11:00:50",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-07-22 06:01:03",
@@ -9,18 +9,18 @@
       "runs_today": 1
     },
     "Utility Bill Bot": {
-      "last_run": "2026-07-21 10:03:08",
-      "success": false,
-      "duration": 166,
-      "last_output": "\ud83e\udd16 Utility Bill Bot [--once mode]\n\u26a0\ufe0f  IMAP connect attempt 1/3 failed: getaddrinfo EAI_AGAIN imap.gmail.com \u2014 retrying in 5s\n\u26a0\ufe0f  IMAP connect attempt 2/3 failed: getaddrinfo EAI_AGAIN imap.gmail.com \u2014 retrying in 10s\nFatal error: getaddrinfo EAI_AGAIN imap.gmail.com",
+      "last_run": "2026-07-22 10:00:28",
+      "success": true,
+      "duration": 11,
+      "last_output": "for new PDFs...\n\ud83d\udced [bses] no new emails since last send (UID 162203)\n\n\ud83d\udcb3 [icici] ICICI Amazon Pay Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [icici] no new emails since last send (UID 162483)\n\n\ud83d\udcb3 [hdfc] HDFC Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [hdfc] no new emails since last send (UID 161641)\n\u2705 Done",
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-22 09:03:08",
+      "last_run": "2026-07-22 11:03:41",
       "success": true,
-      "duration": 21,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took more than 20 seconds, which may increase risk of losing rewards.",
-      "runs_today": 5
+      "duration": 20,
+      "last_output": "ity lookup times and WebSocket errors, but no critical issues.\n  \u2022 {'message': \"WebSocket Error: WSMessage(type=<WSMsgType.ERROR: 258>, data=ServerTimeoutError('No PONG received after 30.0 seconds'))\", 'count': 6}\n  \u2022 {'message': 'Looking up qualities on plot took more than 20 seconds', 'count': 13}",
+      "runs_today": 6
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-22 08:00:14",
