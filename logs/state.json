@@ -1,5 +1,5 @@
 {
-  "last_watchdog": "2026-07-23 17:27:35",
+  "last_watchdog": "2026-07-23 21:34:48",
   "runs": {
     "Portfolio Bot": {
       "last_run": "2026-07-23 06:03:54",
@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-23 19:45:06",
+      "last_run": "2026-07-23 21:50:50",
       "success": true,
-      "duration": 136,
+      "duration": 120,
       "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
-      "runs_today": 10
+      "runs_today": 11
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-23 08:00:16",
@@ -30,11 +30,11 @@
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-07-23 09:01:06",
+      "last_run": "2026-07-23 21:02:44",
       "success": true,
-      "duration": 42,
-      "last_output": "your plan to continue.\"\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Hive: \"Credit quota exceeded. Add credits or upgrade your plan to continue.\"\n  \u26a0 ETH wallet 0xB38F0e\u2026: Hive: \"Credit quota exceeded. Add credits or upgrade your plan to continue.\"\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
-      "runs_today": 1
+      "duration": 155,
+      "last_output": "your plan to continue.\"\n  \u26a0 BSC wallet 0xB38F0e\u2026: Hive: \"Credit quota exceeded. Add credits or upgrade your plan to continue.\"\n  \u26a0 Base L2 wallet 0xB38F0e\u2026: Hive: \"Credit quota exceeded. Add credits or upgrade your plan to continue.\"\n\u274c All holdings lookups failed \u2014 reporting portfolio as unavailable",
+      "runs_today": 2
     }
   },
   "last_watchdog_alert_sig": ""

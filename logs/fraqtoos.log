@@ -13446,3 +13446,24 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-23 19:13:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-23 19:44:58  runner            INFO      ✓ Chia AI Watcher (133s)
 2026-07-23 19:48:18  runner            INFO        ✎ context: Chia AI Watcher OK in 136s.
+2026-07-23 19:49:00  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 20:19:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 20:49:08  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 21:02:44  runner            INFO      ✓ Crypto Portfolio Bot (155s)
+2026-07-23 21:04:24  runner            INFO        ✎ context: Crypto Portfolio Bot OK in 155s.
+2026-07-23 21:19:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 21:27:56  watchdog          INFO      Watchdog full check starting...
+2026-07-23 21:30:46  watchdog          WARNING   AI model phi4 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-23 21:32:46  watchdog          WARNING   AI model deepseek-r1:14b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-23 21:34:46  watchdog          WARNING   AI model gpt-oss:20b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-23 21:34:46  watchdog          INFO      AI diagnosis: AI unavailable
+2026-07-23 21:34:49  watchdog          WARNING   SearXNG is DOWN — web context will be empty
+2026-07-23 21:34:49  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+⚠ SearXNG DOWN
+2026-07-23 21:50:50  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-07-23 21:51:16  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
