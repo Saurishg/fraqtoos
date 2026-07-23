@@ -620,6 +620,6 @@
     "Utility Bill Bot": "Utility Bill Bot OK in 39s."
   },
   "2026-07-24": {
-    "Chia AI Watcher": "The Chia AI Watcher's attempt to classify with phi4 failed due to a read timeout after 120 seconds on localhost port 11434."
+    "Chia AI Watcher": "The Chia AI Watcher's phi4 classification attempt failed due to a read timeout after 120 seconds on localhost:11434."
   }
 }
