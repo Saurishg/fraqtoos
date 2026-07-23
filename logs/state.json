@@ -23,10 +23,10 @@
       "runs_today": 4
     },
     "Chia Health Monitor": {
-      "last_run": "2026-07-22 08:00:14",
+      "last_run": "2026-07-23 08:00:16",
       "success": true,
-      "duration": 4,
-      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13476 plots\n\ud83d\udea8 Last win: 44h ago (expected 14h)\n\u2705 Prover errors: 1 (1 unique plots) [known giga37 bug]\n\u2705 Block validation: normal\n\n\ud83d\udea8 *ALERTS*: No win in 44h (>3\u00d7 expected)",
+      "duration": 6,
+      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\u2705 Last win: 21h ago (expected 15h)\n\u2705 Prover errors: 2 (2 unique plots) [known giga37 bug]\n\ud83d\udea8 Block validation spikes: 183 (worst: 317.2s)\n\u26a0\ufe0f Coin store slow writes: 101 (worst: 104.3s)",
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {
