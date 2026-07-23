@@ -2,10 +2,10 @@
   "last_watchdog": "2026-07-23 05:19:21",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-07-22 06:01:03",
+      "last_run": "2026-07-23 06:03:54",
       "success": true,
-      "duration": 42,
-      "last_output": "eachable \u2014 HTTP Error 503: Service Unavailable\n[send_whatsapp] ERROR (attempt 2/3): wa-service unreachable \u2014 HTTP Error 503: Service Unavailable\n[send_whatsapp] ERROR (attempt 3/3): wa-service unreachable \u2014 HTTP Error 503: Service Unavailable\n2026-07-22 06:01:02,963  INFO  === Portfolio Bot Done ===",
+      "duration": 211,
+      "last_output": " SHIVAMAUTO and THINKINK, potentially reallocating those funds into more promising opportunities such as TMCV or exploring other high-growth sectors.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-07-23 06:03:52,246  INFO  WhatsApp sent to +919818187001\n2026-07-23 06:03:52,776  INFO  === Portfolio Bot Done ===",
       "runs_today": 1
     },
     "Utility Bill Bot": {
@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-23 05:21:16",
+      "last_run": "2026-07-23 07:23:37",
       "success": true,
-      "duration": 25,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold, risking reward loss.\n  \u2022 Plot quality lookup times exceed 20 seconds for multiple plots.",
-      "runs_today": 3
+      "duration": 122,
+      "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
+      "runs_today": 4
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-22 08:00:14",
