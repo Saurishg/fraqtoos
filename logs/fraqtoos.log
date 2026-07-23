@@ -13422,3 +13422,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 ⚠ SearXNG DOWN
 2026-07-23 13:34:10  runner            INFO      ✓ Chia AI Watcher (132s)
 2026-07-23 13:35:16  runner            INFO        ✎ context: Chia AI Watcher OK in 133s.
+2026-07-23 13:37:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 14:07:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 14:37:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 15:07:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-23 15:37:31  runner            INFO      ✓ Chia AI Watcher (122s)
+2026-07-23 15:38:37  runner            INFO        ✎ context: Chia AI Watcher OK in 122s.

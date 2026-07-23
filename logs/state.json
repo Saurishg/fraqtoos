@@ -16,11 +16,11 @@
       "runs_today": 1
     },
     "Chia AI Watcher": {
-      "last_run": "2026-07-23 13:34:11",
+      "last_run": "2026-07-23 15:37:31",
       "success": true,
-      "duration": 133,
+      "duration": 122,
       "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
-      "runs_today": 7
+      "runs_today": 8
     },
     "Chia Health Monitor": {
       "last_run": "2026-07-23 08:00:16",
