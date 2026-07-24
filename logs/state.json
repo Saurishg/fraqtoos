@@ -2,10 +2,10 @@
   "last_watchdog": "2026-07-24 05:38:42",
   "runs": {
     "Portfolio Bot": {
-      "last_run": "2026-07-23 06:03:54",
+      "last_run": "2026-07-24 06:03:32",
       "success": true,
-      "duration": 211,
-      "last_output": " SHIVAMAUTO and THINKINK, potentially reallocating those funds into more promising opportunities such as TMCV or exploring other high-growth sectors.\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n2026-07-23 06:03:52,246  INFO  WhatsApp sent to +919818187001\n2026-07-23 06:03:52,776  INFO  === Portfolio Bot Done ===",
+      "duration": 79,
+      "last_output": "AL SUMMARY*\nInvested : Rs.346,752\nCurrent  : Rs.297,943\nP&L      : Rs.-48,810 (-14.08%)\nStocks   : 10  (5P:0  Kite:10)\n2026-07-24 06:03:31,660  INFO  WhatsApp sent to +919818187001\n2026-07-24 06:03:31,761  INFO  WhatsApp sent to +919810238955\n2026-07-24 06:03:31,769  INFO  === Portfolio Bot Done ===",
       "runs_today": 1
     },
     "Utility Bill Bot": {
@@ -23,10 +23,10 @@
       "runs_today": 3
     },
     "Chia Health Monitor": {
-      "last_run": "2026-07-23 08:00:16",
+      "last_run": "2026-07-24 08:00:05",
       "success": true,
-      "duration": 6,
-      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\u2705 Last win: 21h ago (expected 15h)\n\u2705 Prover errors: 2 (2 unique plots) [known giga37 bug]\n\ud83d\udea8 Block validation spikes: 183 (worst: 317.2s)\n\u26a0\ufe0f Coin store slow writes: 101 (worst: 104.3s)",
+      "duration": 4,
+      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13491 plots\n\u26a0\ufe0f Last win: 45h ago (expected 16h)\n\u2705 Prover errors: 0 (0 unique plots) [known giga37 bug]\n\ud83d\udea8 Block validation spikes: 42 (worst: 231.3s)\n\u26a0\ufe0f Coin store slow writes: 25 (worst: 154.1s)",
       "runs_today": 1
     },
     "Crypto Portfolio Bot": {

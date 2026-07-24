@@ -13509,3 +13509,28 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-07-24 06:01:13  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-07-24 06:01:43  runner            INFO        ✎ context: The Chia AI Watcher's attempt to classify with phi4 failed due to a read timeout
+2026-07-24 06:02:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 06:03:32  runner            INFO      ✓ Portfolio Bot (79s)
+2026-07-24 06:04:14  runner            INFO        ✎ context: The Portfolio Bot reported a total loss of Rs.-48,810 (-14.08%) across 10 stocks
+2026-07-24 06:32:16  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 07:00:18  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-07-24 07:00:18  orchestrator      INFO      AI Agent started — output: /tmp/agent_1784856618.log
+2026-07-24 07:02:18  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 07:19:28  orchestrator      INFO      =======================================================
+2026-07-24 07:19:28  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-07-24 07:19:28  orchestrator      INFO        2026-07-24 07:19:28
+2026-07-24 07:19:28  orchestrator      INFO      =======================================================
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-07-24 07:19:28  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-07-24 07:49:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 08:00:05  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-07-24 08:00:28  runner            INFO        ✎ context: Chia Health Monitor reports normal farming with no prover errors, but warns of d
