@@ -13540,3 +13540,14 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-24 09:00:17  runner            INFO        ✎ context: All wallet queries failed due to exceeding credit quotas, resulting in an unavai
 2026-07-24 09:20:09  runner            INFO      ✓ Chia AI Watcher (21s)
 2026-07-24 09:20:14  runner            INFO        ✎ context: Chia AI Watcher detected multiple instances of plot quality lookup times exceedi
+2026-07-24 09:20:44  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 09:50:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 10:00:26  runner            INFO      ✓ Utility Bill Bot (10s)
+2026-07-24 10:00:32  runner            INFO        ✎ context: Utility Bill Bot confirmed a Tata Neu bill, found no new PDFs or emails for BSES
+2026-07-24 10:21:03  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 10:51:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 11:19:36  watchdog          INFO      Watchdog full check starting...
+2026-07-24 11:19:49  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-24 11:19:49  watchdog          INFO      Watchdog: all systems healthy
+2026-07-24 11:20:40  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-07-24 11:20:44  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times, exceeding 20 second
