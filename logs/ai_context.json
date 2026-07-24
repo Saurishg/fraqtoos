@@ -625,5 +625,8 @@
     "Chia Health Monitor": "Chia Health Monitor reports normal farming with no prover errors, but warns of delayed wins and issues with block validation spikes and slow coin store writes.\n\n(Note: The summary is within the charac",
     "Crypto Portfolio Bot": "All wallet credit quotas were exceeded, causing all holdings lookups to fail and rendering the portfolio unavailable.\n\n--- \n\nThis summary captures the core issue: exceeding credit quotas led to failed",
     "Utility Bill Bot": "Utility Bill Bot confirmed a Tata Neu bill, found no new PDFs or emails for BSES, ICICI, and HDFC accounts, completing the task successfully.\n\n(Note: The summary is concise and captures the key action"
+  },
+  "2026-07-25": {
+    "Chia AI Watcher": "Chia AI Watcher detected that multiple plot quality lookups exceeded the recommended 20-second threshold, taking over 28 seconds each."
   }
 }
