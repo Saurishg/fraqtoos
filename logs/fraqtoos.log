@@ -13607,3 +13607,19 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-24 21:00:37  runner            INFO        ✎ context: All wallet credit quotas were exceeded, causing all holdings lookups to fail and
 2026-07-24 21:23:45  runner            INFO      ✓ Chia AI Watcher (7s)
 2026-07-24 21:23:49  runner            INFO        ✎ context: Bot 'Chia AI Watcher' succeeded in 7s but encountered an exception fetching qual
+2026-07-24 21:24:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 21:54:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 22:24:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 22:54:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-24 23:00:25  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-07-24 23:00:56  orchestrator      INFO      Daily digest sent.
+2026-07-24 23:20:28  watchdog          INFO      Watchdog full check starting...
+2026-07-24 23:20:36  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-24 23:20:36  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-24 23:24:27  runner            INFO      ✓ Chia AI Watcher (21s)
+2026-07-24 23:24:32  runner            INFO        ✎ context: Chia AI Watcher detected that multiple plot quality lookups exceeded the recomme
