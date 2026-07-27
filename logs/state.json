@@ -1,11 +1,13 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-07-27 15:48:10",
+      "last_run": "2026-07-27 17:51:30",
       "success": true,
-      "duration": 43,
-      "last_output": "(warning): Multiple warnings about slow plot quality lookups, exceeding recommended time.\n  \u2022 Mempool update using the slow-path multiple times.\n  \u2022 Error syncing to peer at IP 146.115.118.6, port 8444.\n  \u2022 PlotSync error with node_id 426ff07090a1f586f3657a29a28237418f289817b228c010a21b1162eeba26da.",
-      "runs_today": 1
+      "duration": 124,
+      "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+      "runs_today": 2
     }
-  }
+  },
+  "last_watchdog": "2026-07-27 17:48:53",
+  "last_watchdog_alert_sig": "Chia Health Monitor:Chia Health Monitor has never recorded a run|Portfolio Bot:Portfolio Bot has never recorded a run|Utility Bill Bot:Utility Bill Bot has never recorded a run"
 }
