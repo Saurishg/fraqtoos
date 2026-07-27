@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-07-27 21:58:38",
-      "success": false,
-      "duration": 150,
-      "last_output": "TIMEOUT after 150s",
-      "runs_today": 4
+      "last_run": "2026-07-28 00:02:00",
+      "success": true,
+      "duration": 123,
+      "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
+      "runs_today": 1
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-07-27 21:01:22",
