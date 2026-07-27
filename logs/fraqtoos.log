@@ -14023,3 +14023,18 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-27 19:22:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-27 19:54:48  runner            INFO      ✓ Chia AI Watcher (122s)
 2026-07-27 19:55:53  runner            INFO        ✎ context: Chia AI Watcher OK in 125s.
+2026-07-27 19:55:54  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-27 20:25:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-27 20:55:58  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-27 21:01:22  runner            INFO      ✓ Crypto Portfolio Bot (53s)
+2026-07-27 21:02:24  runner            INFO        ✎ context: Crypto Portfolio Bot OK in 53s.
+2026-07-27 21:26:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-27 21:48:57  watchdog          INFO      Watchdog full check starting...
+2026-07-27 21:51:05  watchdog          WARNING   AI model phi4 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-27 21:53:07  watchdog          WARNING   AI model deepseek-r1:14b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-27 21:55:07  watchdog          WARNING   AI model gpt-oss:20b failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-07-27 21:55:07  watchdog          INFO      AI diagnosis: AI unavailable
+2026-07-27 21:55:07  watchdog          WARNING   SearXNG is DOWN — web context will be empty
+2026-07-27 21:55:07  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
+2026-07-27 21:58:38  runner            ERROR     ✗ Chia AI Watcher TIMEOUT after 150s
+2026-07-27 21:59:42  runner            INFO        ✎ context: Chia AI Watcher FAILED in 150s.
