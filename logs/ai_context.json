@@ -641,6 +641,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu bill, found no new PDFs or emails for BSES, ICICI, and HDFC accounts, and completed its tasks successfully.\n\n(Note: The summary is concise and captures the ke"
   },
   "2026-07-27": {
-    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 10 seconds, confirming that Chia AI is operational."
+    "Chia AI Watcher": "Bot 'Chia AI Watcher' succeeded in 7s but encountered an exception due to a known Gigahorse giga37 bug while fetching qualities.",
+    "Portfolio Bot": "Portfolio Bot identified significant losses in THINKINK$, VOGL, and VEDL stocks, recommending reallocating investments to VAML or TMCV for better returns."
   }
 }
