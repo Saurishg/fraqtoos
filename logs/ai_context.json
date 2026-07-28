@@ -648,7 +648,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu bill, found no new PDFs for BSES, ICICI, or HDFC accounts, and completed its task in 15 seconds.\n\n(Note: The summary is concise and captures the key actions p"
   },
   "2026-07-28": {
-    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully validated a block in 6 seconds, confirming it met the required standards.",
+    "Chia AI Watcher": "Chia AI Watcher identified that 28 out of 29 plot quality lookups exceeded the recommended time threshold, taking over 20 seconds each.",
     "Portfolio Bot": "Portfolio Bot OK in 101s.",
     "Chia Health Monitor": "Chia Health Monitor OK in 17s.",
     "Crypto Portfolio Bot": "Crypto Portfolio Bot OK in 51s.",
