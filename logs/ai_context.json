@@ -651,7 +651,7 @@
     "Chia AI Watcher": "Chia AI Watcher identified that 28 out of 29 plot quality lookups exceeded the recommended time threshold, taking over 20 seconds each.",
     "Portfolio Bot": "Portfolio Bot OK in 101s.",
     "Chia Health Monitor": "Chia Health Monitor OK in 17s.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot OK in 51s.",
+    "Crypto Portfolio Bot": "The Crypto Portfolio Bot reported a portfolio increase of $1,560 (+10.1%) over 24 hours despite Bitcoin and Ethereum's declines, advising to hold and monitor BTC's support level at $62,000.\n\n(Note: Th",
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments, sent a WhatsApp message, and checked for new PDFs from BSES, ICICI, and HDFC credit cards without finding any updates.\n\n(Note: The summary is concise and captu"
   }
 }
