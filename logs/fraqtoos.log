@@ -14320,3 +14320,17 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-07-30 01:51:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-07-30 02:01:04  runner            INFO      ✓ Chia AI Watcher (50s)
 2026-07-30 02:01:10  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task within the expected ti
+2026-07-30 02:09:40  watchdog          INFO      Watchdog full check starting...
+2026-07-30 02:09:53  watchdog          INFO      AI diagnosis: **State:** OK
+2026-07-30 02:09:53  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-07-30 02:21:23  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-30 02:51:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-30 03:21:26  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-30 03:51:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-07-30 04:01:52  runner            INFO      ✓ Chia AI Watcher (24s)
+2026-07-30 04:01:57  runner            INFO        ✎ context: Chia AI Watcher flagged excessive plot quality lookup times exceeding 20 seconds
