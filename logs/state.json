@@ -1,18 +1,18 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-07-29 07:55:03",
+      "last_run": "2026-07-29 09:55:35",
       "success": true,
-      "duration": 21,
+      "duration": 22,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup took over 20 seconds multiple times, increasing risk of losing rewards.'}",
-      "runs_today": 4
+      "runs_today": 5
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-07-28 21:00:20",
+      "last_run": "2026-07-29 09:00:33",
       "success": true,
-      "duration": 12,
-      "last_output": " rated at 29/100. Despite this, your portfolio has gained 10.1%, up to $17.05K.\n\n**Actionable Insight:** Hold for now; watch the $62,000 level on BTC closely for potential support.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
-      "runs_today": 2
+      "duration": 11,
+      "last_output": "nce amid market fear index signaling \"Fear\" at 29/100. SAI and HINT remain stagnant with minor declines. **Actionable Insight:** Hold for potential upside as sentiment may improve.\n\n\ud83e\udd16 Hive + phi4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce4 Sending WhatsApp to +919818187001...\n  \u2705 Sent!",
+      "runs_today": 1
     },
     "Portfolio Bot": {
       "last_run": "2026-07-29 06:00:52",
