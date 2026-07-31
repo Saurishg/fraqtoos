@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-07-31 22:31:23",
+      "last_run": "2026-08-01 00:32:05",
       "success": true,
-      "duration": 27,
+      "duration": 26,
       "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple instances of looking up qualities exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took longer than 20 seconds, which may increase risk of losing rewards.",
-      "runs_today": 7
+      "runs_today": 1
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-07-31 21:00:21",
@@ -36,6 +36,6 @@
       "runs_today": 1
     }
   },
-  "last_watchdog": "2026-07-31 20:28:55",
-  "last_watchdog_alert_sig": "Chia Health Monitor:stale: last run 36.5h ago|Utility Bill Bot:stale: last run 34.5h ago"
+  "last_watchdog": "2026-08-01 00:29:08",
+  "last_watchdog_alert_sig": "Chia Health Monitor:stale: last run 40.5h ago|Utility Bill Bot:stale: last run 38.5h ago"
 }
