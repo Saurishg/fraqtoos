@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-07-31 14:03:09",
+      "last_run": "2026-07-31 18:30:09",
       "success": true,
-      "duration": 28,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took between 29.8 and 35.9 seconds, exceeding the recommended maximum of 20 seconds.",
-      "runs_today": 4
+      "duration": 107,
+      "last_output": "mless unless count >20 in batch'}\n  \u2022 {'message': 'Looking up qualities on /mnt/1/c19/plot-k32-c19-2024-03-20-21-52-0b7090aacc04419ef8ea08317cebf7ff4e55909b4497e2e740b8b91c03431ff9.plot took: 29.123456789.', 'fix_cmd': 'none', 'fix_reason': 'Gigahorse giga37 bug, harmless unless count >20 in batch'}",
+      "runs_today": 5
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-07-30 21:00:40",
