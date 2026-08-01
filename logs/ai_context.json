@@ -675,6 +675,7 @@
   },
   "2026-08-01": {
     "Chia AI Watcher": "Chia AI Watcher detected slow plot quality lookups exceeding 20 seconds, risking reward loss due to performance issues.",
-    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed."
+    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed.",
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,509 plots, a win delay of 12 hours due to a known bug, and three prover errors on unique plots."
   }
 }
