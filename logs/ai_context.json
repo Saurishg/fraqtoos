@@ -676,6 +676,8 @@
   "2026-08-01": {
     "Chia AI Watcher": "Chia AI Watcher detected slow plot quality lookups exceeding 20 seconds, risking reward loss due to performance issues.",
     "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed.",
-    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,509 plots, a win delay of 12 hours due to a known bug, and three prover errors on unique plots."
+    "Chia Health Monitor": "Chia Health Monitor reports farming with 13,509 plots, a win delay of 12 hours due to a known bug, and three prover errors on unique plots.",
+    "Crypto Portfolio Bot": "All wallet queries on BSC, ETH, and Base L2 failed due to exceeded credit quotas, rendering the portfolio unavailable.\n\n--- \n\nThis summary captures the essence of the issue: all attempts to access hol",
+    "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata Neu, BSES Electricity, ICICI Amazon Pay Credit Card, or HDFC Credit Card since the last check.\n\n(Note: The summary is 11"
   }
 }

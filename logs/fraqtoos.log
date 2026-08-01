@@ -14654,3 +14654,13 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-01 08:29:54  watchdog          INFO      AI diagnosis: **State: WARNING**
 2026-08-01 08:34:52  runner            INFO      ✓ Chia AI Watcher (28s)
 2026-08-01 08:34:57  runner            INFO        ✎ context: Chia AI Watcher detected slow plot quality lookups exceeding 20 seconds, risking
+2026-08-01 08:35:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-01 09:00:36  runner            INFO      ✓ Crypto Portfolio Bot (9s)
+2026-08-01 09:00:42  runner            INFO        ✎ context: All wallet queries on BSC, ETH, and Base L2 failed due to exceeded credit quotas
+2026-08-01 09:05:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-01 09:35:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-01 10:00:23  runner            INFO      ✓ Utility Bill Bot (11s)
+2026-08-01 10:00:29  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments and found no new bills or PDFs for Tata 
+2026-08-01 10:05:59  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-01 10:35:27  runner            INFO      ✓ Chia AI Watcher (28s)
+2026-08-01 10:35:32  runner            INFO        ✎ context: Chia AI Watcher detected slow plot quality lookups exceeding 20 seconds, risking
