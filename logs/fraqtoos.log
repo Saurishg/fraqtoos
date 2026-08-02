@@ -14790,3 +14790,192 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-02 14:16:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-02 14:46:29  runner            INFO      ✓ Chia AI Watcher (49s)
 2026-08-02 14:46:34  runner            INFO        ✎ context: Chia AI Watcher detected prolonged plot quality lookup times exceeding 20 second
+2026-08-02 14:47:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 15:17:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 15:47:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 16:17:04  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 16:27:01  orchestrator      INFO      =======================================================
+2026-08-02 16:27:01  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 16:27:01  orchestrator      INFO        2026-08-02 16:27:01
+2026-08-02 16:27:01  orchestrator      INFO      =======================================================
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:27:01  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO      =======================================================
+2026-08-02 16:42:05  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 16:42:05  orchestrator      INFO        2026-08-02 16:42:05
+2026-08-02 16:42:05  orchestrator      INFO      =======================================================
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:42:05  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO      =======================================================
+2026-08-02 16:53:11  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 16:53:11  orchestrator      INFO        2026-08-02 16:53:11
+2026-08-02 16:53:11  orchestrator      INFO      =======================================================
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 16:53:11  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO      =======================================================
+2026-08-02 17:07:31  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 17:07:31  orchestrator      INFO        2026-08-02 17:07:31
+2026-08-02 17:07:31  orchestrator      INFO      =======================================================
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:07:31  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO      =======================================================
+2026-08-02 17:35:14  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 17:35:14  orchestrator      INFO        2026-08-02 17:35:14
+2026-08-02 17:35:14  orchestrator      INFO      =======================================================
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:35:14  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO      =======================================================
+2026-08-02 17:43:55  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 17:43:55  orchestrator      INFO        2026-08-02 17:43:55
+2026-08-02 17:43:55  orchestrator      INFO      =======================================================
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:43:55  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO      =======================================================
+2026-08-02 17:51:31  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 17:51:31  orchestrator      INFO        2026-08-02 17:51:31
+2026-08-02 17:51:31  orchestrator      INFO      =======================================================
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:51:31  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO      =======================================================
+2026-08-02 17:55:26  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 17:55:26  orchestrator      INFO        2026-08-02 17:55:26
+2026-08-02 17:55:26  orchestrator      INFO      =======================================================
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 17:55:26  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO      =======================================================
+2026-08-02 18:01:05  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 18:01:05  orchestrator      INFO        2026-08-02 18:01:05
+2026-08-02 18:01:05  orchestrator      INFO      =======================================================
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:01:05  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO      =======================================================
+2026-08-02 18:31:14  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 18:31:14  orchestrator      INFO        2026-08-02 18:31:14
+2026-08-02 18:31:14  orchestrator      INFO      =======================================================
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:31:14  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO      =======================================================
+2026-08-02 18:40:07  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 18:40:07  orchestrator      INFO        2026-08-02 18:40:07
+2026-08-02 18:40:07  orchestrator      INFO      =======================================================
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:40:07  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO      =======================================================
+2026-08-02 18:59:21  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-02 18:59:21  orchestrator      INFO        2026-08-02 18:59:21
+2026-08-02 18:59:21  orchestrator      INFO      =======================================================
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-02 18:59:21  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-02 19:29:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 19:59:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 20:29:22  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-02 21:01:22  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-08-02 21:01:51  runner            INFO        ✎ context: The Chia AI Watcher's attempt to classify with phi4 failed due to a read timeout
