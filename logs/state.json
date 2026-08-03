@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-08-03 04:08:49",
+      "last_run": "2026-08-03 06:11:32",
       "success": true,
       "duration": 120,
       "last_output": "Chia AI Watcher: phi4 classification failed \u2014 HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
-      "runs_today": 1
+      "runs_today": 2
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-08-02 21:03:05",
@@ -15,7 +15,7 @@
       "runs_today": 2
     },
     "Portfolio Bot": {
-      "last_run": "2026-08-02 06:00:40",
+      "last_run": "2026-08-03 06:00:32",
       "success": false,
       "duration": 15,
       "last_output": "Traceback (most recent call last):\n  File \"/home/work/portfolio_bot/portfolio_bot.py\", line 12, in <module>\n    import pyotp\nModuleNotFoundError: No module named 'pyotp'",
@@ -36,6 +36,6 @@
       "runs_today": 1
     }
   },
-  "last_watchdog": "2026-08-02 23:01:00",
+  "last_watchdog": "2026-08-03 06:08:02",
   "last_watchdog_alert_sig": "Portfolio Bot:last run failed: Traceback (most recent call last):\n  File \"/home/work/portfolio_bot/portfolio_bot.py\", line 12, in <module>\n    import p"
 }
