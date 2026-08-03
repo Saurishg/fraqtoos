@@ -689,6 +689,7 @@
   },
   "2026-08-03": {
     "Chia AI Watcher": "The Chia AI Watcher task succeeded in 120 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434.",
-    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`."
+    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`.",
+    "Chia Health Monitor": "The Chia Health Monitor detected that the node is not farming, with a high number of prover errors due to a known bug, and attempted to send this alert via WhatsApp but failed because the 'chia' comma"
   }
 }
