@@ -695,8 +695,9 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed multiple Tata Neu payments, found no new bills for BSES, ICICI, or HDFC, and completed its tasks successfully.\n\n(Note: The summary is concise and captures the key action"
   },
   "2026-08-04": {
-    "Chia AI Watcher": "The Chia AI Watcher task succeeded in 120 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434.",
+    "Chia AI Watcher": "The Chia AI Watcher's phi4 classification attempt failed due to a read timeout after 120 seconds on localhost:11434.",
     "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed.",
-    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them."
+    "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions are too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
+    "Crypto Portfolio Bot": "All wallets encountered a credit quota issue, preventing successful portfolio lookup and rendering it unavailable."
   }
 }
