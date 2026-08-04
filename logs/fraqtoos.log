@@ -15418,3 +15418,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-04 19:22:52  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
 2026-08-04 19:50:23  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-08-04 19:50:56  runner            INFO        ✎ context: The Chia AI Watcher's attempt to classify with phi4 on localhost:11434 failed du
+2026-08-04 19:50:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-04 20:20:56  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-04 20:50:57  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-04 21:01:14  runner            INFO      ✓ Crypto Portfolio Bot (48s)
+2026-08-04 21:01:50  runner            INFO        ✎ context: The bot encountered a credit quota issue on the Hive platform, preventing it fro
+2026-08-04 21:21:20  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-04 21:53:21  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-08-04 21:53:50  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
