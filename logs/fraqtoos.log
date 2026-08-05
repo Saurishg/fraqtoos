@@ -15485,3 +15485,15 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-05 10:01:09  runner            INFO        ✎ context: The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES,
 2026-08-05 10:09:40  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-08-05 10:10:07  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-08-05 10:10:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-05 10:40:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-05 11:10:38  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-05 11:28:08  watchdog          INFO      Watchdog full check starting...
+2026-08-05 11:29:37  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-08-05 11:29:37  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
+2026-08-05 11:41:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-05 12:00:07  watchdog          INFO      Watchdog full check starting...
+2026-08-05 12:01:42  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-08-05 12:01:42  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
+2026-08-05 12:12:13  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-08-05 12:12:44  runner            INFO        ✎ context: The Chia AI Watcher task succeeded in 120 seconds, but the phi4 classification f
