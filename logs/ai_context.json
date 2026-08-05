@@ -702,7 +702,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, or HDFC credit cards since the last check.\n\n(Note: The summary is based on the assumption that \"Amount not found"
   },
   "2026-08-05": {
-    "Chia AI Watcher": "The Chia AI Watcher's attempt to classify with phi4 on localhost:11434 failed due to a read timeout after 120 seconds.\n\n(Note: The summary is exactly 119 characters long, including spaces and punctuat",
+    "Chia AI Watcher": "The Chia AI Watcher succeeded in 121 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434 after 120 seconds.",
     "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`.",
     "Chia Health Monitor": "The Chia Health Monitor detected that SSL file permissions for `cacert.pem` were too open, recommending running `chia init --fix-ssl-permissions` to correct them.",
     "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered credit quota issues across multiple wallets, resulting in all holdings lookups failing and the portfolio being reported as unavailable.",
