@@ -709,6 +709,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, and HDFC accounts, completing the task in 12 seconds.\n\n(Note: The date \"07-2026\" seems to be a typo; it should l"
   },
   "2026-08-06": {
-    "Chia AI Watcher": "The Chia AI Watcher succeeded in 121 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434 after 120 seconds."
+    "Chia AI Watcher": "The Chia AI Watcher succeeded in 121 seconds, but the phi4 classification failed due to a read timeout on localhost port 11434 after 120 seconds.",
+    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`."
   }
 }

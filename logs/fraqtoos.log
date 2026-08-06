@@ -15561,3 +15561,13 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-06 04:01:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-06 04:33:07  runner            INFO      ✓ Chia AI Watcher (121s)
 2026-08-06 04:33:37  runner            INFO        ✎ context: The Chia AI Watcher succeeded in 121 seconds, but the phi4 classification failed
+2026-08-06 04:34:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 05:04:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 05:34:07  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 06:00:07  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 1
+2026-08-06 06:00:07  runner            INFO        ↺ Retry 1/1: Portfolio Bot
+2026-08-06 06:00:22  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 2
+2026-08-06 06:00:50  runner            INFO        ✎ context: The Portfolio Bot failed because the required `pyotp` Python module was not inst
+2026-08-06 06:04:21  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 06:35:51  runner            INFO      ✓ Chia AI Watcher (121s)
+2026-08-06 06:36:24  runner            INFO        ✎ context: The Chia AI Watcher succeeded in 121 seconds, but the phi4 classification failed
