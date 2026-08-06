@@ -15627,3 +15627,12 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-06 18:20:51  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-06 18:52:22  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-08-06 18:52:55  runner            INFO        ✎ context: The Chia AI Watcher's attempt to classify with phi4 on localhost:11434 failed du
+2026-08-06 18:53:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 19:23:25  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 19:39:55  watchdog          INFO      Watchdog full check starting...
+2026-08-06 19:41:09  watchdog          INFO      AI diagnosis: **State:** WARNING
+2026-08-06 19:41:09  watchdog          INFO      Watchdog: issue unchanged since last alert — not re-paging
+2026-08-06 19:53:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 20:23:39  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-06 20:55:09  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-08-06 20:55:37  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
