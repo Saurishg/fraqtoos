@@ -15670,3 +15670,15 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-07 04:34:42  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-07 05:06:13  runner            INFO      ✓ Chia AI Watcher (120s)
 2026-08-07 05:06:42  runner            INFO        ✎ context: The Chia AI Watcher's phi4 classification attempt failed due to a read timeout a
+2026-08-07 05:07:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 05:37:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 06:00:12  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 1
+2026-08-07 06:00:12  runner            INFO        ↺ Retry 1/1: Portfolio Bot
+2026-08-07 06:00:27  runner            WARNING   ✗ Portfolio Bot exit 1 attempt 2
+2026-08-07 06:00:57  runner            INFO        ✎ context: The Portfolio Bot failed because the required `pyotp` Python module was not inst
+2026-08-07 06:07:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 06:37:28  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 07:00:28  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-08-07 07:00:28  orchestrator      INFO      AI Agent started — output: /tmp/agent_1786066228.log
+2026-08-07 07:08:58  runner            INFO      ✓ Chia AI Watcher (120s)
+2026-08-07 07:09:28  runner            INFO        ✎ context: The Chia AI Watcher's attempt to classify with phi4 failed due to a read timeout
