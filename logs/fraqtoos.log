@@ -15747,3 +15747,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-07 21:00:28  runner            INFO        ✎ context: Crypto Portfolio Bot encountered credit quota issues across multiple wallets, le
 2026-08-07 21:24:12  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-08-07 21:24:15  runner            INFO        ✎ context: The "Chia AI Watcher" bot successfully completed its task in 14 seconds, confirm
+2026-08-07 21:24:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 21:54:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 22:24:45  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 22:54:46  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-07 23:00:16  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-08-07 23:00:28  orchestrator      INFO      Daily digest sent.
+2026-08-07 23:26:02  runner            INFO      ✓ Chia AI Watcher (94s)
+2026-08-07 23:26:07  runner            INFO        ✎ context: Chia AI Watcher detected multiple SpendBundles rejected for syncing, double spen
