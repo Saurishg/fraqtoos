@@ -723,6 +723,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed payments and found no new bills or PDFs for BSES, ICICI, or HDFC credit cards since the last check.\n\n(Note: The summary assumes that \"Amount not found\" indicates a succe"
   },
   "2026-08-08": {
-    "Chia AI Watcher": "The bot successfully monitored the Chia AI harvester, confirming normal operation without any issues in just 30 seconds."
+    "Chia AI Watcher": "The bot successfully monitored Chia AI logs, confirming all operations were normal without any critical issues in 46 seconds."
   }
 }
