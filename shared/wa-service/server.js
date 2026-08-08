@@ -35,7 +35,17 @@ let lastQr  = null;
 let msgQueue = [];               // { phone, message, res } buffered while not ready
 
 // ── WhatsApp Client ────────────────────────────────────────────────────────
-const client = new Client({
+// Escape hatch for WhatsApp Web rollouts. Default is "latest" (whatever
+// WhatsApp serves). If a future build breaks whatsapp-web.js outright, pin a
+// known-good one without editing this file, e.g.
+//   systemctl set-environment WA_WEB_VERSION=2.3000.1044254868-alpha
+// Builds are listed at github.com/wppconnect-team/wa-version (html/).
+// Note: pinning only takes effect if the cached service worker is cleared —
+// rm -rf session/session/Default/{"Service Worker",Cache} — otherwise the SW
+// keeps serving the build it already has.
+const WA_WEB_VERSION = process.env.WA_WEB_VERSION || "latest";
+
+const clientOpts = {
     authStrategy: new LocalAuth({ dataPath: SESSION }),
     puppeteer: {
         headless: true,
@@ -46,7 +56,17 @@ const client = new Client({
             "--disable-gpu",
         ],
     },
-});
+};
+
+if (WA_WEB_VERSION !== "latest") {
+    clientOpts.webVersionCache = {
+        type: "remote",
+        remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${WA_WEB_VERSION}.html`,
+    };
+    console.log(`[wa-service] pinning WhatsApp Web build ${WA_WEB_VERSION}`);
+}
+
+const client = new Client(clientOpts);
 
 client.on("qr", (qr) => {
     state  = "qr_pending";
@@ -148,9 +168,53 @@ function armInitHangWatchdog() {
 client.on("ready", () => clearTimeout(initHangTimer));
 client.on("qr", () => clearTimeout(initHangTimer));  // waiting on a human scan — don't recycle
 
+// whatsapp-web.js only emits "ready" from a `change:hasSynced` transition on
+// WAWebSocketModel.Socket (Client.js: Socket.on('change:hasSynced') →
+// window.onAppStateHasSyncedEvent() → Events.READY). On a warm restored
+// session the socket is often ALREADY synced by the time that listener is
+// attached, so the transition never happens and initialize() hangs forever —
+// page fully logged in, AppState CONNECTED, but no ready event. Diagnosed
+// 2026-08-08 after a reboot left the service in a 4-min crash-restart loop.
+//
+// Fix the race by firing the callback ourselves when the socket reports it has
+// already synced. Idempotent: wwebjs guards the ready path on window.WWebJS,
+// and we stop as soon as state leaves "initializing".
+const SYNC_NUDGE_MS = 20_000;
+let syncNudgeTimer = null;
+
+async function nudgeIfAlreadySynced() {
+    if (state !== "initializing") return;
+    const page = client.pupPage;
+    if (!page || page.isClosed?.()) return;
+    try {
+        const nudged = await page.evaluate(() => {
+            try {
+                const S = window.require("WAWebSocketModel").Socket;
+                if (S.hasSynced && typeof window.onAppStateHasSyncedEvent === "function") {
+                    window.onAppStateHasSyncedEvent();
+                    return true;
+                }
+            } catch (e) { /* page not far enough along yet */ }
+            return false;
+        });
+        if (nudged) console.log("[wa-service] socket already synced — nudged ready event");
+    } catch (e) { /* page navigating or detached; next tick retries */ }
+}
+
+function armSyncNudge() {
+    clearInterval(syncNudgeTimer);
+    syncNudgeTimer = setInterval(() => {
+        if (state !== "initializing") { clearInterval(syncNudgeTimer); return; }
+        nudgeIfAlreadySynced();
+    }, SYNC_NUDGE_MS);
+}
+client.on("ready", () => clearInterval(syncNudgeTimer));
+client.on("qr", () => clearInterval(syncNudgeTimer));
+
 let initAttempt = 0;
 function safeInitialize() {
     armInitHangWatchdog();
+    armSyncNudge();
     client.initialize().then(() => { initAttempt = 0; }).catch((err) => {
         initAttempt++;
         const delay = Math.min(15_000 * initAttempt, 120_000);
