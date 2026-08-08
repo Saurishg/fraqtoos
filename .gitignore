@@ -6,3 +6,5 @@ logs/
 .env
 graphify-out/
 shared/wa_profile/
+*.log.*
+*.log.gz
