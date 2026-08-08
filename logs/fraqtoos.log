@@ -15862,3 +15862,91 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-08 19:54:27  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-08 20:24:55  runner            INFO      ✓ Chia AI Watcher (27s)
 2026-08-08 20:25:01  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully completed its task in 27 seconds, confirm
+2026-08-08 20:25:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-08 20:55:01  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-08 21:00:38  runner            INFO      ✓ Crypto Portfolio Bot (37s)
+2026-08-08 21:00:47  runner            INFO        ✎ context: Crypto Portfolio Bot reported gains, market in 'Fear' mode with caution advised;
+2026-08-08 21:16:03  orchestrator      INFO      =======================================================
+2026-08-08 21:16:03  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-08 21:16:03  orchestrator      INFO        2026-08-08 21:16:03
+2026-08-08 21:16:03  orchestrator      INFO      =======================================================
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 21:16:03  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO      =======================================================
+2026-08-08 21:51:17  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-08 21:51:17  orchestrator      INFO        2026-08-08 21:51:17
+2026-08-08 21:51:17  orchestrator      INFO      =======================================================
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 21:51:17  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-08 22:21:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-08 22:51:17  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-08 22:57:49  orchestrator      INFO      =======================================================
+2026-08-08 22:57:49  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-08 22:57:49  orchestrator      INFO        2026-08-08 22:57:49
+2026-08-08 22:57:49  orchestrator      INFO      =======================================================
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 22:57:49  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-08 23:00:19  orchestrator      INFO      Generating AI daily digest (llama4 → phi4 fallback)...
+2026-08-08 23:01:43  orchestrator      INFO      Daily digest sent.
+2026-08-08 23:28:09  orchestrator      INFO      =======================================================
+2026-08-08 23:28:09  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-08 23:28:09  orchestrator      INFO        2026-08-08 23:28:09
+2026-08-08 23:28:09  orchestrator      INFO      =======================================================
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 23:28:09  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO      =======================================================
+2026-08-08 23:36:40  orchestrator      INFO        FraqtoOS Orchestrator STARTED
+2026-08-08 23:36:40  orchestrator      INFO        2026-08-08 23:36:40
+2026-08-08 23:36:40  orchestrator      INFO      =======================================================
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=30, unit=minutes, do=run_lightweight, args=(), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=2, unit=hours, do=job, args=('chia_ai',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=4, unit=hours, do=run_full, args=(), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('portfolio',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=morning_analysis, args=(), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('utility_bill',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=run_full, args=(), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('chia_health',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=job, args=('crypto_portfolio',), kwargs={})
+2026-08-08 23:36:40  orchestrator      INFO        Job(interval=1, unit=days, do=send_daily_digest, args=(), kwargs={})
+2026-08-09 00:06:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-09 00:36:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-09 01:06:40  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-09 01:37:29  runner            INFO      ✓ Chia AI Watcher (49s)
+2026-08-09 01:37:33  runner            INFO        ✎ context: The bot successfully monitored Chia AI logs, confirming all operations were norm

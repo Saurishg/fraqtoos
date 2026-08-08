@@ -725,6 +725,10 @@
   "2026-08-08": {
     "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully completed its task in 27 seconds, confirming that all log entries showed normal operation without any critical issues.",
     "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`.",
-    "Chia Health Monitor": "The Chia Health Monitor reported successful farming with 13,509 plots, a recent win 2 hours ago, 4 prover errors due to a known bug, and normal block validation.\n\n(Note: The summary is concise and fit"
+    "Chia Health Monitor": "The Chia Health Monitor reported successful farming with 13,509 plots, a recent win 2 hours ago, 4 prover errors due to a known bug, and normal block validation.\n\n(Note: The summary is concise and fit",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot reported gains, market in 'Fear' mode with caution advised; WhatsApp service errors occurred due to unavailability.\n\n(Note: The summary is concise and captures the key points from"
+  },
+  "2026-08-09": {
+    "Chia AI Watcher": "The bot successfully monitored Chia AI logs, confirming all operations were normal without any critical issues in 49 seconds."
   }
 }
