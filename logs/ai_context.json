@@ -737,6 +737,7 @@
   },
   "2026-08-10": {
     "Chia AI Watcher": "The bot successfully monitored routine peer connections and disconnections for Chia AI within 30 seconds.",
-    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`."
+    "Portfolio Bot": "The Portfolio Bot failed because the required `pyotp` Python module was not installed, resulting in a `ModuleNotFoundError`.",
+    "Chia Health Monitor": "Chia Health Monitor reports no wins for 50 hours, exceeding the expected 13-hour interval by over three times, with normal block validation and zero prover errors noted."
   }
 }
