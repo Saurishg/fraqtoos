@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-08-12 00:51:32",
+      "last_run": "2026-08-12 02:52:50",
       "success": true,
-      "duration": 89,
-      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 Looking up qualities on multiple plots took longer than 20 seconds, which may increase risk of losing rewards.",
-      "runs_today": 1
+      "duration": 46,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple plot quality lookups exceeded the recommended time threshold.\n  \u2022 {'issue': 'Plot quality lookup took over 34 seconds for multiple plots, exceeding the 20-second recommendation.'}",
+      "runs_today": 2
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-08-11 21:00:52",
@@ -36,6 +36,6 @@
       "runs_today": 1
     }
   },
-  "last_watchdog": "2026-08-11 20:00:59",
+  "last_watchdog": "2026-08-12 02:50:34",
   "last_watchdog_alert_sig": "Portfolio Bot:last run failed: Traceback (most recent call last):\n  File \"/home/work/portfolio_bot/portfolio_bot.py\", line 12, in <module>\n    import p"
 }
