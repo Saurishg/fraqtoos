@@ -751,6 +751,7 @@
   },
   "2026-08-12": {
     "Chia AI Watcher": "Chia AI Watcher detected multiple slow plot quality lookups exceeding 20 seconds, risking reward loss.",
-    "Portfolio Bot": "The Portfolio Bot failed because the required 'pyotp' Python module was not installed, causing a ModuleNotFoundError during execution."
+    "Portfolio Bot": "The Portfolio Bot failed because the required 'pyotp' Python module was not installed, causing a ModuleNotFoundError during execution.",
+    "Chia Health Monitor": "Chia Health Monitor detected a spike of 277 prover errors, likely due to the known giga37 bug, with farming status normal and last win 7 hours ago.\n\n(Note: The summary is concise and within the charac"
   }
 }
