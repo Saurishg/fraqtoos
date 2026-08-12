@@ -33,7 +33,10 @@ log = get_logger("orchestrator")
 BOTS = {
     "portfolio": {
         "name":    "Portfolio Bot",
-        "cmd":     "python3 portfolio_bot.py",
+        # Pinned to a dedicated venv, not bare `python3`: the system default
+        # python3 moved 3.10 -> 3.12, which orphaned this bot's deps (pyotp,
+        # pandas, py5paisa, selenium all lived only in ~/.local/.../python3.10).
+        "cmd":     "/home/work/.venvs/portfolio/bin/python portfolio_bot.py",
         "cwd":     "/home/work/portfolio_bot",
         "timeout": 300,
         "retries": 1,
@@ -55,7 +58,7 @@ BOTS = {
     },
     "chia_health": {
         "name":    "Chia Health Monitor",
-        "cmd":     "python3 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_health import run; print(run())\"",
+        "cmd":     "/usr/bin/python3.12 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_health import run; print(run())\"",
         "cwd":     "/home/work/fraqtoos",
         "timeout": 60,
         "retries": 0,
@@ -63,7 +66,7 @@ BOTS = {
     },
     "chia_ai": {
         "name":    "Chia AI Watcher",
-        "cmd":     "python3 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_ai_watcher import run; print(run())\"",
+        "cmd":     "/usr/bin/python3.12 -c \"import sys; sys.path.insert(0,'/home/work/fraqtoos'); from bots.chia_ai_watcher import run; print(run())\"",
         "cwd":     "/home/work/fraqtoos",
         "timeout": 150,   # phi4 inference can take ~2min on cold log batch
         "retries": 0,
