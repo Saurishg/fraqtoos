@@ -750,6 +750,7 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu payment, reported an upcoming BSES electricity bill, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-08-12": {
-    "Chia AI Watcher": "Chia AI Watcher detected multiple WebSocket errors, including timeouts, invalid responses, and consensus issues causing peer disconnections."
+    "Chia AI Watcher": "Chia AI Watcher detected multiple slow plot quality lookups exceeding 20 seconds, risking reward loss.",
+    "Portfolio Bot": "The Portfolio Bot failed because the required 'pyotp' Python module was not installed, causing a ModuleNotFoundError during execution."
   }
 }
