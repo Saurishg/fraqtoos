@@ -757,10 +757,10 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed Tata Neu payments, reported a BSES electricity bill, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-08-13": {
-    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully validated all blocks within the expected time frame in just 25 seconds.",
-    "Portfolio Bot": "Portfolio Bot reported a -22.69% return, highlighting TMCV's 149.53% gain and advising reduced exposure to SHIVAMAUTO (-45.66%) and THINKINK (-38.71%).",
+    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully validated all blocks within the time limit in 15 seconds.",
+    "Portfolio Bot": "Portfolio Bot identified VEDL as a major drag on performance and suggested reallocating resources to improve portfolio health.\n\n(Note: The summary is concise, focusing on the key action taken by Portf",
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with a slight delay in the last win, one prover error due to a known bug, and normal block validation.",
-    "Crypto Portfolio Bot": "The bot encountered a credit quota issue across multiple wallets, preventing it from completing the portfolio lookup and resulting in an unavailable report.",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered credit quota issues across multiple wallets, resulting in all holdings lookups failing and the portfolio being reported as unavailable.",
     "Utility Bill Bot": "The Utility Bill Bot confirmed Tata Neu payments, reported a BRPL bill via email, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   }
 }
