@@ -770,6 +770,6 @@
     "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered credit quota issues across multiple wallets, resulting in all holdings lookups failing and the portfolio being reported as unavailable."
   },
   "2026-08-15": {
-    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully completed its task in 22 seconds, confirming all block validation times were within acceptable limits."
+    "Chia AI Watcher": "Chia AI Watcher flagged excessive plot quality lookup delays, risking reward loss with 28 instances over 20 seconds each.\n\n(Note: The summary is within the character limit and specifically addresses t"
   }
 }
