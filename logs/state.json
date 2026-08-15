@@ -1,11 +1,11 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-08-15 18:56:33",
+      "last_run": "2026-08-15 20:57:32",
       "success": true,
-      "duration": 37,
-      "last_output": "\u26a0\ufe0f Chia AI (warning):",
-      "runs_today": 9
+      "duration": 52,
+      "last_output": "\u26a0\ufe0f Chia AI (warning): Multiple WebSocket errors due to server timeout and broadcasting issues.\n  \u2022 Repeated WebSocket ServerTimeoutError indicating no PONG received after 30 seconds.\n  \u2022 Broadcasting removed transactions took over 0.5s to peers, potentially affecting network performance.",
+      "runs_today": 10
     },
     "Crypto Portfolio Bot": {
       "last_run": "2026-08-15 09:00:36",
