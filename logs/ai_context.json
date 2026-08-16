@@ -782,5 +782,8 @@
     "Chia Health Monitor": "Chia Health Monitor reports no wins for 69 hours, exceeding the expected 14-hour interval, with five prover errors linked to a known bug and normal block validation.\n\n(Note: The summary is concise and",
     "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered credit quota issues across multiple wallets, resulting in all holding lookups failing and the portfolio being reported as unavailable.",
     "Utility Bill Bot": "The Utility Bill Bot confirmed a Tata Neu payment, reported an upcoming BSES electricity bill due in 2026, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
+  },
+  "2026-08-17": {
+    "Chia AI Watcher": "Chia AI Watcher identified and broadcasted removed transactions with normal block validation but flagged multiple invalid plot files causing quality-fetching exceptions."
   }
 }
