@@ -211,15 +211,52 @@ function armSyncNudge() {
 client.on("ready", () => clearInterval(syncNudgeTimer));
 client.on("qr", () => clearInterval(syncNudgeTimer));
 
+// A rejected initialize() leaves behind the chrome it already spawned, still
+// holding SingletonLock on userDataDir. Every later attempt then fails with
+// "The browser is already running for …" and the service can never recover on
+// its own. Close the browser before retrying so the next attempt gets the
+// profile back.
+async function destroyStaleBrowser() {
+    try {
+        if (client.pupBrowser) {
+            await client.pupBrowser.close();
+            return;
+        }
+    } catch (e) {
+        console.error("[wa-service] browser close failed:", e.message);
+    }
+    try { await client.destroy(); } catch (e) { /* already gone */ }
+}
+
+// The retry cadence (<=120s) is shorter than INIT_HANG_MS (240s), and
+// safeInitialize() re-arms that watchdog on every attempt — so a loop of
+// *rejecting* initialize() calls kept clearing the guard before it could fire.
+// The hang watchdog only ever covered a silent hang. Track how long we have
+// been failing independently of it, and exit for a clean systemd restart once
+// that passes INIT_GIVEUP_MS. Diagnosed 2026-08-16 after a boot-time
+// "Page.navigate timed out" wedged the service for 3h across 92 retries, with
+// every WhatsApp alert silently dropped.
+const INIT_GIVEUP_MS = 5 * 60_000;
 let initAttempt = 0;
+let firstFailureAt = 0;
+
 function safeInitialize() {
     armInitHangWatchdog();
     armSyncNudge();
-    client.initialize().then(() => { initAttempt = 0; }).catch((err) => {
+    client.initialize().then(() => { initAttempt = 0; firstFailureAt = 0; }).catch(async (err) => {
         initAttempt++;
+        if (!firstFailureAt) firstFailureAt = Date.now();
         const delay = Math.min(15_000 * initAttempt, 120_000);
         console.error(`[wa-service] initialize failed (${(err && err.message) || err}); retry in ${delay / 1000}s`);
         state = "disconnected";
+
+        const failingFor = Date.now() - firstFailureAt;
+        if (failingFor > INIT_GIVEUP_MS) {
+            console.error(`[wa-service] initialize failing for >${INIT_GIVEUP_MS / 60000}min (${initAttempt} attempts) — exiting for clean restart`);
+            process.exit(1);
+        }
+
+        await destroyStaleBrowser();
         setTimeout(() => { state = "initializing"; safeInitialize(); }, delay);
     });
 }
