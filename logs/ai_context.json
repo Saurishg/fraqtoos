@@ -791,6 +791,6 @@
     "Utility Bill Bot": "The Utility Bill Bot confirmed Tata Neu payments, reported a BSES electricity bill due in 2026, and found no new PDFs for BSES, ICICI, or HDFC accounts since the last check."
   },
   "2026-08-18": {
-    "Chia AI Watcher": "The Bot 'Chia AI Watcher' successfully analyzed logs in 17 seconds, confirming all entries as benign or normal after a fork event."
+    "Chia AI Watcher": "The bot \"Chia AI Watcher\" successfully completed its task in 33 seconds, issuing a warning about Chia AI.\n\n(Note: The summary is concise and within the character limit.)"
   }
 }
