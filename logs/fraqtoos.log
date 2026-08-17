@@ -17013,3 +17013,13 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-17 08:00:46  runner            INFO        ✎ context: Chia Health Monitor detected 55 prover errors due to a known bug, alongside bloc
 2026-08-17 08:02:47  runner            INFO      ✓ Chia AI Watcher (31s)
 2026-08-17 08:02:53  runner            INFO        ✎ context: The bot "Chia AI Watcher" successfully completed its task in 31 seconds, confirm
+2026-08-17 08:02:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-17 08:32:53  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-17 09:00:49  runner            INFO      ✓ Crypto Portfolio Bot (26s)
+2026-08-17 09:00:55  runner            INFO        ✎ context: Crypto Portfolio Bot encountered credit quota issues across multiple wallets, re
+2026-08-17 09:02:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-17 09:32:55  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-17 10:00:37  runner            INFO      ✓ Utility Bill Bot (12s)
+2026-08-17 10:00:53  runner            INFO        ✎ context: The Utility Bill Bot confirmed Tata Neu payments, reported a BSES electricity bi
+2026-08-17 10:03:36  runner            INFO      ✓ Chia AI Watcher (13s)
+2026-08-17 10:03:42  runner            INFO        ✎ context: The Bot 'Chia AI Watcher' successfully analyzed logs in 13 seconds, confirming a
