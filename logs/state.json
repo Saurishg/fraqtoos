@@ -22,10 +22,10 @@
       "runs_today": 1
     },
     "Chia Health Monitor": {
-      "last_run": "2026-08-16 08:00:27",
+      "last_run": "2026-08-17 08:00:41",
       "success": true,
       "duration": 4,
-      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\ud83d\udea8 Last win: 69h ago (expected 14h)\n\u2705 Prover errors: 5 (5 unique plots) [known giga37 bug]\n\u2705 Block validation: normal\n\n\ud83d\udea8 *ALERTS*: No win in 69h (>3\u00d7 expected)",
+      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\u2705 Last win: 2h ago (expected 14h)\n\ud83d\udea8 Prover errors: 55 (55 unique plots) [known giga37 bug]\n\u26a0\ufe0f Block validation spikes: 2 (worst: 22.5s)\n\u26a0\ufe0f Coin store slow writes: 2 (worst: 21.8s)\n\n\ud83d\udea8 *ALERTS*: Prover error spike: 55 errors today",
       "runs_today": 1
     },
     "Utility Bill Bot": {
@@ -36,6 +36,6 @@
       "runs_today": 1
     }
   },
-  "last_watchdog": "2026-08-17 03:59:54",
+  "last_watchdog": "2026-08-17 08:00:37",
   "last_watchdog_alert_sig": ""
 }
