@@ -17165,3 +17165,25 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-18 10:00:49  runner            INFO        ✎ context: Utility Bill Bot confirmed Tata Neu payment, reported BSES and ICICI bills, foun
 2026-08-18 10:12:37  runner            INFO      ✓ Chia AI Watcher (47s)
 2026-08-18 10:12:42  runner            INFO        ✎ context: Chia AI Watcher identified repeated issues with broadcasting removed transaction
+2026-08-18 10:13:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-18 10:43:12  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-18 11:13:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-18 11:43:13  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-18 12:00:13  watchdog          INFO      Watchdog full check starting...
+2026-08-18 12:00:50  watchdog          INFO      AI diagnosis: **System Health Snapshot Analysis**
+2026-08-18 12:00:50  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-08-18 12:08:50  watchdog          INFO      Watchdog full check starting...
+2026-08-18 12:09:52  watchdog          INFO      AI diagnosis: **State:** OK
+2026-08-18 12:09:52  watchdog          WARNING   Watchdog soft warning (not paged): 🟢 Orchestrator
+🟢 WhatsApp Service
+🟡 Portfolio Bot
+🟡 Utility Bill Bot
+🟡 Chia Health Monitor
+🟡 Chia AI Watcher
+2026-08-18 12:13:08  runner            INFO      ✓ Chia AI Watcher (16s)
+2026-08-18 12:13:13  runner            INFO        ✎ context: Chia AI Watcher successfully identified and reported that the broadcasting speed
