@@ -157,19 +157,13 @@ def _call_phi4(log_excerpt: str) -> dict:
         "stream": False,
         "options": {"temperature": 0.0},
     }
-    if _ai_ask:
-        # temperature 0 and a JSON-only instruction: this is a classifier, so
-        # determinism matters more than prose quality.
-        content = _ai_ask(user_msg, system=CLASSIFY_PROMPT, temperature=0.0,
-                          max_tokens=400, local_models=[PHI4_MODEL])
-        if not content:
-            resp = requests.post(OLLAMA_URL, json=payload, timeout=120)
-            resp.raise_for_status()
-            content = resp.json()["message"]["content"].strip()
-    else:
-        resp = requests.post(OLLAMA_URL, json=payload, timeout=120)
-        resp.raise_for_status()
-        content = resp.json()["message"]["content"].strip()
+    # 2026-08-18: GEMINI-ONLY. The provider handles all backend selection; no
+    # direct Ollama call remains here. If Gemini is unavailable this returns ""
+    # and the ValueError below fires, which the caller already handles.
+    if not _ai_ask:
+        raise ValueError("ai_provider unavailable")
+    content = _ai_ask(user_msg, system=CLASSIFY_PROMPT, temperature=0.0,
+                      max_tokens=400)
 
     for attempt in [content]:
         try:
@@ -183,15 +177,9 @@ def _call_phi4(log_excerpt: str) -> dict:
             except json.JSONDecodeError:
                 pass
 
-    # Fallback: ask phi4 to reformat its own prose
-    r2 = requests.post(OLLAMA_URL, json={
-        "model": PHI4_MODEL,
-        "messages": [{"role": "user", "content": _FALLBACK_PROMPT + content[:600]}],
-        "stream": False,
-        "options": {"temperature": 0.0},
-    }, timeout=60)
-    r2.raise_for_status()
-    c2 = r2.json()["message"]["content"].strip()
+    # Reformat pass, also through the provider (Gemini-only).
+    c2 = _ai_ask(_FALLBACK_PROMPT + content[:600], temperature=0.0,
+                 max_tokens=400) or ""
     m2 = re.search(r"\{.*\}", c2, re.DOTALL)
     if m2:
         return json.loads(m2.group(0))
