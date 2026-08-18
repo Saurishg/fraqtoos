@@ -172,9 +172,79 @@ def scheduled_run_health(bot: dict) -> tuple[list[str], str]:
 
 # ── AI diagnosis ──────────────────────────────────────────────────────────────
 
+# ── Gemini cloud fallback ─────────────────────────────────────────────────────
+# Added 2026-08-18. Deliberately a FALLBACK ONLY: the local Ollama chain above
+# handles every normal cycle, so this costs nothing until the local AI stack is
+# itself the thing that failed - which is exactly when a diagnosis is most
+# useful and least available. Hard daily cap protects the API quota; a broken
+# or expired key must never stop the watchdog from alerting.
+GEMINI_ENV       = os.path.expanduser("~/.gemini/.env")
+# Measured 2026-08-18: gemini-flash-latest and 3.7 returned 503 on 2 of 3 calls
+# (the alias resolves to the newest, busiest model); 3.6 and 3.5 were 3/3.
+# So: reliable model first, alias last as insurance against 3.6 being retired
+# the way 2.5-flash was.
+GEMINI_MODELS    = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-flash-latest"]
+GEMINI_DAILY_CAP = 20
+GEMINI_STATE     = "/tmp/watchdog-gemini-usage.json"
+
+def _gemini_key() -> str:
+    k = os.getenv("GEMINI_API_KEY", "").strip()
+    if k:
+        return k
+    try:
+        for line in open(GEMINI_ENV):
+            if line.startswith("GEMINI_API_KEY="):
+                return line.split("=", 1)[1].strip().strip('"').strip("'")
+    except Exception:
+        pass
+    return ""
+
+def _gemini_budget_ok() -> bool:
+    """At most GEMINI_DAILY_CAP calls per day. A crash-looping bot must not be
+    able to burn the quota."""
+    today = time.strftime("%Y-%m-%d")
+    try:
+        st = json.load(open(GEMINI_STATE))
+    except Exception:
+        st = {}
+    if st.get("date") != today:
+        st = {"date": today, "count": 0}
+    if st["count"] >= GEMINI_DAILY_CAP:
+        return False
+    st["count"] += 1
+    try:
+        json.dump(st, open(GEMINI_STATE, "w"))
+    except Exception:
+        pass
+    return True
+
+def gemini_diagnose(prompt: str) -> str:
+    key = _gemini_key()
+    if not key:
+        return ""
+    if not _gemini_budget_ok():
+        log.warning("Gemini fallback skipped: daily cap reached")
+        return ""
+    for model in GEMINI_MODELS:
+        url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
+               f"{model}:generateContent?key={key}")
+        try:
+            r = requests.post(url, timeout=90, json={
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.1, "maxOutputTokens": 500},
+            })
+            if r.status_code != 200:
+                log.warning(f"Gemini {model} HTTP {r.status_code}")
+                continue
+            txt = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            if txt:
+                return f"[via Gemini {model} - local AI was down]\n{txt}"
+        except Exception as e:
+            log.warning(f"Gemini {model} failed: {str(e).replace(key, '***')}")
+    return ""
+
 def ai_diagnose(snapshot: dict) -> str:
-    if not ensure_ollama_up():
-        return "AI unavailable (ollama down — restart failed, alerted)"
+    ollama_up = ensure_ollama_up()
 
     prompt = f"""DevOps watchdog. Analyze this bot health snapshot in under 200 words.
 State: OK / WARNING / CRITICAL. List problems and one-line fixes.
@@ -191,6 +261,10 @@ RULES:
 
 {json.dumps(snapshot, indent=2)[:2500]}"""
 
+    if not ollama_up:
+        g = gemini_diagnose(prompt)
+        return g or "AI unavailable (ollama down — restart failed, alerted)"
+
     for model in MODEL_CHAIN:
         try:
             r = requests.post(OLLAMA_URL, json={
@@ -203,7 +277,9 @@ RULES:
                 return content
         except Exception as e:
             log.warning(f"AI model {model} failed: {e}")
-    return "AI unavailable"
+    # every local model failed - try the cloud before giving up
+    g = gemini_diagnose(prompt)
+    return g or "AI unavailable"
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 

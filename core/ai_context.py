@@ -9,6 +9,14 @@ from threading import Lock
 
 CONTEXT_FILE = "/home/work/fraqtoos/logs/ai_context.json"
 OLLAMA_URL   = "http://localhost:11434/api/chat"
+
+# 2026-08-18: AI calls go through the shared provider (Gemini first, local
+# Ollama fallback). Import is defensive so this module still works if the
+# provider is missing for any reason.
+try:
+    from core.ai_provider import ask as _ai_ask
+except Exception:
+    _ai_ask = None
 _lock = Lock()
 
 def _today() -> str:
@@ -56,16 +64,14 @@ def summarize_run(bot_name: str, output: str, success: bool, duration: int) -> s
         f"Write ONE sentence (max 120 chars) summarizing what happened. Be specific. No padding."
     )
     try:
-        r = requests.post(OLLAMA_URL, json={
-            "model": "phi4",
-            "messages": [{"role": "user", "content": prompt}],
-            "stream": False,
-            "options": {"temperature": 0.1, "num_predict": 80}
-        }, timeout=60)
-        r.raise_for_status()
-        summary = r.json()["message"]["content"].strip()
-        return summary[:200]
-    except Exception as e:
+        if _ai_ask:
+            summary = _ai_ask(prompt, temperature=0.1, max_tokens=80,
+                              local_models=["phi4"])
+            if summary:
+                return summary[:200]
+        status = "OK" if success else "FAILED"
+        return f"{bot_name} {status} in {duration}s."
+    except Exception:
         status = "OK" if success else "FAILED"
         return f"{bot_name} {status} in {duration}s."
 
@@ -91,27 +97,15 @@ def generate_digest() -> str:
     )
 
     try:
-        r = requests.post(OLLAMA_URL, json={
-            "model": "gemma4",
-            "messages": [{"role": "user", "content": prompt}],
-            "stream": False,
-            "think": False,  # thinking tokens would eat the num_predict budget
-            "options": {"temperature": 0.2, "num_predict": 400}
-        }, timeout=300)
-        r.raise_for_status()
-        return r.json()["message"]["content"].strip()
-    except Exception as e:
-        # Fallback to phi4 if gemma4 times out
-        try:
-            r = requests.post(OLLAMA_URL, json={
-                "model": "phi4",
-                "messages": [{"role": "user", "content": prompt}],
-                "stream": False,
-                "options": {"temperature": 0.2, "num_predict": 400}
-            }, timeout=120)
-            r.raise_for_status()
-            return r.json()["message"]["content"].strip()
-        except Exception:
+        if _ai_ask:
+            # Gemini first; local chain gemma4 -> phi4 preserved as fallback.
+            out = _ai_ask(prompt, temperature=0.2, max_tokens=400,
+                          local_models=["gemma4", "phi4"])
+            if out:
+                return out
+        raise RuntimeError("no AI provider available")
+    except Exception:
+        if True:
             lines = [f"*FraqtoOS Daily — {today}*", "─" * 28]
             for bot, summary in summaries.items():
                 lines.append(f"• *{bot}*: {summary}")

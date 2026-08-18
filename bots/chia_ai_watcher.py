@@ -28,6 +28,12 @@ STATE_FILE  = Path("/home/work/fraqtoos/logs/chia_watcher_state.json")
 OUTPUT_FILE = Path("/home/work/fraqtoos/logs/chia_ai_latest.json")
 FIX_LOG     = Path("/home/work/fraqtoos/logs/chia_ai_fixes.log")
 OLLAMA_URL  = "http://localhost:11434/api/chat"
+
+# 2026-08-18: route through the shared provider (Gemini first, Ollama fallback).
+try:
+    from core.ai_provider import ask as _ai_ask
+except Exception:
+    _ai_ask = None
 PHI4_MODEL  = "phi4"
 ALERT_COOLDOWN_HOURS = 4
 MAX_LOG_LINES        = 600
@@ -151,9 +157,19 @@ def _call_phi4(log_excerpt: str) -> dict:
         "stream": False,
         "options": {"temperature": 0.0},
     }
-    resp = requests.post(OLLAMA_URL, json=payload, timeout=120)
-    resp.raise_for_status()
-    content = resp.json()["message"]["content"].strip()
+    if _ai_ask:
+        # temperature 0 and a JSON-only instruction: this is a classifier, so
+        # determinism matters more than prose quality.
+        content = _ai_ask(user_msg, system=CLASSIFY_PROMPT, temperature=0.0,
+                          max_tokens=400, local_models=[PHI4_MODEL])
+        if not content:
+            resp = requests.post(OLLAMA_URL, json=payload, timeout=120)
+            resp.raise_for_status()
+            content = resp.json()["message"]["content"].strip()
+    else:
+        resp = requests.post(OLLAMA_URL, json=payload, timeout=120)
+        resp.raise_for_status()
+        content = resp.json()["message"]["content"].strip()
 
     for attempt in [content]:
         try:
