@@ -798,10 +798,10 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed Tata Neu payment, reported BSES and ICICI bills, found no new PDFs for BSES, ICICI, or HDFC, and completed the task successfully.\n\n(Note: The summary assumes that \"Amount no"
   },
   "2026-08-19": {
-    "Chia AI Watcher": "Chia AI Watcher verified normal node operations and low validation times, with one benign Gigahorse exception.",
+    "Chia AI Watcher": "Chia AI Watcher verified normal node operations, Gigahorse dev fee processing, and block validation times.",
     "Portfolio Bot": "Portfolio Bot analyzed portfolio losses and sent rebalancing advice to two WhatsApp numbers in 45s.",
     "Chia Health Monitor": "Chia Health Monitor OK in 4s.",
-    "Crypto Portfolio Bot": "All wallet lookups failed due to exceeded Hive credit quotas, making the crypto portfolio unavailable.",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot failed to fetch wallet balances because its Hive API credit quota was exceeded.",
     "Utility Bill Bot": "Utility Bill Bot checked emails for BSES, ICICI, and HDFC, finding no new bills or payments to report."
   }
 }
