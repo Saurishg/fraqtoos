@@ -183,7 +183,13 @@ GEMINI_ENV       = os.path.expanduser("~/.gemini/.env")
 # (the alias resolves to the newest, busiest model); 3.6 and 3.5 were 3/3.
 # So: reliable model first, alias last as insurance against 3.6 being retired
 # the way 2.5-flash was.
-GEMINI_MODELS    = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-flash-latest"]
+# 2026-08-19: gemini-3.7-flash FIRST at the user's request. Tail order matters:
+# flash-lite last because it draws on a SEPARATE quota pool and reports
+# thoughtsTokenCount=0, so it still answers when every flash model is 429.
+# NB this chain previously lacked flash-lite, so the watchdog lost its cloud
+# fallback entirely whenever the flash tier was exhausted.
+GEMINI_MODELS    = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
+                    "gemini-flash-latest", "gemini-3.1-flash-lite"]
 GEMINI_DAILY_CAP = 20
 GEMINI_STATE     = "/tmp/watchdog-gemini-usage.json"
 
