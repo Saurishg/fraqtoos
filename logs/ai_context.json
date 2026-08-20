@@ -806,6 +806,7 @@
   },
   "2026-08-20": {
     "Chia AI Watcher": "Chia AI Watcher successfully broadcasted removed transactions to 0 peers with block validation times within limits in 17 seconds.",
-    "Portfolio Bot": "Portfolio Bot identified significant losses in VOGL and VEDL, suggesting a reallocation to more promising stocks like VAML."
+    "Portfolio Bot": "Portfolio Bot identified significant losses in VOGL and VEDL, suggesting a reallocation to more promising stocks like VAML.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,477 plots farming with a delayed win, 3 prover errors due to a known bug, and 2 block validation spikes, peaking at 14.0s."
   }
 }
