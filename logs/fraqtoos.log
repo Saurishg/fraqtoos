@@ -17712,3 +17712,9 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 🟡 Chia AI Watcher
 2026-08-22 00:14:00  runner            INFO      ✓ Chia AI Watcher (14s)
 2026-08-22 00:14:05  runner            INFO        ✎ context: Chia AI Watcher successfully analyzed logs in 14 seconds, confirming all entries
+2026-08-22 00:15:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 00:45:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 01:15:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 01:45:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 02:14:25  runner            INFO      ✓ Chia AI Watcher (20s)
+2026-08-22 02:14:30  runner            INFO        ✎ context: Chia AI Watcher successfully completed its task in 20 seconds, confirming that t
