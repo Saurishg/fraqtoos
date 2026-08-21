@@ -17636,3 +17636,15 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-21 10:00:46  runner            INFO        ✎ context: Utility Bill Bot processed bills, confirming payments for Tata Neu, reporting a 
 2026-08-21 10:09:36  runner            INFO      ✓ Chia AI Watcher (20s)
 2026-08-21 10:09:41  runner            INFO        ✎ context: Chia AI Watcher successfully completed its task in 20 seconds, confirming that h
+2026-08-21 10:10:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-21 10:40:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-21 11:10:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-21 11:40:11  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-21 12:00:11  watchdog          INFO      Watchdog full check starting...
+2026-08-21 12:01:20  watchdog          INFO      AI diagnosis: **State: OK**
+2026-08-21 12:01:20  watchdog          INFO      Watchdog: all systems healthy
+2026-08-21 12:04:50  watchdog          INFO      Watchdog full check starting...
+2026-08-21 12:05:38  watchdog          INFO      AI diagnosis: **System Health: OK**
+2026-08-21 12:05:38  watchdog          INFO      Watchdog: all systems healthy
+2026-08-21 12:10:20  runner            INFO      ✓ Chia AI Watcher (12s)
+2026-08-21 12:10:26  runner            INFO        ✎ context: Chia AI Watcher successfully completed its task in 12 seconds, confirming that b
