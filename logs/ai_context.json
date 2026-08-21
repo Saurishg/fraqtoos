@@ -813,6 +813,7 @@
   },
   "2026-08-21": {
     "Chia AI Watcher": "Chia AI Watcher completed in 26s, but broadcasting removed transactions took longer than expected, with 51 transactions taking 0.6017s and 7 transactions taking 0.7307s to 0 peers.",
-    "Portfolio Bot": "Portfolio Bot analyzed performance, noting a 0.12% increase and advising reallocation from underperforming stocks like VEDL to promising ones like VAML."
+    "Portfolio Bot": "Portfolio Bot analyzed performance, noting a 0.12% increase and advising reallocation from underperforming stocks like VEDL to promising ones like VAML.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,477 plots farming with a recent win 13 hours ago, no prover errors, and 21 block validation spikes, peaking at 18.5 seconds."
   }
 }
