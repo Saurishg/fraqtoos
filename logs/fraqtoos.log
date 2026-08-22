@@ -17735,3 +17735,11 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-22 06:00:57  runner            INFO        ✎ context: Portfolio Bot identified VAML as a top gainer with an 801.85% increase, suggesti
 2026-08-22 06:15:54  runner            INFO      ✓ Chia AI Watcher (27s)
 2026-08-22 06:15:59  runner            INFO        ✎ context: Chia AI Watcher detected multiple WebSocket errors and DNS query failures, inclu
+2026-08-22 06:16:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 06:46:29  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 07:00:29  orchestrator      INFO      AI Agent: morning analysis (smart router)
+2026-08-22 07:00:29  orchestrator      INFO      AI Agent started — output: /tmp/agent_1787362229.log
+2026-08-22 07:16:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 07:46:30  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-22 08:00:03  runner            INFO      ✓ Chia Health Monitor (4s)
+2026-08-22 08:00:19  runner            INFO        ✎ context: Chia Health Monitor reports 13,477 plots farming with a delayed win by 8 hours, 

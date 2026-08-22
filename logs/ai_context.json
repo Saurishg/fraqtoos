@@ -820,6 +820,7 @@
   },
   "2026-08-22": {
     "Chia AI Watcher": "Chia AI Watcher detected multiple WebSocket errors and DNS query failures, including server timeouts and issues with seeder.dexie.space.",
-    "Portfolio Bot": "Portfolio Bot identified VAML as a top gainer with an 801.85% increase, suggesting reallocating funds from underperformers like VEDL to enhance returns."
+    "Portfolio Bot": "Portfolio Bot identified VAML as a top gainer with an 801.85% increase, suggesting reallocating funds from underperformers like VEDL to enhance returns.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,477 plots farming with a delayed win by 8 hours, 3 prover errors due to a known bug, and 14 block validation spikes, peaking at 16.1 seconds."
   }
 }
