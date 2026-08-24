@@ -18036,3 +18036,12 @@ Fatal error: Gmail rejected the App Password (AUTHENTICATIONFAILED). Generate a 
 2026-08-24 14:43:05  watchdog          INFO      Watchdog lightweight: all critical processes OK
 2026-08-24 15:13:00  runner            INFO      ✓ Chia AI Watcher (25s)
 2026-08-24 15:13:06  runner            INFO        ✎ context: Chia AI Watcher identified and reported a benign issue with Gigahorse giga37 cau
+2026-08-24 15:13:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-24 15:43:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-24 16:13:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-24 16:43:36  watchdog          INFO      Watchdog lightweight: all critical processes OK
+2026-08-24 17:09:36  watchdog          INFO      Watchdog full check starting...
+2026-08-24 17:10:35  watchdog          INFO      AI diagnosis: **State: OK**
+2026-08-24 17:10:35  watchdog          INFO      Watchdog: all systems healthy
+2026-08-24 17:13:54  runner            INFO      ✓ Chia AI Watcher (19s)
+2026-08-24 17:14:00  runner            INFO        ✎ context: Chia AI Watcher identified and confirmed that broadcasting removed transactions 
