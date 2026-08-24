@@ -840,6 +840,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, received a BSES bill, and found no new PDFs or emails for Tata Neu, ICICI, or HDFC accounts."
   },
   "2026-08-25": {
-    "Chia AI Watcher": "Chia AI Watcher identified and confirmed that broadcasting removed transactions to 0 peers is a benign issue in 21 seconds."
+    "Chia AI Watcher": "Chia AI Watcher succeeded in 60s, but Chia AI warned of potential reward loss due to plot quality lookups exceeding 20 seconds."
   }
 }
