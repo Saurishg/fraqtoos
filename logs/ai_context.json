@@ -841,6 +841,7 @@
   },
   "2026-08-25": {
     "Chia AI Watcher": "The 'Chia AI Watcher' bot successfully completed its task in 77 seconds, indicating optimal performance.",
-    "Portfolio Bot": "Portfolio Bot identified VEDL as the biggest loser and suggested reallocating funds from underperformers to high-performers like VAML."
+    "Portfolio Bot": "Portfolio Bot identified VEDL as the biggest loser and suggested reallocating funds from underperformers to high-performers like VAML.",
+    "Chia Health Monitor": "Chia Health Monitor reports 61 hours without a win, exceeding the expected 11 hours, with 13,477 plots farming and no prover errors."
   }
 }
