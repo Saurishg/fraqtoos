@@ -847,6 +847,6 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, received a BSES electricity bill, and found no new PDFs or emails for Tata Neu, ICICI, or HDFC accounts."
   },
   "2026-08-26": {
-    "Chia AI Watcher": "Chia AI Watcher successfully validated all block times within limits in 15 seconds."
+    "Chia AI Watcher": "Chia AI Watcher detected consistent block validation times above 2 seconds, indicating potential performance issues."
   }
 }
