@@ -22,10 +22,10 @@
       "runs_today": 1
     },
     "Chia Health Monitor": {
-      "last_run": "2026-08-25 08:00:24",
+      "last_run": "2026-08-26 08:00:04",
       "success": true,
       "duration": 4,
-      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\ud83d\udea8 Last win: 61h ago (expected 11h)\n\u2705 Prover errors: 0 (0 unique plots) [known giga37 bug]\n\u2705 Block validation: normal\n\n\ud83d\udea8 *ALERTS*: No win in 61h (>3\u00d7 expected)",
+      "last_output": "*Chia Health \u2014 Daily*\n\u2705 Status: Farming | 13477 plots\n\ud83d\udea8 Last win: 85h ago (expected 14h)\n\u2705 Prover errors: 0 (0 unique plots) [known giga37 bug]\n\u26a0\ufe0f Block validation spikes: 1 (worst: 17.7s)\n\n\ud83d\udea8 *ALERTS*: No win in 85h (>3\u00d7 expected)",
       "runs_today": 1
     },
     "Utility Bill Bot": {
