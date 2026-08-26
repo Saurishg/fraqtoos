@@ -847,10 +847,10 @@
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, received a BSES electricity bill, and found no new PDFs or emails for Tata Neu, ICICI, or HDFC accounts."
   },
   "2026-08-26": {
-    "Chia AI Watcher": "Chia AI Watcher successfully completed a 24-second check, confirming normal operations with no critical issues.",
+    "Chia AI Watcher": "Chia AI Watcher completed a 30-second check, confirming routine operations with no critical issues.",
     "Portfolio Bot": "14 stocks | Invested \u20b9504,432 | Current \u20b9460,193 | P&L \u20b9-44,239 (-8.8%) | 4 zero-cost",
     "Chia Health Monitor": "The Chia Health Monitor reports 13,477 plots farming with no wins in 85 hours, exceeding the expected 14-hour interval, and notes a block validation spike of 17.7 seconds.",
-    "Crypto Portfolio Bot": "The Crypto Portfolio Bot successfully sent a WhatsApp message but encountered multiple request failures and rate limits when fetching token and Ethereum prices from Coingecko and native sources, using",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot encountered multiple request failures with Coingecko and Ethereum, but successfully sent a WhatsApp message.",
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, received a BSES bill, and found no new PDFs or emails for Tata Neu, ICICI, or HDFC accounts."
   }
 }
