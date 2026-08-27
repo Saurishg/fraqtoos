@@ -855,6 +855,7 @@
   },
   "2026-08-27": {
     "Chia AI Watcher": "Chia AI Watcher successfully completed a 24-second check, confirming normal operation with no critical issues in Chia AI logs.",
-    "Portfolio Bot": "Portfolio Bot reported an 8.46% gain, highlighted VEDL's 58.11% loss, and suggested reassessing its position to mitigate risk."
+    "Portfolio Bot": "Portfolio Bot reported an 8.46% gain, highlighted VEDL's 58.11% loss, and suggested reassessing its position to mitigate risk.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,477 plots farming with a recent win 3 hours ago, no prover errors, and 17 block validation spikes, peaking at 14.5 seconds."
   }
 }
