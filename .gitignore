@@ -8,3 +8,4 @@ graphify-out/
 shared/wa_profile/
 *.log.*
 *.log.gz
+*.bak.*

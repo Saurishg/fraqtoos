@@ -12,6 +12,7 @@ Schedule:
   08:00      Chia Health Monitor (rule-based daily summary)
   10:00      Utility Bill Bot
   12:00      Watchdog full check
+  10:10      IPO Last-Day Alert (closing today, GMP >= 30%) — the only IPO msg
   09:00      Crypto Portfolio Bot (Hive)
   21:00      Crypto Portfolio Bot (Hive)
   23:00      Daily WhatsApp digest
@@ -54,6 +55,32 @@ BOTS = {
         "cwd":     "/home/work/Desktop/crypto",
         # Worst case: Hive 429 retries (~30s) + phi4 brief (45s) + WhatsApp send (120s)
         "timeout": 300,
+        "retries": 1,
+    },
+    "ipo": {
+        "name":    "IPO Bot",
+        # NOT SCHEDULED — the full board (open + upcoming) at the 30% floor.
+        # Run by hand: `orchestrator.py --run ipo`. The scheduled daily message
+        # is `ipo_lastday`; the unfiltered board is the `ipo` WhatsApp keyword.
+        # Scheduled runs are filtered to the high-GMP shortlist (user's call,
+        # 2026-08-28). The unfiltered board is still one `ipo` WhatsApp keyword
+        # away, or `ipo_bot.py` with no flags.
+        "cmd":     "/usr/bin/python3.12 ipo_bot.py --min-gmp 30",
+        "cwd":     "/home/work/ipo-bot",
+        # NSE cookie handshake + one ipo-detail call per open issue + the
+        # ipowatch scrape, then a WhatsApp send (~120s worst case).
+        "timeout": 240,
+        "retries": 1,
+    },
+    "ipo_lastday": {
+        "name":    "IPO Last-Day Alert",
+        # THE scheduled IPO message (10:10 daily). Live + last day to apply +
+        # GMP >= 30%; upcoming issues are excluded by design.
+        # ipo_bot skips the send outright when nothing matches, so a quiet day
+        # is silent, not an empty message.
+        "cmd":     "/usr/bin/python3.12 ipo_bot.py --min-gmp 30 --closing-today",
+        "cwd":     "/home/work/ipo-bot",
+        "timeout": 240,
         "retries": 1,
     },
     "chia_health": {
@@ -167,6 +194,12 @@ schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("08:00").do(job, "chia_health")
 schedule.every().day.at("09:00").do(job, "crypto_portfolio")
 schedule.every().day.at("21:00").do(job, "crypto_portfolio")
+# One message a day, 10:10 — issues on their LAST DAY to apply, GMP >= 30%.
+# Upcoming issues are deliberately excluded (2026-08-28): the decision is made
+# on the closing day, when subscription figures are complete.
+# 10:10 not 10:05: utility_bill runs at 10:00 with a 300s timeout, and the
+# scheduler is serial — a slow bill run would otherwise delay this one.
+schedule.every().day.at("10:10").do(job, "ipo_lastday")
 schedule.every().day.at("23:00").do(send_daily_digest)
 
 # ── Entry point ───────────────────────────────────────────────────────────────

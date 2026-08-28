@@ -15,6 +15,12 @@
       "cwd": "/home/work/portfolio_bot",
       "timeout_ms": 200000,
       "description": "Stock holdings (5paisa + Kite) + AI brief"
+    },
+    "ipo": {
+      "cmd": "/usr/bin/python3.12 /home/work/ipo-bot/ipo_bot.py --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cwd": "/home/work/ipo-bot",
+      "timeout_ms": 90000,
+      "description": "Live IPO board — NSE subscription (mainboard + SME) + grey-market premium"
     }
   }
 }

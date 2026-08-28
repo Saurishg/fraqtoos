@@ -7,7 +7,13 @@ Wants=network-online.target
 Type=simple
 User=work
 WorkingDirectory=/home/work/fraqtoos
-ExecStart=/usr/bin/python3 /home/work/fraqtoos/orchestrator.py
+# Must be the venv interpreter, NOT /usr/bin/python3. The system python moved
+# 3.10 -> 3.12 and `schedule` (plus the rest of the orchestrator's deps) lives
+# only in this venv — /usr/bin/python3 fails at the first import.
+# A drop-in at /etc/systemd/system/fraqtoos.service.d/python312-venv.conf sets
+# the same ExecStart; it is kept so an older installed copy of this unit is
+# still corrected, but this file no longer depends on it.
+ExecStart=/home/work/.venvs/fraqtoos/bin/python /home/work/fraqtoos/orchestrator.py
 Restart=always
 RestartSec=30
 Environment=DISPLAY=:0
