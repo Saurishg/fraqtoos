@@ -862,6 +862,7 @@
   },
   "2026-08-28": {
     "Chia AI Watcher": "Chia AI Watcher completed its task in 24 seconds, confirming routine operations with no critical issues.",
-    "Portfolio Bot": "Portfolio Bot identified zero-cost basis stocks from a demerger as profitable, suggesting rebalancing by reducing underperforming stocks like VEDL and reallocating to promising ones like RITES."
+    "Portfolio Bot": "Portfolio Bot identified zero-cost basis stocks from a demerger as profitable, suggesting rebalancing by reducing underperforming stocks like VEDL and reallocating to promising ones like RITES.",
+    "Chia Health Monitor": "Chia Health Monitor reports 13,477 plots farming with a delayed win by 5 hours, no prover errors, and 41 block validation spikes, peaking at 14.3 seconds."
   }
 }
