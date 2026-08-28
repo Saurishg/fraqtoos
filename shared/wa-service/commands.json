@@ -11,7 +11,7 @@
       "description": "All crypto wallet holdings (Base/ETH/BSC) + market + AI brief"
     },
     "stocks": {
-      "cmd": "python3 /home/work/portfolio_bot/portfolio_bot.py --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cmd": "/home/work/.venvs/portfolio/bin/python /home/work/portfolio_bot/portfolio_bot.py --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
       "cwd": "/home/work/portfolio_bot",
       "timeout_ms": 200000,
       "description": "Stock holdings (5paisa + Kite) + AI brief"
