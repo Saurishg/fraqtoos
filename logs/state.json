@@ -1,18 +1,18 @@
 {
   "runs": {
     "Chia AI Watcher": {
-      "last_run": "2026-08-30 08:57:35",
+      "last_run": "2026-08-30 10:58:08",
       "success": true,
-      "duration": 32,
-      "last_output": "\u2705 Chia AI (ok): All log entries indicate normal operation with no critical issues detected.",
-      "runs_today": 5
+      "duration": 23,
+      "last_output": "\u2705 Chia AI (ok): Normal operation with routine updates and signage points.",
+      "runs_today": 6
     },
     "Crypto Portfolio Bot": {
-      "last_run": "2026-08-29 21:01:29",
+      "last_run": "2026-08-30 09:01:13",
       "success": true,
-      "duration": 71,
-      "last_output": "rice cache\n  \u26a0 coingecko: rate-limited, skipping remaining lookups this run\n  \u2139 1 price(s) on 1 served from cache (live sources failed)\n  \u26a0 coingecko: rate-limited, skipping remaining lookups this run\n  \u26a0 native price ethereum: Request failed with status code 429\n  \u2139 ethereum price served from cache",
-      "runs_today": 2
+      "duration": 61,
+      "last_output": "skipping remaining lookups this run\n  \u26a0 coingecko: rate-limited, skipping remaining lookups this run\n  \u26a0 native price ethereum: Request failed with status code 429\n  \u2139 ethereum price served from cache\n  \u26a0 native price ethereum: Request failed with status code 429\n  \u2139 ethereum price served from cache",
+      "runs_today": 1
     },
     "Portfolio Bot": {
       "last_run": "2026-08-30 06:01:10",
@@ -29,20 +29,20 @@
       "runs_today": 1
     },
     "Utility Bill Bot": {
-      "last_run": "2026-08-29 10:00:21",
+      "last_run": "2026-08-30 10:00:29",
       "success": true,
       "duration": 10,
-      "last_output": "for new PDFs...\n\ud83d\udced [bses] no new emails since last send (UID 163542)\n\n\ud83d\udcb3 [icici] ICICI Amazon Pay Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [icici] no new emails since last send (UID 163951)\n\n\ud83d\udcb3 [hdfc] HDFC Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [hdfc] no new emails since last send (UID 163222)\n\u2705 Done",
+      "last_output": "for new PDFs...\n\ud83d\udced [bses] no new emails since last send (UID 163542)\n\n\ud83d\udcb3 [icici] ICICI Amazon Pay Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [icici] no new emails since last send (UID 164530)\n\n\ud83d\udcb3 [hdfc] HDFC Credit Card \u2014 checking for new PDFs...\n\ud83d\udced [hdfc] no new emails since last send (UID 163222)\n\u2705 Done",
       "runs_today": 1
     },
     "IPO Last-Day Alert": {
-      "last_run": "2026-08-29 16:09:19",
+      "last_run": "2026-08-30 10:10:22",
       "success": true,
-      "duration": 9,
-      "last_output": "2026-08-29 16:09:19,676  INFO  NSE: 9 issue(s)\n2026-08-29 16:09:19,743  INFO  GMP: 21 row(s)\n2026-08-29 16:09:19,747  INFO  nothing matched GMP \u2265 30%, last day to apply \u2014 skipping the send",
-      "runs_today": 2
+      "duration": 10,
+      "last_output": "2026-08-30 10:10:22,370  INFO  NSE: 8 issue(s)\n2026-08-30 10:10:22,439  INFO  GMP: 21 row(s)\n2026-08-30 10:10:22,442  INFO  nothing matched GMP \u2265 30%, last day to apply \u2014 skipping the send",
+      "runs_today": 1
     }
   },
-  "last_watchdog": "2026-08-30 06:54:16",
+  "last_watchdog": "2026-08-30 10:55:46",
   "last_watchdog_alert_sig": ""
 }
