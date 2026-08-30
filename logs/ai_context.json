@@ -877,10 +877,10 @@
     "IPO Last-Day Alert": "The bot identified 9 issues on NSE but found no GMP entries meeting the \u2265 30% threshold, so it skipped sending alerts."
   },
   "2026-08-30": {
-    "Chia AI Watcher": "Chia AI Watcher successfully completed its task in 24 seconds, confirming normal operation with no critical issues in the logs.",
+    "Chia AI Watcher": "Chia AI Watcher successfully completed its task in 24 seconds, confirming normal operation with no issues in the logs.",
     "Portfolio Bot": "Portfolio Bot identified losses from VEDL, suggesting reallocating resources from VEDL and SHIVAMAUTO to more promising stocks like VAML and VEDPOWER.",
     "Chia Health Monitor": "The Chia Health Monitor reported successful farming with 13,477 plots, a win 3 hours ago, one prover error due to a known bug, and normal block validation.",
-    "Crypto Portfolio Bot": "Crypto Portfolio Bot successfully sent a WhatsApp message, encountered rate limits on Coingecko, and used cached Ethereum prices due to request failures.",
+    "Crypto Portfolio Bot": "Crypto Portfolio Bot successfully sent a WhatsApp message but encountered rate limits and cache usage for Ethereum prices and Coingecko token lookups.",
     "Utility Bill Bot": "Utility Bill Bot confirmed payments, reported a BSES electricity bill, and found no new emails for BSES, ICICI, or HDFC accounts.",
     "IPO Last-Day Alert": "The bot identified 8 issues on NSE and 21 rows on GMP, but skipped sending alerts as no GMP entries met the \u2265 30% threshold."
   }
