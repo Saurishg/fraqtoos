@@ -5,7 +5,7 @@
   ],
   "commands": {
     "crypto": {
-      "cmd": "node /home/work/Desktop/crypto/index.js --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cmd": "/usr/local/bin/node /home/work/Desktop/crypto/index.js --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
       "cwd": "/home/work/Desktop/crypto",
       "timeout_ms": 120000,
       "description": "All crypto wallet holdings (Base/ETH/BSC) + market + AI brief"

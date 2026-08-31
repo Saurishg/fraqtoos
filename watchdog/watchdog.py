@@ -210,38 +210,58 @@ RULES:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def run_lightweight() -> bool:
-    """Quick process check — no AI, no log reading. Returns True if all OK."""
-    issues = []
-    for bot in BOTS:
-        if bot.get("scheduled"):
-            continue  # one-shot bots are never persistently running — skip
-        running = is_running(bot["proc"])
-        if bot["critical"] and not running:
-            issues.append(f"CRITICAL: {bot['name']} is NOT running!")
-    if issues:
-        # This check runs every 30 minutes; the full check that used to be the
-        # only thing allowed to page runs every 4 hours. Suppressing here left a
-        # 4-hour blind window on exactly the two processes marked critical - the
-        # orchestrator and wa-service - which is most of what a 5h51m alerting
-        # outage was made of.
-        #
-        # Deduped by signature so a process that stays down pages once, not 48
-        # times a day, and paged over BOTH channels: one of the two things this
-        # can report is that the WhatsApp path itself is dead.
-        sig = "|".join(sorted(issues))
-        if sig != st.get("last_light_alert_sig"):
-            st.set("last_light_alert_sig", sig)
-            log.warning("Watchdog lightweight PAGING: " + "; ".join(issues))
-            send_critical("Watchdog", "\n".join(issues))
-        else:
-            log.warning("Watchdog lightweight: unchanged since last page — "
-                        + "; ".join(issues))
-        return False
-    if st.get("last_light_alert_sig"):
+    """Registry-driven sweep. Runs every 30 minutes.
+
+    This used to walk watchdog's own BOTS list - two daemons and four scheduled
+    jobs - and then log "WhatsApp suppressed" rather than paging. It now probes
+    every entry in registry.json (38 at time of writing) and is allowed to page.
+
+    Critical entries page immediately over both channels. Non-critical entries
+    have to fail twice in a row first: a probe that reads a timer mid-run or a
+    log mid-rotation can produce one bad reading, and paging on a single sample
+    is how alerting earns the mute button.
+    """
+    from core import registry
+
+    results = registry.check_all()
+    bad  = [r for r in results if not r["ok"]]
+    crit = [r for r in bad if r["critical"]]
+    soft = [r for r in bad if not r["critical"]]
+
+    if not bad:
+        if st.get("last_light_alert_sig") or st.get("soft_fail_streak"):
+            log.info("Watchdog: all %d registry entries healthy — recovered", len(results))
         st.set("last_light_alert_sig", "")
-        log.info("Watchdog lightweight: critical processes recovered")
-    log.info("Watchdog lightweight: all critical processes OK")
-    return True
+        st.set("soft_fail_streak", 0)
+        log.info(f"Watchdog lightweight: {len(results)}/{len(results)} registry entries OK")
+        return True
+
+    # Non-critical needs two consecutive sweeps before it is real.
+    streak = (st.get("soft_fail_streak", 0) or 0) + 1 if soft else 0
+    st.set("soft_fail_streak", streak)
+    report = crit + (soft if streak >= 2 else [])
+
+    if not report:
+        log.warning("Watchdog: %d soft issue(s), first sweep — holding: %s",
+                    len(soft), "; ".join(r["name"] for r in soft))
+        return False
+
+    sig = "|".join(sorted(f"{r['name']}:{r['detail']}" for r in report))
+    if sig == st.get("last_light_alert_sig"):
+        log.warning("Watchdog: unchanged since last page — %s",
+                    "; ".join(r["name"] for r in report))
+        return False
+
+    st.set("last_light_alert_sig", sig)
+    body = "\n".join(
+        f"{'🔴' if r['critical'] else '🟡'} {r['name']} — {r['detail']}" for r in report)
+    log.warning("Watchdog PAGING: %s", "; ".join(r["name"] for r in report))
+    if crit:
+        send_critical("Watchdog", body)
+    else:
+        send_alert("Watchdog", body)
+    return False
+
 
 def run_full(force_alert: bool = False) -> dict:
     """Full check with log analysis and AI diagnosis."""

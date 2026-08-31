@@ -10,7 +10,7 @@ Schedule:
   06:00      Portfolio Bot
   07:00      AI Agent — morning market analysis
   08:00      Chia Health Monitor (rule-based daily summary)
-  10:00      Utility Bill Bot
+  09:00      Utility Bill Bot (pm2 node-cron — NOT this orchestrator)
   12:00      Watchdog full check
   10:10      IPO Last-Day Alert (closing today, GMP >= 30%) — the only IPO msg
   09:00      Crypto Portfolio Bot (Hive)
@@ -44,14 +44,21 @@ BOTS = {
     },
     "utility_bill": {
         "name":    "Utility Bill Bot",
-        "cmd":     "node bot.js --once",
+        # NOT SCHEDULED here (2026-09-01). This job had two owners: pm2 ran
+        # bot.js as a daemon with its own node-cron at 09:00, and the
+        # orchestrator ran `--once` at 10:00. Its lastSentUid state meant you
+        # never saw a duplicate bill, so the duplication was invisible - and so
+        # was the fact that a failure in either path was masked by the other.
+        # pm2 keeps it: that path also runs the hourly BSES PDF check, which
+        # the orchestrator entry never did. Kept here for manual --run.
+        "cmd":     "/usr/local/bin/node bot.js --once",
         "cwd":     "/home/work/utility-bill-bot",
         "timeout": 300,
         "retries": 1,
     },
     "crypto_portfolio": {
         "name":    "Crypto Portfolio Bot",
-        "cmd":     "node index.js --once",
+        "cmd":     "/usr/local/bin/node index.js --once",
         "cwd":     "/home/work/Desktop/crypto",
         # Worst case: Hive 429 retries (~30s) + phi4 brief (45s) + WhatsApp send (120s)
         "timeout": 300,
@@ -194,7 +201,6 @@ schedule.every(4).hours.do(run_full)
 
 schedule.every().day.at("06:00").do(job, "portfolio")
 schedule.every().day.at("07:00").do(morning_analysis)
-schedule.every().day.at("10:00").do(job, "utility_bill")
 schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("08:00").do(job, "chia_health")
 schedule.every().day.at("09:00").do(job, "crypto_portfolio")
