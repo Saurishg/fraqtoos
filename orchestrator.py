@@ -130,7 +130,12 @@ def job(key: str):
             try: fcntl.flock(lock_fd, fcntl.LOCK_UN); lock_fd.close()
             except Exception: pass
     daily_results.append(r)
-    if not r["success"] and not b.get("silent"):
+    if r.get("degraded"):
+        # A degraded run is not a crash - the report went out - but it is the
+        # failure that used to be invisible: on 2026-08-28 a portfolio report
+        # missing an entire broker read as a normal success.
+        send_alert(f"{b['name']} — incomplete", r["output"][-300:])
+    elif not r["success"] and not b.get("silent"):
         send_alert(b["name"], r["output"][-300:])
 
 def run_ai_agent(task: str):

@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, "/home/work/fraqtoos")
 from core.logger   import get_logger
-from core.notifier import send_alert
+from core.notifier import send_alert, send_critical
 from core          import state as st
 
 log = get_logger("watchdog")
@@ -219,8 +219,27 @@ def run_lightweight() -> bool:
         if bot["critical"] and not running:
             issues.append(f"CRITICAL: {bot['name']} is NOT running!")
     if issues:
-        log.warning("Watchdog issues (WhatsApp suppressed): " + "; ".join(issues))
+        # This check runs every 30 minutes; the full check that used to be the
+        # only thing allowed to page runs every 4 hours. Suppressing here left a
+        # 4-hour blind window on exactly the two processes marked critical - the
+        # orchestrator and wa-service - which is most of what a 5h51m alerting
+        # outage was made of.
+        #
+        # Deduped by signature so a process that stays down pages once, not 48
+        # times a day, and paged over BOTH channels: one of the two things this
+        # can report is that the WhatsApp path itself is dead.
+        sig = "|".join(sorted(issues))
+        if sig != st.get("last_light_alert_sig"):
+            st.set("last_light_alert_sig", sig)
+            log.warning("Watchdog lightweight PAGING: " + "; ".join(issues))
+            send_critical("Watchdog", "\n".join(issues))
+        else:
+            log.warning("Watchdog lightweight: unchanged since last page — "
+                        + "; ".join(issues))
         return False
+    if st.get("last_light_alert_sig"):
+        st.set("last_light_alert_sig", "")
+        log.info("Watchdog lightweight: critical processes recovered")
     log.info("Watchdog lightweight: all critical processes OK")
     return True
 
