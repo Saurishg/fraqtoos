@@ -12,7 +12,7 @@ Schedule:
   08:00      Chia Health Monitor (rule-based daily summary)
   09:00      Utility Bill Bot (pm2 node-cron — NOT this orchestrator)
   12:00      Watchdog full check
-  10:10      IPO Last-Day Alert (closing today, GMP >= 30%) — the only IPO msg
+  10:10      IPO Last-Day Alert — moved to fraqtoos-ipo.timer (systemd), not this loop
   09:00      Crypto Portfolio Bot (Hive)
   21:00      Crypto Portfolio Bot (Hive)
   23:00      Daily WhatsApp digest
@@ -81,8 +81,8 @@ BOTS = {
     },
     "ipo_lastday": {
         "name":    "IPO Last-Day Alert",
-        # THE scheduled IPO message (10:10 daily). Live + last day to apply +
-        # GMP >= 30%; upcoming issues are excluded by design.
+        # NOT SCHEDULED HERE — owned by fraqtoos-ipo.timer since 2026-09-01.
+        # Kept for `orchestrator.py --run ipo_lastday`.
         # ipo_bot skips the send outright when nothing matches, so a quiet day
         # is silent, not an empty message.
         "cmd":     "/usr/bin/python3.12 ipo_bot.py --min-gmp 30 --closing-today",
@@ -205,12 +205,10 @@ schedule.every().day.at("12:00").do(run_full)
 schedule.every().day.at("08:00").do(job, "chia_health")
 schedule.every().day.at("09:00").do(job, "crypto_portfolio")
 schedule.every().day.at("21:00").do(job, "crypto_portfolio")
-# One message a day, 10:10 — issues on their LAST DAY to apply, GMP >= 30%.
-# Upcoming issues are deliberately excluded (2026-08-28): the decision is made
-# on the closing day, when subscription figures are complete.
-# 10:10 not 10:05: utility_bill runs at 10:00 with a 300s timeout, and the
-# scheduler is serial — a slow bill run would otherwise delay this one.
-schedule.every().day.at("10:10").do(job, "ipo_lastday")
+# The IPO alert MOVED OFF this loop 2026-09-01 (Phase 3 pilot). It is now
+# fraqtoos-ipo.timer at 10:10 with Persistent=true, so a reboot across the
+# scheduled minute no longer silently eats the day's only IPO message. Both
+# bot keys stay below for manual --run; neither is scheduled here.
 schedule.every().day.at("23:00").do(send_daily_digest)
 
 # ── Entry point ───────────────────────────────────────────────────────────────

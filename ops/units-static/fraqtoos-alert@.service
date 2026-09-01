@@ -1,0 +1,10 @@
+# Shared OnFailure handler for every generated fraqtoos timer unit.
+# Instance %i is the name of the unit that failed.
+[Unit]
+Description=FraqtoOS failure alert for %i
+
+[Service]
+Type=oneshot
+User=work
+WorkingDirectory=/home/work/fraqtoos
+ExecStart=/home/work/.venvs/fraqtoos/bin/python /home/work/fraqtoos/ops/alert_unit_failure.py %i
