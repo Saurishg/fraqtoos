@@ -16,6 +16,7 @@ source that already exists:
     pm2          pm2 jlist status and restart count
     orchestrator logs/state.json, written by core.runner.record_run
     cron         mtime of the log the entry already writes
+  http         a URL that must answer (containers, health routes)
 
 Run it directly for a snapshot:  python3 -m core.registry
 """
@@ -147,12 +148,26 @@ def _probe_cron(job) -> tuple:
     return (True, f"wrote {age:.1f}h ago")
 
 
+def _probe_http(job) -> tuple:
+    """A URL that must answer. For things systemd cannot see - a container's
+    port, an app's health route - where 'the process exists' is not the
+    question worth asking."""
+    import urllib.request
+    try:
+        with urllib.request.urlopen(job["url"], timeout=job.get("timeout_s", 8)) as r:
+            ok = 200 <= r.status < 400
+            return (ok, f"http {r.status}")
+    except Exception as e:
+        return (False, f"unreachable: {type(e).__name__}")
+
+
 _PROBES = {
     "service":      _probe_service,
     "timer":        _probe_timer,
     "pm2":          _probe_pm2,
     "orchestrator": _probe_orchestrator,
     "cron":         _probe_cron,
+    "http":         _probe_http,
 }
 
 

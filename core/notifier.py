@@ -16,10 +16,10 @@ LOCK_PATH  = "/tmp/fraqtoos_wa.lock"
 # ntfy is a separate process with no shared failure mode: no browser, no
 # WhatsApp session, no Chrome profile lock.
 #
-# NOTE: the default target is bound to 127.0.0.1, so it is a durable local
-# record, not yet a push to your phone. Point FRAQTOOS_NTFY_URL at a reachable
-# ntfy instance/topic to make it page.
-NTFY_URL     = os.getenv("FRAQTOOS_NTFY_URL", "http://127.0.0.1:8091/fraqtoos-alerts")
+# Addressed by LAN IP, not 127.0.0.1: the phone has to reach the SAME topic the
+# server publishes to, and "localhost" means a different machine on each device.
+# Subscribe the ntfy app to http://192.168.0.117:8091, topic "fraqtoos-alerts".
+NTFY_URL     = os.getenv("FRAQTOOS_NTFY_URL", "http://192.168.0.117:8091/fraqtoos-alerts")
 NTFY_TIMEOUT = 8
 
 

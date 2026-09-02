@@ -304,6 +304,13 @@
       "max_age_h": 30,
       "critical": false,
       "note": "already raises its own ntfy alert on failure"
+    },
+    {
+      "name": "ntfy (alert fallback)",
+      "kind": "http",
+      "url": "http://192.168.0.117:8091/v1/health",
+      "critical": true,
+      "note": "The second alert channel. It is a docker container, so systemd cannot see it. If this and wa-service are both down, nothing can page at all - which is exactly the blind spot the second channel was added to remove."
     }
   ]
 }
