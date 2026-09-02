@@ -2,18 +2,19 @@
 # Change the registry entry and regenerate, or the schedule and the monitoring
 # will drift apart, which is the problem this whole layer exists to remove.
 [Unit]
-Description=IPO Bot - allotment checker (Kite applications)
+Description=Chia AI Watcher - classifies new log errors
 After=network-online.target
 Wants=network-online.target
-OnFailure=fraqtoos-alert@%n.service
+# No OnFailure: failures surface through the registry sweep
+# instead, deduped, rather than paging on every run.
 
 [Service]
 Type=oneshot
 User=work
-WorkingDirectory=/home/work/ipo-bot
+WorkingDirectory=/home/work/fraqtoos
 Environment=DISPLAY=:0
 # Exit 4 means "ran, but a data source was missing". Left OUT of
 # SuccessExitStatus on purpose, so systemd records the run as failed and an
 # incomplete result stays visible to OnFailure and to the registry sweep.
-ExecStart=/home/work/.venvs/portfolio/bin/python ipo_allotment.py
-TimeoutStartSec=300
+ExecStart=/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_ai_watcher
+TimeoutStartSec=200

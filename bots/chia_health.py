@@ -14,6 +14,7 @@ Sends WhatsApp alert if anything is critical, daily summary otherwise.
 import os
 import re
 import subprocess
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -27,8 +28,12 @@ ERROR_SPIKE_THRESHOLD = 20       # alert if >20 prover errors in one day
 def _send_alert(msg: str) -> None:
     """Send a WhatsApp alert using the shared sender."""
     try:
+        # sys.executable, not "python3": under a systemd unit PATH is minimal
+        # and "python3" resolves to whatever the system default happens to be
+        # that month. The 3.10 -> 3.12 move broke exactly this shape elsewhere,
+        # and ops/lint_interpreters.sh only sees config files, not call sites.
         subprocess.run(
-            ["python3", "/home/work/fraqtoos/shared/send_whatsapp.py",
+            [sys.executable, "/home/work/fraqtoos/shared/send_whatsapp.py",
              os.getenv("WHATSAPP_RECIPIENT", "+919818187001"), msg],
             timeout=60, env={**os.environ, "DISPLAY": ":0"}
         )

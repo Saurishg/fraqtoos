@@ -126,27 +126,61 @@
     },
     {
       "name": "Portfolio Bot",
-      "kind": "orchestrator",
-      "state_key": "Portfolio Bot",
+      "kind": "timer",
+      "unit": "fraqtoos-portfolio.timer",
       "schedule": "06:00",
       "max_age_h": 30,
-      "critical": false
+      "critical": false,
+      "note": "Selenium + TOTP against two brokers. Exit 4 = a broker was missing.",
+      "systemd": {
+        "description": "Portfolio Bot - 5paisa + Kite holdings report",
+        "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py",
+        "cwd": "/home/work/portfolio_bot",
+        "on_calendar": [
+          "*-*-* 06:00:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
     },
     {
       "name": "Chia Health Monitor",
-      "kind": "orchestrator",
-      "state_key": "Chia Health Monitor",
+      "kind": "timer",
+      "unit": "fraqtoos-chia-health.timer",
       "schedule": "08:00",
       "max_age_h": 30,
-      "critical": false
+      "critical": false,
+      "note": "Was 'silent' under the orchestrator, but it runs once a day - paging on failure is not noisy at that rate.",
+      "systemd": {
+        "description": "Chia Health Monitor - daily farm summary",
+        "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_health",
+        "cwd": "/home/work/fraqtoos",
+        "on_calendar": [
+          "*-*-* 08:00:00"
+        ],
+        "timeout_sec": 120,
+        "on_failure": true
+      }
     },
     {
       "name": "Crypto Portfolio Bot",
-      "kind": "orchestrator",
-      "state_key": "Crypto Portfolio Bot",
+      "kind": "timer",
+      "unit": "fraqtoos-crypto.timer",
       "schedule": "09:00, 21:00",
       "max_age_h": 15,
-      "critical": false
+      "critical": false,
+      "note": "Exit 4 = a chain could not be read; the total is partial.",
+      "systemd": {
+        "description": "Crypto Portfolio Bot - on-chain holdings (Base/ETH/BSC)",
+        "exec": "/usr/local/bin/node index.js --once",
+        "cwd": "/home/work/Desktop/crypto",
+        "on_calendar": [
+          "*-*-* 09:00:00",
+          "*-*-* 21:00:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
     },
     {
       "name": "IPO Last-Day Alert",
@@ -185,11 +219,22 @@
     },
     {
       "name": "Chia AI Watcher",
-      "kind": "orchestrator",
-      "state_key": "Chia AI Watcher",
+      "kind": "timer",
+      "unit": "fraqtoos-chia-ai.timer",
       "schedule": "every 2h",
       "max_age_h": 6,
-      "critical": false
+      "critical": false,
+      "note": "on_failure disabled deliberately: every 2h, so a persistent fault would page 12x a day. The registry sweep still reports it, deduped.",
+      "systemd": {
+        "description": "Chia AI Watcher - classifies new log errors",
+        "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_ai_watcher",
+        "cwd": "/home/work/fraqtoos",
+        "on_calendar": [
+          "*-*-* 00/2:00:00"
+        ],
+        "timeout_sec": 200,
+        "on_failure": false
+      }
     },
     {
       "name": "Utility Bill Bot",

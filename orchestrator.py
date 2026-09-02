@@ -1,21 +1,36 @@
 #!/usr/bin/env python3
 """
-FraqtoOS Master Orchestrator — single source of truth for all bot scheduling.
+FraqtoOS Orchestrator — fleet supervision and cross-bot work.
+
 Runs on boot via systemd (fraqtoos.service).
 
-Schedule:
-  Every 30m  Watchdog lightweight (process check)
-  Every 2h   Chia AI log watcher (phi4 classifies new errors)
+It is no longer the scheduler. Every bot that runs a subprocess moved to its own
+systemd timer on 2026-09-03, generated from registry.json by ops/gen_units.py.
+registry.json is the single source of truth for what runs; this file only holds
+work that has no single bot to belong to.
+
+What this process still schedules:
+  Every 30m  Watchdog lightweight (registry sweep, pages on failure)
   Every 4h   Watchdog full (AI diagnosis)
-  06:00      Portfolio Bot
-  07:00      AI Agent — morning market analysis
-  08:00      Chia Health Monitor (rule-based daily summary)
-  09:00      Utility Bill Bot (pm2 node-cron — NOT this orchestrator)
-  12:00      Watchdog full check
-  10:10      IPO Last-Day Alert — moved to fraqtoos-ipo.timer (systemd), not this loop
-  09:00      Crypto Portfolio Bot (Hive)
-  21:00      Crypto Portfolio Bot (Hive)
+  12:00      Watchdog full
+  07:00      AI Agent - morning market analysis
   23:00      Daily WhatsApp digest
+
+What moved out, and where it lives now:
+  fraqtoos-portfolio.timer      06:00
+  fraqtoos-chia-health.timer    08:00
+  fraqtoos-crypto.timer         09:00, 21:00
+  fraqtoos-ipo.timer            10:10
+  fraqtoos-ipo-allotment.timer  18:00, 21:30
+  fraqtoos-chia-ai.timer        every 2h
+  utility-bill-bot              pm2 node-cron at 09:00 (never this loop)
+
+All timers carry Persistent=true, which is the point of the move: this loop had
+no persistence, so a slot missed during a reboot was gone with nothing recording
+that it was owed.
+
+The BOTS entries below are kept so `orchestrator.py --run <key>` still works for
+a manual run.
 """
 import schedule, time, sys, os
 sys.path.insert(0, "/home/work/fraqtoos")
@@ -195,16 +210,25 @@ def send_daily_digest():
 
 # ── Schedule ──────────────────────────────────────────────────────────────────
 
+# Every bot that runs a subprocess now has its own systemd timer, generated
+# from registry.json (see ops/gen_units.py). What is left here is the work that
+# is genuinely the orchestrator's: watching the fleet, composing across bots,
+# and the daily digest. It no longer owns time for anything else.
+#
+#   fraqtoos-portfolio.timer     06:00
+#   fraqtoos-chia-health.timer   08:00
+#   fraqtoos-crypto.timer        09:00, 21:00
+#   fraqtoos-ipo.timer           10:10
+#   fraqtoos-ipo-allotment.timer 18:00, 21:30
+#   fraqtoos-chia-ai.timer       every 2h
+#
+# All with Persistent=true, so a reboot across the scheduled minute no longer
+# silently eats the run. The BOTS entries below stay for `--run <key>`.
 schedule.every(30).minutes.do(run_lightweight)
-schedule.every(2).hours.do(job, "chia_ai")
 schedule.every(4).hours.do(run_full)
 
-schedule.every().day.at("06:00").do(job, "portfolio")
 schedule.every().day.at("07:00").do(morning_analysis)
 schedule.every().day.at("12:00").do(run_full)
-schedule.every().day.at("08:00").do(job, "chia_health")
-schedule.every().day.at("09:00").do(job, "crypto_portfolio")
-schedule.every().day.at("21:00").do(job, "crypto_portfolio")
 # The IPO alert MOVED OFF this loop 2026-09-01 (Phase 3 pilot). It is now
 # fraqtoos-ipo.timer at 10:10 with Persistent=true, so a reboot across the
 # scheduled minute no longer silently eats the day's only IPO message. Both

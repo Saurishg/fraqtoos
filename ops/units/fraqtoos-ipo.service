@@ -12,7 +12,8 @@ Type=oneshot
 User=work
 WorkingDirectory=/home/work/ipo-bot
 Environment=DISPLAY=:0
-# Exit 4 means "sent, but a source was missing". Left OUT of SuccessExitStatus
-# on purpose: an incomplete report must still reach OnFailure and still page.
+# Exit 4 means "ran, but a data source was missing". Left OUT of
+# SuccessExitStatus on purpose, so systemd records the run as failed and an
+# incomplete result stays visible to OnFailure and to the registry sweep.
 ExecStart=/usr/bin/python3.12 ipo_bot.py --min-gmp 30 --closing-today
 TimeoutStartSec=240
