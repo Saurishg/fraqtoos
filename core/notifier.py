@@ -16,11 +16,40 @@ LOCK_PATH  = "/tmp/fraqtoos_wa.lock"
 # ntfy is a separate process with no shared failure mode: no browser, no
 # WhatsApp session, no Chrome profile lock.
 #
-# Addressed by LAN IP, not 127.0.0.1: the phone has to reach the SAME topic the
-# server publishes to, and "localhost" means a different machine on each device.
-# Subscribe the ntfy app to http://192.168.0.117:8091, topic "fraqtoos-alerts".
-NTFY_URL     = os.getenv("FRAQTOOS_NTFY_URL", "http://192.168.0.117:8091/fraqtoos-alerts")
+# Published to more than one target, because the two have different jobs:
+#
+#   local LAN ntfy  a durable record that survives an internet outage, and the
+#                   only one that still works if the uplink is what broke
+#   ntfy.sh         what actually reaches the iPhone, anywhere
+#
+# iOS cannot take background push from a self-hosted server: notifications must
+# arrive via APNs and only the official ntfy.sh app is registered with Apple.
+# A tunnel would not have fixed it either - these are Cloudflare QUICK tunnels,
+# so the hostname rotates on every cloudflared restart and any subscription
+# pinned to it breaks within the week.
+#
+# Targets live in .ntfy-targets (0600, gitignored) rather than here: the ntfy.sh
+# topic name is the only thing protecting these alerts, so it is a credential
+# and is kept out of the repo and out of terminal output.
+NTFY_TARGETS_FILE = "/home/work/fraqtoos/.ntfy-targets"
+NTFY_FALLBACK_URL = "http://192.168.0.117:8091/fraqtoos-alerts"
 NTFY_TIMEOUT = 8
+
+
+def ntfy_targets() -> list:
+    """Every URL to publish to. FRAQTOOS_NTFY_URL (comma-separated) overrides."""
+    env = os.getenv("FRAQTOOS_NTFY_URL", "")
+    if env.strip():
+        return [u.strip() for u in env.split(",") if u.strip()]
+    try:
+        with open(NTFY_TARGETS_FILE) as f:
+            urls = [l.strip() for l in f
+                    if l.strip() and not l.lstrip().startswith("#")]
+        if urls:
+            return urls
+    except Exception:
+        pass
+    return [NTFY_FALLBACK_URL]
 
 
 _NTFY_PRIORITY = {"urgent": 5, "high": 4, "default": 3, "low": 2}
@@ -32,25 +61,34 @@ def send_ntfy(title: str, body: str, priority: str = "high", tags: str = "warnin
     Published as a JSON body rather than ntfy's Title/Priority headers: HTTP
     headers are latin-1, so an emoji in the title raises UnicodeEncodeError and
     the fallback dies exactly when it is needed. Every title here carries one.
+
+    Delivered to every configured target. Returns True if ANY accepted it - the
+    local record and the phone are independent, and losing one must not be
+    reported as losing both.
     """
-    base, _, topic = NTFY_URL.rstrip("/").rpartition("/")
-    payload = json.dumps({
-        "topic":    topic,
-        "title":    title[:200],
-        "message":  body[:3800],
-        "priority": _NTFY_PRIORITY.get(priority, 4),
-        "tags":     [t.strip() for t in tags.split(",") if t.strip()],
-    }).encode("utf-8")
-    try:
-        req = urllib.request.Request(
-            base or NTFY_URL, data=payload,
-            headers={"Content-Type": "application/json"}, method="POST",
-        )
-        with urllib.request.urlopen(req, timeout=NTFY_TIMEOUT) as r:
-            return 200 <= r.status < 300
-    except Exception as e:
-        print(f"[notifier] ntfy failed: {e}", file=sys.stderr)
-        return False
+    ok = False
+    for url in ntfy_targets():
+        base, _, topic = url.rstrip("/").rpartition("/")
+        payload = json.dumps({
+            "topic":    topic,
+            "title":    title[:200],
+            "message":  body[:3800],
+            "priority": _NTFY_PRIORITY.get(priority, 4),
+            "tags":     [t.strip() for t in tags.split(",") if t.strip()],
+        }).encode("utf-8")
+        try:
+            req = urllib.request.Request(
+                base or url, data=payload,
+                headers={"Content-Type": "application/json"}, method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=NTFY_TIMEOUT) as r:
+                ok = ok or 200 <= r.status < 300
+        except Exception as e:
+            # Never print the URL: it carries the ntfy.sh topic, which is the
+            # only secret protecting these alerts.
+            host = base.split("//")[-1].split("/")[0] if base else "?"
+            print(f"[notifier] ntfy publish to {host} failed: {e}", file=sys.stderr)
+    return ok
 
 def send(message: str, phone: str = WA_NUMBER, retries: int = 2, max_wait: int = 60) -> bool:
     """Send a WhatsApp message. Lock contention and send errors share the same attempt budget."""
