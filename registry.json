@@ -165,6 +165,25 @@
       }
     },
     {
+      "name": "IPO Allotment Checker",
+      "kind": "timer",
+      "unit": "fraqtoos-ipo-allotment.timer",
+      "schedule": "18:00, 21:30",
+      "max_age_h": 30,
+      "critical": false,
+      "note": "Reads Kite's own IPO applications (no PAN, no registrar captcha). Announces a status only once; silent runs are normal.",
+      "systemd": {
+        "description": "IPO Bot - allotment checker (Kite applications)",
+        "exec": "/home/work/.venvs/portfolio/bin/python ipo_allotment.py",
+        "cwd": "/home/work/ipo-bot",
+        "on_calendar": [
+          "*-*-* 18:00:00",
+          "*-*-* 21:30:00"
+        ],
+        "timeout_sec": 300
+      }
+    },
+    {
       "name": "Chia AI Watcher",
       "kind": "orchestrator",
       "state_key": "Chia AI Watcher",

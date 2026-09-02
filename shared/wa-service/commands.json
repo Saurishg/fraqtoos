@@ -21,6 +21,12 @@
       "cwd": "/home/work/ipo-bot",
       "timeout_ms": 90000,
       "description": "Live IPO board — NSE subscription (mainboard + SME) + grey-market premium"
+    },
+    "allotment": {
+      "cmd": "/home/work/.venvs/portfolio/bin/python /home/work/ipo-bot/ipo_allotment.py --force --stdout 2>/dev/null | sed -n '/<<<WA_MSG_START>>>/,/<<<WA_MSG_END>>>/p' | sed '1d;$d'",
+      "cwd": "/home/work/ipo-bot",
+      "timeout_ms": 180000,
+      "description": "IPO allotment status for everything applied through Kite"
     }
   }
 }
