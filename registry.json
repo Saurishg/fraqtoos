@@ -327,28 +327,60 @@
     },
     {
       "name": "Links page publish",
-      "kind": "cron",
-      "log": "/home/work/links-page/update.log",
+      "kind": "timer",
+      "unit": "fraqtoos-links-page.timer",
       "schedule": "every 5m",
       "max_age_h": 1,
-      "critical": false
+      "critical": false,
+      "note": "Every 5m, so on_failure would page 288x/day on a persistent fault; the registry sweep reports it instead. Redirect kept - other scripts read update.log.",
+      "systemd": {
+        "description": "Links page - regenerate redirects and publish",
+        "exec": "/bin/bash -c '/home/work/links-page/update_urls.sh >> /home/work/links-page/update.log 2>&1'",
+        "cwd": "/home/work/links-page",
+        "on_calendar": [
+          "*-*-* *:00/5:00"
+        ],
+        "timeout_sec": 240,
+        "on_failure": false
+      }
     },
     {
       "name": "Obsidian vault sync",
-      "kind": "cron",
-      "log": "/home/work/obsidian-app/logs/update_vault.log",
+      "kind": "timer",
+      "unit": "fraqtoos-obsidian-vault.timer",
       "schedule": "every 30m",
       "max_age_h": 2,
-      "critical": false
+      "critical": false,
+      "note": "Every 30m. Redirect kept so update_vault.log stays the record it has always been.",
+      "systemd": {
+        "description": "Obsidian vault - sync notes",
+        "exec": "/bin/bash -c '/home/work/obsidian-app/update_vault.sh >> /home/work/obsidian-app/logs/update_vault.log 2>&1'",
+        "cwd": "/home/work/obsidian-app",
+        "on_calendar": [
+          "*-*-* *:00/30:00"
+        ],
+        "timeout_sec": 600,
+        "on_failure": false
+      }
     },
     {
       "name": "NAS backup",
-      "kind": "cron",
-      "log": "/home/work/.server-backup/last-run.log",
+      "kind": "timer",
+      "unit": "fraqtoos-nas-backup.timer",
       "schedule": "03:00",
       "max_age_h": 30,
       "critical": false,
-      "note": "already raises its own ntfy alert on failure"
+      "note": "Once a day and it matters, so it pages on failure. It already raises its own ntfy alert too. Writes last-run.log itself, so no redirect is needed.",
+      "systemd": {
+        "description": "NAS backup - nightly rsync to the QNAP",
+        "exec": "/home/work/.server-backup/run-backup.sh",
+        "cwd": "/home/work/.server-backup",
+        "on_calendar": [
+          "*-*-* 03:00:00"
+        ],
+        "timeout_sec": 7200,
+        "on_failure": true
+      }
     },
     {
       "name": "ntfy (alert fallback)",
