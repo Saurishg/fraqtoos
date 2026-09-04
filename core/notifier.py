@@ -3,7 +3,7 @@
 FraqtoOS Core Notifier — single WhatsApp sender for all bots.
 Uses fcntl lock to prevent concurrent WhatsApp session conflicts.
 """
-import os, sys, subprocess, fcntl, time, json, urllib.request
+import os, sys, subprocess, fcntl, time, json, ipaddress, urllib.request
 
 WA_SENDER  = "/home/work/fraqtoos/shared/send_whatsapp.py"
 WA_NUMBER  = os.getenv("WHATSAPP_RECIPIENT", "919818187001")
@@ -55,6 +55,30 @@ def ntfy_targets() -> list:
 _NTFY_PRIORITY = {"urgent": 5, "high": 4, "default": 3, "low": 2}
 
 
+def _is_private(url: str) -> bool:
+    """True for a target inside this network (LAN address or localhost)."""
+    host = url.split("//")[-1].split("/")[0].rsplit(":", 1)[0].strip("[]")
+    if host in ("localhost", "127.0.0.1", "::1"):
+        return True
+    try:
+        return ipaddress.ip_address(host).is_private
+    except ValueError:
+        return False          # a hostname such as ntfy.sh is external
+
+
+def _headline(body: str) -> str:
+    """The first meaningful line, and nothing else.
+
+    Enough to know what broke and that it needs attention; the detail is on
+    the LAN copy and in the journal. Deliberately not a truncation of the body
+    - a sliced log tail would leak exactly what this is meant to withhold.
+    """
+    for line in body.splitlines():
+        if line.strip():
+            return line.strip()[:180]
+    return "(see the local copy for detail)"
+
+
 def send_ntfy(title: str, body: str, priority: str = "high", tags: str = "warning") -> bool:
     """Publish to ntfy. Never raises - a fallback that can throw is not a fallback.
 
@@ -69,10 +93,15 @@ def send_ntfy(title: str, body: str, priority: str = "high", tags: str = "warnin
     ok = False
     for url in ntfy_targets():
         base, _, topic = url.rstrip("/").rpartition("/")
+        # A target outside this network gets the headline only. The full body
+        # routinely carries journal tails, unit names and internal hostnames,
+        # and there is no reason to hand that to a third party to learn that
+        # something broke. The LAN copy keeps everything.
+        message = body if _is_private(url) else _headline(body)
         payload = json.dumps({
             "topic":    topic,
             "title":    title[:200],
-            "message":  body[:3800],
+            "message":  message[:3800],
             "priority": _NTFY_PRIORITY.get(priority, 4),
             "tags":     [t.strip() for t in tags.split(",") if t.strip()],
         }).encode("utf-8")
