@@ -1,0 +1,9 @@
+# Copy to duckdns.conf and fill in. That file is chmod 600 and gitignored:
+# the token is a credential — anyone holding it can repoint your hostname.
+#
+#   1. https://duckdns.org  ->  sign in (GitHub/Google/Reddit/Twitter)
+#   2. create a subdomain, e.g.  fraqtoos      (gives fraqtoos.duckdns.org)
+#   3. copy the token shown at the top of the page
+#
+DUCKDNS_SUBDOMAIN=your-subdomain-without-the-duckdns-org-part
+DUCKDNS_TOKEN=paste-token-here

@@ -10,3 +10,4 @@ shared/wa_profile/
 *.log.gz
 *.bak.*
 .ntfy-targets
+ops/duckdns/duckdns.conf
