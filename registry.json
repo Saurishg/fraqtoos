@@ -101,12 +101,6 @@
       "critical": false
     },
     {
-      "name": "Tunnel: Chat",
-      "kind": "service",
-      "unit": "cloudflared-chat.service",
-      "critical": false
-    },
-    {
       "name": "Portfolio Bot",
       "kind": "timer",
       "unit": "fraqtoos-portfolio.timer",
