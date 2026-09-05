@@ -364,6 +364,25 @@
       "url": "https://ntfy.fraqtos.duckdns.org/v1/health",
       "critical": true,
       "note": "The public face of the alert fallback. If this fails the phone stops receiving, even though the container may look healthy on the LAN."
+    },
+    {
+      "name": "DuckDNS refresh",
+      "kind": "timer",
+      "unit": "fraqtoos-duckdns.timer",
+      "schedule": "every 6h",
+      "max_age_h": 13,
+      "critical": false,
+      "note": "Keeps fraqtos.duckdns.org alive and pointing at the current public IP. DuckDNS drops un-updated hostnames, and losing it would take out all five service URLs and certificate renewal. Exit 4 if the record and the live IP disagree.",
+      "systemd": {
+        "description": "DuckDNS record refresh",
+        "exec": "/home/work/fraqtoos/ops/duckdns/refresh.sh",
+        "cwd": "/home/work/fraqtoos/ops/duckdns",
+        "on_calendar": [
+          "*-*-* 00/6:00:00"
+        ],
+        "timeout_sec": 120,
+        "on_failure": true
+      }
     }
   ]
 }
