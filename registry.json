@@ -113,7 +113,7 @@
       "schedule": "06:00",
       "max_age_h": 30,
       "critical": false,
-      "note": "Selenium + TOTP against two brokers. Exit 4 = a broker was missing.",
+      "note": "Selenium + TOTP against two brokers. Exit 4 = a broker was missing. 900s because each broker now gets 3 attempts with a 35s wait between them for a fresh TOTP window; worst case is ~6 min.",
       "systemd": {
         "description": "Portfolio Bot - 5paisa + Kite holdings report",
         "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py",
@@ -121,7 +121,7 @@
         "on_calendar": [
           "*-*-* 06:00:00"
         ],
-        "timeout_sec": 300,
+        "timeout_sec": 900,
         "on_failure": true
       }
     },
