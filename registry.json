@@ -107,24 +107,6 @@
       "critical": false
     },
     {
-      "name": "Tunnel: Dashboard",
-      "kind": "service",
-      "unit": "cloudflared-dashboard.service",
-      "critical": false
-    },
-    {
-      "name": "Tunnel: Grafana",
-      "kind": "service",
-      "unit": "cloudflared-grafana.service",
-      "critical": false
-    },
-    {
-      "name": "Tunnel: Obsidian",
-      "kind": "service",
-      "unit": "cloudflared-obsidian.service",
-      "critical": false
-    },
-    {
       "name": "Portfolio Bot",
       "kind": "timer",
       "unit": "fraqtoos-portfolio.timer",
@@ -388,6 +370,20 @@
       "url": "http://192.168.0.117:8091/v1/health",
       "critical": true,
       "note": "The second alert channel. It is a docker container, so systemd cannot see it. If this and wa-service are both down, nothing can page at all - which is exactly the blind spot the second channel was added to remove."
+    },
+    {
+      "name": "nginx (reverse proxy)",
+      "kind": "service",
+      "unit": "nginx.service",
+      "critical": false,
+      "note": "Serves grafana/dash/obsidian/ntfy on *.fraqtos.duckdns.org with the Let's Encrypt wildcard. Replaced three Cloudflare quick tunnels 2026-09-05."
+    },
+    {
+      "name": "ntfy via HTTPS",
+      "kind": "http",
+      "url": "https://ntfy.fraqtos.duckdns.org/v1/health",
+      "critical": true,
+      "note": "The public face of the alert fallback. If this fails the phone stops receiving, even though the container may look healthy on the LAN."
     }
   ]
 }
