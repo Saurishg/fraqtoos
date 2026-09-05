@@ -383,6 +383,25 @@
         "timeout_sec": 120,
         "on_failure": true
       }
+    },
+    {
+      "name": "Chia win-rate check",
+      "kind": "timer",
+      "unit": "fraqtoos-chia-winrate.timer",
+      "schedule": "weekly Sun 11:00",
+      "max_age_h": 200,
+      "critical": false,
+      "note": "Answers whether the 2026-09-04 peer fix recovered the orphaned blocks. Counts via chia_total_farmed_xch / 0.125 and integrates expected wins over the window. Baseline 69% by the same method. States its own confidence: noise below 7 days, suggestive to 14, a verdict after.",
+      "systemd": {
+        "description": "Chia win-rate check (post peer-fix)",
+        "exec": "/home/work/.venvs/fraqtoos/bin/python /home/work/fraqtoos/ops/chia_winrate.py",
+        "cwd": "/home/work/fraqtoos",
+        "on_calendar": [
+          "Sun *-*-* 11:00:00"
+        ],
+        "timeout_sec": 180,
+        "on_failure": false
+      }
     }
   ]
 }
