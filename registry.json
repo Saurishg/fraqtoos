@@ -259,20 +259,6 @@
       "critical": false
     },
     {
-      "name": "Tunnel health",
-      "kind": "timer",
-      "unit": "tunnel-health.timer",
-      "max_age_h": 2,
-      "critical": false
-    },
-    {
-      "name": "Tunnel latency",
-      "kind": "timer",
-      "unit": "tunnel-latency.timer",
-      "max_age_h": 1,
-      "critical": false
-    },
-    {
       "name": "I350 BAR recover",
       "kind": "timer",
       "unit": "i350-bar-recover.timer",
@@ -305,16 +291,16 @@
       "name": "Links page publish",
       "kind": "timer",
       "unit": "fraqtoos-links-page.timer",
-      "schedule": "every 5m",
-      "max_age_h": 1,
+      "schedule": "daily 07:00",
+      "max_age_h": 30,
       "critical": false,
-      "note": "Every 5m, so on_failure would page 288x/day on a persistent fault; the registry sweep reports it instead. Redirect kept - other scripts read update.log.",
+      "note": "Was every 5 minutes purely to chase rotating Cloudflare tunnel URLs. All five links are permanent now, so this only republishes on a real change and self-heals the git repo. Daily is enough.",
       "systemd": {
         "description": "Links page - regenerate redirects and publish",
         "exec": "/bin/bash -c '/home/work/links-page/update_urls.sh >> /home/work/links-page/update.log 2>&1'",
         "cwd": "/home/work/links-page",
         "on_calendar": [
-          "*-*-* *:00/5:00"
+          "*-*-* 07:00:00"
         ],
         "timeout_sec": 240,
         "on_failure": false

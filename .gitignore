@@ -11,3 +11,4 @@ shared/wa_profile/
 *.bak.*
 .ntfy-targets
 ops/duckdns/duckdns.conf
+ops/duckdns/webauth.txt
