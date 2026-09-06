@@ -288,25 +288,6 @@
       "note": "OnCalendar=daily (~00:03) — a 2h budget was a registry error, not a fault"
     },
     {
-      "name": "Links page publish",
-      "kind": "timer",
-      "unit": "fraqtoos-links-page.timer",
-      "schedule": "daily 07:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Was every 5 minutes purely to chase rotating Cloudflare tunnel URLs. All five links are permanent now, so this only republishes on a real change and self-heals the git repo. Daily is enough.",
-      "systemd": {
-        "description": "Links page - regenerate redirects and publish",
-        "exec": "/bin/bash -c '/home/work/links-page/update_urls.sh >> /home/work/links-page/update.log 2>&1'",
-        "cwd": "/home/work/links-page",
-        "on_calendar": [
-          "*-*-* 07:00:00"
-        ],
-        "timeout_sec": 240,
-        "on_failure": false
-      }
-    },
-    {
       "name": "Obsidian vault sync",
       "kind": "timer",
       "unit": "fraqtoos-obsidian-vault.timer",
