@@ -12,3 +12,6 @@ shared/wa_profile/
 .ntfy-targets
 ops/duckdns/duckdns.conf
 ops/duckdns/webauth.txt
+
+# Credentials for the reverse-proxy vhosts. Never commit: this repo is public.
+ops/duckdns/*auth.txt
