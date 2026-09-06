@@ -383,6 +383,25 @@
         "timeout_sec": 180,
         "on_failure": false
       }
+    },
+    {
+      "name": "Remote access watch",
+      "kind": "timer",
+      "unit": "fraqtoos-access-watch.timer",
+      "schedule": "every 6h",
+      "max_age_h": 8,
+      "critical": false,
+      "note": "Verifies the five published URLs still answer with the published credentials, that the BMC stays isolated from the shared password, that nginx's hardcoded chat token still matches the app's, and that the wildcard cert is renewing. None of that shows in a unit state.",
+      "systemd": {
+        "description": "Remote access watch - published URLs still work with the published credentials",
+        "exec": "/usr/bin/python3 /home/work/fraqtoos/ops/access_watch.py",
+        "cwd": "/home/work/fraqtoos",
+        "on_calendar": [
+          "*-*-* 02,08,14,20:15:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
     }
   ]
 }
