@@ -91,12 +91,35 @@ def _probe_service(job) -> tuple:
     return (state == "active", state or "unknown")
 
 
+def _has_next_elapse(unit: str) -> bool:
+    """Whether systemd has a next trigger scheduled at all.
+
+    Calendar timers carry NextElapseUSecRealtime; monotonic ones carry a
+    NextElapseUSecMonotonic that is "infinity" when nothing will ever fire.
+    """
+    out = _sh(["systemctl", "show", "-p", "NextElapseUSecRealtime",
+               "-p", "NextElapseUSecMonotonic", unit]).splitlines()
+    vals = dict(line.split("=", 1) for line in out if "=" in line)
+    if _systemd_ts(vals.get("NextElapseUSecRealtime", "")):
+        return True
+    return vals.get("NextElapseUSecMonotonic", "") not in ("", "0", "infinity")
+
+
 def _probe_timer(job) -> tuple:
     unit = job["unit"]
     if _sh(["systemctl", "is-active", unit]) != "active":
+        # A finite job (e.g. the SMART self-test campaign) stops its own timer
+        # when it is done and leaves a marker - that is completion, not failure.
+        marker = job.get("done_marker")
+        if marker and os.path.exists(marker):
+            return (True, "finished (done marker present)")
         return (False, "timer not active")
     last = _systemd_ts(_sh(["systemctl", "show", "-p", "LastTriggerUSec", "--value", unit]))
     if last is None:
+        # nas-mount-heal sat here as OK for a month: its drop-in's empty
+        # OnUnitActiveSec= wiped OnBootSec too, so nothing was ever scheduled.
+        if not _has_next_elapse(unit):
+            return (False, "active but nothing scheduled - it will never fire")
         return (True, "not yet triggered")
     age = _age_h(last)
     svc = unit.rsplit(".", 1)[0] + ".service"

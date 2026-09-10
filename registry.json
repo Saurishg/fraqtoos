@@ -270,7 +270,9 @@
       "kind": "timer",
       "unit": "drive-selftest.timer",
       "max_age_h": 30,
-      "critical": false
+      "critical": false,
+      "done_marker": "/var/lib/drive-selftest/complete",
+      "note": "A finite campaign, not a daemon. drive-selftest.sh touches done_marker when every drive is tested and the timer is then disabled; a new campaign clears the state dir and re-enables it."
     },
     {
       "name": "NAS mount heal",
