@@ -5,6 +5,7 @@
  * Exposes POST /send  { phone, message }
  * GET  /status  → ready | initializing | qr_pending | disconnected
  * GET  /qr      → text QR for terminal scan
+ * POST /pair    { phone? } → 8-char pairing code (link without scanning)
  */
 
 const { Client, LocalAuth, MessageMedia } = require("whatsapp-web.js");
@@ -343,6 +344,34 @@ app.get("/whoami", (_req, res) => res.json({
     wid: (client.info && client.info.wid && client.info.wid._serialized) || null,
     pushname: (client.info && client.info.pushname) || null,
 }));
+
+// POST /pair { phone? } → link by 8-char pairing code instead of a QR.
+// QRs rotate every ~20-60s, too fast when the image has to reach a phone first
+// (2026-09-13: two scans missed their window). A pairing code lasts ~3 min and
+// WhatsApp also pushes a "enter code" notification to the phone. Enter it under
+// Linked devices → Link a device → "Link with phone number instead".
+const PAIR_TXT = "/tmp/wa_pair_code.txt";
+const PAIR_PHONE = process.env.WA_PAIR_PHONE || "919818187001";   // the linked "FRAQTO TECH" account
+
+client.on("code", (code) => {
+    console.log(`[wa-service] Pairing code: ${code}`);
+    try { fs.writeFileSync(PAIR_TXT, `${code}\n`); } catch (e) { /* best effort */ }
+});
+
+app.post("/pair", async (req, res) => {
+    if (state !== "qr_pending") {
+        return res.status(409).json({ ok: false, error: `pairing needs state qr_pending (state: ${state})` });
+    }
+    const phone = String((req.body && req.body.phone) || PAIR_PHONE).replace(/\D/g, "");
+    try {
+        const code = await client.requestPairingCode(phone, true);
+        console.log(`[wa-service] Pairing code requested for ${phone}`);
+        res.json({ ok: true, phone, code });
+    } catch (err) {
+        console.error("[wa-service] Pairing code error:", err.message);
+        res.status(500).json({ ok: false, error: err.message });
+    }
+});
 
 app.get("/qr", (_req, res) => {
     if (state !== "qr_pending" || !lastQr) {
