@@ -30,6 +30,28 @@ function loadCommands() {
 }
 const stripId = (s) => (s || "").replace(/@c\.us$/, "").replace(/^\+/, "");
 
+// WhatsApp now addresses chats by privacy LID ("222079991459944@lid") instead of
+// "<phone>@c.us" — after the 2026-09-13 relink even the self-chat arrives that
+// way, so every owner check failed and all keywords were ignored as "not an
+// owner". Map a LID back to its phone number before comparing. Cached: the
+// mapping is stable and the lookup is a page round-trip.
+const lidCache = new Map();
+async function toPhone(id) {
+    if (!id || !id.endsWith("@lid")) return stripId(id);
+    if (lidCache.has(id)) return lidCache.get(id);
+    try {
+        const [r] = await client.getContactLidAndPhone([id]);
+        if (r && r.pn) {
+            const pn = stripId(r.pn);
+            lidCache.set(id, pn);
+            return pn;
+        }
+    } catch (e) {
+        console.error(`[wa-service] LID lookup failed for ${id}:`, e.message);
+    }
+    return id;   // unresolved — stays unmatched, so the owner check fails closed
+}
+
 // ── State ──────────────────────────────────────────────────────────────────
 let state   = "initializing";   // initializing | qr_pending | ready | disconnected
 let lastQr  = null;
@@ -116,7 +138,7 @@ client.on("disconnected", (reason) => {
 // other inbound text is ignored — the service never messages unprompted. The
 // keyword only *selects* a fixed command from commands.json; the message body is
 // never interpolated into the shell, so there's no injection surface.
-client.on("message_create", (msg) => {
+client.on("message_create", async (msg) => {
     try {
         const body = (msg.body || "").trim().toLowerCase();
         if (!body) return;
@@ -124,9 +146,9 @@ client.on("message_create", (msg) => {
         const cmd = cfg.commands && cfg.commands[body];
         if (!cmd) return;                                   // unknown text → ignore
         const me       = stripId(client.info && client.info.wid && client.info.wid._serialized);
-        const sender   = stripId(msg.from);
+        const sender   = await toPhone(msg.from);
         const owners   = cfg.owners || [];
-        const selfChat = msg.fromMe && stripId(msg.to) === me;   // user typed in their own self-chat
+        const selfChat = msg.fromMe && (await toPhone(msg.to)) === me;   // user typed in their own self-chat
         if (!(owners.includes(sender) || selfChat)) {
             console.log(`[wa-service] cmd '${body}' from ${sender} ignored (not an owner)`);
             return;
