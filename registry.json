@@ -34,6 +34,13 @@
       "note": "primary alert path; 5h51m silent outage 2026-08-16"
     },
     {
+      "name": "WhatsApp file sends",
+      "kind": "http",
+      "url": "http://127.0.0.1:3131/health/sends",
+      "critical": false,
+      "note": "503 while the last /send-file failed. /status stayed 'ready' through a 6-day PDF outage from 2026-09-23 (wwebjs __x_id collision)."
+    },
+    {
       "name": "Ollama",
       "kind": "service",
       "unit": "ollama.service",

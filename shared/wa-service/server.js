@@ -56,6 +56,10 @@ async function toPhone(id) {
 let state   = "initializing";   // initializing | qr_pending | ready | disconnected
 let lastQr  = null;
 let msgQueue = [];               // { phone, message, res } buffered while not ready
+// Outcome of the most recent /send-file. state === "ready" says nothing about
+// whether media actually goes out: from 2026-09-23 every PDF 500'd for 6 days
+// (wwebjs __x_id collision) while text sends and /status stayed healthy.
+let lastFileSend = null;          // { ok, at, error? }
 
 // ── WhatsApp Client ────────────────────────────────────────────────────────
 // Escape hatch for WhatsApp Web rollouts. Default is "latest" (whatever
@@ -362,6 +366,11 @@ app.use(express.json());
 
 app.get("/status", (_req, res) => res.json({ state }));
 
+// 503 while the last file send failed; the registry probes this so a broken
+// media path pages instead of hiding behind a healthy /status.
+app.get("/health/sends", (_req, res) =>
+    res.status(lastFileSend && !lastFileSend.ok ? 503 : 200).json({ lastFileSend }));
+
 app.get("/whoami", (_req, res) => res.json({
     wid: (client.info && client.info.wid && client.info.wid._serialized) || null,
     pushname: (client.info && client.info.pushname) || null,
@@ -457,16 +466,20 @@ app.post("/send-file", async (req, res) => {
         const confirmed = await waitForAck(msg, 1, 45000);
         if (!confirmed) {
             console.error(`[wa-service] File to ${clean} not confirmed (ack timeout): ${path.basename(file_path)}`);
+            lastFileSend = { ok: false, at: new Date().toISOString(), error: "ack timeout" };
             return res.status(504).json({ ok: false, error: "file send not confirmed by server (ack timeout)" });
         }
         console.log(`[wa-service] File sent to ${clean}: ${path.basename(file_path)} (ack confirmed)`);
+        lastFileSend = { ok: true, at: new Date().toISOString() };
         res.json({ ok: true });
     } catch (err) {
         if (deliveredButModelThrew(err)) {
             console.warn(`[wa-service] file delivered but ack-model threw (known wwebjs bug) — treating as sent: ${err.message}`);
+            lastFileSend = { ok: true, at: new Date().toISOString() };
             return res.json({ ok: true, note: "sent; ack unconfirmed (wwebjs serialization bug)" });
         }
         console.error("[wa-service] Send-file error:", err.message);
+        lastFileSend = { ok: false, at: new Date().toISOString(), error: err.message };
         res.status(500).json({ ok: false, error: err.message });
     }
 });

@@ -180,6 +180,9 @@ def _probe_http(job) -> tuple:
         with urllib.request.urlopen(job["url"], timeout=job.get("timeout_s", 8)) as r:
             ok = 200 <= r.status < 400
             return (ok, f"http {r.status}")
+    except urllib.error.HTTPError as e:
+        # It answered, just not with success - say which code, not "unreachable".
+        return (False, f"http {e.code}")
     except Exception as e:
         return (False, f"unreachable: {type(e).__name__}")
 
