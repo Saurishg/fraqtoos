@@ -74,7 +74,6 @@ def main():
     #    was satisfied and the app took over.
     checks = [
         ("grafana",  "https://grafana.fraqtos.duckdns.org/",  wu, wp, (200, 302)),
-        ("dash",     "https://dash.fraqtos.duckdns.org/",     wu, wp, (200, 302)),
         ("obsidian", "https://obsidian.fraqtos.duckdns.org/", wu, wp, (200, 302)),
         ("chat",     "https://chat.fraqtos.duckdns.org/",     wu, wp, (200,)),
         ("bmc",      "https://bmc.fraqtos.duckdns.org/index.html", bu, bp, (200, 302)),

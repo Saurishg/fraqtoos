@@ -233,12 +233,6 @@
       "critical": false
     },
     {
-      "name": "Creator Dashboard",
-      "kind": "pm2",
-      "app": "creator-dashboard",
-      "critical": false
-    },
-    {
       "name": "pm2 logrotate",
       "kind": "pm2",
       "app": "pm2-logrotate",
