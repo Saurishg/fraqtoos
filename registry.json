@@ -369,6 +369,25 @@
       }
     },
     {
+      "name": "Jellyfin scan watch",
+      "kind": "timer",
+      "unit": "fraqtoos-jellyfin-scan.timer",
+      "schedule": "every 10min",
+      "max_age_h": 1,
+      "critical": false,
+      "note": "Rescans Jellyfin when files land in /mnt/multimedia/{Movies,TV Shows}. CIFS has no inotify, so new movies were invisible until the next scheduled scan. Waits one quiet cycle (copy in progress) and defers while anything is playing.",
+      "systemd": {
+        "description": "Jellyfin new-media scan",
+        "exec": "/home/work/fraqtoos/ops/jellyfin/scan_watch.sh",
+        "cwd": "/home/work/fraqtoos/ops/jellyfin",
+        "on_calendar": [
+          "*:0/10"
+        ],
+        "timeout_sec": 120,
+        "on_failure": true
+      }
+    },
+    {
       "name": "Chia win-rate check",
       "kind": "timer",
       "unit": "fraqtoos-chia-winrate.timer",

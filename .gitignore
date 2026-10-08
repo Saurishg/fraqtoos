@@ -15,3 +15,7 @@ ops/duckdns/webauth.txt
 
 # Credentials for the reverse-proxy vhosts. Never commit: this repo is public.
 ops/duckdns/*auth.txt
+
+# Jellyfin scan watcher: API key (secret) + runtime state
+ops/jellyfin/apikey
+ops/jellyfin/state/
