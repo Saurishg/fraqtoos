@@ -425,6 +425,13 @@
       "unit": "plexmediaserver.service",
       "critical": false,
       "note": "Plex on :32400 (LAN only), media from NAS /mnt/multimedia. GPU transcoding needs Plex Pass. Moved off the NAS (ARM, can't transcode) 2026-10-08."
+    },
+    {
+      "name": "Jellyfin via HTTPS",
+      "kind": "http",
+      "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
+      "critical": false,
+      "note": "Public remote-access path (nginx -> :8096), added 2026-10-08. No basic auth; Jellyfin login + nginx login rate limit."
     }
   ]
 }
