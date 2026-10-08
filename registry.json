@@ -411,6 +411,20 @@
         "timeout_sec": 300,
         "on_failure": true
       }
+    },
+    {
+      "name": "Jellyfin",
+      "kind": "service",
+      "unit": "jellyfin.service",
+      "critical": false,
+      "note": "Free media server on :8096 (LAN only), NVENC transcoding on the 3080 Ti. Media from NAS /mnt/multimedia. Added 2026-10-08."
+    },
+    {
+      "name": "Plex Media Server",
+      "kind": "service",
+      "unit": "plexmediaserver.service",
+      "critical": false,
+      "note": "Plex on :32400 (LAN only), media from NAS /mnt/multimedia. GPU transcoding needs Plex Pass. Moved off the NAS (ARM, can't transcode) 2026-10-08."
     }
   ]
 }
