@@ -127,6 +127,25 @@
       }
     },
     {
+      "name": "Portfolio Snapshot",
+      "kind": "timer",
+      "unit": "fraqtoos-portfolio-snapshot.timer",
+      "schedule": "Mon-Fri 16:00",
+      "max_age_h": 80,
+      "critical": false,
+      "note": "Kite-only re-fetch after the 15:30 close, so the Times Frame shows closing P&L instead of the 06:00 figure. Weekdays only; a long max_age_h covers the weekend gap. Writes portfolio_snapshot.json and nothing else - no AI, no WhatsApp. Exit 1 = Kite returned nothing, previous snapshot deliberately left intact.",
+      "systemd": {
+        "description": "Portfolio snapshot - Kite close prices for the Times Frame",
+        "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py --snapshot-only",
+        "cwd": "/home/work/portfolio_bot",
+        "on_calendar": [
+          "Mon..Fri 16:00:00"
+        ],
+        "timeout_sec": 600,
+        "on_failure": true
+      }
+    },
+    {
       "name": "Chia Health Monitor",
       "kind": "timer",
       "unit": "fraqtoos-chia-health.timer",
