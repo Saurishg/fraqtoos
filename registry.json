@@ -459,6 +459,20 @@
       "note": "Plex on :32400 (LAN only), media from NAS /mnt/multimedia. GPU transcoding needs Plex Pass. Moved off the NAS (ARM, can't transcode) 2026-10-08."
     },
     {
+      "name": "Times Frame Data",
+      "kind": "service",
+      "unit": "divoom-frame-data.service",
+      "critical": false,
+      "note": "Renders the Divoom Times Frame dashboard + slides on :9930 (~/divoom-frame). If it is down the frame keeps its last image. Added 2026-10-15."
+    },
+    {
+      "name": "Times Frame Watcher",
+      "kind": "service",
+      "unit": "divoom-frame-watch.service",
+      "critical": false,
+      "note": "Pushes screens + ticks the clock on the frame at 192.168.0.121 (DHCP-reserved 10-15). Down = frozen clock on the wall. Added 2026-10-15."
+    },
+    {
       "name": "Jellyfin via HTTPS",
       "kind": "http",
       "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
