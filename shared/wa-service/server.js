@@ -142,6 +142,10 @@ client.on("disconnected", (reason) => {
 // other inbound text is ignored — the service never messages unprompted. The
 // keyword only *selects* a fixed command from commands.json; the message body is
 // never interpolated into the shell, so there's no injection surface.
+// TEMP-DEBUG 2026-09-30: metadata only (no bodies) — find why keywords never arrive.
+for (const ev of ["message", "message_create"]) {
+    client.on(ev, (m) => console.log(`[wa-debug] ${ev} type=${m.type} fromMe=${m.fromMe} from=${m.from} to=${m.to} len=${(m.body || "").length} kw=${!!(loadCommands().commands || {})[(m.body || "").trim().toLowerCase()]}`));
+}
 client.on("message_create", async (msg) => {
     try {
         const body = (msg.body || "").trim().toLowerCase();
@@ -447,9 +451,10 @@ app.post("/send", (req, res) => {
     }
 });
 
-// POST /send-file { phone, file_path, caption? }
+// POST /send-file { phone, file_path, caption?, as_document? }
+// as_document: send as a file attachment (no WhatsApp recompression of video/images)
 app.post("/send-file", async (req, res) => {
-    const { phone, file_path, caption } = req.body;
+    const { phone, file_path, caption, as_document } = req.body;
     if (!phone || !file_path) {
         return res.status(400).json({ ok: false, error: "phone and file_path required" });
     }
@@ -460,7 +465,7 @@ app.post("/send-file", async (req, res) => {
         const clean  = phone.replace(/^\+/, "").replace(/\s/g, "");
         const chatId = `${clean}@c.us`;
         const media  = MessageMedia.fromFilePath(file_path);
-        const msg = await client.sendMessage(chatId, media, { caption: caption || "" });
+        const msg = await client.sendMessage(chatId, media, { caption: caption || "", sendMediaAsDocument: !!as_document });
         // Media uploads are the most likely to silently fail post-relink — give
         // the upload + server ack a longer window before confirming.
         const confirmed = await waitForAck(msg, 1, 45000);
