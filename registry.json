@@ -473,6 +473,13 @@
       "note": "Pushes screens + ticks the clock on the frame at 192.168.0.121 (DHCP-reserved 10-15). Down = frozen clock on the wall. Added 2026-10-15."
     },
     {
+      "name": "OB Terminal",
+      "kind": "service",
+      "unit": "ob-terminal.service",
+      "critical": false,
+      "note": "F&O strength boards on :8570 (~/ob-terminal), 5paisa live feed 09:13-15:30 IST, last close otherwise. Down = no board; nothing else depends on it. Added 2026-10-15."
+    },
+    {
       "name": "Jellyfin via HTTPS",
       "kind": "http",
       "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
