@@ -485,6 +485,13 @@
       "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
       "critical": false,
       "note": "Public remote-access path (nginx -> :8096), added 2026-10-08. No basic auth; Jellyfin login + nginx login rate limit."
+    },
+    {
+      "name": "PEARL Auto-sell",
+      "kind": "service",
+      "unit": "pearl-autosell.service",
+      "critical": false,
+      "note": "Sells mined PEARL on SafeTrade (pearlusdt, floor $2) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
     }
   ]
 }
