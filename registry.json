@@ -491,7 +491,7 @@
       "kind": "service",
       "unit": "pearl-autosell.service",
       "critical": false,
-      "note": "Sells mined PEARL on SafeTrade (pearlusdt, floor $2) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
+      "note": "Sells mined PEARL + NOCK on SafeTrade (pearlusdt floor $1.90, nockusdt floor $0.015) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
     }
   ]
 }
