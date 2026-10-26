@@ -139,7 +139,17 @@ def scheduled_run_health(bot: dict) -> tuple[list[str], str]:
     Scheduled bots share the orchestrator log, so scanning that log for words like
     "exception" attributes unrelated watchdog/AI prose to every scheduled bot.
     state.json is the per-bot source of truth for these jobs.
+
+    Jobs that moved to systemd timers or pm2 (2026-09) stopped writing state.json,
+    so for them it holds a run from early September and every check called them
+    stale. The registry's probe knows where each one really runs - use it.
     """
+    from core import registry
+    job = next((j for j in registry.load() if j["name"] == bot["name"]), None)
+    if job and job["kind"] != "orchestrator":
+        r = registry.check(job)
+        return ([] if r["ok"] else [r["detail"]]), f"{'OK' if r['ok'] else 'ISSUE'} {r['kind']}: {r['detail']}"
+
     run = st.get_all_runs().get(bot["name"], {})
     if not run:
         return [f"{bot['name']} has never recorded a run"], "(no recorded run)"
@@ -360,12 +370,15 @@ def run_full(force_alert: bool = False) -> dict:
         ])
         extra = "\n⚠ SearXNG DOWN" if searx_down else ""
         if force_alert or critical_down or disk_full or hard_errors:
-            # Dedupe: don't re-page the same failure signature every 4h cycle
-            sig = "|".join(sorted(
+            # Dedupe: don't re-page the same failure signature every 4h cycle.
+            # Numbers are masked: "stale: last run 31.2h ago" grows every cycle and
+            # would otherwise look like a new failure each time.
+            import re as _re
+            sig = _re.sub(r"\d+(\.\d+)?", "#", "|".join(sorted(
                 [f"{b['name']}:{b['errors'][-1]}" for b in hard_errors]
                 + (["critical_down"] if critical_down else [])
                 + (["disk_full"] if disk_full else [])
-            ))
+            )))
             if force_alert or sig != st.get("last_watchdog_alert_sig"):
                 st.set("last_watchdog_alert_sig", sig)
                 send_alert("Watchdog", f"{bots_status}{extra}")
