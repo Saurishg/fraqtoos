@@ -492,6 +492,25 @@
       "unit": "pearl-autosell.service",
       "critical": false,
       "note": "Sells mined PEARL + NOCK on SafeTrade (pearlusdt floor $1.40, nockusdt floor $0.015) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
+    },
+    {
+      "name": "Coin profit watch",
+      "kind": "timer",
+      "unit": "fraqtoos-coin-watch.timer",
+      "schedule": "every 30m",
+      "max_age_h": 3,
+      "critical": false,
+      "note": "Pearl vs Quantus profit per 3070 Ti (electricity only, no tax). WhatsApps once when Quantus leads by 3 % on 2 runs in a row, once more when Pearl is back ahead (~/pearl-autosell/coin_watch.py, state coin_watch_state.json, --dry = no send). Exit 1 = a price/pool API failed. Added 2026-11-01.",
+      "systemd": {
+        "description": "Coin profit watch - Pearl vs Quantus WhatsApp alert",
+        "exec": "/usr/bin/python3 /home/work/pearl-autosell/coin_watch.py",
+        "cwd": "/home/work/pearl-autosell",
+        "on_calendar": [
+          "*-*-* *:00/30:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": false
+      }
     }
   ]
 }
