@@ -462,6 +462,14 @@ app.post("/send-file", async (req, res) => {
         return res.status(503).json({ ok: false, error: `WA not ready (state: ${state})` });
     }
     try {
+        // A 95 MB video (11-01) crashed the Chrome tab ("Target closed"): MessageMedia
+        // base64-loads the whole file into the page, and every later send then hit the
+        // detached frame. Refuse big files instead of taking all alerting down.
+        const MAX_FILE_MB = 60;
+        const sizeMb = fs.statSync(file_path).size / 1048576;
+        if (sizeMb > MAX_FILE_MB) {
+            return res.status(413).json({ ok: false, error: `file is ${sizeMb.toFixed(0)} MB; limit ${MAX_FILE_MB} MB (compress it first)` });
+        }
         const clean  = phone.replace(/^\+/, "").replace(/\s/g, "");
         const chatId = `${clean}@c.us`;
         const media  = MessageMedia.fromFilePath(file_path);
