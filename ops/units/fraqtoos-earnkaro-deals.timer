@@ -3,7 +3,7 @@
 Description=EarnKaro Deals - post one deal to the Telegram channel (timer)
 
 [Timer]
-OnCalendar=*-*-* 09..22:00/10:00
+OnCalendar=*-*-* 09..22:00/5:00
 # The whole reason for this migration: if the machine was down or rebooting at
 # the scheduled minute, run as soon as it is back rather than skipping the day.
 Persistent=true

@@ -568,6 +568,64 @@
         "timeout_sec": 300,
         "on_failure": true
       }
+    },
+    {
+      "name": "EarnKaro Morning Deals",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-morning.timer",
+      "schedule": "08:55",
+      "max_age_h": 30,
+      "critical": false,
+      "note": "Good-morning post to @savings_dhamaka: fresh scan of Flipkart/Myntra/Tata CLiQ, best 5 deals in one list (~/earnkaro-bot, python -m deals.digest morning). Once per day (kv digest:morning:<date>); the deals are recorded so the 5-min stream won't repeat them. Added 2026-11-02.",
+      "systemd": {
+        "description": "EarnKaro Morning Deals - good-morning top 5",
+        "exec": "/usr/bin/python3.12 -m deals.digest morning",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "*-*-* 08:55:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
+    },
+    {
+      "name": "EarnKaro Budget Roundup",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-budget.timer",
+      "schedule": "13:00, 18:00",
+      "max_age_h": 30,
+      "critical": false,
+      "note": "'₹199 se kam ke Loot Deals' (or ₹499) roundup of deals posted since the previous roundup (~/earnkaro-bot, python -m deals.digest budget). Once per slot; skips if < 3 deals. Added 2026-11-02.",
+      "systemd": {
+        "description": "EarnKaro Budget Roundup - under 199/499 deals",
+        "exec": "/usr/bin/python3.12 -m deals.digest budget",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "*-*-* 13:00:00",
+          "*-*-* 18:00:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
+    },
+    {
+      "name": "EarnKaro Price Alerts",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-watch.timer",
+      "schedule": "every 1m (50 s long-poll)",
+      "max_age_h": 1,
+      "critical": false,
+      "note": "Listens to DMs to @SavingsDhamakabot (python -m deals.watch) and saves members' price alerts ('boat earbuds under 999'); deals.run DMs matching deals after each channel post. on_failure off: a 1-min job would page every minute on a Telegram blip; max_age 1 h catches a dead timer. Added 2026-11-02.",
+      "systemd": {
+        "description": "EarnKaro Price Alerts - read bot DMs",
+        "exec": "/usr/bin/python3.12 -m deals.watch",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "*-*-* *:*:00"
+        ],
+        "timeout_sec": 120,
+        "on_failure": false
+      }
     }
   ]
 }
