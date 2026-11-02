@@ -17,4 +17,4 @@ Environment=DISPLAY=:0
 # SuccessExitStatus on purpose, so systemd records the run as failed and an
 # incomplete result stays visible to OnFailure and to the registry sweep.
 ExecStart=/usr/bin/python3.12 -m deals.run
-TimeoutStartSec=300
+TimeoutStartSec=600

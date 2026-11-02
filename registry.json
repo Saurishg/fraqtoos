@@ -527,7 +527,7 @@
         "on_calendar": [
           "*-*-* 09..22:00/15:00"
         ],
-        "timeout_sec": 300,
+        "timeout_sec": 600,
         "on_failure": false
       }
     }
