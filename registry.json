@@ -516,7 +516,7 @@
       "name": "EarnKaro Deals",
       "kind": "timer",
       "unit": "fraqtoos-earnkaro-deals.timer",
-      "schedule": "every 15m 09:00-22:45",
+      "schedule": "every 10m 09:00-22:50 (posts every 30m before 12, 20m 12-17, 10m 17-23; price crashes any tick)",
       "max_age_h": 12,
       "critical": false,
       "note": "Posts one limited-time Flipkart/Myntra/Tata CLiQ deal per run to the owner's public Telegram channel via EK Affiliaters convert_share (~/earnkaro-bot, python -m deals.run; --dry-run = convert_only, changes nothing). Alerts itself (deduped) on no post for 2 h, EK failing, store unreadable, posts not reaching the channel; on_failure off because a 15-min job would page every 15 min. max_age 12 h covers the 22:45-09:00 gap. Added 2026-11-02.",
@@ -525,7 +525,7 @@
         "exec": "/usr/bin/python3.12 -m deals.run",
         "cwd": "/home/work/earnkaro-bot",
         "on_calendar": [
-          "*-*-* 09..22:00/15:00"
+          "*-*-* 09..22:00/10:00"
         ],
         "timeout_sec": 600,
         "on_failure": false
