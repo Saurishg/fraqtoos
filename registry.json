@@ -530,6 +530,44 @@
         "timeout_sec": 600,
         "on_failure": false
       }
+    },
+    {
+      "name": "EarnKaro Daily Top 5",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-daily.timer",
+      "schedule": "21:00",
+      "max_age_h": 30,
+      "critical": false,
+      "note": "Posts 'Top deals of the day' (5 best of today's confirmed posts) to @savings_dhamaka via the own bot (~/earnkaro-bot, python -m deals.digest daily). Once per day (kv digest:daily:<date>); skips if < 3 deals or no TG_BOT_TOKEN. Added 2026-11-02.",
+      "systemd": {
+        "description": "EarnKaro Daily Top 5 - deals roundup",
+        "exec": "/usr/bin/python3.12 -m deals.digest daily",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "*-*-* 21:00:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
+    },
+    {
+      "name": "EarnKaro Weekly Roundup",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-weekly.timer",
+      "schedule": "Sun 19:00",
+      "max_age_h": 170,
+      "critical": false,
+      "note": "Posts 'Best deals of the week' (7 best confirmed posts of the last 7 days) to @savings_dhamaka (~/earnkaro-bot, python -m deals.digest weekly). Once per ISO week. Added 2026-11-02.",
+      "systemd": {
+        "description": "EarnKaro Weekly Roundup - best deals of the week",
+        "exec": "/usr/bin/python3.12 -m deals.digest weekly",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "Sun *-*-* 19:00:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
     }
   ]
 }
