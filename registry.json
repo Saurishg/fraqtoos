@@ -631,10 +631,10 @@
       "name": "Savings Dhamaka Daily Reel",
       "kind": "timer",
       "unit": "fraqtoos-deals-reel.timer",
-      "schedule": "02:00",
+      "schedule": "02:00 + 10 min after every boot (resumes an interrupted night; only starts 02:00-08:30)",
       "max_age_h": 30,
       "critical": false,
-      "note": "Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04.",
+      "note": "Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04. 11-05: layout v2 (reel_v2.py: real product card on top, her below, music + SFX), QA gates on stills/clips (qa.py), CodeFormer face pass, delivered.json marker; OnBootSec resumes a reel a reboot interrupted, and runs outside 02:00-08:30 exit without starting.",
       "systemd": {
         "description": "Savings Dhamaka Daily Reel - deals video with new looks",
         "exec": "/usr/bin/python3.12 /home/work/ai-video/deals-reel/daily/daily_reel.py",
@@ -643,7 +643,8 @@
           "*-*-* 02:00:00"
         ],
         "timeout_sec": 21600,
-        "on_failure": false
+        "on_failure": false,
+        "on_boot_sec": "10min"
       }
     },
     {

@@ -79,6 +79,10 @@ def render(job: dict) -> dict:
     cal = sd["on_calendar"]
     cal_lines = "\n".join(f"OnCalendar={c}" for c in
                            (cal if isinstance(cal, list) else [cal]))
+    # on_boot_sec: also fire this long after every boot, for a job that must pick up an
+    # interrupted run (the job itself decides whether there is anything to do).
+    if sd.get("on_boot_sec"):
+        cal_lines += f"\nOnBootSec={sd['on_boot_sec']}"
     # Some jobs were deliberately non-paging under the orchestrator ("silent"):
     # chia_ai runs every 2h, and a persistent fault would page 12 times a day.
     # They are not invisible - the registry sweep still reports a failed unit,
