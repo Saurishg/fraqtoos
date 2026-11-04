@@ -380,6 +380,41 @@ app.get("/whoami", (_req, res) => res.json({
     pushname: (client.info && client.info.pushname) || null,
 }));
 
+// Read-only WhatsApp Channels (newsletters) the linked account follows. Used by the
+// Savings Dhamaka bot to repost the Amazon Associates channel's deals with its own tag.
+const withTimeout = (p, ms) => Promise.race([p, new Promise((_, rej) =>
+    setTimeout(() => rej(new Error(`timed out after ${ms} ms`)), ms))]);
+
+// GET /channels → [{ id, name }]
+app.get("/channels", async (_req, res) => {
+    if (state !== "ready") return res.status(503).json({ ok: false, error: `state: ${state}` });
+    try {
+        const chans = await withTimeout(client.getChannels(), 30000);
+        res.json({ ok: true, channels: chans.map((c) => ({ id: c.id && c.id._serialized, name: c.name })) });
+    } catch (err) {
+        res.status(500).json({ ok: false, error: err.message });
+    }
+});
+
+// GET /channel-messages?id=<id@newsletter>&limit=20 → [{ id, timestamp, body, hasMedia }]
+app.get("/channel-messages", async (req, res) => {
+    if (state !== "ready") return res.status(503).json({ ok: false, error: `state: ${state}` });
+    const id = String(req.query.id || "");
+    if (!/@newsletter$/.test(id)) return res.status(400).json({ ok: false, error: "id must end in @newsletter" });
+    const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 20, 1), 50);
+    try {
+        const chan = await withTimeout(client.getChatById(id), 30000);
+        if (!chan || typeof chan.fetchMessages !== "function") {
+            return res.status(404).json({ ok: false, error: "channel not found (is it followed?)" });
+        }
+        const msgs = await withTimeout(chan.fetchMessages({ limit }), 30000);
+        res.json({ ok: true, messages: msgs.map((m) => ({
+            id: m.id && m.id._serialized, timestamp: m.timestamp, body: m.body || "", hasMedia: !!m.hasMedia })) });
+    } catch (err) {
+        res.status(500).json({ ok: false, error: err.message });
+    }
+});
+
 // POST /pair { phone? } → link by 8-char pairing code instead of a QR.
 // QRs rotate every ~20-60s, too fast when the image has to reach a phone first
 // (2026-09-13: two scans missed their window). A pairing code lasts ~3 min and
