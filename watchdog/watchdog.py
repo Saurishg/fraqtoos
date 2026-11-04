@@ -19,8 +19,35 @@ OLLAMA_PROBE = "http://localhost:11434/api/tags"
 MODEL_CHAIN  = ["phi4", "deepseek-r1:14b", "gpt-oss:20b"]
 DISK_WARN_PCT = 90
 
+GPU_BUSY = "/tmp/fraqtoos-gpu-busy"     # "<pid> <what>", written by jobs that stop Ollama on purpose
+
+
+def gpu_job_running() -> str:
+    """A GPU job that stopped Ollama on purpose to have the RX 6800 XT to itself (the nightly Savings
+    Dhamaka reel: LTX-2.5 + LatentSync), or "". Restarting Ollama then and running AI diagnosis on it
+    loads a model next to the video models (2026-11-04 12:00: a lip-sync shot took 15 min, not 6)."""
+    try:
+        state = subprocess.run(["systemctl", "is-active", "fraqtoos-deals-reel.service"],
+                               capture_output=True, text=True, timeout=5).stdout.strip()
+        if state in ("active", "activating"):
+            return "the nightly Savings Dhamaka reel"
+    except Exception:
+        pass
+    try:
+        pid, _, what = open(GPU_BUSY).read().strip().partition(" ")
+        os.kill(int(pid), 0)                       # raises if that job is gone (stale marker)
+        return what or f"GPU job pid {pid}"
+    except Exception:
+        return ""
+
+
 def ensure_ollama_up(attempts: int = 2) -> bool:
-    """Probe ollama; if down, try systemctl restart. Alert on persistent failure."""
+    """Probe ollama; if down, try systemctl restart. Alert on persistent failure.
+    Never while a GPU job has paused it on purpose."""
+    job = gpu_job_running()
+    if job:
+        log.info(f"Ollama is paused for {job} — not restarting it")
+        return False
     for i in range(attempts):
         try:
             r = requests.get(OLLAMA_PROBE, timeout=3)
@@ -183,6 +210,9 @@ def scheduled_run_health(bot: dict) -> tuple[list[str], str]:
 # ── AI diagnosis ──────────────────────────────────────────────────────────────
 
 def ai_diagnose(snapshot: dict) -> str:
+    job = gpu_job_running()
+    if job:
+        return f"AI diagnosis skipped — Ollama is paused for {job}"
     ollama_up = ensure_ollama_up()
 
     prompt = f"""DevOps watchdog. Analyze this bot health snapshot in under 200 words.
