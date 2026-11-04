@@ -645,6 +645,25 @@
         "timeout_sec": 21600,
         "on_failure": false
       }
+    },
+    {
+      "name": "EarnKaro Amazon Channel Reposts",
+      "kind": "timer",
+      "unit": "fraqtoos-earnkaro-amazon.timer",
+      "schedule": "every 10 min",
+      "max_age_h": 2,
+      "critical": false,
+      "note": "Reposts the official Amazon Associates WhatsApp channel's deal roundups to @savings_dhamaka with the owner's tag savingdhamaka-21 (python -m deals.amazon_channel). Reads the channel via wa-service /channel-messages; every amzaff.to link is converted to amazon.in/dp/ASIN?tag=… or the post is skipped. 09:00-23:00, at most 1 per 20 min, silent, Associates disclosure appended. Added 2026-11-05.",
+      "systemd": {
+        "description": "EarnKaro Amazon Channel Reposts",
+        "exec": "/usr/bin/python3.12 -m deals.amazon_channel",
+        "cwd": "/home/work/earnkaro-bot",
+        "on_calendar": [
+          "*-*-* *:00/10:30"
+        ],
+        "timeout_sec": 300,
+        "on_failure": false
+      }
     }
   ]
 }
