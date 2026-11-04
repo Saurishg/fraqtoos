@@ -385,33 +385,100 @@ app.get("/whoami", (_req, res) => res.json({
 const withTimeout = (p, ms) => Promise.race([p, new Promise((_, rej) =>
     setTimeout(() => rej(new Error(`timed out after ${ms} ms`)), ms))]);
 
+// Channels are read straight from WhatsApp Web's in-memory newsletter store. client.getChannels()
+// and getChatById() refresh newsletter metadata over the network first, and that refresh fails
+// ("r") for long stretches after a restart (2026-11-05) — the store itself is fine.
+const Message = require("whatsapp-web.js/src/structures/Message");
+
+async function channelList() {
+    return client.pupPage.evaluate(() => window.require("WAWebCollections").WAWebNewsletterCollection
+        .getModelsArray().map((c) => ({ id: c.id._serialized, name: c.name })));
+}
+
+async function channelMsgs(id, limit) {
+    const models = await client.pupPage.evaluate(async (id, limit) => {
+        const chat = window.require("WAWebCollections").WAWebNewsletterCollection.get(id);
+        if (!chat) return null;
+        const keep = (m) => !m.isNotification && m.type !== "newsletter_notification";
+        let msgs = chat.msgs.getModelsArray().filter(keep);
+        for (let i = 0; i < 10 && msgs.length < limit; i++) {
+            let more = null;
+            try { more = await window.require("WAWebChatLoadMessages").loadEarlierMsgs({ chat }); } catch (e) { break; }
+            if (!more || !more.length) break;
+            msgs = [...more.filter(keep), ...msgs];
+        }
+        msgs.sort((a, b) => (a.t > b.t ? 1 : -1));
+        return msgs.slice(-limit).map((m) => window.WWebJS.getMessageModel(m));
+    }, id, limit);
+    return models && models.map((m) => new Message(client, m));
+}
+
 // GET /channels → [{ id, name }]
 app.get("/channels", async (_req, res) => {
     if (state !== "ready") return res.status(503).json({ ok: false, error: `state: ${state}` });
     try {
-        const chans = await withTimeout(client.getChannels(), 30000);
-        res.json({ ok: true, channels: chans.map((c) => ({ id: c.id && c.id._serialized, name: c.name })) });
+        res.json({ ok: true, channels: await withTimeout(channelList(), 30000) });
     } catch (err) {
         res.status(500).json({ ok: false, error: err.message });
     }
 });
 
-// GET /channel-messages?id=<id@newsletter>&limit=20 → [{ id, timestamp, body, hasMedia }]
+// GET /channel-messages?id=<id@newsletter>&limit=20 → [{ timestamp, body, hasMedia }]
 app.get("/channel-messages", async (req, res) => {
     if (state !== "ready") return res.status(503).json({ ok: false, error: `state: ${state}` });
     const id = String(req.query.id || "");
     if (!/@newsletter$/.test(id)) return res.status(400).json({ ok: false, error: "id must end in @newsletter" });
     const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 20, 1), 50);
     try {
-        const chan = await withTimeout(client.getChatById(id), 30000);
-        if (!chan || typeof chan.fetchMessages !== "function") {
-            return res.status(404).json({ ok: false, error: "channel not found (is it followed?)" });
-        }
-        const msgs = await withTimeout(chan.fetchMessages({ limit }), 30000);
+        const msgs = await withTimeout(channelMsgs(id, limit), 45000);
+        if (!msgs) return res.status(404).json({ ok: false, error: "channel not found (is it followed?)" });
         res.json({ ok: true, messages: msgs.map((m) => ({
             id: m.id && m.id._serialized, timestamp: m.timestamp, body: m.body || "", hasMedia: !!m.hasMedia })) });
     } catch (err) {
         res.status(500).json({ ok: false, error: err.message });
+    }
+});
+
+// GET /channel-media?id=<id@newsletter>&ts=<message timestamp> → { mimetype, data (base64) }
+// The image Amazon attached to a channel post (Associates share creatives), for a full-size photo post.
+app.get("/channel-media", async (req, res) => {
+    if (state !== "ready") return res.status(503).json({ ok: false, error: `state: ${state}` });
+    const id = String(req.query.id || "");
+    const ts = parseInt(req.query.ts, 10);
+    if (!/@newsletter$/.test(id) || !ts) return res.status(400).json({ ok: false, error: "id@newsletter and ts required" });
+    try {
+        await withTimeout(channelMsgs(id, 50), 45000);          // make sure older posts are loaded
+        // Channel messages come back without an id, so Message.downloadMedia() can't find them:
+        // locate the message inside the channel by timestamp and download it here.
+        const media = await withTimeout(client.pupPage.evaluate(async (id, ts) => {
+            const chat = window.require("WAWebCollections").WAWebNewsletterCollection.get(id);
+            const msg = chat && chat.msgs.getModelsArray().find((m) => m.t === ts && m.mediaData);
+            if (!msg) return { err: "no media message with that timestamp" };
+            if (msg.mediaData.mediaStage !== "RESOLVED") {
+                try { await msg.downloadMedia({ downloadEvenIfExpensive: true, rmrReason: 1 }); } catch (e) { /* try anyway */ }
+            }
+            const info = { directPath: msg.directPath, hasKey: !!msg.mediaKey, type: msg.type, mimetype: msg.mimetype,
+                stage: msg.mediaData.mediaStage, staticUrl: msg.staticUrl || null,
+                url: msg.deprecatedMms3Url || msg.clientUrl || null, size: msg.size };
+            if (!msg.mediaKey && msg.directPath) return { direct: info };   // channel media: plain file on the CDN
+            const qpl = { addAnnotations() { return this; }, addPoint() { return this; } };
+            const buf = await window.require("WAWebDownloadManager").downloadManager.downloadAndMaybeDecrypt({
+                directPath: msg.directPath, encFilehash: msg.encFilehash, filehash: msg.filehash,
+                mediaKey: msg.mediaKey, mediaKeyTimestamp: msg.mediaKeyTimestamp, type: msg.type,
+                signal: new AbortController().signal, downloadQpl: qpl });
+            return { mimetype: msg.mimetype, data: await window.WWebJS.arrayBufferToBase64Async(buf) };
+        }, id, ts), 60000);
+        if (media.err) return res.status(404).json({ ok: false, error: media.err });
+        if (media.direct) {
+            const d = media.direct;
+            const r = await withTimeout(fetch("https://mmg.whatsapp.net" + d.directPath), 60000);
+            if (!r.ok) return res.status(502).json({ ok: false, error: `CDN ${r.status}`, info: d });
+            const buf = Buffer.from(await r.arrayBuffer());
+            return res.json({ ok: true, mimetype: d.mimetype || r.headers.get("content-type"), data: buf.toString("base64") });
+        }
+        res.json({ ok: true, mimetype: media.mimetype, data: media.data });
+    } catch (err) {
+        res.status(500).json({ ok: false, error: String(err && (err.stack || err.message || err)).slice(0, 300) });
     }
 });
 
