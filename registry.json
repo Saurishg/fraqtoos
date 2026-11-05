@@ -60,12 +60,6 @@
       "critical": false
     },
     {
-      "name": "DeepSeek Harness Web",
-      "kind": "service",
-      "unit": "dsh-web.service",
-      "critical": false
-    },
-    {
       "name": "Prometheus",
       "kind": "service",
       "unit": "prometheus.service",
