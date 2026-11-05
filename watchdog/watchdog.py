@@ -16,7 +16,7 @@ from core          import state as st
 log = get_logger("watchdog")
 OLLAMA_URL   = "http://localhost:11434/api/generate"
 OLLAMA_PROBE = "http://localhost:11434/api/tags"
-MODEL_CHAIN  = ["phi4", "deepseek-r1:14b", "gpt-oss:20b"]
+MODEL_CHAIN  = ["phi4", "gpt-oss:20b"]          # deepseek-r1:14b removed from Ollama 2026-11-05
 DISK_WARN_PCT = 90
 
 GPU_BUSY = "/tmp/fraqtoos-gpu-busy"     # "<pid> <what>", written by jobs that stop Ollama on purpose
