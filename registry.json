@@ -1,664 +1,671 @@
 {
-  "_about": [
-    "Single source of truth for everything scheduled or long-running on this server.",
-    "Written 2026-09-01. Before this, five independent schedulers each held part of the",
-    "picture and nothing held all of it, so the watchdog covered 6 of 31 entries and",
-    "drifted every time a bot was added.",
-    "",
-    "The watchdog reads THIS file. Adding a job here is what makes it monitored.",
-    "",
-    "kind decides how health is probed - no job needs to be instrumented for it:",
-    "  orchestrator : ran by fraqtoos orchestrator; probed from logs/state.json",
-    "  service      : systemd unit expected active; probed with systemctl is-active",
-    "  timer        : systemd timer; probed from LastTriggerUSec + the unit's Result",
-    "  pm2          : pm2-managed app; probed from `pm2 jlist` status + restart count",
-    "  cron         : crontab entry; probed from the mtime of the log it writes",
-    "",
-    "max_age_h is how long the job may go without a successful run before it is stale.",
-    "Set it to roughly twice the interval, so one missed run is tolerated and two are not.",
-    "critical=true means a failure pages over BOTH channels (WhatsApp + ntfy)."
-  ],
-  "jobs": [
-    {
-      "name": "Orchestrator",
-      "kind": "service",
-      "unit": "fraqtoos.service",
-      "critical": true,
-      "note": "owns every orchestrator-kind job below; if it is down, none of them run"
-    },
-    {
-      "name": "WhatsApp Service",
-      "kind": "service",
-      "unit": "wa-service.service",
-      "critical": true,
-      "note": "primary alert path; 5h51m silent outage 2026-08-16"
-    },
-    {
-      "name": "WhatsApp file sends",
-      "kind": "http",
-      "url": "http://127.0.0.1:3131/health/sends",
-      "critical": false,
-      "note": "503 while the last /send-file failed. /status stayed 'ready' through a 6-day PDF outage from 2026-09-23 (wwebjs __x_id collision)."
-    },
-    {
-      "name": "Ollama",
-      "kind": "service",
-      "unit": "ollama.service",
-      "critical": false,
-      "note": "AI briefs degrade without it; bots still send"
-    },
-    {
-      "name": "FraqtoOS Chat",
-      "kind": "service",
-      "unit": "fraqtoos-chat.service",
-      "critical": false
-    },
-    {
-      "name": "Grafana WA Bridge",
-      "kind": "service",
-      "unit": "grafana-wa-bridge.service",
-      "critical": false
-    },
-    {
-      "name": "Prometheus",
-      "kind": "service",
-      "unit": "prometheus.service",
-      "critical": false
-    },
-    {
-      "name": "Grafana",
-      "kind": "service",
-      "unit": "grafana-server.service",
-      "critical": false
-    },
-    {
-      "name": "Chia Exporter",
-      "kind": "service",
-      "unit": "chia_exporter.service",
-      "critical": false
-    },
-    {
-      "name": "NAS Exporter",
-      "kind": "service",
-      "unit": "nas_exporter.service",
-      "critical": false
-    },
-    {
-      "name": "Node Exporter",
-      "kind": "service",
-      "unit": "node_exporter.service",
-      "critical": false
-    },
-    {
-      "name": "NVIDIA GPU Exporter",
-      "kind": "service",
-      "unit": "nvidia_gpu_exporter.service",
-      "critical": false
-    },
-    {
-      "name": "IPMI Exporter",
-      "kind": "service",
-      "unit": "ipmi_exporter.service",
-      "critical": false
-    },
-    {
-      "name": "Portfolio Bot",
-      "kind": "timer",
-      "unit": "fraqtoos-portfolio.timer",
-      "schedule": "06:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Selenium + TOTP against two brokers. Exit 4 = a broker was missing. 900s because each broker now gets 3 attempts with a 35s wait between them for a fresh TOTP window; worst case is ~6 min.",
-      "systemd": {
-        "description": "Portfolio Bot - 5paisa + Kite holdings report",
-        "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py",
-        "cwd": "/home/work/portfolio_bot",
-        "on_calendar": [
-          "*-*-* 06:00:00"
-        ],
-        "timeout_sec": 900,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Portfolio Snapshot",
-      "kind": "timer",
-      "unit": "fraqtoos-portfolio-snapshot.timer",
-      "schedule": "Mon-Fri 16:00",
-      "max_age_h": 80,
-      "critical": false,
-      "note": "Kite-only re-fetch after the 15:30 close, so the Times Frame shows closing P&L instead of the 06:00 figure. Weekdays only; a long max_age_h covers the weekend gap. Writes portfolio_snapshot.json and nothing else - no AI, no WhatsApp. Exit 1 = Kite returned nothing, previous snapshot deliberately left intact.",
-      "systemd": {
-        "description": "Portfolio snapshot - Kite close prices for the Times Frame",
-        "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py --snapshot-only",
-        "cwd": "/home/work/portfolio_bot",
-        "on_calendar": [
-          "Mon..Fri 16:00:00"
-        ],
-        "timeout_sec": 600,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Chia Health Monitor",
-      "kind": "timer",
-      "unit": "fraqtoos-chia-health.timer",
-      "schedule": "08:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Was 'silent' under the orchestrator, but it runs once a day - paging on failure is not noisy at that rate.",
-      "systemd": {
-        "description": "Chia Health Monitor - daily farm summary",
-        "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_health",
-        "cwd": "/home/work/fraqtoos",
-        "on_calendar": [
-          "*-*-* 08:00:00"
-        ],
-        "timeout_sec": 120,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Crypto Portfolio Bot",
-      "kind": "timer",
-      "unit": "fraqtoos-crypto.timer",
-      "schedule": "09:00, 21:00",
-      "max_age_h": 15,
-      "critical": false,
-      "note": "Exit 4 = a chain could not be read; the total is partial.",
-      "systemd": {
-        "description": "Crypto Portfolio Bot - on-chain holdings (Base/ETH/BSC)",
-        "exec": "/usr/local/bin/node index.js --once",
-        "cwd": "/home/work/Desktop/crypto",
-        "on_calendar": [
-          "*-*-* 09:00:00",
-          "*-*-* 21:00:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "IPO Last-Day Alert",
-      "kind": "timer",
-      "unit": "fraqtoos-ipo.timer",
-      "schedule": "10:10",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Migrated off the orchestrator loop 2026-09-01 (Phase 3 pilot). Silent when nothing matches - a quiet run is still a successful run.",
-      "systemd": {
-        "description": "IPO Bot - last-day alert (GMP >= 30%)",
-        "exec": "/usr/bin/python3.12 ipo_bot.py --min-gmp 30 --closing-today",
-        "cwd": "/home/work/ipo-bot",
-        "on_calendar": "*-*-* 10:10:00",
-        "timeout_sec": 240
-      }
-    },
-    {
-      "name": "IPO Allotment Checker",
-      "kind": "timer",
-      "unit": "fraqtoos-ipo-allotment.timer",
-      "schedule": "18:00, 21:30",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Reads Kite's own IPO applications (no PAN, no registrar captcha). Announces a status only once; silent runs are normal.",
-      "systemd": {
-        "description": "IPO Bot - allotment checker (Kite applications)",
-        "exec": "/home/work/.venvs/portfolio/bin/python ipo_allotment.py",
-        "cwd": "/home/work/ipo-bot",
-        "on_calendar": [
-          "*-*-* 18:00:00",
-          "*-*-* 21:30:00"
-        ],
-        "timeout_sec": 300
-      }
-    },
-    {
-      "name": "Chia AI Watcher",
-      "kind": "timer",
-      "unit": "fraqtoos-chia-ai.timer",
-      "schedule": "every 2h",
-      "max_age_h": 6,
-      "critical": false,
-      "note": "on_failure disabled deliberately: every 2h, so a persistent fault would page 12x a day. The registry sweep still reports it, deduped.",
-      "systemd": {
-        "description": "Chia AI Watcher - classifies new log errors",
-        "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_ai_watcher",
-        "cwd": "/home/work/fraqtoos",
-        "on_calendar": [
-          "*-*-* 00/2:00:00"
-        ],
-        "timeout_sec": 200,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "Utility Bill Bot",
-      "kind": "pm2",
-      "app": "utility-bill-bot",
-      "critical": false,
-      "note": "sole owner of its schedule since 2026-09-01: internal node-cron at 09:00"
-    },
-    {
-      "name": "Chia Win Notifier",
-      "kind": "pm2",
-      "app": "chia-win-notifier",
-      "critical": false
-    },
-    {
-      "name": "pm2 logrotate",
-      "kind": "pm2",
-      "app": "pm2-logrotate",
-      "critical": false
-    },
-    {
-      "name": "SMART metrics",
-      "kind": "timer",
-      "unit": "smartmon.timer",
-      "max_age_h": 1,
-      "critical": false
-    },
-    {
-      "name": "SMART fleet watch",
-      "kind": "timer",
-      "unit": "smart-watch.timer",
-      "max_age_h": 2,
-      "critical": false
-    },
-    {
-      "name": "Root disk watch",
-      "kind": "timer",
-      "unit": "root-disk-watch.timer",
-      "max_age_h": 1,
-      "critical": false
-    },
-    {
-      "name": "I350 BAR recover",
-      "kind": "timer",
-      "unit": "i350-bar-recover.timer",
-      "max_age_h": 2,
-      "critical": false
-    },
-    {
-      "name": "Drive self-test",
-      "kind": "timer",
-      "unit": "drive-selftest.timer",
-      "max_age_h": 30,
-      "critical": false,
-      "done_marker": "/var/lib/drive-selftest/complete",
-      "note": "A finite campaign, not a daemon. drive-selftest.sh touches done_marker when every drive is tested and the timer is then disabled; a new campaign clears the state dir and re-enables it."
-    },
-    {
-      "name": "NAS mount heal",
-      "kind": "timer",
-      "unit": "nas-mount-heal.timer",
-      "max_age_h": 2,
-      "critical": false
-    },
-    {
-      "name": "Odysseus healthcheck",
-      "kind": "timer",
-      "unit": "odysseus-healthcheck.timer",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "OnCalendar=daily (~00:03) — a 2h budget was a registry error, not a fault"
-    },
-    {
-      "name": "Obsidian vault sync",
-      "kind": "timer",
-      "unit": "fraqtoos-obsidian-vault.timer",
-      "schedule": "every 30m",
-      "max_age_h": 2,
-      "critical": false,
-      "note": "Every 30m. Redirect kept so update_vault.log stays the record it has always been.",
-      "systemd": {
-        "description": "Obsidian vault - sync notes",
-        "exec": "/bin/bash -c '/home/work/obsidian-app/update_vault.sh >> /home/work/obsidian-app/logs/update_vault.log 2>&1'",
-        "cwd": "/home/work/obsidian-app",
-        "on_calendar": [
-          "*-*-* *:00/30:00"
-        ],
-        "timeout_sec": 600,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "NAS backup",
-      "kind": "timer",
-      "unit": "fraqtoos-nas-backup.timer",
-      "schedule": "03:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Once a day and it matters, so it pages on failure. It already raises its own ntfy alert too. Writes last-run.log itself, so no redirect is needed.",
-      "systemd": {
-        "description": "NAS backup - nightly rsync to the QNAP",
-        "exec": "/home/work/.server-backup/run-backup.sh",
-        "cwd": "/home/work/.server-backup",
-        "on_calendar": [
-          "*-*-* 03:00:00"
-        ],
-        "timeout_sec": 7200,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "ntfy (alert fallback)",
-      "kind": "http",
-      "url": "http://192.168.0.117:8091/v1/health",
-      "critical": true,
-      "note": "The second alert channel. It is a docker container, so systemd cannot see it. If this and wa-service are both down, nothing can page at all - which is exactly the blind spot the second channel was added to remove."
-    },
-    {
-      "name": "nginx (reverse proxy)",
-      "kind": "service",
-      "unit": "nginx.service",
-      "critical": false,
-      "note": "Serves grafana/dash/obsidian/ntfy on *.fraqtos.duckdns.org with the Let's Encrypt wildcard. Replaced three Cloudflare quick tunnels 2026-09-05."
-    },
-    {
-      "name": "ntfy via HTTPS",
-      "kind": "http",
-      "url": "https://ntfy.fraqtos.duckdns.org/v1/health",
-      "critical": true,
-      "note": "The public face of the alert fallback. If this fails the phone stops receiving, even though the container may look healthy on the LAN."
-    },
-    {
-      "name": "DuckDNS refresh",
-      "kind": "timer",
-      "unit": "fraqtoos-duckdns.timer",
-      "schedule": "every 6h",
-      "max_age_h": 13,
-      "critical": false,
-      "note": "Keeps fraqtos.duckdns.org alive and pointing at the current public IP. DuckDNS drops un-updated hostnames, and losing it would take out all five service URLs and certificate renewal. Exit 4 if the record and the live IP disagree.",
-      "systemd": {
-        "description": "DuckDNS record refresh",
-        "exec": "/home/work/fraqtoos/ops/duckdns/refresh.sh",
-        "cwd": "/home/work/fraqtoos/ops/duckdns",
-        "on_calendar": [
-          "*-*-* 00/6:00:00"
-        ],
-        "timeout_sec": 120,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Jellyfin scan watch",
-      "kind": "timer",
-      "unit": "fraqtoos-jellyfin-scan.timer",
-      "schedule": "every 10min",
-      "max_age_h": 1,
-      "critical": false,
-      "note": "Rescans Jellyfin when files land in /mnt/multimedia/{Movies,TV Shows}. CIFS has no inotify, so new movies were invisible until the next scheduled scan. Waits one quiet cycle (copy in progress) and defers while anything is playing.",
-      "systemd": {
-        "description": "Jellyfin new-media scan",
-        "exec": "/home/work/fraqtoos/ops/jellyfin/scan_watch.sh",
-        "cwd": "/home/work/fraqtoos/ops/jellyfin",
-        "on_calendar": [
-          "*:0/10"
-        ],
-        "timeout_sec": 120,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Chia win-rate check",
-      "kind": "timer",
-      "unit": "fraqtoos-chia-winrate.timer",
-      "schedule": "weekly Sun 11:00",
-      "max_age_h": 200,
-      "critical": false,
-      "note": "Answers whether the 2026-09-04 peer fix recovered the orphaned blocks. Counts via chia_total_farmed_xch / 0.125 and integrates expected wins over the window. Baseline 69% by the same method. States its own confidence: noise below 7 days, suggestive to 14, a verdict after.",
-      "systemd": {
-        "description": "Chia win-rate check (post peer-fix)",
-        "exec": "/home/work/.venvs/fraqtoos/bin/python /home/work/fraqtoos/ops/chia_winrate.py",
-        "cwd": "/home/work/fraqtoos",
-        "on_calendar": [
-          "Sun *-*-* 11:00:00"
-        ],
-        "timeout_sec": 180,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "Remote access watch",
-      "kind": "timer",
-      "unit": "fraqtoos-access-watch.timer",
-      "schedule": "every 6h",
-      "max_age_h": 8,
-      "critical": false,
-      "note": "Verifies the five published URLs still answer with the published credentials, that the BMC stays isolated from the shared password, that nginx's hardcoded chat token still matches the app's, and that the wildcard cert is renewing. None of that shows in a unit state.",
-      "systemd": {
-        "description": "Remote access watch - published URLs still work with the published credentials",
-        "exec": "/usr/bin/python3 /home/work/fraqtoos/ops/access_watch.py",
-        "cwd": "/home/work/fraqtoos",
-        "on_calendar": [
-          "*-*-* 02,08,14,20:15:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "Jellyfin",
-      "kind": "service",
-      "unit": "jellyfin.service",
-      "critical": false,
-      "note": "Free media server on :8096 (LAN only), NVENC transcoding on the 3080 Ti. Media from NAS /mnt/multimedia. Added 2026-10-08."
-    },
-    {
-      "name": "Plex Media Server",
-      "kind": "service",
-      "unit": "plexmediaserver.service",
-      "critical": false,
-      "note": "Plex on :32400 (LAN only), media from NAS /mnt/multimedia. GPU transcoding needs Plex Pass. Moved off the NAS (ARM, can't transcode) 2026-10-08."
-    },
-    {
-      "name": "Times Frame Data",
-      "kind": "service",
-      "unit": "divoom-frame-data.service",
-      "critical": false,
-      "note": "Renders the Divoom Times Frame dashboard + slides on :9930 (~/divoom-frame). If it is down the frame keeps its last image. Added 2026-10-15."
-    },
-    {
-      "name": "Times Frame Watcher",
-      "kind": "service",
-      "unit": "divoom-frame-watch.service",
-      "critical": false,
-      "note": "Pushes screens + ticks the clock on the frame at 192.168.0.121 (DHCP-reserved 10-15). Down = frozen clock on the wall. Added 2026-10-15."
-    },
-    {
-      "name": "OB Terminal",
-      "kind": "service",
-      "unit": "ob-terminal.service",
-      "critical": false,
-      "note": "F&O strength boards on :8570 (~/ob-terminal), 5paisa live feed 09:13-15:30 IST, last close otherwise. Down = no board; nothing else depends on it. Added 2026-10-15."
-    },
-    {
-      "name": "Jellyfin via HTTPS",
-      "kind": "http",
-      "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
-      "critical": false,
-      "note": "Public remote-access path (nginx -> :8096), added 2026-10-08. No basic auth; Jellyfin login + nginx login rate limit."
-    },
-    {
-      "name": "PEARL Auto-sell",
-      "kind": "service",
-      "unit": "pearl-autosell.service",
-      "critical": false,
-      "note": "Sells mined PEARL + NOCK on SafeTrade (pearlusdt floor $1.30, nockusdt floor $0.015) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
-    },
-    {
-      "name": "Coin profit watch",
-      "kind": "timer",
-      "unit": "fraqtoos-coin-watch.timer",
-      "schedule": "every 30m",
-      "max_age_h": 3,
-      "critical": false,
-      "note": "Pearl vs Quantus profit per 3070 Ti (electricity only, no tax). WhatsApps once when Quantus leads by 3 % on 2 runs in a row, once more when Pearl is back ahead (~/pearl-autosell/coin_watch.py, state coin_watch_state.json, --dry = no send). Exit 1 = a price/pool API failed. Added 2026-11-01.",
-      "systemd": {
-        "description": "Coin profit watch - Pearl vs Quantus WhatsApp alert",
-        "exec": "/usr/bin/python3 /home/work/pearl-autosell/coin_watch.py",
-        "cwd": "/home/work/pearl-autosell",
-        "on_calendar": [
-          "*-*-* *:00/30:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "EarnKaro Deals",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-deals.timer",
-      "schedule": "every 5m 09:00-22:55 (one deal per tick, cap 170/day)",
-      "max_age_h": 12,
-      "critical": false,
-      "note": "Posts one limited-time Flipkart/Myntra/Tata CLiQ deal per run to the owner's public Telegram channel via EK Affiliaters convert_share (~/earnkaro-bot, python -m deals.run; --dry-run = convert_only, changes nothing). Alerts itself (deduped) on no post for 2 h, EK failing, store unreadable, posts not reaching the channel; on_failure off because a 15-min job would page every 15 min. max_age 12 h covers the 22:45-09:00 gap. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Deals - post one deal to the Telegram channel",
-        "exec": "/usr/bin/python3.12 -m deals.run",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* 09..22:00/5:00"
-        ],
-        "timeout_sec": 600,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "EarnKaro Daily Top 5",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-daily.timer",
-      "schedule": "21:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Posts 'Top deals of the day' (5 best of today's confirmed posts) to @savings_dhamaka via the own bot (~/earnkaro-bot, python -m deals.digest daily). Once per day (kv digest:daily:<date>); skips if < 3 deals or no TG_BOT_TOKEN. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Daily Top 5 - deals roundup",
-        "exec": "/usr/bin/python3.12 -m deals.digest daily",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* 21:00:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "EarnKaro Weekly Roundup",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-weekly.timer",
-      "schedule": "Sun 19:00",
-      "max_age_h": 170,
-      "critical": false,
-      "note": "Posts 'Best deals of the week' (7 best confirmed posts of the last 7 days) to @savings_dhamaka (~/earnkaro-bot, python -m deals.digest weekly). Once per ISO week. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Weekly Roundup - best deals of the week",
-        "exec": "/usr/bin/python3.12 -m deals.digest weekly",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "Sun *-*-* 19:00:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "EarnKaro Morning Deals",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-morning.timer",
-      "schedule": "08:55",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Good-morning post to @savings_dhamaka: fresh scan of Flipkart/Myntra/Tata CLiQ, best 5 deals in one list (~/earnkaro-bot, python -m deals.digest morning). Once per day (kv digest:morning:<date>); the deals are recorded so the 5-min stream won't repeat them. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Morning Deals - good-morning top 5",
-        "exec": "/usr/bin/python3.12 -m deals.digest morning",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* 08:55:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "EarnKaro Budget Roundup",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-budget.timer",
-      "schedule": "13:00, 18:00",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "'₹199 se kam ke Loot Deals' (or ₹499) roundup of deals posted since the previous roundup (~/earnkaro-bot, python -m deals.digest budget). Once per slot; skips if < 3 deals. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Budget Roundup - under 199/499 deals",
-        "exec": "/usr/bin/python3.12 -m deals.digest budget",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* 13:00:00",
-          "*-*-* 18:00:00"
-        ],
-        "timeout_sec": 300,
-        "on_failure": true
-      }
-    },
-    {
-      "name": "EarnKaro Price Alerts",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-watch.timer",
-      "schedule": "every 1m (50 s long-poll)",
-      "max_age_h": 1,
-      "critical": false,
-      "note": "Listens to DMs to @SavingsDhamakabot (python -m deals.watch) and saves members' price alerts ('boat earbuds under 999'); deals.run DMs matching deals after each channel post. on_failure off: a 1-min job would page every minute on a Telegram blip; max_age 1 h catches a dead timer. Added 2026-11-02.",
-      "systemd": {
-        "description": "EarnKaro Price Alerts - read bot DMs",
-        "exec": "/usr/bin/python3.12 -m deals.watch",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* *:*:00"
-        ],
-        "timeout_sec": 120,
-        "on_failure": false
-      }
-    },
-    {
-      "name": "Savings Dhamaka Daily Reel",
-      "kind": "timer",
-      "unit": "fraqtoos-deals-reel.timer",
-      "schedule": "02:00 + 10 min after every boot (resumes an interrupted night; only starts 02:00-08:30)",
-      "max_age_h": 30,
-      "critical": false,
-      "note": "Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04. 11-05: layout v2 (reel_v2.py: real product card on top, her below, music + SFX), QA gates on stills/clips (qa.py), CodeFormer face pass, delivered.json marker; OnBootSec resumes a reel a reboot interrupted, and runs outside 02:00-08:30 exit without starting.",
-      "systemd": {
-        "description": "Savings Dhamaka Daily Reel - deals video with new looks",
-        "exec": "/usr/bin/python3.12 /home/work/ai-video/deals-reel/daily/daily_reel.py",
-        "cwd": "/home/work/ai-video/deals-reel/daily",
-        "on_calendar": [
-          "*-*-* 02:00:00"
-        ],
-        "timeout_sec": 21600,
-        "on_failure": false,
-        "on_boot_sec": "10min"
-      }
-    },
-    {
-      "name": "EarnKaro Amazon Channel Reposts",
-      "kind": "timer",
-      "unit": "fraqtoos-earnkaro-amazon.timer",
-      "schedule": "every 10 min",
-      "max_age_h": 2,
-      "critical": false,
-      "note": "Reposts the official Amazon Associates WhatsApp channel's deal roundups to @savings_dhamaka with the owner's tag savingdhamaka-21 (python -m deals.amazon_channel). Reads the channel via wa-service /channel-messages; every amzaff.to link is converted to amazon.in/dp/ASIN?tag=… or the post is skipped. 09:00-23:00, at most 1 per 20 min, silent, Associates disclosure appended. Added 2026-11-05.",
-      "systemd": {
-        "description": "EarnKaro Amazon Channel Reposts",
-        "exec": "/usr/bin/python3.12 -m deals.amazon_channel",
-        "cwd": "/home/work/earnkaro-bot",
-        "on_calendar": [
-          "*-*-* *:00/10:30"
-        ],
-        "timeout_sec": 300,
-        "on_failure": false
-      }
-    }
-  ]
+ "_about": [
+  "Single source of truth for everything scheduled or long-running on this server.",
+  "Written 2026-09-01. Before this, five independent schedulers each held part of the",
+  "picture and nothing held all of it, so the watchdog covered 6 of 31 entries and",
+  "drifted every time a bot was added.",
+  "",
+  "The watchdog reads THIS file. Adding a job here is what makes it monitored.",
+  "",
+  "kind decides how health is probed - no job needs to be instrumented for it:",
+  "  orchestrator : ran by fraqtoos orchestrator; probed from logs/state.json",
+  "  service      : systemd unit expected active; probed with systemctl is-active",
+  "  timer        : systemd timer; probed from LastTriggerUSec + the unit's Result",
+  "  pm2          : pm2-managed app; probed from `pm2 jlist` status + restart count",
+  "  cron         : crontab entry; probed from the mtime of the log it writes",
+  "",
+  "max_age_h is how long the job may go without a successful run before it is stale.",
+  "Set it to roughly twice the interval, so one missed run is tolerated and two are not.",
+  "critical=true means a failure pages over BOTH channels (WhatsApp + ntfy)."
+ ],
+ "jobs": [
+  {
+   "name": "Orchestrator",
+   "kind": "service",
+   "unit": "fraqtoos.service",
+   "critical": true,
+   "note": "owns every orchestrator-kind job below; if it is down, none of them run"
+  },
+  {
+   "name": "WhatsApp Service",
+   "kind": "service",
+   "unit": "wa-service.service",
+   "critical": true,
+   "note": "primary alert path; 5h51m silent outage 2026-08-16"
+  },
+  {
+   "name": "WhatsApp file sends",
+   "kind": "http",
+   "url": "http://127.0.0.1:3131/health/sends",
+   "critical": false,
+   "note": "503 while the last /send-file failed. /status stayed 'ready' through a 6-day PDF outage from 2026-09-23 (wwebjs __x_id collision)."
+  },
+  {
+   "name": "Ollama",
+   "kind": "service",
+   "unit": "ollama.service",
+   "critical": false,
+   "note": "AI briefs degrade without it; bots still send"
+  },
+  {
+   "name": "FraqtoOS Chat",
+   "kind": "service",
+   "unit": "fraqtoos-chat.service",
+   "critical": false
+  },
+  {
+   "name": "Grafana WA Bridge",
+   "kind": "service",
+   "unit": "grafana-wa-bridge.service",
+   "critical": false
+  },
+  {
+   "name": "Prometheus",
+   "kind": "service",
+   "unit": "prometheus.service",
+   "critical": false
+  },
+  {
+   "name": "Grafana",
+   "kind": "service",
+   "unit": "grafana-server.service",
+   "critical": false
+  },
+  {
+   "name": "Chia Exporter",
+   "kind": "service",
+   "unit": "chia_exporter.service",
+   "critical": false
+  },
+  {
+   "name": "NAS Exporter",
+   "kind": "service",
+   "unit": "nas_exporter.service",
+   "critical": false
+  },
+  {
+   "name": "Instagram Exporter",
+   "kind": "service",
+   "unit": "ig_exporter.service",
+   "critical": false,
+   "note": "Reel insights from the Instagram Graph API -> Prometheus :9831 -> Grafana 'Instagram Reels' (~/ig-graph). Also refreshes the 60-day token; ig_token_days_left < 7 means it is failing to. Added 2026-11-07 (install: sudo bash ~/ig-graph/deploy/install.sh)."
+  },
+  {
+   "name": "Node Exporter",
+   "kind": "service",
+   "unit": "node_exporter.service",
+   "critical": false
+  },
+  {
+   "name": "NVIDIA GPU Exporter",
+   "kind": "service",
+   "unit": "nvidia_gpu_exporter.service",
+   "critical": false
+  },
+  {
+   "name": "IPMI Exporter",
+   "kind": "service",
+   "unit": "ipmi_exporter.service",
+   "critical": false
+  },
+  {
+   "name": "Portfolio Bot",
+   "kind": "timer",
+   "unit": "fraqtoos-portfolio.timer",
+   "schedule": "06:00",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Selenium + TOTP against two brokers. Exit 4 = a broker was missing. 900s because each broker now gets 3 attempts with a 35s wait between them for a fresh TOTP window; worst case is ~6 min.",
+   "systemd": {
+    "description": "Portfolio Bot - 5paisa + Kite holdings report",
+    "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py",
+    "cwd": "/home/work/portfolio_bot",
+    "on_calendar": [
+     "*-*-* 06:00:00"
+    ],
+    "timeout_sec": 900,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Portfolio Snapshot",
+   "kind": "timer",
+   "unit": "fraqtoos-portfolio-snapshot.timer",
+   "schedule": "Mon-Fri 16:00",
+   "max_age_h": 80,
+   "critical": false,
+   "note": "Kite-only re-fetch after the 15:30 close, so the Times Frame shows closing P&L instead of the 06:00 figure. Weekdays only; a long max_age_h covers the weekend gap. Writes portfolio_snapshot.json and nothing else - no AI, no WhatsApp. Exit 1 = Kite returned nothing, previous snapshot deliberately left intact.",
+   "systemd": {
+    "description": "Portfolio snapshot - Kite close prices for the Times Frame",
+    "exec": "/home/work/.venvs/portfolio/bin/python portfolio_bot.py --snapshot-only",
+    "cwd": "/home/work/portfolio_bot",
+    "on_calendar": [
+     "Mon..Fri 16:00:00"
+    ],
+    "timeout_sec": 600,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Chia Health Monitor",
+   "kind": "timer",
+   "unit": "fraqtoos-chia-health.timer",
+   "schedule": "08:00",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Was 'silent' under the orchestrator, but it runs once a day - paging on failure is not noisy at that rate.",
+   "systemd": {
+    "description": "Chia Health Monitor - daily farm summary",
+    "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_health",
+    "cwd": "/home/work/fraqtoos",
+    "on_calendar": [
+     "*-*-* 08:00:00"
+    ],
+    "timeout_sec": 120,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Crypto Portfolio Bot",
+   "kind": "timer",
+   "unit": "fraqtoos-crypto.timer",
+   "schedule": "09:00, 21:00",
+   "max_age_h": 15,
+   "critical": false,
+   "note": "Exit 4 = a chain could not be read; the total is partial.",
+   "systemd": {
+    "description": "Crypto Portfolio Bot - on-chain holdings (Base/ETH/BSC)",
+    "exec": "/usr/local/bin/node index.js --once",
+    "cwd": "/home/work/Desktop/crypto",
+    "on_calendar": [
+     "*-*-* 09:00:00",
+     "*-*-* 21:00:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "IPO Last-Day Alert",
+   "kind": "timer",
+   "unit": "fraqtoos-ipo.timer",
+   "schedule": "10:10",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Migrated off the orchestrator loop 2026-09-01 (Phase 3 pilot). Silent when nothing matches - a quiet run is still a successful run.",
+   "systemd": {
+    "description": "IPO Bot - last-day alert (GMP >= 30%)",
+    "exec": "/usr/bin/python3.12 ipo_bot.py --min-gmp 30 --closing-today",
+    "cwd": "/home/work/ipo-bot",
+    "on_calendar": "*-*-* 10:10:00",
+    "timeout_sec": 240
+   }
+  },
+  {
+   "name": "IPO Allotment Checker",
+   "kind": "timer",
+   "unit": "fraqtoos-ipo-allotment.timer",
+   "schedule": "18:00, 21:30",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Reads Kite's own IPO applications (no PAN, no registrar captcha). Announces a status only once; silent runs are normal.",
+   "systemd": {
+    "description": "IPO Bot - allotment checker (Kite applications)",
+    "exec": "/home/work/.venvs/portfolio/bin/python ipo_allotment.py",
+    "cwd": "/home/work/ipo-bot",
+    "on_calendar": [
+     "*-*-* 18:00:00",
+     "*-*-* 21:30:00"
+    ],
+    "timeout_sec": 300
+   }
+  },
+  {
+   "name": "Chia AI Watcher",
+   "kind": "timer",
+   "unit": "fraqtoos-chia-ai.timer",
+   "schedule": "every 2h",
+   "max_age_h": 6,
+   "critical": false,
+   "note": "on_failure disabled deliberately: every 2h, so a persistent fault would page 12x a day. The registry sweep still reports it, deduped.",
+   "systemd": {
+    "description": "Chia AI Watcher - classifies new log errors",
+    "exec": "/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_ai_watcher",
+    "cwd": "/home/work/fraqtoos",
+    "on_calendar": [
+     "*-*-* 00/2:00:00"
+    ],
+    "timeout_sec": 200,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "Utility Bill Bot",
+   "kind": "pm2",
+   "app": "utility-bill-bot",
+   "critical": false,
+   "note": "sole owner of its schedule since 2026-09-01: internal node-cron at 09:00"
+  },
+  {
+   "name": "Chia Win Notifier",
+   "kind": "pm2",
+   "app": "chia-win-notifier",
+   "critical": false
+  },
+  {
+   "name": "pm2 logrotate",
+   "kind": "pm2",
+   "app": "pm2-logrotate",
+   "critical": false
+  },
+  {
+   "name": "SMART metrics",
+   "kind": "timer",
+   "unit": "smartmon.timer",
+   "max_age_h": 1,
+   "critical": false
+  },
+  {
+   "name": "SMART fleet watch",
+   "kind": "timer",
+   "unit": "smart-watch.timer",
+   "max_age_h": 2,
+   "critical": false
+  },
+  {
+   "name": "Root disk watch",
+   "kind": "timer",
+   "unit": "root-disk-watch.timer",
+   "max_age_h": 1,
+   "critical": false
+  },
+  {
+   "name": "I350 BAR recover",
+   "kind": "timer",
+   "unit": "i350-bar-recover.timer",
+   "max_age_h": 2,
+   "critical": false
+  },
+  {
+   "name": "Drive self-test",
+   "kind": "timer",
+   "unit": "drive-selftest.timer",
+   "max_age_h": 30,
+   "critical": false,
+   "done_marker": "/var/lib/drive-selftest/complete",
+   "note": "A finite campaign, not a daemon. drive-selftest.sh touches done_marker when every drive is tested and the timer is then disabled; a new campaign clears the state dir and re-enables it."
+  },
+  {
+   "name": "NAS mount heal",
+   "kind": "timer",
+   "unit": "nas-mount-heal.timer",
+   "max_age_h": 2,
+   "critical": false
+  },
+  {
+   "name": "Odysseus healthcheck",
+   "kind": "timer",
+   "unit": "odysseus-healthcheck.timer",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "OnCalendar=daily (~00:03) — a 2h budget was a registry error, not a fault"
+  },
+  {
+   "name": "Obsidian vault sync",
+   "kind": "timer",
+   "unit": "fraqtoos-obsidian-vault.timer",
+   "schedule": "every 30m",
+   "max_age_h": 2,
+   "critical": false,
+   "note": "Every 30m. Redirect kept so update_vault.log stays the record it has always been.",
+   "systemd": {
+    "description": "Obsidian vault - sync notes",
+    "exec": "/bin/bash -c '/home/work/obsidian-app/update_vault.sh >> /home/work/obsidian-app/logs/update_vault.log 2>&1'",
+    "cwd": "/home/work/obsidian-app",
+    "on_calendar": [
+     "*-*-* *:00/30:00"
+    ],
+    "timeout_sec": 600,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "NAS backup",
+   "kind": "timer",
+   "unit": "fraqtoos-nas-backup.timer",
+   "schedule": "03:00",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Once a day and it matters, so it pages on failure. It already raises its own ntfy alert too. Writes last-run.log itself, so no redirect is needed.",
+   "systemd": {
+    "description": "NAS backup - nightly rsync to the QNAP",
+    "exec": "/home/work/.server-backup/run-backup.sh",
+    "cwd": "/home/work/.server-backup",
+    "on_calendar": [
+     "*-*-* 03:00:00"
+    ],
+    "timeout_sec": 7200,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "ntfy (alert fallback)",
+   "kind": "http",
+   "url": "http://192.168.0.117:8091/v1/health",
+   "critical": true,
+   "note": "The second alert channel. It is a docker container, so systemd cannot see it. If this and wa-service are both down, nothing can page at all - which is exactly the blind spot the second channel was added to remove."
+  },
+  {
+   "name": "nginx (reverse proxy)",
+   "kind": "service",
+   "unit": "nginx.service",
+   "critical": false,
+   "note": "Serves grafana/dash/obsidian/ntfy on *.fraqtos.duckdns.org with the Let's Encrypt wildcard. Replaced three Cloudflare quick tunnels 2026-09-05."
+  },
+  {
+   "name": "ntfy via HTTPS",
+   "kind": "http",
+   "url": "https://ntfy.fraqtos.duckdns.org/v1/health",
+   "critical": true,
+   "note": "The public face of the alert fallback. If this fails the phone stops receiving, even though the container may look healthy on the LAN."
+  },
+  {
+   "name": "DuckDNS refresh",
+   "kind": "timer",
+   "unit": "fraqtoos-duckdns.timer",
+   "schedule": "every 6h",
+   "max_age_h": 13,
+   "critical": false,
+   "note": "Keeps fraqtos.duckdns.org alive and pointing at the current public IP. DuckDNS drops un-updated hostnames, and losing it would take out all five service URLs and certificate renewal. Exit 4 if the record and the live IP disagree.",
+   "systemd": {
+    "description": "DuckDNS record refresh",
+    "exec": "/home/work/fraqtoos/ops/duckdns/refresh.sh",
+    "cwd": "/home/work/fraqtoos/ops/duckdns",
+    "on_calendar": [
+     "*-*-* 00/6:00:00"
+    ],
+    "timeout_sec": 120,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Jellyfin scan watch",
+   "kind": "timer",
+   "unit": "fraqtoos-jellyfin-scan.timer",
+   "schedule": "every 10min",
+   "max_age_h": 1,
+   "critical": false,
+   "note": "Rescans Jellyfin when files land in /mnt/multimedia/{Movies,TV Shows}. CIFS has no inotify, so new movies were invisible until the next scheduled scan. Waits one quiet cycle (copy in progress) and defers while anything is playing.",
+   "systemd": {
+    "description": "Jellyfin new-media scan",
+    "exec": "/home/work/fraqtoos/ops/jellyfin/scan_watch.sh",
+    "cwd": "/home/work/fraqtoos/ops/jellyfin",
+    "on_calendar": [
+     "*:0/10"
+    ],
+    "timeout_sec": 120,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Chia win-rate check",
+   "kind": "timer",
+   "unit": "fraqtoos-chia-winrate.timer",
+   "schedule": "weekly Sun 11:00",
+   "max_age_h": 200,
+   "critical": false,
+   "note": "Answers whether the 2026-09-04 peer fix recovered the orphaned blocks. Counts via chia_total_farmed_xch / 0.125 and integrates expected wins over the window. Baseline 69% by the same method. States its own confidence: noise below 7 days, suggestive to 14, a verdict after.",
+   "systemd": {
+    "description": "Chia win-rate check (post peer-fix)",
+    "exec": "/home/work/.venvs/fraqtoos/bin/python /home/work/fraqtoos/ops/chia_winrate.py",
+    "cwd": "/home/work/fraqtoos",
+    "on_calendar": [
+     "Sun *-*-* 11:00:00"
+    ],
+    "timeout_sec": 180,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "Remote access watch",
+   "kind": "timer",
+   "unit": "fraqtoos-access-watch.timer",
+   "schedule": "every 6h",
+   "max_age_h": 8,
+   "critical": false,
+   "note": "Verifies the five published URLs still answer with the published credentials, that the BMC stays isolated from the shared password, that nginx's hardcoded chat token still matches the app's, and that the wildcard cert is renewing. None of that shows in a unit state.",
+   "systemd": {
+    "description": "Remote access watch - published URLs still work with the published credentials",
+    "exec": "/usr/bin/python3 /home/work/fraqtoos/ops/access_watch.py",
+    "cwd": "/home/work/fraqtoos",
+    "on_calendar": [
+     "*-*-* 02,08,14,20:15:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "Jellyfin",
+   "kind": "service",
+   "unit": "jellyfin.service",
+   "critical": false,
+   "note": "Free media server on :8096 (LAN only), NVENC transcoding on the 3080 Ti. Media from NAS /mnt/multimedia. Added 2026-10-08."
+  },
+  {
+   "name": "Plex Media Server",
+   "kind": "service",
+   "unit": "plexmediaserver.service",
+   "critical": false,
+   "note": "Plex on :32400 (LAN only), media from NAS /mnt/multimedia. GPU transcoding needs Plex Pass. Moved off the NAS (ARM, can't transcode) 2026-10-08."
+  },
+  {
+   "name": "Times Frame Data",
+   "kind": "service",
+   "unit": "divoom-frame-data.service",
+   "critical": false,
+   "note": "Renders the Divoom Times Frame dashboard + slides on :9930 (~/divoom-frame). If it is down the frame keeps its last image. Added 2026-10-15."
+  },
+  {
+   "name": "Times Frame Watcher",
+   "kind": "service",
+   "unit": "divoom-frame-watch.service",
+   "critical": false,
+   "note": "Pushes screens + ticks the clock on the frame at 192.168.0.121 (DHCP-reserved 10-15). Down = frozen clock on the wall. Added 2026-10-15."
+  },
+  {
+   "name": "OB Terminal",
+   "kind": "service",
+   "unit": "ob-terminal.service",
+   "critical": false,
+   "note": "F&O strength boards on :8570 (~/ob-terminal), 5paisa live feed 09:13-15:30 IST, last close otherwise. Down = no board; nothing else depends on it. Added 2026-10-15."
+  },
+  {
+   "name": "Jellyfin via HTTPS",
+   "kind": "http",
+   "url": "https://jellyfin.fraqtos.duckdns.org/System/Info/Public",
+   "critical": false,
+   "note": "Public remote-access path (nginx -> :8096), added 2026-10-08. No basic auth; Jellyfin login + nginx login rate limit."
+  },
+  {
+   "name": "PEARL Auto-sell",
+   "kind": "service",
+   "unit": "pearl-autosell.service",
+   "critical": false,
+   "note": "Sells mined PEARL + NOCK on SafeTrade (pearlusdt floor $1.30, nockusdt floor $0.015) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
+  },
+  {
+   "name": "Coin profit watch",
+   "kind": "timer",
+   "unit": "fraqtoos-coin-watch.timer",
+   "schedule": "every 30m",
+   "max_age_h": 3,
+   "critical": false,
+   "note": "Pearl vs Quantus profit per 3070 Ti (electricity only, no tax). WhatsApps once when Quantus leads by 3 % on 2 runs in a row, once more when Pearl is back ahead (~/pearl-autosell/coin_watch.py, state coin_watch_state.json, --dry = no send). Exit 1 = a price/pool API failed. Added 2026-11-01.",
+   "systemd": {
+    "description": "Coin profit watch - Pearl vs Quantus WhatsApp alert",
+    "exec": "/usr/bin/python3 /home/work/pearl-autosell/coin_watch.py",
+    "cwd": "/home/work/pearl-autosell",
+    "on_calendar": [
+     "*-*-* *:00/30:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "EarnKaro Deals",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-deals.timer",
+   "schedule": "every 5m 09:00-22:55 (one deal per tick, cap 170/day)",
+   "max_age_h": 12,
+   "critical": false,
+   "note": "Posts one limited-time Flipkart/Myntra/Tata CLiQ deal per run to the owner's public Telegram channel via EK Affiliaters convert_share (~/earnkaro-bot, python -m deals.run; --dry-run = convert_only, changes nothing). Alerts itself (deduped) on no post for 2 h, EK failing, store unreadable, posts not reaching the channel; on_failure off because a 15-min job would page every 15 min. max_age 12 h covers the 22:45-09:00 gap. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Deals - post one deal to the Telegram channel",
+    "exec": "/usr/bin/python3.12 -m deals.run",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* 09..22:00/5:00"
+    ],
+    "timeout_sec": 600,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "EarnKaro Daily Top 5",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-daily.timer",
+   "schedule": "21:00",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Posts 'Top deals of the day' (5 best of today's confirmed posts) to @savings_dhamaka via the own bot (~/earnkaro-bot, python -m deals.digest daily). Once per day (kv digest:daily:<date>); skips if < 3 deals or no TG_BOT_TOKEN. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Daily Top 5 - deals roundup",
+    "exec": "/usr/bin/python3.12 -m deals.digest daily",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* 21:00:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "EarnKaro Weekly Roundup",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-weekly.timer",
+   "schedule": "Sun 19:00",
+   "max_age_h": 170,
+   "critical": false,
+   "note": "Posts 'Best deals of the week' (7 best confirmed posts of the last 7 days) to @savings_dhamaka (~/earnkaro-bot, python -m deals.digest weekly). Once per ISO week. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Weekly Roundup - best deals of the week",
+    "exec": "/usr/bin/python3.12 -m deals.digest weekly",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "Sun *-*-* 19:00:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "EarnKaro Morning Deals",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-morning.timer",
+   "schedule": "08:55",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Good-morning post to @savings_dhamaka: fresh scan of Flipkart/Myntra/Tata CLiQ, best 5 deals in one list (~/earnkaro-bot, python -m deals.digest morning). Once per day (kv digest:morning:<date>); the deals are recorded so the 5-min stream won't repeat them. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Morning Deals - good-morning top 5",
+    "exec": "/usr/bin/python3.12 -m deals.digest morning",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* 08:55:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "EarnKaro Budget Roundup",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-budget.timer",
+   "schedule": "13:00, 18:00",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "'₹199 se kam ke Loot Deals' (or ₹499) roundup of deals posted since the previous roundup (~/earnkaro-bot, python -m deals.digest budget). Once per slot; skips if < 3 deals. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Budget Roundup - under 199/499 deals",
+    "exec": "/usr/bin/python3.12 -m deals.digest budget",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* 13:00:00",
+     "*-*-* 18:00:00"
+    ],
+    "timeout_sec": 300,
+    "on_failure": true
+   }
+  },
+  {
+   "name": "EarnKaro Price Alerts",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-watch.timer",
+   "schedule": "every 1m (50 s long-poll)",
+   "max_age_h": 1,
+   "critical": false,
+   "note": "Listens to DMs to @SavingsDhamakabot (python -m deals.watch) and saves members' price alerts ('boat earbuds under 999'); deals.run DMs matching deals after each channel post. on_failure off: a 1-min job would page every minute on a Telegram blip; max_age 1 h catches a dead timer. Added 2026-11-02.",
+   "systemd": {
+    "description": "EarnKaro Price Alerts - read bot DMs",
+    "exec": "/usr/bin/python3.12 -m deals.watch",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* *:*:00"
+    ],
+    "timeout_sec": 120,
+    "on_failure": false
+   }
+  },
+  {
+   "name": "Savings Dhamaka Daily Reel",
+   "kind": "timer",
+   "unit": "fraqtoos-deals-reel.timer",
+   "schedule": "02:00 + 10 min after every boot (resumes an interrupted night; only starts 02:00-08:30)",
+   "max_age_h": 30,
+   "critical": false,
+   "note": "Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04. 11-05: layout v2 (reel_v2.py: real product card on top, her below, music + SFX), QA gates on stills/clips (qa.py), CodeFormer face pass, delivered.json marker; OnBootSec resumes a reel a reboot interrupted, and runs outside 02:00-08:30 exit without starting.",
+   "systemd": {
+    "description": "Savings Dhamaka Daily Reel - deals video with new looks",
+    "exec": "/usr/bin/python3.12 /home/work/ai-video/deals-reel/daily/daily_reel.py",
+    "cwd": "/home/work/ai-video/deals-reel/daily",
+    "on_calendar": [
+     "*-*-* 02:00:00"
+    ],
+    "timeout_sec": 21600,
+    "on_failure": false,
+    "on_boot_sec": "10min"
+   }
+  },
+  {
+   "name": "EarnKaro Amazon Channel Reposts",
+   "kind": "timer",
+   "unit": "fraqtoos-earnkaro-amazon.timer",
+   "schedule": "every 10 min",
+   "max_age_h": 2,
+   "critical": false,
+   "note": "Reposts the official Amazon Associates WhatsApp channel's deal roundups to @savings_dhamaka with the owner's tag savingdhamaka-21 (python -m deals.amazon_channel). Reads the channel via wa-service /channel-messages; every amzaff.to link is converted to amazon.in/dp/ASIN?tag=… or the post is skipped. 09:00-23:00, at most 1 per 20 min, silent, Associates disclosure appended. Added 2026-11-05.",
+   "systemd": {
+    "description": "EarnKaro Amazon Channel Reposts",
+    "exec": "/usr/bin/python3.12 -m deals.amazon_channel",
+    "cwd": "/home/work/earnkaro-bot",
+    "on_calendar": [
+     "*-*-* *:00/10:30"
+    ],
+    "timeout_sec": 300,
+    "on_failure": false
+   }
+  }
+ ]
 }
