@@ -649,6 +649,26 @@
       }
     },
     {
+      "name": "Kabaddi Uncut Daily Reel",
+      "kind": "timer",
+      "unit": "fraqtoos-kabaddi-reel.timer",
+      "schedule": "22:30 + 10 min after every boot (only starts 22:30-01:50, so the 02:00 deals reel keeps the GPU)",
+      "max_age_h": 30,
+      "critical": false,
+      "note": "Daily ~30 s Hinglish kabaddi reel for Instagram @kabaddiuncut (~/ai-video/kabaddi/daily_kabaddi.py). Weekday rotation news/player/explainer/debate; facts only from Google News RSS + Wikipedia, gpt-oss:120b script rejected if it states a number not in the facts. Reuses the deals reel's GPU stages (OmniVoice, Klein, LTX, LatentSync, CodeFormer, RIFE) with its own anchor (assets/ref.png + voice_ref.wav), Ollama STOPPED while they run; GPU retries stop 01:40. Posts with IG_ENV=~/.config/instagram/kabaddi.env, copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). WhatsApps its own failures. Added 2026-11-08.",
+      "systemd": {
+        "description": "Kabaddi Uncut Daily Reel - Hinglish kabaddi reel for Instagram",
+        "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_kabaddi.py",
+        "cwd": "/home/work/ai-video/kabaddi",
+        "on_calendar": [
+          "*-*-* 22:30:00"
+        ],
+        "timeout_sec": 14400,
+        "on_failure": false,
+        "on_boot_sec": "10min"
+      }
+    },
+    {
       "name": "EarnKaro Amazon Channel Reposts",
       "kind": "timer",
       "unit": "fraqtoos-earnkaro-amazon.timer",
