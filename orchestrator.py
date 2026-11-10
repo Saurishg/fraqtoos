@@ -233,7 +233,8 @@ schedule.every().day.at("12:00").do(run_full)
 # fraqtoos-ipo.timer at 10:10 with Persistent=true, so a reboot across the
 # scheduled minute no longer silently eats the day's only IPO message. Both
 # bot keys stay below for manual --run; neither is scheduled here.
-schedule.every().day.at("23:00").do(send_daily_digest)
+# 21:00, not 23:00 (2026-11-10): the reels night chain stops Ollama from 22:00, and the digest is written by it.
+schedule.every().day.at("21:00").do(send_daily_digest)
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
