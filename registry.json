@@ -652,16 +652,17 @@
       "name": "Kabaddi Uncut Daily Reel",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-reel.timer",
-      "schedule": "22:30 + 10 min after every boot (only starts 22:30-01:50, so the 02:00 deals reel keeps the GPU)",
+      "schedule": "22:30 build + 13:00 post, + 10 min after every boot (builds only 22:30-01:50, so the 02:00 deals reel keeps the GPU; posts only 13:00-21:30)",
       "max_age_h": 30,
       "critical": false,
-      "note": "Daily ~30 s Hinglish kabaddi reel for Instagram @kabaddiuncut (~/ai-video/kabaddi/daily_kabaddi.py). Weekday rotation news/player/explainer/debate; facts only from Google News RSS + Wikipedia, gpt-oss:120b script rejected if it states a number not in the facts. Reuses the deals reel's GPU stages (OmniVoice, Klein, LTX, LatentSync, CodeFormer, RIFE) with its own anchor (assets/ref.png + voice_ref.wav), Ollama STOPPED while they run; GPU retries stop 01:40. Posts with IG_ENV=~/.config/instagram/kabaddi.env, copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). WhatsApps its own failures. Added 2026-11-08.",
+      "note": "Daily ~30 s Hinglish kabaddi reel for Instagram @kabaddiuncut (~/ai-video/kabaddi/daily_kabaddi.py). Weekday rotation news/player/explainer/debate; facts only from Google News RSS + Wikipedia, gpt-oss:120b script rejected if it states a number not in the facts. Reuses the deals reel's GPU stages (OmniVoice, Klein, LTX, LatentSync, CodeFormer, RIFE) with its own anchor (assets/ref.png + voice_ref.wav), Ollama STOPPED while they run; GPU retries stop 01:40. Posts with IG_ENV=~/.config/instagram/kabaddi.env, copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). WhatsApps its own failures. Added 2026-11-08. Since 2026-11-10 the reel is built at night and HELD: the 13:00 run posts it (posting times 13:00 / 17:30 / 20:00 = this reel / photo post / day reel).",
       "systemd": {
         "description": "Kabaddi Uncut Daily Reel - Hinglish kabaddi reel for Instagram",
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_kabaddi.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
-          "*-*-* 22:30:00"
+          "*-*-* 22:30:00",
+          "*-*-* 13:00:00"
         ],
         "timeout_sec": 14400,
         "on_failure": false,
@@ -672,17 +673,18 @@
       "name": "Kabaddi Uncut Photo Reel",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-flash.timer",
-      "schedule": "05:30 build + 13:00 post, + 10 min after every boot (builds 05:00-11:00 after the deals reel, ~2.5 h of GPU; posts 12:00-21:30)",
+      "schedule": "05:30 build + 13:00 retry build + 20:00 post, + 10 min after every boot (builds 05:00-16:30 after the deals reel, ~2.5 h of GPU; posts 20:00-23:30)",
       "max_age_h": 30,
       "critical": false,
-      "note": "The second daily @kabaddiuncut reel (~/ai-video/kabaddi/daily_flash.py). Since 2026-11-10 evening it is a full AI-anchor reel like the night one (voice -> Klein stills -> LTX -> LatentSync -> CodeFormer -> RIFE, ~2.5 h with Ollama STOPPED, roughly 06:45-09:15), same anchor in a different outfit; if the GPU gives no usable still of her it falls back to the old Commons-photo layout. Own format rotation (never the night reel's format of the day, never news). Builds at 05:30 once the deals reel is done (waits while it runs or is still due), GPU retries stop at 12:30, posts at 13:00 with IG_ENV=~/.config/instagram/kabaddi.env (a build that ends after 13:00 posts itself), copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). The 13:00 run builds first if the morning build didn't happen (3.5 h GPU limit). WhatsApps its own failures. Added 2026-11-10.",
+      "note": "The second daily @kabaddiuncut reel (~/ai-video/kabaddi/daily_flash.py). Since 2026-11-10 evening it is a full AI-anchor reel like the night one (voice -> Klein stills -> LTX -> LatentSync -> CodeFormer -> RIFE, ~2.5 h with Ollama STOPPED, roughly 06:45-09:15), same anchor in a different outfit; if the GPU gives no usable still of her it falls back to the old Commons-photo layout. Own format rotation (never the night reel's format of the day, never news). Builds at 05:30 once the deals reel is done (waits while it runs or is still due), GPU retries stop at 19:30, posts at 20:00 with IG_ENV=~/.config/instagram/kabaddi.env (a build that ends after 20:00 posts itself), copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). 13:00 is a second build attempt; the 20:00 run builds first if there is still no reel (GPU only until 22:15, the night reel needs it at 22:30). WhatsApps its own failures. Added 2026-11-10.",
       "systemd": {
         "description": "Kabaddi Uncut Day Reel - second daily kabaddi anchor reel",
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_flash.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
           "*-*-* 05:30:00",
-          "*-*-* 13:00:00"
+          "*-*-* 13:00:00",
+          "*-*-* 20:00:00"
         ],
         "timeout_sec": 28800,
         "on_failure": false,
@@ -693,7 +695,7 @@
       "name": "Kabaddi Uncut Photo Post",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-photo.timer",
-      "schedule": "19:00 + 10 min after every boot (only 16:00-22:15)",
+      "schedule": "17:30 + 10 min after every boot (only 17:30-22:15)",
       "max_age_h": 30,
       "critical": false,
       "note": "Daily @kabaddiuncut photo post (~/ai-video/kabaddi/daily_photo.py): the latest kabaddi news (Bing + Google News, last 3 days, not posted before) as a 1080x1350 card, or a kabaddi fun fact from Wikipedia when there is no news. gpt-oss:20b writes Hinglish from only the source (not 120b: its cold load blocks Ollama ~5 min); a draft with a number, ordinal or name not in it is sent back, then the source's own words are used. Credited Commons photo, labelled representative. Posts via ig_post.py --image, which needs the media vhost (sudo bash ~/ig-graph/deploy/install-media.sh): Instagram fetches photos from a public URL. Copies to /mnt/nas/Kabaddi Uncut/posts, ONE WhatsApp text. Exit 4 = made but not posted. Added 2026-11-10.",
@@ -702,7 +704,7 @@
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_photo.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
-          "*-*-* 19:00:00"
+          "*-*-* 17:30:00"
         ],
         "timeout_sec": 3600,
         "on_failure": false,
