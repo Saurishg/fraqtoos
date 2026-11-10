@@ -726,6 +726,25 @@
         "timeout_sec": 300,
         "on_failure": false
       }
+    },
+    {
+      "name": "Arb Watch (Delta vs CoinDCX)",
+      "kind": "timer",
+      "unit": "fraqtoos-arb-watch.timer",
+      "schedule": "every 5 min",
+      "max_age_h": 1,
+      "critical": false,
+      "note": "READ-ONLY research logger (~/arb-watch/arb_log.py): every 5 min samples the perpetual futures listed on both Delta Exchange India and CoinDCX (public APIs, no keys, no orders) into data/arb.db. `arb_log.py report` shows how often a price gap beat the assumed 0.30 % round-trip cost and for how long. Started 2026-11-10 for one week (report due ~2026-11-17), then remove unless the user wants it kept.",
+      "systemd": {
+        "description": "Arb Watch - Delta Exchange India vs CoinDCX futures price log (read-only)",
+        "exec": "/usr/bin/python3.12 /home/work/arb-watch/arb_log.py",
+        "cwd": "/home/work/arb-watch",
+        "on_calendar": [
+          "*:0/5"
+        ],
+        "timeout_sec": 120,
+        "on_failure": false
+      }
     }
   ]
 }
