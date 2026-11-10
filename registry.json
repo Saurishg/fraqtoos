@@ -672,19 +672,19 @@
       "name": "Kabaddi Uncut Photo Reel",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-flash.timer",
-      "schedule": "05:30 build + 13:00 post, + 10 min after every boot (builds 05:00-11:00 after the deals reel, posts 12:00-21:30)",
+      "schedule": "05:30 build + 13:00 post, + 10 min after every boot (builds 05:00-11:00 after the deals reel, ~2.5 h of GPU; posts 12:00-21:30)",
       "max_age_h": 30,
       "critical": false,
-      "note": "The second daily @kabaddiuncut reel (~/ai-video/kabaddi/daily_flash.py): credited Wikimedia Commons photos (photos.py pool, no PKL logos) + the anchor's VoiceStudio voice, no AI video - its GPU part is ~10 min of TTS with Ollama paused. Own format rotation (never the night reel's format of the day, never news). Builds at 05:30 once the deals reel is done (waits while it runs or is still due), posts at 13:00 with IG_ENV=~/.config/instagram/kabaddi.env, copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). The 13:00 run builds first if the morning build didn't happen. WhatsApps its own failures. Added 2026-11-10.",
+      "note": "The second daily @kabaddiuncut reel (~/ai-video/kabaddi/daily_flash.py). Since 2026-11-10 evening it is a full AI-anchor reel like the night one (voice -> Klein stills -> LTX -> LatentSync -> CodeFormer -> RIFE, ~2.5 h with Ollama STOPPED, roughly 06:45-09:15), same anchor in a different outfit; if the GPU gives no usable still of her it falls back to the old Commons-photo layout. Own format rotation (never the night reel's format of the day, never news). Builds at 05:30 once the deals reel is done (waits while it runs or is still due), GPU retries stop at 12:30, posts at 13:00 with IG_ENV=~/.config/instagram/kabaddi.env (a build that ends after 13:00 posts itself), copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). The 13:00 run builds first if the morning build didn't happen (3.5 h GPU limit). WhatsApps its own failures. Added 2026-11-10.",
       "systemd": {
-        "description": "Kabaddi Uncut Photo Reel - second daily kabaddi reel from Commons photos",
+        "description": "Kabaddi Uncut Day Reel - second daily kabaddi anchor reel",
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_flash.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
           "*-*-* 05:30:00",
           "*-*-* 13:00:00"
         ],
-        "timeout_sec": 14400,
+        "timeout_sec": 28800,
         "on_failure": false,
         "on_boot_sec": "10min"
       }
