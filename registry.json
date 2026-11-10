@@ -629,21 +629,21 @@
       }
     },
     {
-      "name": "Savings Dhamaka Daily Reel",
+      "name": "Reels Night Chain",
       "kind": "timer",
-      "unit": "fraqtoos-deals-reel.timer",
-      "schedule": "02:00 + 10 min after every boot (resumes an interrupted night; only starts 02:00-08:30)",
+      "unit": "fraqtoos-reels-night.timer",
+      "schedule": "22:00 + 10 min after every boot (only works 22:00-08:30; resumes an interrupted night)",
       "max_age_h": 30,
       "critical": false,
-      "note": "Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04. 11-05: layout v2 (reel_v2.py: real product card on top, her below, music + SFX), QA gates on stills/clips (qa.py), CodeFormer face pass, delivered.json marker; OnBootSec resumes a reel a reboot interrupted, and runs outside 02:00-08:30 exit without starting.",
+      "note": "Since 2026-11-10 ONE job builds every reel, in order, on the one GPU (~/ai-video/night_chain.py): kabaddi reel 1 (held, posts 13:00 via fraqtoos-kabaddi-reel.timer) -> kabaddi reel 2 (held, posts 20:00 via fraqtoos-kabaddi-flash.timer) -> kabaddi photo post (composed, posts 17:30 via fraqtoos-kabaddi-photo.timer) -> the Savings Dhamaka deals reel (posts to @justbeing_ani as soon as it is built, ~07:00-08:45; it replaced fraqtoos-deals-reel.timer 02:00). Ollama is STOPPED for most of 22:00-08:00. Each script gets --chain --date, is resumable and WhatsApps its own failure; a failed job does not stop the next. Cut-offs: reel 1 not started after 01:30, reel 2 not after 04:30 (it then builds at 20:00). Exit 4 = a job degraded or skipped, 1 = a job failed. Deals reel details: Builds a ~40 s Hinglish Instagram reel from the deals @savings_dhamaka posted in the last 30 h, with a new comedy premise, outfits and backgrounds each day (~/ai-video/deals-reel/daily/daily_reel.py). gpt-oss on CPU writes the script, Parler-TTS + whisper.cpp voice check, FLUX.2 Klein stills, LTX-2.5 clips + LatentSync on the RX 6800 XT with Ollama STOPPED for ~3 h (restarted in a finally block), then funny_reel.py assembly. Delivers to /mnt/nas/Savings Dhamaka Reels + WhatsApp (video + caption). WhatsApps its own failures, so on_failure is off. Added 2026-11-04. 11-05: layout v2 (reel_v2.py: real product card on top, her below, music + SFX), QA gates on stills/clips (qa.py), CodeFormer face pass, delivered.json marker; OnBootSec resumes a reel a reboot interrupted, and runs outside 02:00-08:30 exit without starting.",
       "systemd": {
-        "description": "Savings Dhamaka Daily Reel - deals video with new looks",
-        "exec": "/usr/bin/python3.12 /home/work/ai-video/deals-reel/daily/daily_reel.py",
-        "cwd": "/home/work/ai-video/deals-reel/daily",
+        "description": "Reels Night Chain - kabaddi reel 1, reel 2, photo post, then the deals reel",
+        "exec": "/usr/bin/python3.12 /home/work/ai-video/night_chain.py",
+        "cwd": "/home/work/ai-video",
         "on_calendar": [
-          "*-*-* 02:00:00"
+          "*-*-* 22:00:00"
         ],
-        "timeout_sec": 21600,
+        "timeout_sec": 43200,
         "on_failure": false,
         "on_boot_sec": "10min"
       }
@@ -652,7 +652,7 @@
       "name": "Kabaddi Uncut Daily Reel",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-reel.timer",
-      "schedule": "22:30 build + 13:00 post, + 10 min after every boot (builds only 22:30-01:50, so the 02:00 deals reel keeps the GPU; posts only 13:00-21:30)",
+      "schedule": "13:00 post only, + 10 min after every boot (posts 13:00-21:30); built by the Reels Night Chain at 22:00",
       "max_age_h": 30,
       "critical": false,
       "note": "Daily ~30 s Hinglish kabaddi reel for Instagram @kabaddiuncut (~/ai-video/kabaddi/daily_kabaddi.py). Weekday rotation news/player/explainer/debate; facts only from Google News RSS + Wikipedia, gpt-oss:120b script rejected if it states a number not in the facts. Reuses the deals reel's GPU stages (OmniVoice, Klein, LTX, LatentSync, CodeFormer, RIFE) with its own anchor (assets/ref.png + voice_ref.wav), Ollama STOPPED while they run; GPU retries stop 01:40. Posts with IG_ENV=~/.config/instagram/kabaddi.env, copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). WhatsApps its own failures. Added 2026-11-08. Since 2026-11-10 the reel is built at night and HELD: the 13:00 run posts it (posting times 13:00 / 17:30 / 20:00 = this reel / photo post / day reel).",
@@ -661,7 +661,6 @@
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_kabaddi.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
-          "*-*-* 22:30:00",
           "*-*-* 13:00:00"
         ],
         "timeout_sec": 14400,
@@ -673,7 +672,7 @@
       "name": "Kabaddi Uncut Photo Reel",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-flash.timer",
-      "schedule": "05:30 build + 13:00 retry build + 20:00 post, + 10 min after every boot (builds 05:00-16:30 after the deals reel, ~2.5 h of GPU; posts 20:00-23:30)",
+      "schedule": "20:00 post, + 10 min after every boot (posts 20:00-21:50; builds first only if the night chain did not); built by the Reels Night Chain",
       "max_age_h": 30,
       "critical": false,
       "note": "The second daily @kabaddiuncut reel (~/ai-video/kabaddi/daily_flash.py). Since 2026-11-10 evening it is a full AI-anchor reel like the night one (voice -> Klein stills -> LTX -> LatentSync -> CodeFormer -> RIFE, ~2.5 h with Ollama STOPPED, roughly 06:45-09:15), same anchor in a different outfit; if the GPU gives no usable still of her it falls back to the old Commons-photo layout. Own format rotation (never the night reel's format of the day, never news). Builds at 05:30 once the deals reel is done (waits while it runs or is still due), GPU retries stop at 19:30, posts at 20:00 with IG_ENV=~/.config/instagram/kabaddi.env (a build that ends after 20:00 posts itself), copies to /mnt/nas/Kabaddi Uncut, ONE WhatsApp text (no video). 13:00 is a second build attempt; the 20:00 run builds first if there is still no reel (GPU only until 22:15, the night reel needs it at 22:30). WhatsApps its own failures. Added 2026-11-10.",
@@ -682,8 +681,6 @@
         "exec": "/usr/bin/python3.12 /home/work/ai-video/kabaddi/daily_flash.py",
         "cwd": "/home/work/ai-video/kabaddi",
         "on_calendar": [
-          "*-*-* 05:30:00",
-          "*-*-* 13:00:00",
           "*-*-* 20:00:00"
         ],
         "timeout_sec": 28800,
@@ -695,7 +692,7 @@
       "name": "Kabaddi Uncut Photo Post",
       "kind": "timer",
       "unit": "fraqtoos-kabaddi-photo.timer",
-      "schedule": "17:30 + 10 min after every boot (only 17:30-22:15)",
+      "schedule": "17:30 + 10 min after every boot (only 17:30-22:15); composed by the Reels Night Chain, or at 17:30 if it was not",
       "max_age_h": 30,
       "critical": false,
       "note": "Daily @kabaddiuncut photo post (~/ai-video/kabaddi/daily_photo.py): the latest kabaddi news (Bing + Google News, last 3 days, not posted before) as a 1080x1350 card, or a kabaddi fun fact from Wikipedia when there is no news. gpt-oss:20b writes Hinglish from only the source (not 120b: its cold load blocks Ollama ~5 min); a draft with a number, ordinal or name not in it is sent back, then the source's own words are used. Credited Commons photo, labelled representative. Posts via ig_post.py --image, which needs the media vhost (sudo bash ~/ig-graph/deploy/install-media.sh): Instagram fetches photos from a public URL. Copies to /mnt/nas/Kabaddi Uncut/posts, ONE WhatsApp text. Exit 4 = made but not posted. Added 2026-11-10.",

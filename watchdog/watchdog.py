@@ -27,10 +27,10 @@ def gpu_job_running() -> str:
     Dhamaka reel: LTX-2.5 + LatentSync), or "". Restarting Ollama then and running AI diagnosis on it
     loads a model next to the video models (2026-11-04 12:00: a lip-sync shot took 15 min, not 6)."""
     try:
-        state = subprocess.run(["systemctl", "is-active", "fraqtoos-deals-reel.service"],
+        state = subprocess.run(["systemctl", "is-active", "fraqtoos-reels-night.service"],
                                capture_output=True, text=True, timeout=5).stdout.strip()
         if state in ("active", "activating"):
-            return "the nightly Savings Dhamaka reel"
+            return "the reels night chain"
     except Exception:
         pass
     try:
