@@ -227,7 +227,8 @@ def send_daily_digest():
 schedule.every(30).minutes.do(run_lightweight)
 schedule.every(4).hours.do(run_full)
 
-schedule.every().day.at("07:00").do(morning_analysis)
+# 09:00, not 07:00 (2026-11-10): the reels night chain can keep Ollama stopped until ~08:45.
+schedule.every().day.at("09:00").do(morning_analysis)
 schedule.every().day.at("12:00").do(run_full)
 # The IPO alert MOVED OFF this loop 2026-09-01 (Phase 3 pilot). It is now
 # fraqtoos-ipo.timer at 10:10 with Persistent=true, so a reboot across the
