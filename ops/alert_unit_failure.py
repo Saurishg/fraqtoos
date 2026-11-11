@@ -3,8 +3,8 @@
 OnFailure handler for generated fraqtoos timer units.
 
 systemd calls this as fraqtoos-alert@<escaped-unit>.service whenever a job
-unit fails. It reports over the Phase 1 notifier, so it inherits the WhatsApp
--> ntfy fallback: a job failing because wa-service is down still reaches you.
+unit fails. It reports over the Phase 1 notifier (WhatsApp; the ntfy fallback was
+removed 2026-11-11, so a job failing while wa-service is down is NOT delivered).
 
 It distinguishes the two ways a job can not-succeed, because they need
 different reactions:

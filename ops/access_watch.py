@@ -77,7 +77,6 @@ def main():
         ("obsidian", "https://obsidian.fraqtos.duckdns.org/", wu, wp, (200, 302)),
         ("chat",     "https://chat.fraqtos.duckdns.org/",     wu, wp, (200,)),
         ("bmc",      "https://bmc.fraqtos.duckdns.org/index.html", bu, bp, (200, 302)),
-        ("ntfy",     "https://ntfy.fraqtos.duckdns.org/",     None, None, (200,)),
     ]
     for name, url, u, p, ok in checks:
         st = fetch(url, u, p)

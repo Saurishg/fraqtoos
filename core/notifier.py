@@ -31,8 +31,12 @@ LOCK_PATH  = "/tmp/fraqtoos_wa.lock"
 # Targets live in .ntfy-targets (0600, gitignored) rather than here: the ntfy.sh
 # topic name is the only thing protecting these alerts, so it is a credential
 # and is kept out of the repo and out of terminal output.
+#
+# 2026-11-11: ntfy REMOVED at the owner's request (container, nginx site and .ntfy-targets gone). Alerts are
+# WhatsApp-only now; send_ntfy() publishes nowhere and returns False unless FRAQTOOS_NTFY_URL or a recreated
+# .ntfy-targets names a target again. Backup of the old setup: ~/.server-backup/ntfy-removal-20261111/.
 NTFY_TARGETS_FILE = "/home/work/fraqtoos/.ntfy-targets"
-NTFY_FALLBACK_URL = "http://192.168.0.117:8091/fraqtoos-alerts"
+NTFY_FALLBACK_URL = None
 NTFY_TIMEOUT = 8
 
 
@@ -49,7 +53,7 @@ def ntfy_targets() -> list:
             return urls
     except Exception:
         pass
-    return [NTFY_FALLBACK_URL]
+    return [NTFY_FALLBACK_URL] if NTFY_FALLBACK_URL else []
 
 
 _NTFY_PRIORITY = {"urgent": 5, "high": 4, "default": 3, "low": 2}

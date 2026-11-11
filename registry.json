@@ -336,7 +336,7 @@
       "schedule": "03:00",
       "max_age_h": 30,
       "critical": false,
-      "note": "Once a day and it matters, so it pages on failure. It already raises its own ntfy alert too. Writes last-run.log itself, so no redirect is needed.",
+      "note": "Once a day and it matters, so it pages on failure. It also WhatsApps its own failures (ntfy until 2026-11-11). Writes last-run.log itself, so no redirect is needed.",
       "systemd": {
         "description": "NAS backup - nightly rsync to the QNAP",
         "exec": "/home/work/.server-backup/run-backup.sh",
@@ -349,25 +349,11 @@
       }
     },
     {
-      "name": "ntfy (alert fallback)",
-      "kind": "http",
-      "url": "http://192.168.0.117:8091/v1/health",
-      "critical": true,
-      "note": "The second alert channel. It is a docker container, so systemd cannot see it. If this and wa-service are both down, nothing can page at all - which is exactly the blind spot the second channel was added to remove."
-    },
-    {
       "name": "nginx (reverse proxy)",
       "kind": "service",
       "unit": "nginx.service",
       "critical": false,
-      "note": "Serves grafana/dash/obsidian/ntfy on *.fraqtos.duckdns.org with the Let's Encrypt wildcard. Replaced three Cloudflare quick tunnels 2026-09-05."
-    },
-    {
-      "name": "ntfy via HTTPS",
-      "kind": "http",
-      "url": "https://ntfy.fraqtos.duckdns.org/v1/health",
-      "critical": true,
-      "note": "The public face of the alert fallback. If this fails the phone stops receiving, even though the container may look healthy on the LAN."
+      "note": "Serves grafana/obsidian/chat/bmc/jellyfin/media/ob on *.fraqtos.duckdns.org with the Let's Encrypt wildcard. Replaced three Cloudflare quick tunnels 2026-09-05. ntfy site removed 2026-11-11."
     },
     {
       "name": "DuckDNS refresh",
