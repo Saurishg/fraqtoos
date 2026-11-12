@@ -720,7 +720,7 @@
       "schedule": "every 5 min",
       "max_age_h": 1,
       "critical": false,
-      "note": "READ-ONLY research logger (~/arb-watch/arb_log.py): every 5 min samples the perpetual futures listed on both Delta Exchange India and CoinDCX (public APIs, no keys, no orders) into data/arb.db. `arb_log.py report` shows how often a price gap beat the assumed 0.30 % round-trip cost and for how long. Started 2026-11-10 for one week (report due ~2026-11-17), then remove unless the user wants it kept.",
+      "note": "READ-ONLY research logger (~/arb-watch/arb_log.py): every 5 min samples the perpetual futures listed on both Delta Exchange India and CoinDCX (public APIs, no keys, no orders) into data/arb.db. Since 2026-11-12 each run then spends ~4.5 min sampling the real top-of-book on both exchanges every 15 s for INIT/ARIA/JCT/BTW/AIN (table q) - hence the 330 s timeout. `arb_log.py report` shows how often a gap beat the round-trip cost (fee 0.02 % per fill) and replays the fast quotes as trades. Started 2026-11-10 for one week (report due ~2026-11-17), then remove unless the user wants it kept.",
       "systemd": {
         "description": "Arb Watch - Delta Exchange India vs CoinDCX futures price log (read-only)",
         "exec": "/usr/bin/python3.12 /home/work/arb-watch/arb_log.py",
@@ -728,7 +728,7 @@
         "on_calendar": [
           "*:0/5"
         ],
-        "timeout_sec": 120,
+        "timeout_sec": 330,
         "on_failure": false
       }
     }
