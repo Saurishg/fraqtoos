@@ -731,6 +731,26 @@
         "timeout_sec": 330,
         "on_failure": false
       }
+    },
+    {
+      "name": "CardWise Sync",
+      "kind": "timer",
+      "unit": "fraqtoos-cardwise.timer",
+      "schedule": "10:30 + 21:30",
+      "max_age_h": 14,
+      "critical": false,
+      "note": "Adds new bank-alert charges to cards.fraqtos.duckdns.org (data/auto.json) and verifies each new Tata Neu HDFC / Amazon ICICI statement against the page; WhatsApps a summary. Exit 4 = alerts unreadable (Apps Script Gmail quota) or a statement unreadable. Never deletes rows.",
+      "systemd": {
+        "description": "CardWise Sync - bank alerts in, card statements verified",
+        "exec": "/home/work/.venvs/fraqtoos-chat/bin/python cardwise_sync.py",
+        "cwd": "/home/work/cardwise-sync",
+        "on_calendar": [
+          "*-*-* 10:30:00",
+          "*-*-* 21:30:00"
+        ],
+        "timeout_sec": 600,
+        "on_failure": true
+      }
     }
   ]
 }
