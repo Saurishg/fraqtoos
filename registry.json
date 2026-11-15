@@ -751,6 +751,25 @@
         "timeout_sec": 600,
         "on_failure": true
       }
+    },
+    {
+      "name": "Rent Book",
+      "kind": "timer",
+      "unit": "fraqtoos-rentbook.timer",
+      "schedule": "daily 11:15",
+      "max_age_h": 26,
+      "critical": false,
+      "note": "Fetches new monthly ICICI ••7229 savings e-statements from Gmail (read-only) into ~/.config/rentbook/icici and rebuilds cards.fraqtos.duckdns.org/rent/ (Union Bank ••0978 tab from the newest NAS PDF + ICICI tab); WhatsApps a rent summary only when a new statement arrived. Tenant terms: ACCOUNTS in ~/.config/rentbook/build_rent.py.",
+      "systemd": {
+        "description": "Rent Book - ICICI statements in, rent page rebuilt",
+        "exec": "/home/work/.venvs/fraqtoos-chat/bin/python build_rent.py /var/www/cardwise/rent/index.html --fetch --notify",
+        "cwd": "/home/work/.config/rentbook",
+        "on_calendar": [
+          "*-*-* 11:15:00"
+        ],
+        "timeout_sec": 300,
+        "on_failure": true
+      }
     }
   ]
 }
