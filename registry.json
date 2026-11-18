@@ -770,6 +770,25 @@
         "timeout_sec": 300,
         "on_failure": true
       }
+    },
+    {
+      "name": "Job Alerts (Jiyestha)",
+      "kind": "timer",
+      "unit": "fraqtoos-job-alerts.timer",
+      "schedule": "daily 13:30 IST (09:00 CET)",
+      "max_age_h": 26,
+      "critical": false,
+      "note": "Remote BIM / Solutions-Pre-Sales / Customer Success / AR jobs workable from Germany (no German-language roles) from Arbeitnow, Remotive, Himalayas, Jobicy, Remote OK -> WhatsApp to 919971878030 ONLY (Jiyestha; user's instruction 2026-11-18 - never add the owner). Sends a 'no new jobs' line on empty days so silence = broken. Dedup in ~/job-alerts/state.json (60 d). Exit 4 = a source was down.",
+      "systemd": {
+        "description": "Job Alerts - daily remote jobs for Jiyestha to WhatsApp",
+        "exec": "/usr/bin/python3.12 job_alerts.py",
+        "cwd": "/home/work/job-alerts",
+        "on_calendar": [
+          "*-*-* 13:30:00"
+        ],
+        "timeout_sec": 600,
+        "on_failure": true
+      }
     }
   ]
 }
