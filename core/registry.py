@@ -198,6 +198,10 @@ _PROBES = {
 
 
 def check(job: dict) -> dict:
+    # "paused": "<why>" = switched off on purpose (timer disabled); report it, never page on it.
+    if job.get("paused"):
+        return {"name": job["name"], "kind": job["kind"], "critical": bool(job.get("critical")),
+                "ok": True, "detail": f"paused - {job['paused']}"}
     probe = _PROBES.get(job["kind"])
     if probe is None:
         return {**job, "ok": True, "detail": f"unknown kind {job['kind']} — not probed"}
