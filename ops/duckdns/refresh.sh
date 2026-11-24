@@ -17,16 +17,27 @@ CONF="/home/work/fraqtoos/ops/duckdns/duckdns.conf"
 # shellcheck source=/dev/null
 source "$CONF"
 
-ip=$(curl -s --max-time 20 https://api.ipify.org)
+ip=$(curl -s --max-time 10 https://api.ipify.org)
 if [ -z "$ip" ]; then
   echo "could not determine the public IP — skipping (not a DuckDNS fault)"
   exit 0
 fi
 
-resp=$(curl -s --max-time 30 \
-  "https://www.duckdns.org/update?domains=${DUCKDNS_SUBDOMAIN}&token=${DUCKDNS_TOKEN}&ip=${ip}")
+# DuckDNS answers 502 Bad Gateway now and then (11-23 and 11-24, both at the
+# 18:00 run, every other run fine), so one bad answer must not fail the run:
+# up to 4 tries, 10/20/30 s apart. Worst case ~110 s stays under the unit's
+# TimeoutStartSec=120 (the unit is generated from registry.json - not edited).
+resp=""
+for wait in 0 10 20 30; do
+  sleep "$wait"
+  resp=$(curl -s --max-time 8 \
+    "https://www.duckdns.org/update?domains=${DUCKDNS_SUBDOMAIN}&token=${DUCKDNS_TOKEN}&ip=${ip}")
+  [ "$resp" = "OK" ] && break
+  why=$(echo "$resp" | grep -o '<title>[^<]*' | sed 's/<title>//'); why=${why:-${resp:-no response}}
+  echo "duckdns update attempt failed (${why:0:80}), retrying"
+done
 if [ "$resp" != "OK" ]; then
-  echo "duckdns update FAILED: ${resp:-<empty>}"
+  echo "duckdns update FAILED after 4 tries: $(echo "${resp:-<empty>}" | tr -s '\n' ' ' | cut -c1-200)"
   exit 1
 fi
 
