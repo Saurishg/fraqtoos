@@ -17,4 +17,4 @@ Environment=DISPLAY=:0
 # SuccessExitStatus on purpose, so systemd records the run as failed and an
 # incomplete result stays visible to OnFailure and to the registry sweep.
 ExecStart=/usr/bin/python3.12 /home/work/fraqtoos/ops/run_bot_module.py bots.chia_ai_watcher
-TimeoutStartSec=200
+TimeoutStartSec=1200

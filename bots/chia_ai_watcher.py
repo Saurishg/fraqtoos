@@ -37,6 +37,8 @@ except Exception:
 PHI4_MODEL  = "phi4"
 ALERT_COOLDOWN_HOURS = 4
 MAX_LOG_LINES        = 600
+PROBLEM_CHARS        = 6_000     # ~2.5k tokens, ~60-90 s for phi4 on CPU
+AI_TIMEOUT           = 300       # per model, see run()
 
 # Safe fix commands phi4 is allowed to suggest.
 # The agent is constrained to this allowlist — no arbitrary shell injection.
@@ -163,7 +165,7 @@ def _call_phi4(log_excerpt: str) -> dict:
     if not _ai_ask:
         raise ValueError("ai_provider unavailable")
     content = _ai_ask(user_msg, system=CLASSIFY_PROMPT, temperature=0.0,
-                      max_tokens=400)
+                      max_tokens=400, local_models=["phi4", "gemma4"], timeout=AI_TIMEOUT)
 
     for attempt in [content]:
         try:
@@ -179,7 +181,7 @@ def _call_phi4(log_excerpt: str) -> dict:
 
     # Reformat pass, also through the provider (Gemini-only).
     c2 = _ai_ask(_FALLBACK_PROMPT + content[:600], temperature=0.0,
-                 max_tokens=400) or ""
+                 max_tokens=400, local_models=["phi4"], timeout=AI_TIMEOUT) or ""
     m2 = re.search(r"\{.*\}", c2, re.DOTALL)
     if m2:
         return json.loads(m2.group(0))
@@ -255,10 +257,21 @@ def run() -> str:
 
     line_count = log_text.count("\n") + 1
 
-    try:
-        verdict = _call_phi4(log_text)
-    except Exception as e:
-        return f"Chia AI Watcher: phi4 classification failed — {e}"
+    # 2026-11-25: only the WARNING/ERROR/CRITICAL lines go to the model. Ollama is
+    # CPU-only since 11-20 and reads ~40 tok/s, so the old 12,000-char excerpt (the
+    # newest ~50 lines, nearly all INFO) took ~156 s and every run hit the unit's
+    # timeout from 11-20 on. A 2 h window holds ~20 such lines; the newest
+    # PROBLEM_CHARS of them are sent. No problem lines = nothing to classify.
+    problems = [l for l in log_text.splitlines() if re.search(r"\b(WARNING|ERROR|CRITICAL)\b", l)]
+    if not problems:
+        verdict = {"severity": "ok", "summary": f"No WARNING/ERROR lines in {line_count} new log lines.",
+                   "new_issues": [], "prover_errors_in_batch": 0, "fix_cmd": "none", "fix_reason": ""}
+    else:
+        excerpt = "\n".join(problems)[-PROBLEM_CHARS:]
+        try:
+            verdict = _call_phi4(excerpt)
+        except Exception as e:
+            return f"Chia AI Watcher: phi4 classification failed — {e}"
 
     severity   = verdict.get("severity", "ok")
     summary    = verdict.get("summary", "")
