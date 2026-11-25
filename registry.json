@@ -478,7 +478,7 @@
       "kind": "service",
       "unit": "pearl-autosell.service",
       "critical": false,
-      "note": "Sells mined PEARL + PROX + QTC on SafeTrade (pearlusdt floor $1.30, proxusdt floor $0.006 since 11-24, qtcusdt floor $0.33 since 11-26; NOCK + NEB removed 11-24) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
+      "note": "Sells mined PEARL + PROX + QTC on SafeTrade (pearlusdt floor $1.30, proxusdt floor $0.004 since 11-26 (was $0.006), qtcusdt floor $0.33 since 11-26; NOCK + NEB removed 11-24) every 5 min (~/pearl-autosell). Down = PEARL piles up unsold, nothing lost. IPv4-only; key IP-locked to the home IP. Added 2026-10-23."
     },
     {
       "name": "Coin profit watch",
